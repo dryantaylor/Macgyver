@@ -9,7 +9,12 @@ Math::Vector3 Components::Camera::convertToCameraSpace(Gameobjects::Component* s
 	Math::Vector3 camObjTransform = self->getWorldTransform();
 	Math::Vector3 compObjTransform = comp->getWorldTransform();
 	Math::Vector3 camSpaceTransform;
+	//subtracting the camera's world space position from the component
+	//gets us the position relative to the camera (in cameras co-ordinates)
 	camSpaceTransform.x = compObjTransform.x - camObjTransform.x;
+	//the y-axis for SDL increases as we go down the screen
+	//whereas world co-ordinates use positive numbers for up
+	//so we have to invert the subtraction
 	camSpaceTransform.y = camObjTransform.y - compObjTransform.y;
 	camSpaceTransform.z = compObjTransform.z;
 
@@ -23,16 +28,15 @@ void Components::Camera::Draw(Gameobjects::Component* self)
 	
 	SDL_Renderer* renderer = self->getWorldScene()->scene_RENDERER;
 	for (Gameobjects::Component* comp : renderables) {
-		//by subtracting the cameras position from the components position
-		//we get a vector which tells us the position relative to the camera
 		Math::Vector3 cameraSpace = convertToCameraSpace(self,comp);
-		//TODO: account for sprite size on left and top
-		if (0 < cameraSpace.x && cameraSpace.x <= Globals::SCREEN_WIDTH && 0 < cameraSpace.y && cameraSpace.y <=Globals::SCREEN_HEIGHT){
-			//by declaring a component renderable we are commiting to having
-			//a RenderableData Struct
-			Components::RenderableData* data = 
-				(Components::RenderableData*)(comp->data);
-
+		
+		//by declaring a component renderable we are commiting to having
+		//a RenderableData Struct
+		Components::RenderableData* data =
+			(Components::RenderableData*)(comp->data);
+		if (-(data->rect.w) < cameraSpace.x && cameraSpace.x <= Globals::SCREEN_WIDTH 
+		 && -(data->rect.h) < cameraSpace.y && cameraSpace.y <=Globals::SCREEN_HEIGHT){
+			
 			SDL_Texture* texture = data->texture;
 			data->rect.x = cameraSpace.x; //saves allocating new memory
 			data->rect.y = cameraSpace.y;
@@ -47,6 +51,14 @@ void Components::Camera::update(Gameobjects::Component* self, unsigned int delta
 	Camera::Draw(self);
 }
 
+void Components::Camera::AttachNew(Gameobjects::Component* comp)
+{
+	comp->setComponentProperties(RENDERER);
+	comp->update = Camera::update;
+
+}
+
+//update to use the attachNew format
 Gameobjects::Component* Components::Camera::CreateNew()
 {
 	COMPONENT_TYPE types[1] = { RENDERER };

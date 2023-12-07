@@ -1,18 +1,6 @@
-﻿  Camera.cpp
-C:\Users\44791\source\repos\macgyver_v1\MacGyver\Camera.cpp(37,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\44791\source\repos\macgyver_v1\MacGyver\Camera.cpp(38,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-  Physics2D.cpp
+﻿  PlayerController.cpp
 C:\Users\44791\source\repos\macgyver_v1\MacGyver\Physics2D.h(7,3): warning C4091: 'static ': ignored on left of 'Macgyver::Components::PhysicsConstants' when no variable is declared
-  (compiling source file 'Physics2D.cpp')
+  (compiling source file 'PlayerController.cpp')
   
-  Renderable.cpp
-  Velocity.cpp
-C:\Users\44791\source\repos\macgyver_v1\MacGyver\Physics2D.h(7,3): warning C4091: 'static ': ignored on left of 'Macgyver::Components::PhysicsConstants' when no variable is declared
-  (compiling source file 'Velocity.cpp')
-  
-  main.cpp
-C:\Users\44791\source\repos\macgyver_v1\MacGyver\Physics2D.h(7,3): warning C4091: 'static ': ignored on left of 'Macgyver::Components::PhysicsConstants' when no variable is declared
-  (compiling source file 'main.cpp')
-  
-  Generating Code...
+C:\Users\44791\source\repos\macgyver_v1\MacGyver\PlayerController.cpp(25,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   MacGyver.vcxproj -> C:\Users\44791\source\repos\macgyver_v1\x64\Debug\MacGyver.exe

@@ -1,14 +1,14 @@
 #include "Vector3.h"
 
-using namespace Macgyver::Math;
+//using namespace Macgyver::Math;
 
-Vector3::Vector3(int x , int y, int z) {
+Macgyver::Math::Vector3::Vector3(float x , float y, float z) {
 	this->x = x;
 	this->y = y;
 	this->z = z;
 }
 
-Vector3 Vector3::operator+(const Vector3& a)
+Macgyver::Math::Vector3 Macgyver::Math::Vector3::operator+(const Macgyver::Math::Vector3& a)
 {
 	Vector3 temp;
 	temp.x = this->x + a.x;
@@ -17,7 +17,7 @@ Vector3 Vector3::operator+(const Vector3& a)
 	return temp;
 }
 
-Vector3 Vector3::operator-(const Vector3& a)
+Macgyver::Math::Vector3 Macgyver::Math::Vector3::operator-(const Macgyver::Math::Vector3& a)
 {
 	Vector3 temp;
 	temp.x = this->x - a.x;
@@ -26,7 +26,7 @@ Vector3 Vector3::operator-(const Vector3& a)
 	return temp;
 }
 
-Vector3 Vector3::operator*(const float b)
+Macgyver::Math::Vector3 Macgyver::Math::Vector3::operator*(const float b)
 {
 	Vector3 temp;
 	temp.x = this->x * b;
@@ -35,7 +35,7 @@ Vector3 Vector3::operator*(const float b)
 	return temp;
 }
 
-Vector3 Vector3::operator/(const float b)
+Macgyver::Math::Vector3 Macgyver::Math::Vector3::operator/(const float b)
 {
 	Vector3 temp;
 	temp.x = this->x / b;
@@ -44,7 +44,7 @@ Vector3 Vector3::operator/(const float b)
 	return temp;
 }
 
-Vector3& Vector3::operator+=(const Vector3& a)
+Macgyver::Math::Vector3& Macgyver::Math::Vector3::operator+=(const Macgyver::Math::Vector3& a)
 {
 	this->x += a.x;
 	this->y += a.y;
@@ -52,7 +52,7 @@ Vector3& Vector3::operator+=(const Vector3& a)
 	return *this;
 }
 
-std::ostream& operator<<(std::ostream& os, const Vector3& v)
+std::ostream& operator<<(std::ostream& os, const Macgyver::Math::Vector3& v)
 {
 	os << "x: " << v.x << ", y: " << v.y << ", z: " << v.z;
 	return os;

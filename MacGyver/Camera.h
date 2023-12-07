@@ -13,7 +13,7 @@ namespace Macgyver::Components {
 		static void update(Gameobjects::Component* self, unsigned int deltaTime);
 		static Math::Vector3 convertToCameraSpace(Gameobjects::Component* self, Gameobjects::Component* comp);
 		
-		//static void AttachNew(Gameobjects::Component* comp);
+		static void AttachNew(Gameobjects::Component* comp);
 		static Macgyver::Gameobjects::Component* CreateNew();
 	};
 

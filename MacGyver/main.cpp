@@ -32,8 +32,6 @@ SDL_Renderer* c_RENDERER;
 int main(int argc, char* argv[])
 {
 	//TODO LIST:
-	// 1. FIX CAMERA
-	// 2. Refactor and cleanup a little (please make a copy before)
 	//multiple Data structs per component with appropriate managers
 
 	//NOTE: FULLSCREEN RESOLOUTION DOES NOT WORK WITH SCALED DISPLAYS!
@@ -93,8 +91,13 @@ int main(int argc, char* argv[])
 	*/
 	Gameobjects::Scene sc = Gameobjects::Scene();
 	sc.scene_RENDERER = c_RENDERER;
+
 	Gameobjects::GameObject cam = Gameobjects::GameObject();
-	cam.addComponent(Components::Camera::CreateNew());
+	sc.addObject(&cam);
+
+	Gameobjects::Component camera = Gameobjects::Component();
+	cam.addComponent(&camera);
+	Components::Camera::AttachNew(&camera);
 
 	Gameobjects::GameObject player = Gameobjects::GameObject();
 	sc.addObject(&player);

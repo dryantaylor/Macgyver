@@ -11,20 +11,19 @@ void DemoProject::PlayerController::update(Macgyver::Gameobjects::Component* sel
 	Math::Force2D velocity(0, 0);
 	Components::Physics2DData* data = (Components::Physics2DData*)(self->data);
 	if (Input::isKeyDown(SDLK_w)) {
-		velocity.y += speed;
+		velocity.y += 1;
 	}
 	if (Input::isKeyDown(SDLK_s)) {
-		velocity.y -= speed;
+		velocity.y -= 1;
 	}
 	if (Input::isKeyDown(SDLK_a)) {
-		velocity.x -= speed;
+		velocity.x -= 1;
 	}
 	if (Input::isKeyDown(SDLK_d)) {
-		velocity.x += speed;
+		velocity.x += 1;
 	}
+	velocity.scaleToMagnitude(speed);
 	data->velocity = velocity;
-
-	//std::cout << "Player is at position" << self->getWorldTransform() << std::endl;
 }
 
 void DemoProject::PlayerController::attachNew(Macgyver::Gameobjects::Component* comp)
