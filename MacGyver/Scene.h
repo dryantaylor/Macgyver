@@ -1,7 +1,8 @@
 #pragma once
 #include "SDL.h"
-#include "vector"
+#include <vector>
 #include "ComponentManager.h"
+
 namespace Macgyver::Gameobjects {
 	class GameObject;
 	class Component;

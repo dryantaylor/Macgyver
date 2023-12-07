@@ -1,20 +1,22 @@
 #include "GameObject.h"
-//#include "Scene.h"
 #include "Component.h"
+#include "Scene.h"
 #include "ComponentManager.h"
-Macgyver::Gameobjects::GameObject::GameObject(int x, int y, int z)
+
+using namespace Macgyver;
+
+Gameobjects::GameObject::GameObject(int x, int y, int z)
 {
 	transform = Macgyver::Math::Vector3(x, y, z);
 }
 
-
-void Macgyver::Gameobjects::GameObject::addComponent(Component* comp)
+void Gameobjects::GameObject::addComponent(Component* comp)
 {
 	components.push_back(comp);
 	comp->parent = this;
 }
 
-std::vector<Macgyver::Gameobjects::Component*> Macgyver::Gameobjects::GameObject::getComponentsWithProperty(Components::COMPONENT_TYPES type)
+std::vector<Gameobjects::Component*> Gameobjects::GameObject::getComponentsWithProperty(Components::COMPONENT_TYPES type)
 {
 	std::vector<Component*> comps;
 	for (Component* comp : components) {
@@ -25,7 +27,7 @@ std::vector<Macgyver::Gameobjects::Component*> Macgyver::Gameobjects::GameObject
 	return comps;
 }
 
-void Macgyver::Gameobjects::GameObject::update(unsigned int deltaTime)
+void Gameobjects::GameObject::update(unsigned int deltaTime)
 {
 	Scene* parentScene = this->getParentScene();
 	for (Component* comp : components)
@@ -46,9 +48,7 @@ void Macgyver::Gameobjects::GameObject::update(unsigned int deltaTime)
 	}
 }
 
-
-
-Macgyver::Gameobjects::Scene* Macgyver::Gameobjects::GameObject::getParentScene()
+Gameobjects::Scene* Gameobjects::GameObject::getParentScene()
 {
 	return parentScene;
 }

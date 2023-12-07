@@ -1,22 +1,20 @@
 #include "Input.h"
 
-Uint8* Macgyver::Input::keyboardState = nullptr;
+using namespace Macgyver;
 
-void Macgyver::Input::init()
-{
-}
+Uint8* Input::keyboardState = nullptr;
 
-void Macgyver::Input::update()
+void Input::update()
 {
 	Input::keyboardState = const_cast<Uint8*>(SDL_GetKeyboardState(NULL));
 }
 
-bool Macgyver::Input::isKeyDown(SDL_KeyCode key)
+bool Input::isKeyDown(SDL_KeyCode key)
 {
 	return isKeyDown(SDL_GetScancodeFromKey(key));
 }
 
-bool Macgyver::Input::isKeyDown(SDL_Scancode key)
+bool Input::isKeyDown(SDL_Scancode key)
 {
 	
 	return Input::keyboardState[key];

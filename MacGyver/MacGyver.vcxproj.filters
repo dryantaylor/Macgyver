@@ -13,29 +13,14 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Resource Files\Engine">
-      <UniqueIdentifier>{2e52e17b-8326-4b21-b0c7-506af636a29b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\Engine\Math">
-      <UniqueIdentifier>{60258463-3c4c-4d4a-9d87-dffd27421d83}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Engine">
       <UniqueIdentifier>{cf34c07a-cb37-435e-b3ad-70476c5af512}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Engine\Math">
       <UniqueIdentifier>{1e7992bf-9e7e-4ccc-80b1-003da1195c1c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\Engine\Gameobjects">
-      <UniqueIdentifier>{f509f7ed-28de-4cf1-b617-1f1085762e93}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\Engine\Components">
-      <UniqueIdentifier>{bd2e455d-9af1-42c9-8a29-d9a6b4310df8}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Engine\Gameobjects">
       <UniqueIdentifier>{6bafd7df-2068-4548-83b9-95208bef582c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\Engine\Input">
-      <UniqueIdentifier>{d8dcc8c4-8ab3-4b1f-a607-eaefd91b7f89}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Engine\Input">
       <UniqueIdentifier>{eb99eb9f-7aee-42c6-8589-b0ff490795bb}</UniqueIdentifier>
@@ -43,11 +28,26 @@
     <Filter Include="Source Files\Engine\Components">
       <UniqueIdentifier>{374a5d77-054e-4824-bb97-9a6aee84645c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\Game">
-      <UniqueIdentifier>{3d7c680c-a3a5-4ea7-bfa6-42e3964a4211}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Game">
       <UniqueIdentifier>{b89fd370-a620-4fbd-bba3-091cec8a5c79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine">
+      <UniqueIdentifier>{2e52e17b-8326-4b21-b0c7-506af636a29b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine\Math">
+      <UniqueIdentifier>{60258463-3c4c-4d4a-9d87-dffd27421d83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine\Gameobjects">
+      <UniqueIdentifier>{f509f7ed-28de-4cf1-b617-1f1085762e93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine\Components">
+      <UniqueIdentifier>{bd2e455d-9af1-42c9-8a29-d9a6b4310df8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine\Input">
+      <UniqueIdentifier>{d8dcc8c4-8ab3-4b1f-a607-eaefd91b7f89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Game">
+      <UniqueIdentifier>{3d7c680c-a3a5-4ea7-bfa6-42e3964a4211}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -78,9 +78,6 @@
     <ClCompile Include="Renderable.cpp">
       <Filter>Source Files\Engine\Components</Filter>
     </ClCompile>
-    <ClCompile Include="ComponentData.cpp">
-      <Filter>Source Files\Engine\Components</Filter>
-    </ClCompile>
     <ClCompile Include="Velocity.cpp">
       <Filter>Source Files\Engine\Components</Filter>
     </ClCompile>
@@ -99,46 +96,46 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vector3.h">
-      <Filter>Resource Files\Engine\Math</Filter>
+      <Filter>Header Files\Engine\Math</Filter>
     </ClInclude>
     <ClInclude Include="Component.h">
-      <Filter>Resource Files\Engine\Gameobjects</Filter>
+      <Filter>Header Files\Engine\Gameobjects</Filter>
     </ClInclude>
     <ClInclude Include="GameObject.h">
-      <Filter>Resource Files\Engine\Gameobjects</Filter>
+      <Filter>Header Files\Engine\Gameobjects</Filter>
     </ClInclude>
     <ClInclude Include="Globals.h">
-      <Filter>Resource Files\Engine</Filter>
+      <Filter>Header Files\Engine</Filter>
     </ClInclude>
     <ClInclude Include="ComponentManager.h">
-      <Filter>Resource Files\Engine\Components</Filter>
+      <Filter>Header Files\Engine\Components</Filter>
     </ClInclude>
     <ClInclude Include="Camera.h">
-      <Filter>Resource Files\Engine\Components</Filter>
+      <Filter>Header Files\Engine\Components</Filter>
     </ClInclude>
     <ClInclude Include="Scene.h">
-      <Filter>Resource Files\Engine\Gameobjects</Filter>
+      <Filter>Header Files\Engine\Gameobjects</Filter>
     </ClInclude>
     <ClInclude Include="Renderable.h">
-      <Filter>Resource Files\Engine\Components</Filter>
+      <Filter>Header Files\Engine\Components</Filter>
     </ClInclude>
     <ClInclude Include="ComponentData.h">
-      <Filter>Resource Files\Engine\Components</Filter>
+      <Filter>Header Files\Engine\Components</Filter>
     </ClInclude>
     <ClInclude Include="Physics2D.h">
-      <Filter>Resource Files\Engine\Components</Filter>
+      <Filter>Header Files\Engine\Components</Filter>
     </ClInclude>
     <ClInclude Include="Force2D.h">
-      <Filter>Resource Files\Engine\Math</Filter>
+      <Filter>Header Files\Engine\Math</Filter>
     </ClInclude>
     <ClInclude Include="Velocity.h">
-      <Filter>Resource Files\Engine\Components</Filter>
-    </ClInclude>
-    <ClInclude Include="Input.h">
-      <Filter>Resource Files\Engine</Filter>
+      <Filter>Header Files\Engine\Components</Filter>
     </ClInclude>
     <ClInclude Include="PlayerController.h">
-      <Filter>Resource Files\Game</Filter>
+      <Filter>Header Files\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>Header Files\Engine\Input</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

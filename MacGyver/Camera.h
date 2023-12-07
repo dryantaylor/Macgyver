@@ -9,11 +9,11 @@
 namespace Macgyver::Components {
 
 	struct Camera {
-		COMPONENT_TYPE flags = RENDERER;
-		static void Draw(Macgyver::Gameobjects::Component* self);
+		static void Draw(Gameobjects::Component* self);
 		static void update(Gameobjects::Component* self, unsigned int deltaTime);
 		static Math::Vector3 convertToCameraSpace(Gameobjects::Component* self, Gameobjects::Component* comp);
 		
+		//static void AttachNew(Gameobjects::Component* comp);
 		static Macgyver::Gameobjects::Component* CreateNew();
 	};
 

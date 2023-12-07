@@ -6,6 +6,6 @@
 namespace Macgyver::Components {
 	
 	struct ComponentData {
-		int test;
+		
 	};
 }

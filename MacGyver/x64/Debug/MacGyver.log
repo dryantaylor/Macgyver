@@ -1,34 +1,18 @@
 ﻿  Camera.cpp
-C:\Users\44791\source\repos\macgyver_v1\MacGyver\Camera.cpp(34,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\44791\source\repos\macgyver_v1\MacGyver\Camera.cpp(35,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-  Component.cpp
-  ComponentData.cpp
-  ComponentManager.cpp
-  Force2D.cpp
-  GameObject.cpp
-  Globals.cpp
-  Input.cpp
-  main.cpp
-C:\Users\44791\source\repos\macgyver_v1\MacGyver\Physics2D.h(7,3): warning C4091: 'static ': ignored on left of 'Macgyver::Components::PhysicsConstants' when no variable is declared
-  (compiling source file 'main.cpp')
-  
+C:\Users\44791\source\repos\macgyver_v1\MacGyver\Camera.cpp(37,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\44791\source\repos\macgyver_v1\MacGyver\Camera.cpp(38,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
   Physics2D.cpp
 C:\Users\44791\source\repos\macgyver_v1\MacGyver\Physics2D.h(7,3): warning C4091: 'static ': ignored on left of 'Macgyver::Components::PhysicsConstants' when no variable is declared
   (compiling source file 'Physics2D.cpp')
   
-  PlayerController.cpp
-C:\Users\44791\source\repos\macgyver_v1\MacGyver\Physics2D.h(7,3): warning C4091: 'static ': ignored on left of 'Macgyver::Components::PhysicsConstants' when no variable is declared
-  (compiling source file 'PlayerController.cpp')
-  
   Renderable.cpp
-  Scene.cpp
-  Vector3.cpp
-C:\Users\44791\source\repos\macgyver_v1\MacGyver\Vector3.cpp(6,12): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\44791\source\repos\macgyver_v1\MacGyver\Vector3.cpp(7,12): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\44791\source\repos\macgyver_v1\MacGyver\Vector3.cpp(8,12): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
   Velocity.cpp
 C:\Users\44791\source\repos\macgyver_v1\MacGyver\Physics2D.h(7,3): warning C4091: 'static ': ignored on left of 'Macgyver::Components::PhysicsConstants' when no variable is declared
   (compiling source file 'Velocity.cpp')
+  
+  main.cpp
+C:\Users\44791\source\repos\macgyver_v1\MacGyver\Physics2D.h(7,3): warning C4091: 'static ': ignored on left of 'Macgyver::Components::PhysicsConstants' when no variable is declared
+  (compiling source file 'main.cpp')
   
   Generating Code...
   MacGyver.vcxproj -> C:\Users\44791\source\repos\macgyver_v1\x64\Debug\MacGyver.exe

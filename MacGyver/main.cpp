@@ -1,21 +1,23 @@
 #include <iostream>
 
+//SDL imports
 #include <SDL.h>
 #include <SDL_image.h>
 //#include <SDL_ttf.h>
 #include <SDL_mixer.h>
 
+
+//main engine framework imports
 #include "Globals.h"
 #include "Vector3.h"
 #include "Scene.h"
 #include "GameObject.h"
 #include "Input.h"
-
 #include "Camera.h"
 #include "Renderable.h"
 
 
-
+//extra components imports
 #include "PlayerController.h"
 
 
@@ -33,6 +35,8 @@ int main(int argc, char* argv[])
 	// 1. FIX CAMERA
 	// 2. Refactor and cleanup a little (please make a copy before)
 	//multiple Data structs per component with appropriate managers
+
+	//NOTE: FULLSCREEN RESOLOUTION DOES NOT WORK WITH SCALED DISPLAYS!
 	Globals::SCREEN_WIDTH = 1280;
 	Globals::SCREEN_HEIGHT = 720;
 
@@ -83,7 +87,6 @@ int main(int argc, char* argv[])
 		return 1;
 	}
 
-	Input::init();
 	/*
 	* MAIN GAME, CREATE ALL DATA BEFORE THE WHILE LOOP
 	* CALL ALL UPDATES AND DRAWING WITHIN THE WHILE LOOP
@@ -143,8 +146,8 @@ int main(int argc, char* argv[])
 		/*
 		* Place update then drawing code here
 		*/
-		sc.update(deltaTime);
 		sc.physicsUpdate(deltaTime);
+		sc.update(deltaTime);
 
 		SDL_RenderPresent(c_RENDERER);
 		last_time = curr_time;

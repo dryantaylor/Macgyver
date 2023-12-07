@@ -1,6 +1,6 @@
 #pragma once
-
 #include <iostream>
+
 namespace Macgyver::Math{
 
 	class Vector3 {
