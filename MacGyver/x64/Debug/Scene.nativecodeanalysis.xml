@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\44791\OneDrive - University of Kent\SDL_headers\SDL2\include\</FILEPATH>
+      <FILENAME>SDL_stdinc.h</FILENAME>
+      <LINE>544</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>26819</DEFECTCODE>
+    <DESCRIPTION>Unannotated fallthrough between switch labels (es.78).</DESCRIPTION>
+    <FUNCTION>SDL_memset4</FUNCTION>
+    <DECORATED>SDL_memset4</DECORATED>
+    <FUNCLINE>525</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\44791\OneDrive - University of Kent\SDL_headers\SDL2\include\</FILEPATH>
+      <FILENAME>SDL_stdinc.h</FILENAME>
+      <LINE>545</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>26819</DEFECTCODE>
+    <DESCRIPTION>Unannotated fallthrough between switch labels (es.78).</DESCRIPTION>
+    <FUNCTION>SDL_memset4</FUNCTION>
+    <DECORATED>SDL_memset4</DECORATED>
+    <FUNCLINE>525</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\44791\OneDrive - University of Kent\SDL_headers\SDL2\include\</FILEPATH>
+      <FILENAME>SDL_stdinc.h</FILENAME>
+      <LINE>546</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>26819</DEFECTCODE>
+    <DESCRIPTION>Unannotated fallthrough between switch labels (es.78).</DESCRIPTION>
+    <FUNCTION>SDL_memset4</FUNCTION>
+    <DECORATED>SDL_memset4</DECORATED>
+    <FUNCLINE>525</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\44791\OneDrive - University of Kent\SDL_headers\SDL2\include\</FILEPATH>
+      <FILENAME>SDL_stdinc.h</FILENAME>
+      <LINE>547</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>26819</DEFECTCODE>
+    <DESCRIPTION>Unannotated fallthrough between switch labels (es.78).</DESCRIPTION>
+    <FUNCTION>SDL_memset4</FUNCTION>
+    <DECORATED>SDL_memset4</DECORATED>
+    <FUNCLINE>525</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\44791\source\repos\macgyver_v1\MacGyver\</FILEPATH>
+      <FILENAME>Scene.cpp</FILENAME>
+      <LINE>4</LINE>
+      <COLUMN>30</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Macgyver::Gameobjects::Scene::scene_RENDERER' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Macgyver::Gameobjects::Scene::{ctor}</FUNCTION>
+    <DECORATED>??0Scene@Gameobjects@Macgyver@@QEAA@XZ</DECORATED>
+    <FUNCLINE>4</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Macgyver::Gameobjects::Scene::scene_RENDERER</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\44791\source\repos\macgyver_v1\MacGyver\</FILEPATH>
+      <FILENAME>Scene.cpp</FILENAME>
+      <LINE>4</LINE>
+      <COLUMN>30</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Macgyver::Gameobjects::Scene::physicsGravImpactingCache' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Macgyver::Gameobjects::Scene::{ctor}</FUNCTION>
+    <DECORATED>??0Scene@Gameobjects@Macgyver@@QEAA@XZ</DECORATED>
+    <FUNCLINE>4</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Macgyver::Gameobjects::Scene::physicsGravImpactingCache</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\44791\OneDrive - University of Kent\SDL_headers\SDL2\include\</FILEPATH>
+      <FILENAME>SDL_stdinc.h</FILENAME>
+      <LINE>544</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>26819</DEFECTCODE>
+    <DESCRIPTION>Unannotated fallthrough between switch labels (es.78).</DESCRIPTION>
+    <FUNCTION>SDL_memset4</FUNCTION>
+    <DECORATED>SDL_memset4</DECORATED>
+    <FUNCLINE>525</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\44791\OneDrive - University of Kent\SDL_headers\SDL2\include\</FILEPATH>
+      <FILENAME>SDL_stdinc.h</FILENAME>
+      <LINE>545</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>26819</DEFECTCODE>
+    <DESCRIPTION>Unannotated fallthrough between switch labels (es.78).</DESCRIPTION>
+    <FUNCTION>SDL_memset4</FUNCTION>
+    <DECORATED>SDL_memset4</DECORATED>
+    <FUNCLINE>525</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\44791\OneDrive - University of Kent\SDL_headers\SDL2\include\</FILEPATH>
+      <FILENAME>SDL_stdinc.h</FILENAME>
+      <LINE>546</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>26819</DEFECTCODE>
+    <DESCRIPTION>Unannotated fallthrough between switch labels (es.78).</DESCRIPTION>
+    <FUNCTION>SDL_memset4</FUNCTION>
+    <DECORATED>SDL_memset4</DECORATED>
+    <FUNCLINE>525</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\44791\OneDrive - University of Kent\SDL_headers\SDL2\include\</FILEPATH>
+      <FILENAME>SDL_stdinc.h</FILENAME>
+      <LINE>547</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>26819</DEFECTCODE>
+    <DESCRIPTION>Unannotated fallthrough between switch labels (es.78).</DESCRIPTION>
+    <FUNCTION>SDL_memset4</FUNCTION>
+    <DECORATED>SDL_memset4</DECORATED>
+    <FUNCLINE>525</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\44791\source\repos\macgyver_v1\MacGyver\</FILEPATH>
+      <FILENAME>Physics2D.cpp</FILENAME>
+      <LINE>5</LINE>
+      <COLUMN>37</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Macgyver::Components::Physics2DData::collider' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Macgyver::Components::Physics2DData::{ctor}</FUNCTION>
+    <DECORATED>??0Physics2DData@Components@Macgyver@@QEAA@XZ</DECORATED>
+    <FUNCLINE>5</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Macgyver::Components::Physics2DData::collider</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\44791\source\repos\macgyver_v1\MacGyver\</FILEPATH>
+      <FILENAME>Physics2D.cpp</FILENAME>
+      <LINE>5</LINE>
+      <COLUMN>37</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Macgyver::Components::Physics2DData::mass' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Macgyver::Components::Physics2DData::{ctor}</FUNCTION>
+    <DECORATED>??0Physics2DData@Components@Macgyver@@QEAA@XZ</DECORATED>
+    <FUNCLINE>5</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Macgyver::Components::Physics2DData::mass</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

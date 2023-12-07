@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\44791\OneDrive - University of Kent\SDL_headers\SDL2\include\</FILEPATH>
+      <FILENAME>SDL_stdinc.h</FILENAME>
+      <LINE>544</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>26819</DEFECTCODE>
+    <DESCRIPTION>Unannotated fallthrough between switch labels (es.78).</DESCRIPTION>
+    <FUNCTION>SDL_memset4</FUNCTION>
+    <DECORATED>SDL_memset4</DECORATED>
+    <FUNCLINE>525</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\44791\OneDrive - University of Kent\SDL_headers\SDL2\include\</FILEPATH>
+      <FILENAME>SDL_stdinc.h</FILENAME>
+      <LINE>545</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>26819</DEFECTCODE>
+    <DESCRIPTION>Unannotated fallthrough between switch labels (es.78).</DESCRIPTION>
+    <FUNCTION>SDL_memset4</FUNCTION>
+    <DECORATED>SDL_memset4</DECORATED>
+    <FUNCLINE>525</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\44791\OneDrive - University of Kent\SDL_headers\SDL2\include\</FILEPATH>
+      <FILENAME>SDL_stdinc.h</FILENAME>
+      <LINE>546</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>26819</DEFECTCODE>
+    <DESCRIPTION>Unannotated fallthrough between switch labels (es.78).</DESCRIPTION>
+    <FUNCTION>SDL_memset4</FUNCTION>
+    <DECORATED>SDL_memset4</DECORATED>
+    <FUNCLINE>525</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\44791\OneDrive - University of Kent\SDL_headers\SDL2\include\</FILEPATH>
+      <FILENAME>SDL_stdinc.h</FILENAME>
+      <LINE>547</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>26819</DEFECTCODE>
+    <DESCRIPTION>Unannotated fallthrough between switch labels (es.78).</DESCRIPTION>
+    <FUNCTION>SDL_memset4</FUNCTION>
+    <DECORATED>SDL_memset4</DECORATED>
+    <FUNCLINE>525</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\44791\source\repos\macgyver_v1\MacGyver\</FILEPATH>
+      <FILENAME>Renderable.cpp</FILENAME>
+      <LINE>4</LINE>
+      <COLUMN>38</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Macgyver::Components::RenderableData::texture' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Macgyver::Components::RenderableData::{ctor}</FUNCTION>
+    <DECORATED>??0RenderableData@Components@Macgyver@@QEAA@PEAVComponent@Gameobjects@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@HH@Z</DECORATED>
+    <FUNCLINE>4</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Macgyver::Components::RenderableData::texture</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\44791\source\repos\macgyver_v1\MacGyver\</FILEPATH>
+      <FILENAME>Renderable.cpp</FILENAME>
+      <LINE>4</LINE>
+      <COLUMN>38</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Macgyver::Components::RenderableData::rect' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Macgyver::Components::RenderableData::{ctor}</FUNCTION>
+    <DECORATED>??0RenderableData@Components@Macgyver@@QEAA@PEAVComponent@Gameobjects@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@HH@Z</DECORATED>
+    <FUNCLINE>4</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Macgyver::Components::RenderableData::rect</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

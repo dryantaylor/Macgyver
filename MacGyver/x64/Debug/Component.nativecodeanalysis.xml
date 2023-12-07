@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\44791\OneDrive - University of Kent\SDL_headers\SDL2\include\</FILEPATH>
+      <FILENAME>SDL_stdinc.h</FILENAME>
+      <LINE>544</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>26819</DEFECTCODE>
+    <DESCRIPTION>Unannotated fallthrough between switch labels (es.78).</DESCRIPTION>
+    <FUNCTION>SDL_memset4</FUNCTION>
+    <DECORATED>SDL_memset4</DECORATED>
+    <FUNCLINE>525</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\44791\OneDrive - University of Kent\SDL_headers\SDL2\include\</FILEPATH>
+      <FILENAME>SDL_stdinc.h</FILENAME>
+      <LINE>545</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>26819</DEFECTCODE>
+    <DESCRIPTION>Unannotated fallthrough between switch labels (es.78).</DESCRIPTION>
+    <FUNCTION>SDL_memset4</FUNCTION>
+    <DECORATED>SDL_memset4</DECORATED>
+    <FUNCLINE>525</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\44791\OneDrive - University of Kent\SDL_headers\SDL2\include\</FILEPATH>
+      <FILENAME>SDL_stdinc.h</FILENAME>
+      <LINE>546</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>26819</DEFECTCODE>
+    <DESCRIPTION>Unannotated fallthrough between switch labels (es.78).</DESCRIPTION>
+    <FUNCTION>SDL_memset4</FUNCTION>
+    <DECORATED>SDL_memset4</DECORATED>
+    <FUNCLINE>525</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\44791\OneDrive - University of Kent\SDL_headers\SDL2\include\</FILEPATH>
+      <FILENAME>SDL_stdinc.h</FILENAME>
+      <LINE>547</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>26819</DEFECTCODE>
+    <DESCRIPTION>Unannotated fallthrough between switch labels (es.78).</DESCRIPTION>
+    <FUNCTION>SDL_memset4</FUNCTION>
+    <DECORATED>SDL_memset4</DECORATED>
+    <FUNCLINE>525</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\44791\source\repos\macgyver_v1\MacGyver\</FILEPATH>
+      <FILENAME>Component.cpp</FILENAME>
+      <LINE>7</LINE>
+      <COLUMN>34</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Macgyver::Gameobjects::Component::data' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Macgyver::Gameobjects::Component::{ctor}</FUNCTION>
+    <DECORATED>??0Component@Gameobjects@Macgyver@@QEAA@XZ</DECORATED>
+    <FUNCLINE>7</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Macgyver::Gameobjects::Component::data</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\44791\source\repos\macgyver_v1\MacGyver\</FILEPATH>
+      <FILENAME>Component.cpp</FILENAME>
+      <LINE>7</LINE>
+      <COLUMN>34</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Macgyver::Gameobjects::Component::parent' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Macgyver::Gameobjects::Component::{ctor}</FUNCTION>
+    <DECORATED>??0Component@Gameobjects@Macgyver@@QEAA@XZ</DECORATED>
+    <FUNCLINE>7</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Macgyver::Gameobjects::Component::parent</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\44791\source\repos\macgyver_v1\MacGyver\</FILEPATH>
+      <FILENAME>Component.cpp</FILENAME>
+      <LINE>12</LINE>
+      <COLUMN>34</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Macgyver::Gameobjects::Component::data' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Macgyver::Gameobjects::Component::{ctor}</FUNCTION>
+    <DECORATED>??0Component@Gameobjects@Macgyver@@QEAA@PEAI_KV?$function@$$A6AXPEAVComponent@Gameobjects@Macgyver@@I@Z@std@@@Z</DECORATED>
+    <FUNCLINE>12</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Macgyver::Gameobjects::Component::data</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\44791\source\repos\macgyver_v1\MacGyver\</FILEPATH>
+      <FILENAME>Component.cpp</FILENAME>
+      <LINE>12</LINE>
+      <COLUMN>34</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Macgyver::Gameobjects::Component::parent' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Macgyver::Gameobjects::Component::{ctor}</FUNCTION>
+    <DECORATED>??0Component@Gameobjects@Macgyver@@QEAA@PEAI_KV?$function@$$A6AXPEAVComponent@Gameobjects@Macgyver@@I@Z@std@@@Z</DECORATED>
+    <FUNCLINE>12</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Macgyver::Gameobjects::Component::parent</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>
