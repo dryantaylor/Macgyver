@@ -27,13 +27,14 @@ void Components::Camera::Draw(Gameobjects::Component* self)
 		self->getWorldScene()->getComponentsInWorldByType(RENDERABLE);
 	
 	SDL_Renderer* renderer = self->getWorldScene()->scene_RENDERER;
+	std::size_t dataTypeHash = typeid(RenderableData).hash_code();
 	for (Gameobjects::Component* comp : renderables) {
 		Math::Vector3 cameraSpace = convertToCameraSpace(self,comp);
 		
 		//by declaring a component renderable we are commiting to having
 		//a RenderableData Struct
 		Components::RenderableData* data =
-			(Components::RenderableData*)(comp->data);
+			(Components::RenderableData*)(comp->getData(dataTypeHash));
 		if (-(data->rect.w) < cameraSpace.x && cameraSpace.x <= Globals::SCREEN_WIDTH 
 		 && -(data->rect.h) < cameraSpace.y && cameraSpace.y <=Globals::SCREEN_HEIGHT){
 			
@@ -58,15 +59,5 @@ void Components::Camera::AttachNew(Gameobjects::Component* comp)
 
 }
 
-//update to use the attachNew format
-Gameobjects::Component* Components::Camera::CreateNew()
-{
-	COMPONENT_TYPE types[1] = { RENDERER };
-	Gameobjects::Component* comp =
-		new Gameobjects::Component((unsigned int*)types, 1, 
-			update);
-	
-	return comp;
-}
 
 

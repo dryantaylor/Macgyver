@@ -139,6 +139,7 @@
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Component.cpp" />
+    <ClCompile Include="ComponentDataWrapper.cpp" />
     <ClCompile Include="ComponentManager.cpp" />
     <ClCompile Include="Force2D.cpp" />
     <ClCompile Include="GameObject.cpp" />
@@ -156,6 +157,7 @@
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="ComponentData.h" />
+    <ClInclude Include="ComponentDataWrapper.h" />
     <ClInclude Include="ComponentManager.h" />
     <ClInclude Include="Force2D.h" />
     <ClInclude Include="GameObject.h" />

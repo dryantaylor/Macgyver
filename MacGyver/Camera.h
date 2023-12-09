@@ -14,7 +14,6 @@ namespace Macgyver::Components {
 		static Math::Vector3 convertToCameraSpace(Gameobjects::Component* self, Gameobjects::Component* comp);
 		
 		static void AttachNew(Gameobjects::Component* comp);
-		static Macgyver::Gameobjects::Component* CreateNew();
 	};
 
 	

@@ -93,6 +93,9 @@
     <ClCompile Include="Force2D.cpp">
       <Filter>Source Files\Engine\Math</Filter>
     </ClCompile>
+    <ClCompile Include="ComponentDataWrapper.cpp">
+      <Filter>Source Files\Engine\Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vector3.h">
@@ -136,6 +139,9 @@
     </ClInclude>
     <ClInclude Include="Input.h">
       <Filter>Header Files\Engine\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentDataWrapper.h">
+      <Filter>Header Files\Engine\Components</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

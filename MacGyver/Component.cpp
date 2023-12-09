@@ -8,14 +8,14 @@ using namespace Macgyver;
 
 Gameobjects::Component::Component()
 {
-    data = nullptr;
+    data = std::vector<Components::ComponentDataWrapper*>();
     parent = nullptr;
 }
 
 Gameobjects::Component::Component(COMPONENT_TYPE* types, size_t typesSize,
     std::function<void(Component*, unsigned int)> updateFunction)
 {
-    data = nullptr;
+    data = std::vector<Components::ComponentDataWrapper*>();
     this->parent = nullptr;
     this->update = updateFunction;
     for (int i = 0; i < typesSize; i++) {
@@ -28,9 +28,20 @@ Gameobjects::GameObject* Gameobjects::Component::getParent()
     return parent;
 }
 
-void Gameobjects::Component::addData(Components::ComponentData* data)
+void Gameobjects::Component::addData(Components::ComponentData* data,std::size_t dataTypeHash)
 {
-    this->data = data;
+    this->data.push_back(
+        new Components::ComponentDataWrapper(dataTypeHash, data));
+}
+
+Components::ComponentData* Macgyver::Gameobjects::Component::getData(std::size_t dataTypeHash)
+{
+    for (Components::ComponentDataWrapper* wrapper : data) {
+        if (wrapper->type == dataTypeHash) {
+            return wrapper->data;
+        }
+    }
+    return nullptr;
 }
 
 COMPONENT_TYPE Gameobjects::Component::getComponentProperties()

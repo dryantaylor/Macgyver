@@ -36,6 +36,7 @@ void Components::Renderable::AttachNew(Gameobjects::Component* comp, std::string
 {
 	comp->setComponentProperties(RENDERABLE);
 	comp->update = Renderable::update;
-	comp->addData((ComponentData*) new RenderableData(comp, path, width, height));
+	comp->addData((ComponentData*) new RenderableData(comp, path, width, height),
+		typeid(RenderableData).hash_code());
 	
 }

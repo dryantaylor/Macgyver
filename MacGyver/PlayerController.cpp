@@ -9,7 +9,8 @@ void DemoProject::PlayerController::update(Macgyver::Gameobjects::Component* sel
 		speed = 300;
 	}
 	Math::Force2D velocity(0, 0);
-	Components::Physics2DData* data = (Components::Physics2DData*)(self->data);
+	Components::Physics2DData* data = (Components::Physics2DData*)
+		(self->getData(typeid(Components::Physics2DData).hash_code()));
 	if (Input::isKeyDown(SDLK_w)) {
 		velocity.y += 1;
 	}
@@ -32,6 +33,7 @@ void DemoProject::PlayerController::attachNew(Macgyver::Gameobjects::Component* 
 	comp->update = PlayerController::update;
 	comp->physicsUpdate = Macgyver::Components::Velocity::physicsUpdate;
 	comp->addData((Macgyver::Components::ComponentData*)
-		new Macgyver::Components::Physics2DData());
+		new Macgyver::Components::Physics2DData(), 
+		typeid(Components::Physics2DData).hash_code());
 
 }

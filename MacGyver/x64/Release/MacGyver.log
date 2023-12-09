@@ -1,0 +1,46 @@
+﻿  Camera.cpp
+  Component.cpp
+C:\Users\44791\source\repos\macgyver_v1\MacGyver\Scene.h(2,10): error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  (compiling source file 'Camera.cpp')
+  
+C:\Users\44791\source\repos\macgyver_v1\MacGyver\Scene.h(2,10): error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  (compiling source file 'Component.cpp')
+  
+  ComponentDataWrapper.cpp
+C:\Users\44791\source\repos\macgyver_v1\MacGyver\Scene.h(2,10): error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  (compiling source file 'ComponentDataWrapper.cpp')
+  
+  ComponentManager.cpp
+  Force2D.cpp
+  GameObject.cpp
+C:\Users\44791\source\repos\macgyver_v1\MacGyver\Scene.h(2,10): error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  (compiling source file 'GameObject.cpp')
+  
+  Globals.cpp
+  Input.cpp
+C:\Users\44791\source\repos\macgyver_v1\MacGyver\Input.h(2,10): error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  (compiling source file 'Input.cpp')
+  
+  main.cpp
+C:\Users\44791\source\repos\macgyver_v1\MacGyver\main.cpp(4,10): error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  Physics2D.cpp
+C:\Users\44791\source\repos\macgyver_v1\MacGyver\Physics2D.h(2,10): error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  (compiling source file 'Physics2D.cpp')
+  
+  PlayerController.cpp
+C:\Users\44791\source\repos\macgyver_v1\MacGyver\Scene.h(2,10): error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  (compiling source file 'PlayerController.cpp')
+  
+  Renderable.cpp
+C:\Users\44791\source\repos\macgyver_v1\MacGyver\Renderable.h(4,10): error C1083: Cannot open include file: 'SDL_image.h': No such file or directory
+  (compiling source file 'Renderable.cpp')
+  
+  Scene.cpp
+C:\Users\44791\source\repos\macgyver_v1\MacGyver\Scene.h(2,10): error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  (compiling source file 'Scene.cpp')
+  
+  Vector3.cpp
+  Velocity.cpp
+C:\Users\44791\source\repos\macgyver_v1\MacGyver\Physics2D.h(2,10): error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  (compiling source file 'Velocity.cpp')
+  
