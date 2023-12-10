@@ -40,9 +40,14 @@ void Gameobjects::Scene::update(unsigned int deltaTime)
 void Macgyver::Gameobjects::Scene::physicsUpdate(unsigned int deltaTime)
 {
 	physicsTick += deltaTime;
-	//20 ticks = 1/50th of a second, physics update runs 50 times per second
-	if (physicsTick >= 20) {
+	//while loop used to account for sudden frame spikes
+	while (true){
+		//20 ticks = 1/50th of a second, physics update runs 50 times per second
+		if (physicsTick < 20) {
+			return;
+		}
 		physicsTick -= 20;
+		//std::cout << tick << std::endl;
 		if (physicsGravImpactingCache != nullptr) {
 			physicsGravImpactingCache->physicsUpdate(physicsGravImpactingCache);
 		}
@@ -55,7 +60,7 @@ void Macgyver::Gameobjects::Scene::physicsUpdate(unsigned int deltaTime)
 		for (Component* comp : physicsColliderCache) {
 			comp->physicsUpdate(comp);
 		}
-
+		
 	}
 	
 }

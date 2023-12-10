@@ -12,17 +12,6 @@ Gameobjects::Component::Component()
     parent = nullptr;
 }
 
-Gameobjects::Component::Component(COMPONENT_TYPE* types, size_t typesSize,
-    std::function<void(Component*, unsigned int)> updateFunction)
-{
-    data = std::vector<Components::ComponentDataWrapper*>();
-    this->parent = nullptr;
-    this->update = updateFunction;
-    for (int i = 0; i < typesSize; i++) {
-        this->componentProperties &= types[i];
-    }
-}
-
 Gameobjects::GameObject* Gameobjects::Component::getParent()
 {
     return parent;

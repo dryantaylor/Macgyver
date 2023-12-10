@@ -4,9 +4,9 @@
 using namespace Macgyver;
 void DemoProject::PlayerController::update(Macgyver::Gameobjects::Component* self, unsigned int deltaTime)
 {
-	int speed = 150;
+	float speed = 150;
 	if (Input::isKeyDown(SDLK_LSHIFT)) {
-		speed = 300;
+		speed *= 2;
 	}
 	Math::Force2D velocity(0, 0);
 	Components::Physics2DData* data = (Components::Physics2DData*)

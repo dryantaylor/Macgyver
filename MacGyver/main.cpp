@@ -31,8 +31,6 @@ SDL_Renderer* c_RENDERER;
 
 int main(int argc, char* argv[])
 {
-	//TODO LIST:
-	//multiple Data structs per component with appropriate managers
 
 	//NOTE: FULLSCREEN RESOLOUTION DOES NOT WORK WITH SCALED DISPLAYS!
 	Globals::SCREEN_WIDTH = 1280;
