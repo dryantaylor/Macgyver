@@ -23,6 +23,8 @@ Math::Vector3 Components::Camera::convertToCameraSpace(Gameobjects::Component* s
 
 void Components::Camera::Draw(Gameobjects::Component* self)
 {
+
+	
 	std::vector<Gameobjects::Component*> renderables = 
 		self->getWorldScene()->getComponentsInWorldByType(RENDERABLE);
 	

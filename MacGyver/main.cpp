@@ -29,6 +29,45 @@ extern int Globals::SCREEN_HEIGHT;
 SDL_Window* WINDOW;
 SDL_Renderer* c_RENDERER;
 
+
+#include<algorithm>
+void DEBUG_PROFILE_FRAMETIMES(unsigned int* frames, std::size_t numFrames) 
+{
+	std::sort(frames, frames + numFrames);
+	unsigned long sum = 0;
+	unsigned long above10 = 0;
+	unsigned long above25 = 0;
+	unsigned long above50 = 0;
+	unsigned long above100 = 0;
+	for (int i = 0; i < numFrames; i++) {
+		sum += frames[i];
+		if (frames[i] > 100) {
+			above100++;
+		}
+		else if (frames[i] > 50) {
+			above50++;
+		}
+		else if (frames[i] > 25) {
+			above25++;
+		}
+		else if (frames[i] > 10){
+			above10++;
+		}
+	}
+	std::cout << "Mean Frame Time: " << sum / double(numFrames) << std::endl;
+	std::cout << "Frames between 1-10ms: " << numFrames - above10 - above25 - above50 - above100 << std::endl;
+	std::cout << "Frames between 11-25ms: " << above10 << std::endl;
+	std::cout << "Frames between 26-50ms: " << above25 << std::endl;
+	std::cout << "Frames between 51-100ms: " << above50 << std::endl;
+	std::cout << "Frames  > 100ms : " << above100 << std::endl;
+	std::cout << "Lowest frame time: " << frames[0] << std::endl;
+	std::cout << "Median Frame time : " << frames[((numFrames + 1) / 2) -1] << std::endl;
+	std::cout << "90th %tile Frame time: " << frames[(numFrames / 10 * 9) - 1] << std::endl;
+	std::cout << "99th %tile Frame time: " << frames[(numFrames / 100 * 99) -1] << std::endl;
+	std::cout << "Highest Frame: " << frames[numFrames - 2] << std::endl;
+
+}
+
 int main(int argc, char* argv[])
 {
 
@@ -122,11 +161,14 @@ int main(int argc, char* argv[])
 	unsigned int curr_time;
 	SDL_Event e;
 	running = true;
-	while (running)
+	unsigned int frames[10000];
+	int index = 0;
+	while (index < 10000)
 	{
 		curr_time = SDL_GetTicks();
-		deltaTime = std::max(curr_time - last_time, (unsigned int)1);
-
+		deltaTime = std::max(curr_time - last_time, (unsigned int)0);
+		frames[index] = deltaTime;
+		index++;
 		/*
 		* handle events within the while loop
 		*/
@@ -149,7 +191,8 @@ int main(int argc, char* argv[])
 		*/
 		sc.physicsUpdate(deltaTime);
 		sc.update(deltaTime);
-
+		//std::cout << deltaTime << std::endl;
+		//std::cout << index << std::endl;
 		SDL_RenderPresent(c_RENDERER);
 		last_time = curr_time;
 	}
@@ -166,5 +209,9 @@ int main(int argc, char* argv[])
 
 	//Quit SDL subsystems
 	SDL_Quit();
+
+	unsigned int* framesPointer = frames;
+	DEBUG_PROFILE_FRAMETIMES(framesPointer, 10000);
+	
 	return 0;
 }

@@ -4,10 +4,8 @@
 using namespace Macgyver;
 void DemoProject::PlayerController::update(Macgyver::Gameobjects::Component* self, unsigned int deltaTime)
 {
-	float speed = 150;
-	if (Input::isKeyDown(SDLK_LSHIFT)) {
-		speed *= 2;
-	}
+	PlayerControllerData* playerData = 
+	(PlayerControllerData*)(self->getData(1));
 	Math::Force2D velocity(0, 0);
 	Components::Physics2DData* data = (Components::Physics2DData*)
 		(self->getData(typeid(Components::Physics2DData).hash_code()));
@@ -23,7 +21,12 @@ void DemoProject::PlayerController::update(Macgyver::Gameobjects::Component* sel
 	if (Input::isKeyDown(SDLK_d)) {
 		velocity.x += 1;
 	}
-	velocity.scaleToMagnitude(speed);
+	if (Input::isKeyDown(SDLK_LSHIFT)) {
+		velocity.scaleToMagnitude(playerData->sprintSpeed);
+	}
+	else {
+		velocity.scaleToMagnitude(playerData->walkSpeed);
+	}
 	data->velocity = velocity;
 }
 
@@ -35,5 +38,9 @@ void DemoProject::PlayerController::attachNew(Macgyver::Gameobjects::Component* 
 	comp->addData((Macgyver::Components::ComponentData*)
 		new Macgyver::Components::Physics2DData(), 
 		typeid(Components::Physics2DData).hash_code());
+
+	comp->addData((Macgyver::Components::ComponentData*)
+		new PlayerControllerData(),
+		typeid(PlayerControllerData).hash_code());
 
 }

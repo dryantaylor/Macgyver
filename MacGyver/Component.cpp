@@ -33,6 +33,11 @@ Components::ComponentData* Macgyver::Gameobjects::Component::getData(std::size_t
     return nullptr;
 }
 
+Components::ComponentData* Macgyver::Gameobjects::Component::getData(int index)
+{
+    return data.at(index)->data;
+}
+
 COMPONENT_TYPE Gameobjects::Component::getComponentProperties()
 {
     return this->componentProperties;

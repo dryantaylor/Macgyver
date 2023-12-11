@@ -57,6 +57,7 @@ namespace Macgyver::Gameobjects{
 		*/
 		Components::ComponentData* getData(std::size_t dataTypeHash);
 
+		Components::ComponentData* getData(int index);
 		/*
 		Gets the flags/properties/types this component has set as a Uint
 
