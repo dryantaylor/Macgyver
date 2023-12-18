@@ -1,6 +1,8 @@
 #include "PlayerController.h"
 #include "Input.h"
 #include "Force2D.h"
+#include "ComponentManager.h"
+#include "AnimationManager.h"
 using namespace Macgyver;
 void DemoProject::PlayerController::update(Macgyver::Gameobjects::Component* self, unsigned int deltaTime)
 {
@@ -21,13 +23,27 @@ void DemoProject::PlayerController::update(Macgyver::Gameobjects::Component* sel
 	if (Input::isKeyDown(SDLK_d)) {
 		velocity.x += 1;
 	}
-	if (Input::isKeyDown(SDLK_LSHIFT)) {
-		velocity.scaleToMagnitude(playerData->sprintSpeed);
+	if (velocity.x != 0) {
+		if (Input::isKeyDown(SDLK_LSHIFT)) {
+			velocity.scaleToMagnitude(playerData->sprintSpeed);
+			((Macgyver::Components::AnimationManagerData*)(self->getParent()
+				->getComponentsWithProperty(Components::ANIMATION)
+				.at(0)->getData(0)))->setActiveAnimation("run");
+		}
+		else {
+			((Macgyver::Components::AnimationManagerData*)(self->getParent()
+				->getComponentsWithProperty(Components::ANIMATION)
+				.at(0)->getData(0)))->setActiveAnimation("walk");
+			velocity.scaleToMagnitude(playerData->walkSpeed);
+		}
 	}
 	else {
-		velocity.scaleToMagnitude(playerData->walkSpeed);
+		((Macgyver::Components::AnimationManagerData*)(self->getParent()
+			->getComponentsWithProperty(Components::ANIMATION)
+			.at(0)->getData(0)))->setActiveAnimation("idle");
 	}
 	data->velocity = velocity;
+	
 }
 
 void DemoProject::PlayerController::attachNew(Macgyver::Gameobjects::Component* comp)

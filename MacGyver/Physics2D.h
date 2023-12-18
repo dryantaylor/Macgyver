@@ -20,5 +20,6 @@ namespace Macgyver::Components {
 		Math::Force2D velocity;
 		/// mass of the object
 		float mass; 
+		bool isMoveable;
 	};
 }

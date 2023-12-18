@@ -137,7 +137,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AnimationHelpers.cpp" />
+    <ClCompile Include="AnimationManager.cpp" />
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Collider.cpp" />
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="ComponentDataWrapper.cpp" />
     <ClCompile Include="ComponentManager.cpp" />
@@ -154,7 +157,10 @@
     <ClCompile Include="Velocity.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AnimationHelpers.h" />
+    <ClInclude Include="AnimationManager.h" />
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="Collider.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="ComponentData.h" />
     <ClInclude Include="ComponentDataWrapper.h" />

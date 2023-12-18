@@ -1,5 +1,5 @@
 #include "Vector3.h"
-
+#include "Force2D.h"
 //using namespace Macgyver::Math;
 
 Macgyver::Math::Vector3::Vector3(float x , float y, float z) {
@@ -50,6 +50,11 @@ Macgyver::Math::Vector3& Macgyver::Math::Vector3::operator+=(const Macgyver::Mat
 	this->y += a.y;
 	this->z += a.z;
 	return *this;
+}
+
+Macgyver::Math::Force2D Macgyver::Math::Vector3::copyToForce2D()
+{
+	return Force2D(this->x, this->y);
 }
 
 std::ostream& operator<<(std::ostream& os, const Macgyver::Math::Vector3& v)

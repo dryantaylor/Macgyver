@@ -1,14 +1,15 @@
 #pragma once
 #include <iostream>
 
-namespace Macgyver::Math{
+namespace Macgyver::Math {
+	class Force2D;
 	/*
 	Class to represent a 3 dimensional vector
 	x -> represents horizontal
 	y -> represents vertical
 	z -> represents distance to the camera
 	*/
-	class Vector3 {
+	class Vector3{
 	public:
 		float x, y, z;
 		/*
@@ -23,6 +24,7 @@ namespace Macgyver::Math{
 		Vector3 operator*(const float b);
 		Vector3 operator/(const float b);
 		Vector3& operator+=(const Vector3& a);
+		Force2D copyToForce2D();
 		//friend std::ostream& operator<<(std::ostream& os, const Vector3& v);
 
 	};

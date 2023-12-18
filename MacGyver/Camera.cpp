@@ -32,7 +32,6 @@ void Components::Camera::Draw(Gameobjects::Component* self)
 	std::size_t dataTypeHash = typeid(RenderableData).hash_code();
 	for (Gameobjects::Component* comp : renderables) {
 		Math::Vector3 cameraSpace = convertToCameraSpace(self,comp);
-		
 		//by declaring a component renderable we are commiting to having
 		//a RenderableData Struct
 		Components::RenderableData* data =

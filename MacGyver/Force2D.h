@@ -15,6 +15,8 @@ namespace Macgyver::Math {
 		@param y y-value for the vector, default 0
 		*/
 		Force2D(float x = 0, float y = 0);
+
+		Force2D operator+(const Force2D& a);
 		/*
 		Gets the magnitude of the vector 
 		(i.e the length if a direct line was drawn 
@@ -52,6 +54,9 @@ namespace Macgyver::Math {
 
 		@param num number to multiply the vector by
 		*/
-		void scalerMultiply(float num);
+		void scalarMultiply(float num);
+
+		Math::Force2D returnScalarMultiply(float num);
+		
 	};
 }

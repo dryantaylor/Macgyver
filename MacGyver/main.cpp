@@ -20,6 +20,7 @@
 //extra components imports
 #include "PlayerController.h"
 
+#include "AnimationManager.h"
 
 
 using namespace Macgyver;
@@ -70,7 +71,7 @@ void DEBUG_PROFILE_FRAMETIMES(unsigned int* frames, std::size_t numFrames)
 
 int main(int argc, char* argv[])
 {
-
+	
 	//NOTE: FULLSCREEN RESOLOUTION DOES NOT WORK WITH SCALED DISPLAYS!
 	Globals::SCREEN_WIDTH = 1280;
 	Globals::SCREEN_HEIGHT = 720;
@@ -126,30 +127,56 @@ int main(int argc, char* argv[])
 	* MAIN GAME, CREATE ALL DATA BEFORE THE WHILE LOOP
 	* CALL ALL UPDATES AND DRAWING WITHIN THE WHILE LOOP
 	*/
+	
 	Gameobjects::Scene sc = Gameobjects::Scene();
 	sc.scene_RENDERER = c_RENDERER;
 
-	Gameobjects::GameObject cam = Gameobjects::GameObject();
-	sc.addObject(&cam);
 
-	Gameobjects::Component camera = Gameobjects::Component();
-	cam.addComponent(&camera);
-	Components::Camera::AttachNew(&camera);
+	Gameobjects::GameObject animatedPlayer = Gameobjects::GameObject();
+	sc.addObject(&animatedPlayer);
 
-	Gameobjects::GameObject player = Gameobjects::GameObject();
-	sc.addObject(&player);
+	Gameobjects::Component animation;
 
-	Gameobjects::Component renderable = Gameobjects::Component();
-	player.addComponent(&renderable);
-	Components::Renderable::AttachNew(&renderable, "\\_Idle.png", 150, 200);
-	player.transform.x = 100;
-	player.transform.y = -100;
+	animatedPlayer.addComponent(&animation);
 
-	Gameobjects::Component playerController = Gameobjects::Component();
-	player.addComponent(&playerController);
+	Macgyver::Components::AnimationManager::AttachNew(&animation,"");
+
+	Components::AnimationManagerData* data = 
+		(Components::AnimationManagerData*) animation.getData(0);
+
+	data->animations.insert({ "idle", new Components::AnimationData(&animation,
+		"/Animations/Idle") });
+
+	data->animations.insert({ "run",
+		new Components::AnimationData(&animation, "/Animations/Run") });
+	data->animations.insert({ "walk",
+		new Components::AnimationData(&animation, "/Animations/Walk") });
+	data->idleAnimation = data->animations.at("idle");
+	data->activeAnimation = data->idleAnimation;
+
+	Gameobjects::Component sprite;
+	animatedPlayer.addComponent(&sprite);
+
+	Components::Renderable::AttachNew(&sprite, "", 150, 200);
+	
+	data->attachedRenderable = (Components::RenderableData*)
+		sprite.getData(
+			typeid(Components::RenderableData).hash_code());
+
+	Gameobjects::Component playerController;
+	animatedPlayer.addComponent(&playerController);
 	DemoProject::PlayerController::attachNew(&playerController);
 
+	animatedPlayer.transform.x = 100;
+	animatedPlayer.transform.y = -100;
+
+	Gameobjects::GameObject cam = Gameobjects::GameObject();
 	sc.addObject(&cam);
+	Gameobjects::Component c;
+	cam.addComponent(&c);
+	Components::Camera::AttachNew(&c);
+
+
 
 	
 
@@ -161,14 +188,10 @@ int main(int argc, char* argv[])
 	unsigned int curr_time;
 	SDL_Event e;
 	running = true;
-	unsigned int frames[10000];
-	int index = 0;
-	while (index < 10000)
+	while (running)
 	{
 		curr_time = SDL_GetTicks();
-		deltaTime = std::max(curr_time - last_time, (unsigned int)0);
-		frames[index] = deltaTime;
-		index++;
+		deltaTime = std::max(curr_time - last_time, (unsigned int)1);
 		/*
 		* handle events within the while loop
 		*/
@@ -185,14 +208,13 @@ int main(int argc, char* argv[])
 		Input::update();
 		
 		SDL_RenderClear(c_RENDERER);
-
+		//SDL_RenderCopy(c_RENDERER, data->activeAnimation->sprites[0], NULL, NULL);
+		//SDL_RenderCopy(c_RENDERER, test, &srcRect, &dstRect);
 		/*
 		* Place update then drawing code here
 		*/
-		sc.physicsUpdate(deltaTime);
+	    sc.physicsUpdate(deltaTime);
 		sc.update(deltaTime);
-		//std::cout << deltaTime << std::endl;
-		//std::cout << index << std::endl;
 		SDL_RenderPresent(c_RENDERER);
 		last_time = curr_time;
 	}
@@ -210,8 +232,8 @@ int main(int argc, char* argv[])
 	//Quit SDL subsystems
 	SDL_Quit();
 
-	unsigned int* framesPointer = frames;
-	DEBUG_PROFILE_FRAMETIMES(framesPointer, 10000);
+	//unsigned int* framesPointer = frames;
+	//DEBUG_PROFILE_FRAMETIMES(framesPointer, 10000);
 	
 	return 0;
 }

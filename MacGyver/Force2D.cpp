@@ -9,6 +9,11 @@ Math::Force2D::Force2D(float x, float y):
 
 }
 
+Math::Force2D Macgyver::Math::Force2D::operator+(const Force2D& a)
+{
+	return Force2D(this->x + a.x, this->y + a.y);
+}
+
 float Math::Force2D::magnitude()
 {
 	return std::sqrtf(x * x + y * y);
@@ -35,8 +40,13 @@ void Math::Force2D::scaleToMagnitude(float magnitude)
 	}
 }
 
-void Macgyver::Math::Force2D::scalerMultiply(float num)
+void Macgyver::Math::Force2D::scalarMultiply(float num)
 {
 	x *= num;
 	y *= num;
+}
+
+Math::Force2D Macgyver::Math::Force2D::returnScalarMultiply(float num)
+{
+	return Math::Force2D(num * this->x, num* this->y);
 }

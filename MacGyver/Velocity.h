@@ -17,7 +17,7 @@ namespace Macgyver::Components {
 		static void update(Gameobjects::Component* self ,unsigned int deltaTime);
 		
 		/*
-		Velocities physics update, updates the parent GameObject's
+		Velocity's physics update, updates the parent GameObject's
 		transform by velocity * physicsDeltaTime units each call.
 
 		@param self pointer to the Component which the Velocity is part of

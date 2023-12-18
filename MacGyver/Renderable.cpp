@@ -11,11 +11,12 @@ Components::RenderableData::RenderableData(Gameobjects::Component* self,
 	if (path != "") {
 		texture = IMG_LoadTexture(self->getWorldScene()->scene_RENDERER,
 			 (std::string(SDL_GetBasePath()) + path).c_str());
-		rect.x = 0;
-		rect.y = 0;
-		rect.w = width;
-		rect.h = height;
 	}
+
+	rect.x = 0;
+	rect.y = 0;
+	rect.w = width;
+	rect.h = height;
 	
 }
 

@@ -49,6 +49,24 @@
     <Filter Include="Header Files\Game">
       <UniqueIdentifier>{3d7c680c-a3a5-4ea7-bfa6-42e3964a4211}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Engine\Components\Images">
+      <UniqueIdentifier>{5ef78312-514c-4dad-865d-140f95a4d7aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine\Components\InternalHelperFunctions">
+      <UniqueIdentifier>{4df670ea-f7e6-432e-8a21-094b7ae0039b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine\Components\Physics">
+      <UniqueIdentifier>{d97dd051-9b3a-4d18-8d35-2851279c1781}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine\Components\Images">
+      <UniqueIdentifier>{71548349-7365-47c5-9dfd-341411e82002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine\Components\Physics">
+      <UniqueIdentifier>{5f649873-904a-477f-8f51-99ded0e90f2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine\Components\InternalHelperFunctions">
+      <UniqueIdentifier>{f82cd613-5a43-4e32-9f9a-327bc52cff5c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -59,9 +77,6 @@
     </ClCompile>
     <ClCompile Include="Globals.cpp">
       <Filter>Source Files\Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="Camera.cpp">
-      <Filter>Source Files\Engine\Components</Filter>
     </ClCompile>
     <ClCompile Include="GameObject.cpp">
       <Filter>Source Files\Engine\Gameobjects</Filter>
@@ -75,15 +90,6 @@
     <ClCompile Include="ComponentManager.cpp">
       <Filter>Source Files\Engine\Components</Filter>
     </ClCompile>
-    <ClCompile Include="Renderable.cpp">
-      <Filter>Source Files\Engine\Components</Filter>
-    </ClCompile>
-    <ClCompile Include="Velocity.cpp">
-      <Filter>Source Files\Engine\Components</Filter>
-    </ClCompile>
-    <ClCompile Include="Physics2D.cpp">
-      <Filter>Source Files\Engine\Components</Filter>
-    </ClCompile>
     <ClCompile Include="PlayerController.cpp">
       <Filter>Source Files\Game</Filter>
     </ClCompile>
@@ -95,6 +101,27 @@
     </ClCompile>
     <ClCompile Include="ComponentDataWrapper.cpp">
       <Filter>Source Files\Engine\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationManager.cpp">
+      <Filter>Source Files\Engine\Components\Images</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderable.cpp">
+      <Filter>Source Files\Engine\Components\Images</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Source Files\Engine\Components\Images</Filter>
+    </ClCompile>
+    <ClCompile Include="Physics2D.cpp">
+      <Filter>Source Files\Engine\Components\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Collider.cpp">
+      <Filter>Source Files\Engine\Components\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Velocity.cpp">
+      <Filter>Source Files\Engine\Components\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationHelpers.cpp">
+      <Filter>Source Files\Engine\Components\InternalHelperFunctions</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -113,26 +140,14 @@
     <ClInclude Include="ComponentManager.h">
       <Filter>Header Files\Engine\Components</Filter>
     </ClInclude>
-    <ClInclude Include="Camera.h">
-      <Filter>Header Files\Engine\Components</Filter>
-    </ClInclude>
     <ClInclude Include="Scene.h">
       <Filter>Header Files\Engine\Gameobjects</Filter>
-    </ClInclude>
-    <ClInclude Include="Renderable.h">
-      <Filter>Header Files\Engine\Components</Filter>
     </ClInclude>
     <ClInclude Include="ComponentData.h">
       <Filter>Header Files\Engine\Components</Filter>
     </ClInclude>
-    <ClInclude Include="Physics2D.h">
-      <Filter>Header Files\Engine\Components</Filter>
-    </ClInclude>
     <ClInclude Include="Force2D.h">
       <Filter>Header Files\Engine\Math</Filter>
-    </ClInclude>
-    <ClInclude Include="Velocity.h">
-      <Filter>Header Files\Engine\Components</Filter>
     </ClInclude>
     <ClInclude Include="PlayerController.h">
       <Filter>Header Files\Game</Filter>
@@ -142,6 +157,27 @@
     </ClInclude>
     <ClInclude Include="ComponentDataWrapper.h">
       <Filter>Header Files\Engine\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationManager.h">
+      <Filter>Header Files\Engine\Components\Images</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Header Files\Engine\Components\Images</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderable.h">
+      <Filter>Header Files\Engine\Components\Images</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider.h">
+      <Filter>Header Files\Engine\Components\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics2D.h">
+      <Filter>Header Files\Engine\Components\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Velocity.h">
+      <Filter>Header Files\Engine\Components\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationHelpers.h">
+      <Filter>Header Files\Engine\Components\InternalHelperFunctions</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
