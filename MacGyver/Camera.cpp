@@ -38,7 +38,7 @@ void Components::Camera::Draw(Gameobjects::Component* self)
 			(Components::RenderableData*)(comp->getData(dataTypeHash));
 		if (-(data->rect.w) < cameraSpace.x && cameraSpace.x <= Globals::SCREEN_WIDTH 
 		 && -(data->rect.h) < cameraSpace.y && cameraSpace.y <=Globals::SCREEN_HEIGHT){
-			
+
 			SDL_Texture* texture = data->texture;
 			data->rect.x = cameraSpace.x; //saves allocating new memory
 			data->rect.y = cameraSpace.y;

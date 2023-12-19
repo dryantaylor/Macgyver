@@ -52,9 +52,6 @@
     <Filter Include="Header Files\Engine\Components\Images">
       <UniqueIdentifier>{5ef78312-514c-4dad-865d-140f95a4d7aa}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Engine\Components\InternalHelperFunctions">
-      <UniqueIdentifier>{4df670ea-f7e6-432e-8a21-094b7ae0039b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Engine\Components\Physics">
       <UniqueIdentifier>{d97dd051-9b3a-4d18-8d35-2851279c1781}</UniqueIdentifier>
     </Filter>
@@ -64,8 +61,11 @@
     <Filter Include="Source Files\Engine\Components\Physics">
       <UniqueIdentifier>{5f649873-904a-477f-8f51-99ded0e90f2f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Engine\Components\InternalHelperFunctions">
-      <UniqueIdentifier>{f82cd613-5a43-4e32-9f9a-327bc52cff5c}</UniqueIdentifier>
+    <Filter Include="Header Files\Engine\Animations">
+      <UniqueIdentifier>{ad87ed61-35e9-4deb-be13-6e76b7b0a2f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine\Animations">
+      <UniqueIdentifier>{639f4dce-e810-4ae6-b3c4-6048b2efd14a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -120,8 +120,11 @@
     <ClCompile Include="Velocity.cpp">
       <Filter>Source Files\Engine\Components\Physics</Filter>
     </ClCompile>
-    <ClCompile Include="AnimationHelpers.cpp">
-      <Filter>Source Files\Engine\Components\InternalHelperFunctions</Filter>
+    <ClCompile Include="AnimationHandler.cpp">
+      <Filter>Source Files\Engine\Animations</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationData.cpp">
+      <Filter>Source Files\Engine\Animations</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -176,8 +179,14 @@
     <ClInclude Include="Velocity.h">
       <Filter>Header Files\Engine\Components\Physics</Filter>
     </ClInclude>
-    <ClInclude Include="AnimationHelpers.h">
-      <Filter>Header Files\Engine\Components\InternalHelperFunctions</Filter>
+    <ClInclude Include="AnimationHandler.h">
+      <Filter>Header Files\Engine\Animations</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationData.h">
+      <Filter>Header Files\Engine\Animations</Filter>
+    </ClInclude>
+    <ClInclude Include="ActiveAnimation.h">
+      <Filter>Header Files\Engine\Animations</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

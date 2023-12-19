@@ -15,7 +15,7 @@
 #include "Input.h"
 #include "Camera.h"
 #include "Renderable.h"
-
+#include "AnimationHandler.h"
 
 //extra components imports
 #include "PlayerController.h"
@@ -122,66 +122,41 @@ int main(int argc, char* argv[])
 		printf("Renderer could not be created! SDL_Error: %s\n", SDL_GetError());
 		return 1;
 	}
+	/*
+	* INITIALISE SINGLETON OBJECTS FOR:
+	* ANIMATION
+	* INPUT
+	*/
+	Animations::AnimationHandler::getInstance().attachRenderer(c_RENDERER);
+	Input::getInstance();
 
 	/*
 	* MAIN GAME, CREATE ALL DATA BEFORE THE WHILE LOOP
 	* CALL ALL UPDATES AND DRAWING WITHIN THE WHILE LOOP
 	*/
-	
+
 	Gameobjects::Scene sc = Gameobjects::Scene();
 	sc.scene_RENDERER = c_RENDERER;
 
+	Gameobjects::GameObject playerController;
+	Gameobjects::GameObject camera;
+	sc.addObject(&playerController);
+	sc.addObject(&camera);
 
-	Gameobjects::GameObject animatedPlayer = Gameobjects::GameObject();
-	sc.addObject(&animatedPlayer);
+	Gameobjects::Component playerSprite;
+	Gameobjects::Component playerMovement;
+	playerController.addComponent(&playerSprite);
+	playerController.addComponent(&playerMovement);
 
-	Gameobjects::Component animation;
+	Gameobjects::Component cam;
+	camera.addComponent(&cam);
 
-	animatedPlayer.addComponent(&animation);
+	Components::Renderable::AttachNew(&playerSprite, "", 150, 200);
+	DemoProject::PlayerController::attachNew(&playerMovement);
 
-	Macgyver::Components::AnimationManager::AttachNew(&animation,"");
-
-	Components::AnimationManagerData* data = 
-		(Components::AnimationManagerData*) animation.getData(0);
-
-	data->animations.insert({ "idle", new Components::AnimationData(&animation,
-		"/Animations/Idle") });
-
-	data->animations.insert({ "run",
-		new Components::AnimationData(&animation, "/Animations/Run") });
-	data->animations.insert({ "walk",
-		new Components::AnimationData(&animation, "/Animations/Walk") });
-	data->idleAnimation = data->animations.at("idle");
-	data->activeAnimation = data->idleAnimation;
-
-	Gameobjects::Component sprite;
-	animatedPlayer.addComponent(&sprite);
-
-	Components::Renderable::AttachNew(&sprite, "", 150, 200);
-	
-	data->attachedRenderable = (Components::RenderableData*)
-		sprite.getData(
-			typeid(Components::RenderableData).hash_code());
-
-	Gameobjects::Component playerController;
-	animatedPlayer.addComponent(&playerController);
-	DemoProject::PlayerController::attachNew(&playerController);
-
-	animatedPlayer.transform.x = 100;
-	animatedPlayer.transform.y = -100;
-
-	Gameobjects::GameObject cam = Gameobjects::GameObject();
-	sc.addObject(&cam);
-	Gameobjects::Component c;
-	cam.addComponent(&c);
-	Components::Camera::AttachNew(&c);
-
-
-
-	
-
+	Components::Camera::AttachNew(&cam);
 	/*
-	* WHILE LOOP BEGINS HERE
+	* INIITIALISE VALUES NEEDED FOR THE MAIN LOOP
 	*/
 	unsigned int last_time = SDL_GetTicks();
 	unsigned int deltaTime;
@@ -205,11 +180,11 @@ int main(int argc, char* argv[])
 				break;
 			}
 		}
-		Input::update();
+		//TODO: figure out a way to cache the instance
+		Input::getInstance().update();
+		Animations::AnimationHandler::getInstance().update(deltaTime);
 		
 		SDL_RenderClear(c_RENDERER);
-		//SDL_RenderCopy(c_RENDERER, data->activeAnimation->sprites[0], NULL, NULL);
-		//SDL_RenderCopy(c_RENDERER, test, &srcRect, &dstRect);
 		/*
 		* Place update then drawing code here
 		*/
@@ -231,6 +206,7 @@ int main(int argc, char* argv[])
 
 	//Quit SDL subsystems
 	SDL_Quit();
+
 
 	//unsigned int* framesPointer = frames;
 	//DEBUG_PROFILE_FRAMETIMES(framesPointer, 10000);

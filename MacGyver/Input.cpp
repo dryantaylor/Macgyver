@@ -2,11 +2,17 @@
 
 using namespace Macgyver;
 
-Uint8* Input::keyboardState = nullptr;
+Input::Input() 
+{
+	keyboardState = nullptr;
+}
 
+Input::~Input() 
+{
+}
 void Input::update()
 {
-	Input::keyboardState = const_cast<Uint8*>(SDL_GetKeyboardState(NULL));
+	keyboardState = const_cast<Uint8*>(SDL_GetKeyboardState(NULL));
 }
 
 bool Input::isKeyDown(SDL_KeyCode key)
@@ -17,5 +23,5 @@ bool Input::isKeyDown(SDL_KeyCode key)
 bool Input::isKeyDown(SDL_Scancode key)
 {
 	
-	return Input::keyboardState[key];
+	return keyboardState[key];
 }
