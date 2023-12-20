@@ -6,21 +6,21 @@
 #include <iostream>
 #include <map>
 #include <queue>
-/*
-* set of animations stored as a name e.g "Player/walk"
-* mapped to an AnimationData object. methods within components
-* can call to load new Animation objects or close them. 
-*
-* They can bind a RENDERABLE component to the an animation
-* which creates a new entry into a map which corresponds to an
-* ID to access that animation at any time. Each entry will have
-* a unique tick count/ frame and can change between animations through
-* method calls via this singleton handler class.
-*/
 
 
-//TODO: CRASH HAS SOMETHING TO DO WITH ONE OF THE VECTORS IN THIS CLASS
-namespace Macgyver::Animations {
+namespace Macgyver {
+	/*
+    Stores a set of animations stored as a name e.g "Player/walk"
+    mapped to an AnimationData object. Methods within components
+    can call to load new Animation objects or close them.
+    They can bind a RENDERABLE component to a loaded animation
+    which creates a new entry into a map which corresponds to an
+    ID to access that animation at any time. Each entry will have
+    a unique tick count/ frame and can change between animations through
+    method calls via this singleton handler class.
+
+	ADD A RENDERER TO THIS CLASS BEFORE LOADING ANY COMPONENTS.
+    */
 	class AnimationHandler {
 	public:
 		/*
@@ -66,7 +66,7 @@ namespace Macgyver::Animations {
 		@returns true if animation could be added (no animation exists with
 				  the name provided). False otherwise
 		*/
-		bool addAnimation(std::string name, AnimationData* animation);
+		bool addAnimation(std::string name, Animations::AnimationData* animation);
 
 		/*
 		Closes the animation data of the animation given as name
@@ -175,10 +175,11 @@ namespace Macgyver::Animations {
 	private:
 		AnimationHandler();
 		~AnimationHandler();
-		std::map<std::string, AnimationData*> animations;
-		std::map<unsigned int, ActiveAnimation*> activeAnimations;
+
+		std::map<std::string, Animations::AnimationData*> animations;
+		std::map<unsigned int, Animations::ActiveAnimation*> activeAnimations;
 		std::queue<unsigned int> freeIds;
-		SDL_Renderer* c_renderer;
+		SDL_Renderer* c_renderer; //used for loading new animations
 	};
 }
 

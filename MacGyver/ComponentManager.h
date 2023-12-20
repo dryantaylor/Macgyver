@@ -13,15 +13,14 @@ namespace Macgyver::Components {
 		RENDERABLE              = 0b00000000000000000000000000000001,
 		//commitment to handle sprite drawing
 		RENDERER                = 0b00000000000000000000000000000010,
-		ANIMATION               = 0b00000000000000000000000000000100,
 		//Commitment to have Physics 2D data with a collision box
-		COLLIDER                = 0b00000000000000000000000000001000,
+		COLLIDER                = 0b00000000000000000000000000000100,
 		//Commitment to have Physics2DData where velocity will act on GameObjects Transform
-		VELOCITY                = 0b00000000000000000000000000010000,
+		VELOCITY                = 0b00000000000000000000000000001000,
 		//Same commitment as PHYSICS2D_VELOCITY but allowing gravity to act on it
-		GRAV_IMPACTED           = 0b00000000000000000000000000100000,
+		GRAV_IMPACTED           = 0b00000000000000000000000000010000,
 		//commitment to only have one in the scene
-		GRAV_IMPACTING          = 0b00000000000000000000000001000000
+		GRAV_IMPACTING          = 0b00000000000000000000000000100000,
 	};
 
 	/*

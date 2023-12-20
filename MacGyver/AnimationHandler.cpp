@@ -1,20 +1,23 @@
 #include "AnimationHandler.h"
 #include <ranges>
 
+/// MSVC stores std::deque elements in blocks of 16 bytes, in powers of 2
+/// 4 uints can fit into 16 bytes, so number of IDs should be some number
+/// which is a power of 2. However more ID's will cause higher memory usage.
 constexpr unsigned int NUM_IDS = 512;
 
-void Macgyver::Animations::AnimationHandler::attachRenderer(SDL_Renderer* renderer)
+void Macgyver::AnimationHandler::attachRenderer(SDL_Renderer* renderer)
 {
 	c_renderer = renderer;
 }
 
-bool Macgyver::Animations::AnimationHandler::addAnimation(std::string name, std::string path)
+bool Macgyver::AnimationHandler::addAnimation(std::string name, std::string path)
 {
-	AnimationData* data = new AnimationData(c_renderer, path);
+	Animations::AnimationData* data = new Animations::AnimationData(c_renderer, path);
 	return addAnimation(name, data);
 }
 
-bool Macgyver::Animations::AnimationHandler::addAnimation(std::string name, AnimationData* animation)
+bool Macgyver::AnimationHandler::addAnimation(std::string name, Animations::AnimationData* animation)
 {
 	if (animations.contains(name)) {
 		return false;
@@ -23,7 +26,7 @@ bool Macgyver::Animations::AnimationHandler::addAnimation(std::string name, Anim
 	return true;
 }
 
-void Macgyver::Animations::AnimationHandler::closeAnimationData(std::string name)
+void Macgyver::AnimationHandler::closeAnimationData(std::string name)
 {
 	if (animations.contains(name)) {
 		delete animations.at(name);
@@ -31,7 +34,7 @@ void Macgyver::Animations::AnimationHandler::closeAnimationData(std::string name
 	}
 }
 
-void Macgyver::Animations::AnimationHandler::closeAllAnimationData()
+void Macgyver::AnimationHandler::closeAllAnimationData()
 {
 	for (auto& animation : animations) {
 		delete animation.second;
@@ -39,7 +42,7 @@ void Macgyver::Animations::AnimationHandler::closeAllAnimationData()
 	animations.clear();
 }
 
-unsigned int Macgyver::Animations::AnimationHandler::beginAnimation(Components::RenderableData* attachedRenderable, std::string idleAnimName)
+unsigned int Macgyver::AnimationHandler::beginAnimation(Components::RenderableData* attachedRenderable, std::string idleAnimName)
 {
 	if (freeIds.empty()) {
 		return 0;
@@ -48,7 +51,7 @@ unsigned int Macgyver::Animations::AnimationHandler::beginAnimation(Components::
 	unsigned int id = freeIds.front();
 	freeIds.pop();
 
-	ActiveAnimation* anim = new ActiveAnimation();
+	Animations::ActiveAnimation* anim = new Animations::ActiveAnimation();
 	anim->idleAnimation = animations[idleAnimName];
 	anim->activeAnimation = anim->idleAnimation;
 	anim->attachedRenderable = attachedRenderable;
@@ -56,10 +59,10 @@ unsigned int Macgyver::Animations::AnimationHandler::beginAnimation(Components::
 	return id;
 }
 
-void Macgyver::Animations::AnimationHandler::changeActiveAnimation(unsigned int id, std::string animationName)
+void Macgyver::AnimationHandler::changeActiveAnimation(unsigned int id, std::string animationName)
 {
-	ActiveAnimation* animation = activeAnimations.at(id);
-	AnimationData* newAnim = animations.at(animationName);
+	Animations::ActiveAnimation* animation = activeAnimations.at(id);
+	Animations::AnimationData* newAnim = animations.at(animationName);
 	if (newAnim != animation->activeAnimation) {
 		animation->activeAnimation = newAnim;
 		animation->currFrame = 0;
@@ -67,20 +70,20 @@ void Macgyver::Animations::AnimationHandler::changeActiveAnimation(unsigned int 
 	}
 }
 
-void Macgyver::Animations::AnimationHandler::changeCurrentFrame(unsigned int id, unsigned int frame)
+void Macgyver::AnimationHandler::changeCurrentFrame(unsigned int id, unsigned int frame)
 {
 	activeAnimations.at(id)->currFrame = frame;
 }
 
-void Macgyver::Animations::AnimationHandler::changeCurrentTick(unsigned int id, unsigned int tick)
+void Macgyver::AnimationHandler::changeCurrentTick(unsigned int id, unsigned int tick)
 {
 	activeAnimations.at(id)->currFrame = tick;
 }
 
-void Macgyver::Animations::AnimationHandler::getCurrentFrameProperties(unsigned int id,
+void Macgyver::AnimationHandler::getCurrentFrameProperties(unsigned int id,
 	unsigned int* outFrameNumber, unsigned int* outTick)
 {
-	ActiveAnimation* anim = activeAnimations.at(id);
+	Animations::ActiveAnimation* anim = activeAnimations.at(id);
 	if (outFrameNumber != NULL) {
 		*outFrameNumber = anim->currFrame;
 	}
@@ -89,7 +92,7 @@ void Macgyver::Animations::AnimationHandler::getCurrentFrameProperties(unsigned 
 	}
 }
 
-void Macgyver::Animations::AnimationHandler::closeActiveAnimation(unsigned int id)
+void Macgyver::AnimationHandler::closeActiveAnimation(unsigned int id)
 {
 	if (activeAnimations.contains(id)) {
 		delete activeAnimations.at(id);
@@ -98,7 +101,7 @@ void Macgyver::Animations::AnimationHandler::closeActiveAnimation(unsigned int i
 	}
 }
 
-void Macgyver::Animations::AnimationHandler::closeAllActiveAnimations()
+void Macgyver::AnimationHandler::closeAllActiveAnimations()
 {
 	for (auto& animationPair : activeAnimations) {
 		delete animationPair.second;
@@ -109,13 +112,13 @@ void Macgyver::Animations::AnimationHandler::closeAllActiveAnimations()
 
 }
 
-void Macgyver::Animations::AnimationHandler::update(unsigned int deltaTime)
+void Macgyver::AnimationHandler::update(unsigned int deltaTime)
 {
 
 	for (auto &animationPair : activeAnimations) {
-		ActiveAnimation* animation = animationPair.second;
+		Animations::ActiveAnimation* animation = animationPair.second;
 		animation->frameTick += deltaTime;
-		AnimationData* activeAnimation = animation->activeAnimation;
+		Animations::AnimationData* activeAnimation = animation->activeAnimation;
 
 		while (animation->frameTick > 
 			activeAnimation->frameTimes[animation->currFrame]) {
@@ -140,7 +143,7 @@ void Macgyver::Animations::AnimationHandler::update(unsigned int deltaTime)
 	}
 }
 
-Macgyver::Animations::AnimationHandler::AnimationHandler()
+Macgyver::AnimationHandler::AnimationHandler()
 {
 	animations = {};
 	activeAnimations = {};
@@ -151,6 +154,6 @@ Macgyver::Animations::AnimationHandler::AnimationHandler()
 	}
 }
 
-Macgyver::Animations::AnimationHandler::~AnimationHandler()
+Macgyver::AnimationHandler::~AnimationHandler()
 {
 }

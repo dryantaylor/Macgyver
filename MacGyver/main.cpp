@@ -1,9 +1,10 @@
-#include <iostream>
+﻿#include <iostream>
+#include <string>
 
 //SDL imports
 #include <SDL.h>
 #include <SDL_image.h>
-//#include <SDL_ttf.h>
+#include <SDL_ttf.h>
 #include <SDL_mixer.h>
 
 
@@ -69,7 +70,7 @@ void DEBUG_PROFILE_FRAMETIMES(unsigned int* frames, std::size_t numFrames)
 
 int main(int argc, char* argv[])
 {
-	
+
 	//NOTE: FULLSCREEN RESOLOUTION DOES NOT WORK WITH SCALED DISPLAYS!
 	Globals::SCREEN_WIDTH = 1280;
 	Globals::SCREEN_HEIGHT = 720;
@@ -92,16 +93,16 @@ int main(int argc, char* argv[])
 		std::cout << IMG_Init(0) << std::endl;
 	}
 
-	//if (TTF_Init() == -1) {
-	//	std::cout << "Error: TTF: " << TTF_GetError() << std::endl;
-	//}
+	if (TTF_Init() == -1) {
+		std::cout << "Error: TTF: " << TTF_GetError() << std::endl;
+	}
 
-	//int result = Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 1024);
+	int result = Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 1024);
 
 	// Check load
-	//if (result != 0) {
-	//	std::cout << "Failed to open audio: " << Mix_GetError() << std::endl;
-	//}
+	if (result != 0) {
+		std::cout << "Failed to open audio: " << Mix_GetError() << std::endl;
+	}
 
 
 	/*
@@ -125,7 +126,7 @@ int main(int argc, char* argv[])
 	* ANIMATION
 	* INPUT
 	*/
-	Animations::AnimationHandler::getInstance().attachRenderer(c_RENDERER);
+	AnimationHandler::getInstance().attachRenderer(c_RENDERER);
 	Input::getInstance();
 
 	/*
@@ -180,7 +181,7 @@ int main(int argc, char* argv[])
 		}
 		//TODO: figure out a way to cache the instance
 		Input::getInstance().update();
-		Animations::AnimationHandler::getInstance().update(deltaTime);
+		AnimationHandler::getInstance().update(deltaTime);
 		
 		SDL_RenderClear(c_RENDERER);
 		/*
@@ -205,10 +206,7 @@ int main(int argc, char* argv[])
 	//Quit SDL subsystems
 	SDL_Quit();
 
-
-	//unsigned int* framesPointer = frames;
-	//DEBUG_PROFILE_FRAMETIMES(framesPointer, 10000);
-	Animations::AnimationHandler::getInstance().closeAllAnimationData();
-	Animations::AnimationHandler::getInstance().closeAllActiveAnimations();
+	AnimationHandler::getInstance().closeAllAnimationData();
+	AnimationHandler::getInstance().closeAllActiveAnimations();
 	return 0;
 }

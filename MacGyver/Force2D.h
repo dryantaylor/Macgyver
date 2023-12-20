@@ -56,6 +56,15 @@ namespace Macgyver::Math {
 		*/
 		void scalarMultiply(float num);
 
+		/*
+		Multiplies the current vectors x and y components by
+		num. Does not mutate this object.
+		
+		@param num a scalar float to multiply by
+
+		@returns a new Force2D with the components of this Force2D
+		         multiplied by num
+		*/
 		Math::Force2D returnScalarMultiply(float num);
 		
 	};

@@ -26,17 +26,17 @@ void DemoProject::PlayerController::update(Macgyver::Gameobjects::Component* sel
 	if (velocity.x != 0 || velocity.y != 0 ) {
 		if (Input::getInstance().isKeyDown(SDLK_LSHIFT)) {
 			velocity.scaleToMagnitude(playerData->sprintSpeed);
-			Macgyver::Animations::AnimationHandler::getInstance()
+			Macgyver::AnimationHandler::getInstance()
 				.changeActiveAnimation(playerData->id, "player/run");
 		}
 		else {
-			Macgyver::Animations::AnimationHandler::getInstance()
+			Macgyver::AnimationHandler::getInstance()
 				.changeActiveAnimation(playerData->id, "player/walk");
 			velocity.scaleToMagnitude(playerData->walkSpeed);
 		}
 	}
 	else {
-		Macgyver::Animations::AnimationHandler::getInstance()
+		Macgyver::AnimationHandler::getInstance()
 			.changeActiveAnimation(playerData->id, "player/idle");
 	}
 	data->velocity = velocity;
@@ -54,14 +54,14 @@ void DemoProject::PlayerController::attachNew(Macgyver::Gameobjects::Component* 
 		typeid(Components::Physics2DData).hash_code());
 
 	PlayerControllerData* data = new PlayerControllerData();
-	Animations::AnimationHandler::getInstance()
+	AnimationHandler::getInstance()
 		.addAnimation("player/idle", "/Animations/Idle");
-	Animations::AnimationHandler::getInstance()
+	AnimationHandler::getInstance()
 		.addAnimation("player/walk", "/Animations/Walk");
-	Animations::AnimationHandler::getInstance()
+	AnimationHandler::getInstance()
 		.addAnimation("player/run", "/Animations/Run");
 
-	data->id = Animations::AnimationHandler::getInstance()
+	data->id = AnimationHandler::getInstance()
 		.beginAnimation(
 			(Components::RenderableData*)(comp->getParent()->getComponentsWithProperty(Components::RENDERABLE)[0]
 				->getData(typeid(Components::RenderableData).hash_code()))

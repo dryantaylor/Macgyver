@@ -41,7 +41,7 @@ namespace Macgyver {
 
 		Input();
 		~Input();
-		//pointer to the internal SDL keyboard array
+		///pointer to the internal SDL keyboard array
 		Uint8* keyboardState;
 
 	};

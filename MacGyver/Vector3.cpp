@@ -56,9 +56,3 @@ Macgyver::Math::Force2D Macgyver::Math::Vector3::copyToForce2D()
 {
 	return Force2D(this->x, this->y);
 }
-
-std::ostream& operator<<(std::ostream& os, const Macgyver::Math::Vector3& v)
-{
-	os << "x: " << v.x << ", y: " << v.y << ", z: " << v.z;
-	return os;
-}

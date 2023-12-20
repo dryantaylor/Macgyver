@@ -24,8 +24,15 @@ namespace Macgyver::Math {
 		Vector3 operator*(const float b);
 		Vector3 operator/(const float b);
 		Vector3& operator+=(const Vector3& a);
+
+		/*
+		Creates a new force 2D object with the same x and y components as this
+		object
+
+		@returns a Force2D object which has the same x and y components as this
+		vector but anb under the hood z component of 0.
+		*/
 		Force2D copyToForce2D();
-		//friend std::ostream& operator<<(std::ostream& os, const Vector3& v);
 
 	};
 }

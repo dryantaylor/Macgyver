@@ -12,7 +12,7 @@ namespace Macgyver::Gameobjects {
 	class Scene {
 		friend GameObject;
 	public:
-		//sdl renderer used for the scene
+		///sdl renderer used for the scene
 		SDL_Renderer* scene_RENDERER;
 		/*
 		Default Contsructor
