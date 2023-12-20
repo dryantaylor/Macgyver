@@ -139,7 +139,6 @@
   <ItemGroup>
     <ClCompile Include="AnimationData.cpp" />
     <ClCompile Include="AnimationHandler.cpp" />
-    <ClCompile Include="AnimationManager.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Collider.cpp" />
     <ClCompile Include="Component.cpp" />
@@ -161,7 +160,6 @@
     <ClInclude Include="ActiveAnimation.h" />
     <ClInclude Include="AnimationData.h" />
     <ClInclude Include="AnimationHandler.h" />
-    <ClInclude Include="AnimationManager.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Collider.h" />
     <ClInclude Include="Component.h" />

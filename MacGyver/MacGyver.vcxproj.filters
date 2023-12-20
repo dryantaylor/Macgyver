@@ -102,9 +102,6 @@
     <ClCompile Include="ComponentDataWrapper.cpp">
       <Filter>Source Files\Engine\Components</Filter>
     </ClCompile>
-    <ClCompile Include="AnimationManager.cpp">
-      <Filter>Source Files\Engine\Components\Images</Filter>
-    </ClCompile>
     <ClCompile Include="Renderable.cpp">
       <Filter>Source Files\Engine\Components\Images</Filter>
     </ClCompile>
@@ -160,9 +157,6 @@
     </ClInclude>
     <ClInclude Include="ComponentDataWrapper.h">
       <Filter>Header Files\Engine\Components</Filter>
-    </ClInclude>
-    <ClInclude Include="AnimationManager.h">
-      <Filter>Header Files\Engine\Components\Images</Filter>
     </ClInclude>
     <ClInclude Include="Camera.h">
       <Filter>Header Files\Engine\Components\Images</Filter>

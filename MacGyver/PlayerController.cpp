@@ -3,7 +3,6 @@
 #include "AnimationHandler.h"
 #include "Force2D.h"
 #include "ComponentManager.h"
-#include "AnimationManager.h"
 using namespace Macgyver;
 void DemoProject::PlayerController::update(Macgyver::Gameobjects::Component* self, unsigned int deltaTime)
 {
@@ -24,7 +23,7 @@ void DemoProject::PlayerController::update(Macgyver::Gameobjects::Component* sel
 	if (Input::getInstance().isKeyDown(SDLK_d)) {
 		velocity.x += 1;
 	}
-	if (velocity.x != 0 ) {
+	if (velocity.x != 0 || velocity.y != 0 ) {
 		if (Input::getInstance().isKeyDown(SDLK_LSHIFT)) {
 			velocity.scaleToMagnitude(playerData->sprintSpeed);
 			Macgyver::Animations::AnimationHandler::getInstance()

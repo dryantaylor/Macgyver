@@ -20,8 +20,6 @@
 //extra components imports
 #include "PlayerController.h"
 
-#include "AnimationManager.h"
-
 
 using namespace Macgyver;
 
@@ -210,6 +208,7 @@ int main(int argc, char* argv[])
 
 	//unsigned int* framesPointer = frames;
 	//DEBUG_PROFILE_FRAMETIMES(framesPointer, 10000);
-	
+	Animations::AnimationHandler::getInstance().closeAllAnimationData();
+	Animations::AnimationHandler::getInstance().closeAllActiveAnimations();
 	return 0;
 }
