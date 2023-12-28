@@ -3,14 +3,14 @@
 #include "AnimationHandler.h"
 #include "Force2D.h"
 #include "ComponentManager.h"
+
 using namespace Macgyver;
 void DemoProject::PlayerController::update(Macgyver::Gameobjects::Component* self, unsigned int deltaTime)
 {
-	PlayerControllerData* playerData = 
-	(PlayerControllerData*)(self->getData(typeid(PlayerControllerData).hash_code()));
+	PlayerControllerData* playerData = componentGetData(self, PlayerControllerData);
 	Math::Force2D velocity(0, 0);
-	Components::Physics2DData* data = (Components::Physics2DData*)
-		(self->getData(typeid(Components::Physics2DData).hash_code()));
+	Components::Physics2DData* data = 
+		componentGetData(self, Components::Physics2DData);
 	if (Input::getInstance().isKeyDown(SDLK_w)) {
 		velocity.y += 1;
 	}
@@ -26,17 +26,15 @@ void DemoProject::PlayerController::update(Macgyver::Gameobjects::Component* sel
 	if (velocity.x != 0 || velocity.y != 0 ) {
 		if (Input::getInstance().isKeyDown(SDLK_LSHIFT)) {
 			velocity.scaleToMagnitude(playerData->sprintSpeed);
-			Macgyver::AnimationHandler::getInstance()
-				.changeActiveAnimation(playerData->id, "player/run");
+			getAnimationHandler.changeActiveAnimation(playerData->id, "player/run");
 		}
 		else {
-			Macgyver::AnimationHandler::getInstance()
-				.changeActiveAnimation(playerData->id, "player/walk");
+			getAnimationHandler.changeActiveAnimation(playerData->id, "player/walk");
 			velocity.scaleToMagnitude(playerData->walkSpeed);
 		}
 	}
 	else {
-		Macgyver::AnimationHandler::getInstance()
+		getAnimationHandler
 			.changeActiveAnimation(playerData->id, "player/idle");
 	}
 	data->velocity = velocity;
@@ -45,29 +43,32 @@ void DemoProject::PlayerController::update(Macgyver::Gameobjects::Component* sel
 
 void DemoProject::PlayerController::attachNew(Macgyver::Gameobjects::Component* comp)
 {
-	std::cout << comp->getParent()->getComponentsWithProperty(Components::RENDERABLE).size() << std::endl;
 	comp->setComponentProperties(Macgyver::Components::VELOCITY);
 	comp->update = PlayerController::update;
 	comp->physicsUpdate = Macgyver::Components::Velocity::physicsUpdate;
-	comp->addData((Macgyver::Components::ComponentData*)
-		new Macgyver::Components::Physics2DData(), 
-		typeid(Components::Physics2DData).hash_code());
+	//comp->addData((Macgyver::Components::ComponentData*)
+	//	new Macgyver::Components::Physics2DData(), 
+	//	typeid(Components::Physics2DData).hash_code());
+	comp->addData(
+	    componentCreateData(Macgyver::Components::Physics2DData)
+	);
+
 
 	PlayerControllerData* data = new PlayerControllerData();
-	AnimationHandler::getInstance()
+	getAnimationHandler
 		.addAnimation("player/idle", "/Animations/Idle");
-	AnimationHandler::getInstance()
+	getAnimationHandler
 		.addAnimation("player/walk", "/Animations/Walk");
-	AnimationHandler::getInstance()
+	getAnimationHandler
 		.addAnimation("player/run", "/Animations/Run");
 
-	data->id = AnimationHandler::getInstance()
+	data->id = getAnimationHandler
 		.beginAnimation(
-			(Components::RenderableData*)(comp->getParent()->getComponentsWithProperty(Components::RENDERABLE)[0]
-				->getData(typeid(Components::RenderableData).hash_code()))
+			componentGetData(
+				comp->getParent()->getComponentsWithProperty(Components::RENDERABLE)[0]
+				,Components::RenderableData)
 			, "player/idle");
 	comp->addData((Macgyver::Components::ComponentData*)
 		data,
-		typeid(PlayerControllerData).hash_code());
-
+		typeHash(PlayerControllerData));
 }

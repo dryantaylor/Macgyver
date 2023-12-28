@@ -2,6 +2,7 @@
 #include <SDL.h>
 #include "MouseEnum.h"
 
+#define getInput Macgyver::Input::getInstance()
 namespace Macgyver {
 	/**
 	Static class to handle checking for input in the engine

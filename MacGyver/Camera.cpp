@@ -29,7 +29,7 @@ void Components::Camera::Draw(Gameobjects::Component* self)
 		self->getWorldScene()->getComponentsInWorldByType(RENDERABLE);
 	
 	SDL_Renderer* renderer = self->getWorldScene()->scene_RENDERER;
-	std::size_t dataTypeHash = typeid(RenderableData).hash_code();
+	std::size_t dataTypeHash = typeHash(RenderableData);
 	for (Gameobjects::Component* comp : renderables) {
 		Math::Vector3 cameraSpace = convertToCameraSpace(self,comp);
 		//by declaring a component renderable we are commiting to having
@@ -43,7 +43,7 @@ void Components::Camera::Draw(Gameobjects::Component* self)
 			data->rect.x = cameraSpace.x; //saves allocating new memory
 			data->rect.y = cameraSpace.y;
 			SDL_RenderCopy(renderer, texture, NULL, &data->rect);
-
+			data->rect.x = data->rect.y = 0;
 		}
 	}
 }

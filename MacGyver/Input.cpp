@@ -1,6 +1,6 @@
 #include "Input.h"
-using namespace Macgyver;
 
+using namespace Macgyver;
 Input::Input() 
 {
 	keyboardState = nullptr;

@@ -7,6 +7,7 @@
 #include <map>
 #include <queue>
 
+#define getAnimationHandler Macgyver::AnimationHandler::getInstance()
 
 namespace Macgyver {
 	/*

@@ -128,8 +128,8 @@ int main(int argc, char* argv[])
 	* ANIMATION
 	* INPUT
 	*/
-	AnimationHandler::getInstance().attachRenderer(c_RENDERER);
-	Input::getInstance();
+	getAnimationHandler.attachRenderer(c_RENDERER);
+	getInput;
 
 	/*
 	* MAIN GAME, CREATE ALL DATA BEFORE THE WHILE LOOP
@@ -183,15 +183,15 @@ int main(int argc, char* argv[])
 				break;
 
 			case SDL_MOUSEWHEEL:
-				Input::getInstance().INTERNAL_addMouseWheel(
+				getInput.INTERNAL_addMouseWheel(
 					e.wheel.y
 				);
 				break;
 			}
 		}
 		//TODO: figure out a way to cache the instance
-		Input::getInstance().update();
-		AnimationHandler::getInstance().update(deltaTime);
+		getInput.update();
+		getAnimationHandler.update(deltaTime);
 
 		SDL_RenderClear(c_RENDERER);
 		/*
@@ -216,7 +216,7 @@ int main(int argc, char* argv[])
 	//Quit SDL subsystems
 	SDL_Quit();
 
-	AnimationHandler::getInstance().closeAllAnimationData();
-	AnimationHandler::getInstance().closeAllActiveAnimations();
+	getAnimationHandler.closeAllAnimationData();
+	getAnimationHandler.closeAllActiveAnimations();
 	return 0;
 }

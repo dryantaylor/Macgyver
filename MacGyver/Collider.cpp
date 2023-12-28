@@ -10,8 +10,8 @@ void Macgyver::Components::Collider::physicsUpdate(Gameobjects::Component* self)
 	std::vector<Gameobjects::Component*> colliders = self->getParent()
 		->getComponentsWithProperty(COLLIDER);
 
-	std::size_t physics2DHash = typeid(Physics2DData).hash_code();
-	Physics2DData* selfData = (Physics2DData*)(self->getData(physics2DHash));
+	std::size_t physics2DHash = typeHash(Physics2DData);
+	Physics2DData* selfData = componentGetData(self, Physics2DData);
 	Math::Force2D u1 = selfData->velocity;
 	float m1 = selfData->mass;
 	//Math::Force2D CoM1 = self->getWorldTransform().copyToForce2D();
@@ -20,7 +20,7 @@ void Macgyver::Components::Collider::physicsUpdate(Gameobjects::Component* self)
 		if (comp == self) {
 			continue;
 		}
-		Physics2DData* compData =(Physics2DData*) comp->getData(physics2DHash);
+		Physics2DData* compData = (Physics2DData*) comp->getData(physics2DHash);
 		if (SDL_HasIntersection(compData->collider, selfData->collider) 
 			== SDL_TRUE) {
 			//set position so they just don't touch
@@ -53,6 +53,7 @@ void Macgyver::Components::Collider::AttachNew(Gameobjects::Component* comp, boo
 	data->isMoveable = moveable;
 	comp->addData((Macgyver::Components::ComponentData*)
 		data,
-		typeid(Components::Physics2DData).hash_code());
+		typeHash(Components::Physics2DData)
+		);
 	
 }
