@@ -1,6 +1,6 @@
 #pragma once
 #include <SDL.h>
-
+#include "MouseEnum.h"
 
 namespace Macgyver {
 	/**
@@ -37,12 +37,26 @@ namespace Macgyver {
 		@returns true if presed down currently, false if not
 		*/
 		bool isKeyDown(SDL_Scancode key);
+
+		bool isMouseButtonDown(Mouse button);
+		
+		void getMousePosition(int* x, int* y);
+
+		void INTERNAL_addMouseWheel(int value);
+
+		int getMouseWheelPos();
+
+		void resetMouseWheelPos();
 	private:
 
 		Input();
 		~Input();
 		///pointer to the internal SDL keyboard array
 		Uint8* keyboardState;
+		//state of the mouse
+		Uint32 mouseState;
+		int *x, *y;
+		int wheelPos;
 
 	};
 }

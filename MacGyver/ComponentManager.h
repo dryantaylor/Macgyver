@@ -21,6 +21,10 @@ namespace Macgyver::Components {
 		GRAV_IMPACTED           = 0b00000000000000000000000000010000,
 		//commitment to only have one in the scene
 		GRAV_IMPACTING          = 0b00000000000000000000000000100000,
+
+		//Don't update with other objects, call UIUpdate at after all world objects are done updating
+		UI_RENDERABLE           = 0b00000000000000000000000001000000,
+		UI_INTERACTABLE         = 0b00000000000000000000000010000000
 	};
 
 	/*

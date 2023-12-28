@@ -170,6 +170,7 @@
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Globals.h" />
     <ClInclude Include="Input.h" />
+    <ClInclude Include="MouseEnum.h" />
     <ClInclude Include="Physics2D.h" />
     <ClInclude Include="PlayerController.h" />
     <ClInclude Include="Renderable.h" />

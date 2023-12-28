@@ -67,6 +67,9 @@
     <Filter Include="Source Files\Engine\Animations">
       <UniqueIdentifier>{639f4dce-e810-4ae6-b3c4-6048b2efd14a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Engine\Components\UI">
+      <UniqueIdentifier>{44b24ef2-76fe-4b43-803f-111910a9c552}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -181,6 +184,9 @@
     </ClInclude>
     <ClInclude Include="ActiveAnimation.h">
       <Filter>Header Files\Engine\Animations</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseEnum.h">
+      <Filter>Header Files\Engine\Input</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

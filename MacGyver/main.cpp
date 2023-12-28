@@ -108,8 +108,8 @@ int main(int argc, char* argv[])
 	/*
 	* Creating a window and renderer
 	*/
-	WINDOW = SDL_CreateWindow("MacGyver Engine PRE-APLHA", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 
-		              Globals::SCREEN_WIDTH, Globals::SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+	WINDOW = SDL_CreateWindow("MacGyver Engine PRE-APLHA", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
+		Globals::SCREEN_WIDTH, Globals::SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
 	if (WINDOW == NULL)
 	{
 		printf("Window could not be created! SDL_Error: %s\n", SDL_GetError());
@@ -121,6 +121,8 @@ int main(int argc, char* argv[])
 		printf("Renderer could not be created! SDL_Error: %s\n", SDL_GetError());
 		return 1;
 	}
+
+
 	/*
 	* INITIALISE SINGLETON OBJECTS FOR:
 	* ANIMATION
@@ -162,6 +164,8 @@ int main(int argc, char* argv[])
 	unsigned int curr_time;
 	SDL_Event e;
 	running = true;
+	int* x = new int; 
+	int* y = new int;
 	while (running)
 	{
 		curr_time = SDL_GetTicks();
@@ -177,12 +181,18 @@ int main(int argc, char* argv[])
 			case SDL_QUIT:
 				running = false;
 				break;
+
+			case SDL_MOUSEWHEEL:
+				Input::getInstance().INTERNAL_addMouseWheel(
+					e.wheel.y
+				);
+				break;
 			}
 		}
 		//TODO: figure out a way to cache the instance
 		Input::getInstance().update();
 		AnimationHandler::getInstance().update(deltaTime);
-		
+
 		SDL_RenderClear(c_RENDERER);
 		/*
 		* Place update then drawing code here
