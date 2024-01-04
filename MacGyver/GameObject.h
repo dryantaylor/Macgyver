@@ -10,7 +10,7 @@ namespace Macgyver::Gameobjects {
 	class Component;
 	class Scene;
 	/*
-	Class which represents a single objects in the world
+	Class which represents a single object in the world
 	*/
 	class GameObject {
 		friend Scene;
@@ -58,6 +58,8 @@ namespace Macgyver::Gameobjects {
 		@returns pointer to parent Scene object
 		*/
 		Scene* getParentScene();
+
+		bool enabled = true;
 	private:
 		///pointer to parent Scene object
 		Scene* parentScene;

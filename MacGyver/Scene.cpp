@@ -33,7 +33,9 @@ void Gameobjects::Scene::update(unsigned int deltaTime)
 	physicsColliderCache.clear();
 
 	for (GameObject* obj : objects) {
-		obj->update(deltaTime);
+		if (obj->enabled) {
+			obj->update(deltaTime);
+		}
 	}
 }
 

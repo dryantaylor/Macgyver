@@ -97,7 +97,7 @@ namespace Macgyver::Gameobjects{
 		/// with a self argument)
 		std::function<void(Component*)> physicsUpdate;
 
-		
+		bool enabled = true;
 	private:
 		/// set of pointers to the different data structs this
 		/// component has
@@ -106,9 +106,7 @@ namespace Macgyver::Gameobjects{
 		GameObject* parent;
 		/// properties/flags of this component, which makes garentees
 		/// about what methods or data structures it will have
-		COMPONENT_TYPE componentProperties = 0x0000;
-
-		
+		COMPONENT_TYPE componentProperties = 0x0000;		
 	
 	};
 }

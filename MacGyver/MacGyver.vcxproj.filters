@@ -67,8 +67,17 @@
     <Filter Include="Source Files\Engine\Animations">
       <UniqueIdentifier>{639f4dce-e810-4ae6-b3c4-6048b2efd14a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Engine\Components\UI">
+    <Filter Include="Header Files\Engine\UI">
       <UniqueIdentifier>{44b24ef2-76fe-4b43-803f-111910a9c552}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine\UI">
+      <UniqueIdentifier>{a32402c6-9203-4e3b-8461-ac5a4a4c4ae5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine\Components\UI">
+      <UniqueIdentifier>{21aeaf8b-f6bb-465a-ac93-e6ba51750d4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine\Components\UI">
+      <UniqueIdentifier>{cdbf4a31-e343-46b4-b247-2cc74943aa76}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -125,6 +134,18 @@
     </ClCompile>
     <ClCompile Include="AnimationData.cpp">
       <Filter>Source Files\Engine\Animations</Filter>
+    </ClCompile>
+    <ClCompile Include="Font.cpp">
+      <Filter>Source Files\Engine\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="TextRenderer.cpp">
+      <Filter>Source Files\Engine\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Text.cpp">
+      <Filter>Source Files\Engine\Components\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UICamera.cpp">
+      <Filter>Source Files\Engine\Components\UI</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -187,6 +208,21 @@
     </ClInclude>
     <ClInclude Include="MouseEnum.h">
       <Filter>Header Files\Engine\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Font.h">
+      <Filter>Header Files\Engine\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="TextRenderer.h">
+      <Filter>Header Files\Engine\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Text.h">
+      <Filter>Header Files\Engine\Components\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="TextData.h">
+      <Filter>Header Files\Engine\Components\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UICamera.h">
+      <Filter>Header Files\Engine\Components\UI</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

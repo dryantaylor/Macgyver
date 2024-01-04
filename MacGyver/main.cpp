@@ -18,6 +18,11 @@
 #include "Renderable.h"
 #include "AnimationHandler.h"
 
+#include "TextRenderer.h"
+#include  "Font.h"
+#include "Text.h"
+#include "UICamera.h"
+
 //extra components imports
 #include "PlayerController.h"
 
@@ -122,7 +127,6 @@ int main(int argc, char* argv[])
 		return 1;
 	}
 
-
 	/*
 	* INITIALISE SINGLETON OBJECTS FOR:
 	* ANIMATION
@@ -131,18 +135,29 @@ int main(int argc, char* argv[])
 	getAnimationHandler.attachRenderer(c_RENDERER);
 	getInput;
 
+	Macgyver::UI::Font font(c_RENDERER,
+		"C:\\Users\\44791\\source\\repos\\macgyver_v1\\x64\\Debug\\KirimomiSwash.ttf",
+		128);
+	getTextRenderer.addFont("test-font", &font);
+	
 	/*
 	* MAIN GAME, CREATE ALL DATA BEFORE THE WHILE LOOP
 	* CALL ALL UPDATES AND DRAWING WITHIN THE WHILE LOOP
 	*/
-
 	Gameobjects::Scene sc = Gameobjects::Scene();
 	sc.scene_RENDERER = c_RENDERER;
 
 	Gameobjects::GameObject playerController;
 	Gameobjects::GameObject camera;
+
+	Gameobjects::GameObject UIcam;
+	Gameobjects::GameObject UItext;
+
 	sc.addObject(&playerController);
 	sc.addObject(&camera);
+	sc.addObject(&UIcam);
+	sc.addObject(&UItext);
+
 
 	Gameobjects::Component playerSprite;
 	Gameobjects::Component playerMovement;
@@ -152,10 +167,26 @@ int main(int argc, char* argv[])
 	Gameobjects::Component cam;
 	camera.addComponent(&cam);
 
+	Gameobjects::Component UIcam_comp;
+	UIcam.addComponent(&UIcam_comp);
+
+	Gameobjects::Component UItext_comp;
+	UItext.addComponent(&UItext_comp);
+
 	Components::Renderable::AttachNew(&playerSprite, "", 150, 200);
 	DemoProject::PlayerController::attachNew(&playerMovement);
 
 	Components::Camera::AttachNew(&cam);
+
+	Components::UI::UICamera::AttachNew(&UIcam_comp);
+
+	SDL_Rect temp;
+	temp.x = temp.y = 0;
+	temp.w = 400;
+	temp.h = 400;
+	Components::UI::Text::attachNew(&UItext_comp,
+		"test-font", "Hello World", 128, temp
+	);
 	/*
 	* INIITIALISE VALUES NEEDED FOR THE MAIN LOOP
 	*/
