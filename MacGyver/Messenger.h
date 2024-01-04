@@ -1,8 +1,10 @@
 #pragma once
 
-namespace Macgyver {
+#define getMessenger Macgyver::Messenger::getInstance()
 
+namespace Macgyver {
 	class Messenger {
+	public:
 		static Messenger& getInstance() {
 			static Messenger instance;
 			return instance;
@@ -10,8 +12,8 @@ namespace Macgyver {
 		Messenger(const Messenger&) = delete;
 		Messenger& operator=(const Messenger&) = delete;
 
-		long long& operator[](std::size_t idx) { return data[idx]; }
-		const long long& operator[](std::size_t idx) const { return data[idx]; }
+		long long& operator[](size_t idx) { return data[idx]; }
+		const long long& operator[](size_t idx) const { return data[idx]; }
 		void setDataSize(size_t newSize);
 		size_t getDataSize() const;
 		long long* data;

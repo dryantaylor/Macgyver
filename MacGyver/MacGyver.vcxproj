@@ -149,7 +149,9 @@
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Globals.cpp" />
     <ClCompile Include="Input.cpp" />
+    <ClCompile Include="KeyPressedOverlay.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Messenger.cpp" />
     <ClCompile Include="Physics2D.cpp" />
     <ClCompile Include="PlayerController.cpp" />
     <ClCompile Include="Renderable.cpp" />
@@ -175,6 +177,8 @@
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Globals.h" />
     <ClInclude Include="Input.h" />
+    <ClInclude Include="KeyPressedOverlay.h" />
+    <ClInclude Include="Messenger.h" />
     <ClInclude Include="MouseEnum.h" />
     <ClInclude Include="Physics2D.h" />
     <ClInclude Include="PlayerController.h" />

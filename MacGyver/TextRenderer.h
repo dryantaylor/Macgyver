@@ -19,6 +19,10 @@ namespace Macgyver::UI {
 		void addFont(std::string textureName, Font* font);
 		void addFontUsage(std::string fontName);
 		void removeFontUsage(std::string fontName);
+
+		/*
+		* TODO: ADD SCALING OF SIZE OF OUTPUT TEXT FROM SINGLE FONT
+		*/
 		SDL_Texture* DisplayText(SDL_Renderer* renderer,std::string fontName , std::string text, SDL_Rect* dstRect, SDL_Color displayColour = { 255,255,255 });
 	private:
 		std::map<std::string, Font*> fonts;

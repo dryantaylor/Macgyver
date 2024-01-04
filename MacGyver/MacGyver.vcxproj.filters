@@ -147,6 +147,12 @@
     <ClCompile Include="UICamera.cpp">
       <Filter>Source Files\Engine\Components\UI</Filter>
     </ClCompile>
+    <ClCompile Include="Messenger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyPressedOverlay.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vector3.h">
@@ -223,6 +229,12 @@
     </ClInclude>
     <ClInclude Include="UICamera.h">
       <Filter>Header Files\Engine\Components\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Messenger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyPressedOverlay.h">
+      <Filter>Header Files\Game</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -15,6 +15,10 @@ void Macgyver::Components::UI::Text::update(Gameobjects::Component* self, unsign
 			data->font, data->text, &data->textBoundries
 		);
 		//UPDATE INTERNAL DATA STRUCTS
+		data->INTERNAL_cachedFont = data->font;
+		data->INTERNAL_cachedPtSize = data->ptSize;
+		data->INTERNAL_cachedText = data->text;
+
 	}
 }
 

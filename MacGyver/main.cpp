@@ -23,8 +23,11 @@
 #include "Text.h"
 #include "UICamera.h"
 
+#include "Messenger.h"
+
 //extra components imports
 #include "PlayerController.h"
+#include "KeyPressedOverlay.h"
 
 
 using namespace Macgyver;
@@ -134,6 +137,10 @@ int main(int argc, char* argv[])
 	*/
 	getAnimationHandler.attachRenderer(c_RENDERER);
 	getInput;
+	Macgyver::Messenger::getInstance()[1] = 10;
+	std::cout << Messenger::getInstance()[1] << std::endl;
+	std::cout << Messenger::getInstance().data[1] << std::endl;
+
 
 	Macgyver::UI::Font font(c_RENDERER,
 		"C:\\Users\\44791\\source\\repos\\macgyver_v1\\x64\\Debug\\KirimomiSwash.ttf",
@@ -187,6 +194,10 @@ int main(int argc, char* argv[])
 	Components::UI::Text::attachNew(&UItext_comp,
 		"test-font", "Hello World", 128, temp
 	);
+	Macgyver::Gameobjects::Component keyPressOverlay;
+	UItext.addComponent(&keyPressOverlay);
+	DemoProject::KeyPressedOverlay::attachNew(&keyPressOverlay,&UItext_comp);
+
 	/*
 	* INIITIALISE VALUES NEEDED FOR THE MAIN LOOP
 	*/
