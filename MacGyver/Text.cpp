@@ -1,5 +1,6 @@
 #include "Text.h"
 #include "TextRenderer.h"
+#include "UIRenderableData.h"
 void Macgyver::Components::UI::Text::update(Gameobjects::Component* self, unsigned int deltaTime)
 {
 	TextData* data = componentGetData(self, TextData);
@@ -7,19 +8,22 @@ void Macgyver::Components::UI::Text::update(Gameobjects::Component* self, unsign
 		data->INTERNAL_cachedFont != data->font ||
 		data->INTERNAL_cachedText != data->text) {
 
-		SDL_DestroyTexture(data->INTERNAL_cachedTexture);
-		data->INTERNAL_cachedTexture = 
-			getTextRenderer.DisplayText
+		UIRenderableData* renderData = componentGetData(self, UIRenderableData);
+
+		SDL_DestroyTexture(renderData->texture);
+		renderData->texture = 
+			getTextRenderer.displayText
 		(
 			self->getWorldScene()->scene_RENDERER,
-			data->font, data->text, &data->textBoundries
+			data->font, data->text, &data->textBoundries, {255,255,255}, data->ptSize
 		);
 		//UPDATE INTERNAL DATA STRUCTS
 		data->INTERNAL_cachedFont = data->font;
 		data->INTERNAL_cachedPtSize = data->ptSize;
 		data->INTERNAL_cachedText = data->text;
-
 	}
+
+	
 }
 
 void Macgyver::Components::UI::Text::attachNew(Gameobjects::Component* comp,
@@ -36,6 +40,16 @@ void Macgyver::Components::UI::Text::attachNew(Gameobjects::Component* comp,
 			text, font, ptSize, size)
 	);
 
+	SDL_Texture* textRender = getTextRenderer.displayText(
+		comp->getWorldScene()->scene_RENDERER, font, text, &size, {255,255,255}, ptSize
+	);
+	UIRenderableData* renderableData = new UIRenderableData(textRender, size.w, size.h);
+	renderableData->rect.x = size.x;
+	renderableData->rect.y = size.y;
+	comp->addData(
+		(ComponentData*)renderableData, typeHash(UIRenderableData)
+	);
+
 }
 
 Macgyver::Components::UI::TextData::TextData(SDL_Renderer* renderer ,
@@ -46,10 +60,4 @@ Macgyver::Components::UI::TextData::TextData(SDL_Renderer* renderer ,
 	this->font = this->INTERNAL_cachedFont = fnt;
 	this->ptSize = this->INTERNAL_cachedPtSize = ptSize;
 	this->textBoundries = rect;
-
-	INTERNAL_cachedTexture = getTextRenderer.DisplayText
-	(
-		renderer,
-		font, text, &textBoundries
-	);
 }

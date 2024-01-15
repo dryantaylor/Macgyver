@@ -147,11 +147,20 @@
     <ClCompile Include="UICamera.cpp">
       <Filter>Source Files\Engine\Components\UI</Filter>
     </ClCompile>
-    <ClCompile Include="Messenger.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="KeyPressedOverlay.cpp">
       <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="UIMouseDetector.cpp">
+      <Filter>Source Files\Engine\Components\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UIRenderableData.cpp">
+      <Filter>Source Files\Engine\Components\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Messenger.cpp">
+      <Filter>Source Files\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="UIRenderable.cpp">
+      <Filter>Source Files\Engine\Components\UI</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -230,11 +239,20 @@
     <ClInclude Include="UICamera.h">
       <Filter>Header Files\Engine\Components\UI</Filter>
     </ClInclude>
-    <ClInclude Include="Messenger.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="KeyPressedOverlay.h">
       <Filter>Header Files\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="UIMouseDetector.h">
+      <Filter>Header Files\Engine\Components\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIRenderableData.h">
+      <Filter>Header Files\Engine\Components\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Messenger.h">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="UIRenderable.h">
+      <Filter>Header Files\Engine\Components\UI</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

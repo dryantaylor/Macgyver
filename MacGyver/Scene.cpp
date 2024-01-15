@@ -49,7 +49,6 @@ void Macgyver::Gameobjects::Scene::physicsUpdate(unsigned int deltaTime)
 			return;
 		}
 		physicsTick -= 20;
-		//std::cout << tick << std::endl;
 		if (physicsGravImpactingCache != nullptr) {
 			physicsGravImpactingCache->physicsUpdate(physicsGravImpactingCache);
 		}

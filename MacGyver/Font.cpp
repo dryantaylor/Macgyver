@@ -14,27 +14,38 @@ Macgyver::UI::Font::Font(SDL_Renderer* renderer, std::string fontName, unsigned 
 	this->usageCount = 0;
 	this->storedRenderSize = ptSize;
 
+	//TODO: split rows not when reaching 8192 pixels but evenly along the horizontal
 	//creates the symbols as SDL_Surfaces and stores their native width/height
 	symbolRects = new SDL_Rect[numSymbols];
-
-
-	//TODO: ALLOW THE SIZE OPENED AT TO BE SCALED
-	TTF_Font* ttfFont = TTF_OpenFont(fontName.c_str(), 128);
-	std::cout << ttfFont;
+	TTF_Font* ttfFont = TTF_OpenFont((std::string(SDL_GetBasePath()) + fontName).c_str(), ptSize);
 	SDL_Surface* symbols[numSymbols];
 	int maxHeight = 0;
 	int currWidth = 0;
+	int rows = 1;
+	int maxWidth = 0;
 	for (int i = 0; i < numSymbols; i++) {
-		char* chrPtr = new char[2] {*(letters[i]), '\0'};
+		
 		symbols[i] = TTF_RenderUTF8_Blended(ttfFont, letters[i], {255,255,255});
 		symbolRects[i] = SDL_Rect();
-		symbolRects[i].x = currWidth;
-		symbolRects[i].y = 0;
+		if (currWidth + symbols[i]->w > 8192) {
+			maxWidth = currWidth > maxHeight ? currWidth : maxWidth;
+			symbolRects[i].x = 0;
+			rows++;
+			currWidth = symbols[i]->w;
+		}
+		else {
+			symbolRects[i].x = currWidth;
+			currWidth += symbols[i]->w;
+		}
+		symbolRects[i].y = rows - 1;
 		symbolRects[i].w = symbols[i]->w;
 		symbolRects[i].h = symbols[i]->h;
-		currWidth += symbols[i]->w;
+		
 		maxHeight = symbols[i]->h > maxHeight ? symbols[i]->h : maxHeight;
-		delete[] chrPtr;
+	}
+	for (int i = 0; i < numSymbols; i++) 
+	{
+		symbolRects[i].y *= maxHeight+1;
 	}
 
 	//create a texture to store the texture in
@@ -42,16 +53,14 @@ Macgyver::UI::Font::Font(SDL_Renderer* renderer, std::string fontName, unsigned 
 	SDL_GetRendererInfo(renderer, &info);
 	Uint32 format = info.texture_formats[0];
 	fontMap = SDL_CreateTexture(renderer, format,
-		SDL_TEXTUREACCESS_TARGET, currWidth, maxHeight);
-
+		SDL_TEXTUREACCESS_TARGET, maxWidth, (maxHeight +1) * rows);
+	
 	//convert all surfaces to a texture and render them to the font map Texture
 	SDL_SetRenderTarget(renderer, fontMap);
 	for (int i = 0; i < numSymbols; i++) {
-
 		SDL_Texture* tempTexture = SDL_CreateTextureFromSurface(renderer, symbols[i]);
 
 		SDL_RenderCopy(renderer, tempTexture, NULL, &symbolRects[i]);
-		symbolRects[i].h = maxHeight;
 		SDL_FreeSurface(symbols[i]);
 		SDL_DestroyTexture(tempTexture);
 	}

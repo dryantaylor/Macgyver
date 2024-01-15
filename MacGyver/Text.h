@@ -25,7 +25,6 @@ namespace Macgyver::Components::UI {
 		std::string text;
 		std::string font;
 		unsigned int ptSize;
-		SDL_Texture* INTERNAL_cachedTexture;
 		std::string INTERNAL_cachedText;
 		std::string INTERNAL_cachedFont;
 		unsigned int INTERNAL_cachedPtSize;

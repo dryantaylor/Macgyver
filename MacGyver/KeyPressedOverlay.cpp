@@ -27,8 +27,6 @@ void DemoProject::KeyPressedOverlay::update(Macgyver::Gameobjects::Component* se
 		data->text += "s";
 	}
 
-	//std::cout << "writing " << data->text << "to screen" << std::endl;
-
 	
 
 }

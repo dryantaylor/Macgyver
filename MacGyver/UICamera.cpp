@@ -1,21 +1,27 @@
 #include "UICamera.h"
 
-#include "Text.h"
+#include "UIRenderableData.h"
+
 void Macgyver::Components::UI::UICamera::draw(Gameobjects::Component* self)
 {
 	std::vector<Gameobjects::Component*> renderables =
 		self->getWorldScene()->getComponentsInWorldByType(UI_RENDERABLE);
 
 	SDL_Renderer* renderer = self->getWorldScene()->scene_RENDERER;
-	std::size_t dataTypeHash = typeHash(TextData);
+	SDL_Rect renderRect;
 	for (Gameobjects::Component* comp : renderables) 
 	{
-		Components::UI::TextData* data =
-			componentGetData(comp, TextData);
+		
+		Components::UI::UIRenderableData* data =
+			componentGetData(comp, UIRenderableData);
+		renderRect.x = comp->getWorldTransform().x;
+		renderRect.y = comp->getWorldTransform().y;
+		renderRect.w = data->rect.w;
+		renderRect.h = data->rect.h;
 		SDL_RenderCopy(
 			renderer,
-			data->INTERNAL_cachedTexture,
-			NULL, &data->textBoundries
+			data->texture,
+			NULL, &renderRect
 		);
 	}
 }

@@ -20,5 +20,8 @@ C:\Users\44791\source\repos\macgyver_v1\MacGyver\Scene.cpp;C:\Users\44791\source
 C:\Users\44791\source\repos\macgyver_v1\MacGyver\Text.cpp;C:\Users\44791\source\repos\macgyver_v1\MacGyver\x64\Debug\Text.obj
 C:\Users\44791\source\repos\macgyver_v1\MacGyver\TextRenderer.cpp;C:\Users\44791\source\repos\macgyver_v1\MacGyver\x64\Debug\TextRenderer.obj
 C:\Users\44791\source\repos\macgyver_v1\MacGyver\UICamera.cpp;C:\Users\44791\source\repos\macgyver_v1\MacGyver\x64\Debug\UICamera.obj
+C:\Users\44791\source\repos\macgyver_v1\MacGyver\UIMouseDetector.cpp;C:\Users\44791\source\repos\macgyver_v1\MacGyver\x64\Debug\UIMouseDetector.obj
+C:\Users\44791\source\repos\macgyver_v1\MacGyver\UIRenderable.cpp;C:\Users\44791\source\repos\macgyver_v1\MacGyver\x64\Debug\UIRenderable.obj
+C:\Users\44791\source\repos\macgyver_v1\MacGyver\UIRenderableData.cpp;C:\Users\44791\source\repos\macgyver_v1\MacGyver\x64\Debug\UIRenderableData.obj
 C:\Users\44791\source\repos\macgyver_v1\MacGyver\Vector3.cpp;C:\Users\44791\source\repos\macgyver_v1\MacGyver\x64\Debug\Vector3.obj
 C:\Users\44791\source\repos\macgyver_v1\MacGyver\Velocity.cpp;C:\Users\44791\source\repos\macgyver_v1\MacGyver\x64\Debug\Velocity.obj

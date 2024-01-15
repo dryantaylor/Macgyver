@@ -22,6 +22,8 @@
 #include  "Font.h"
 #include "Text.h"
 #include "UICamera.h"
+#include "UIMouseDetector.h"
+#include "UIRenderable.h"
 
 #include "Messenger.h"
 
@@ -62,7 +64,9 @@ void DEBUG_PROFILE_FRAMETIMES(unsigned int* frames, std::size_t numFrames)
 			above10++;
 		}
 	}
-	std::cout << "Mean Frame Time: " << sum / double(numFrames) << std::endl;
+	double frameTime = sum / double(numFrames);
+	std::cout << "Mean Frame Time: " << frameTime << std::endl;
+	std::cout << "Mean FPS: " << 1000 / frameTime << std::endl;
 	std::cout << "Frames between 1-10ms: " << numFrames - above10 - above25 - above50 - above100 << std::endl;
 	std::cout << "Frames between 11-25ms: " << above10 << std::endl;
 	std::cout << "Frames between 26-50ms: " << above25 << std::endl;
@@ -137,15 +141,17 @@ int main(int argc, char* argv[])
 	*/
 	getAnimationHandler.attachRenderer(c_RENDERER);
 	getInput;
-	Macgyver::Messenger::getInstance()[1] = 10;
-	std::cout << Messenger::getInstance()[1] << std::endl;
-	std::cout << Messenger::getInstance().data[1] << std::endl;
-
+	getMessenger;
 
 	Macgyver::UI::Font font(c_RENDERER,
-		"C:\\Users\\44791\\source\\repos\\macgyver_v1\\x64\\Debug\\KirimomiSwash.ttf",
-		128);
+		"\\KirimomiSwash.ttf",
+		256);
 	getTextRenderer.addFont("test-font", &font);
+	SDL_Rect test{};
+	test.x = test.y = 0;
+	test.w = 1280;
+		test.h = 720;
+
 	
 	/*
 	* MAIN GAME, CREATE ALL DATA BEFORE THE WHILE LOOP
@@ -180,6 +186,7 @@ int main(int argc, char* argv[])
 	Gameobjects::Component UItext_comp;
 	UItext.addComponent(&UItext_comp);
 
+
 	Components::Renderable::AttachNew(&playerSprite, "", 150, 200);
 	DemoProject::PlayerController::attachNew(&playerMovement);
 
@@ -192,11 +199,33 @@ int main(int argc, char* argv[])
 	temp.w = 400;
 	temp.h = 400;
 	Components::UI::Text::attachNew(&UItext_comp,
-		"test-font", "Hello World", 128, temp
+		"test-font", "Hello World", 256, temp
 	);
 	Macgyver::Gameobjects::Component keyPressOverlay;
 	UItext.addComponent(&keyPressOverlay);
 	DemoProject::KeyPressedOverlay::attachNew(&keyPressOverlay,&UItext_comp);
+
+	Gameobjects::GameObject button;
+	sc.addObject(&button);
+
+	button.transform.x = 400;
+	button.transform.y = 200;
+
+	Macgyver::Gameobjects::Component pressedDetector;
+	button.addComponent(&pressedDetector);
+	Macgyver::Components::UI::UIMouseDetector::attachNew(
+		&pressedDetector, { 0,0,400,150 }, 10, 0b1
+	);
+
+	Macgyver::Gameobjects::Component buttonBackground;
+	button.addComponent(&buttonBackground);
+	Macgyver::Components::UI::UIRenderable::AttachNew(&buttonBackground, "\\button.png", 400, 150);
+
+	Macgyver::Gameobjects::Component buttonText;
+	button.addComponent(&buttonText);
+	buttonText.localTransform.x += 35;
+	buttonText.localTransform.y += 20;
+	Macgyver::Components::UI::Text::attachNew(&buttonText, "test-font", "Press", 128, { 0,0,400,150 });
 
 	/*
 	* INIITIALISE VALUES NEEDED FOR THE MAIN LOOP
@@ -206,8 +235,6 @@ int main(int argc, char* argv[])
 	unsigned int curr_time;
 	SDL_Event e;
 	running = true;
-	int* x = new int; 
-	int* y = new int;
 	while (running)
 	{
 		curr_time = SDL_GetTicks();
@@ -232,7 +259,7 @@ int main(int argc, char* argv[])
 			}
 		}
 		//TODO: figure out a way to cache the instance
-		getInput.update();
+	    getInput.update();
 		getAnimationHandler.update(deltaTime);
 
 		SDL_RenderClear(c_RENDERER);
@@ -242,12 +269,17 @@ int main(int argc, char* argv[])
 	    sc.physicsUpdate(deltaTime);
 		sc.update(deltaTime);
 		SDL_RenderPresent(c_RENDERER);
+		
+		
 		last_time = curr_time;
-	}
 
+		//std::cout << getMessenger[10] << std::endl;
+	}
 	/*
 	* HANDLE CLEAN UP HERE
 	*/
+	getAnimationHandler.closeAllAnimationData();
+	getAnimationHandler.closeAllActiveAnimations();
 
 	//Destroy renderer
 	SDL_DestroyRenderer(c_RENDERER);
@@ -255,10 +287,8 @@ int main(int argc, char* argv[])
 	//Destroy window
 	SDL_DestroyWindow(WINDOW);
 
+
 	//Quit SDL subsystems
 	SDL_Quit();
-
-	getAnimationHandler.closeAllAnimationData();
-	getAnimationHandler.closeAllActiveAnimations();
 	return 0;
 }
