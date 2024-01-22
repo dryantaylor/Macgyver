@@ -27,9 +27,12 @@
 
 #include "Messenger.h"
 
+#include "SingletonSerialiser.h"
+
 //extra components imports
 #include "PlayerController.h"
 #include "KeyPressedOverlay.h"
+
 
 
 using namespace Macgyver;
@@ -142,6 +145,8 @@ int main(int argc, char* argv[])
 	getAnimationHandler.attachRenderer(c_RENDERER);
 	getInput;
 	getMessenger;
+	
+	return 0;
 
 	Macgyver::UI::Font font(c_RENDERER,
 		"\\KirimomiSwash.ttf",
@@ -274,6 +279,10 @@ int main(int argc, char* argv[])
 		last_time = curr_time;
 
 		//std::cout << getMessenger[10] << std::endl;
+		//if (getMessenger[10] == 0b10) 
+		//{
+		//	std::cout << "pressed" << std::endl;
+		//}
 	}
 	/*
 	* HANDLE CLEAN UP HERE

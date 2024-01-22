@@ -156,6 +156,7 @@
     <ClCompile Include="PlayerController.cpp" />
     <ClCompile Include="Renderable.cpp" />
     <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SingletonSerialiser.cpp" />
     <ClCompile Include="Text.cpp" />
     <ClCompile Include="TextRenderer.cpp" />
     <ClCompile Include="UICamera.cpp" />
@@ -180,6 +181,7 @@
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Globals.h" />
     <ClInclude Include="Input.h" />
+    <ClInclude Include="json.hpp" />
     <ClInclude Include="KeyPressedOverlay.h" />
     <ClInclude Include="Messenger.h" />
     <ClInclude Include="MouseEnum.h" />
@@ -187,6 +189,7 @@
     <ClInclude Include="PlayerController.h" />
     <ClInclude Include="Renderable.h" />
     <ClInclude Include="Scene.h" />
+    <ClInclude Include="SingletonSerialiser.h" />
     <ClInclude Include="Text.h" />
     <ClInclude Include="TextData.h" />
     <ClInclude Include="TextRenderer.h" />

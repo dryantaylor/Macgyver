@@ -23,5 +23,9 @@ namespace Macgyver::Components::UI {
 
 		SDL_Point INTERNAL_mousePoint;
 		bool pressedPrevFrame;
+
+		//UIRenderableData* buttonBackgroundSprite;
+
+		
 	};
 }

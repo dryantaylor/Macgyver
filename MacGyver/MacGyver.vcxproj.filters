@@ -79,6 +79,9 @@
     <Filter Include="Header Files\Engine\Components\UI">
       <UniqueIdentifier>{cdbf4a31-e343-46b4-b247-2cc74943aa76}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Engine\Serialisation">
+      <UniqueIdentifier>{8bbec3df-37db-429d-b0dc-5ceb96d60fa4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -161,6 +164,9 @@
     </ClCompile>
     <ClCompile Include="UIRenderable.cpp">
       <Filter>Source Files\Engine\Components\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="SingletonSerialiser.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -253,6 +259,12 @@
     </ClInclude>
     <ClInclude Include="UIRenderable.h">
       <Filter>Header Files\Engine\Components\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="SingletonSerialiser.h">
+      <Filter>Header Files\Engine\Serialisation</Filter>
+    </ClInclude>
+    <ClInclude Include="json.hpp">
+      <Filter>Header Files\Engine\Serialisation</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
