@@ -156,4 +156,5 @@ Macgyver::AnimationHandler::AnimationHandler()
 
 Macgyver::AnimationHandler::~AnimationHandler()
 {
+	//TODO: write a deletion script here maybe??
 }

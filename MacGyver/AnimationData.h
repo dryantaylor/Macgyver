@@ -7,7 +7,14 @@ namespace Macgyver::Animations {
 	Holds information about an animation loaded from disk
 	*/
 	struct AnimationData {
+		/*
+		* Create AnimationData object from the animation
+		* file given at path
+		*/
 		AnimationData(SDL_Renderer* renderer, std::string path);
+		/*
+		* Delete all Sprites in the sprite array
+		*/
 		~AnimationData();
 
 		//the frames of the animation as an array

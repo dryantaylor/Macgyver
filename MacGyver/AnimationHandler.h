@@ -167,6 +167,7 @@ namespace Macgyver {
 
 		/*
 		checks all active animations for any frame changes
+		called by the main game loop not individual objects
 
 		@param deltaTime time in ms between last frame and current frame.
 		*/
@@ -177,10 +178,14 @@ namespace Macgyver {
 		AnimationHandler();
 		~AnimationHandler();
 
+		/// map of name of animations to animations
 		std::map<std::string, Animations::AnimationData*> animations;
+		/// map of id to information about a unique instance of an animation
 		std::map<unsigned int, Animations::ActiveAnimation*> activeAnimations;
+		/// all currently unused ids
 		std::queue<unsigned int> freeIds;
-		SDL_Renderer* c_renderer; //used for loading new animations
+		/// used for loading new animations
+		SDL_Renderer* c_renderer;
 	};
 }
 

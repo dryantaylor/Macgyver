@@ -5,10 +5,13 @@
 #include <SDL_image.h>
 #include <vector>
 
+
 Macgyver::Animations::AnimationData::AnimationData(SDL_Renderer* renderer, std::string path)
 {
+    //open the config file
     std::ifstream configFile(std::string(SDL_GetBasePath()) + path +
         "/config.txt");
+
     if (!configFile) {
         char errorBuffer[512];
 
@@ -58,6 +61,7 @@ Macgyver::Animations::AnimationData::AnimationData(SDL_Renderer* renderer, std::
         currIndex = temp.find(";", prevIndex);
     }
 
+    //load the sprite sheet
     SDL_Texture* fullSheet = IMG_LoadTexture(
         renderer,
         (std::string(SDL_GetBasePath()) + path + "/sprites.png").c_str()

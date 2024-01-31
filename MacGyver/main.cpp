@@ -146,7 +146,6 @@ int main(int argc, char* argv[])
 	getInput;
 	getMessenger;
 	
-	return 0;
 
 	Macgyver::UI::Font font(c_RENDERER,
 		"\\KirimomiSwash.ttf",
