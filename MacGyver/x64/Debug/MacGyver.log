@@ -1,5 +1,2 @@
-﻿  main.cpp
-C:\Users\44791\source\repos\macgyver_v1\MacGyver\Physics2D.h(11,3): warning C4091: 'static ': ignored on left of 'Macgyver::Components::PhysicsConstants' when no variable is declared
-  (compiling source file 'main.cpp')
-  
+﻿  AnimationHandler.cpp
   MacGyver.vcxproj -> C:\Users\44791\source\repos\macgyver_v1\x64\Debug\MacGyver.exe

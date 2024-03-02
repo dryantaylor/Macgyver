@@ -191,7 +191,7 @@ int main(int argc, char* argv[])
 	UItext.addComponent(&UItext_comp);
 
 
-	Components::Renderable::AttachNew(&playerSprite, "", 150, 200);
+	Components::Renderable::AttachNew(&playerSprite, "", 525, 410);
 	DemoProject::PlayerController::attachNew(&playerMovement);
 
 	Components::Camera::AttachNew(&cam);
@@ -231,6 +231,7 @@ int main(int argc, char* argv[])
 	buttonText.localTransform.y += 20;
 	Macgyver::Components::UI::Text::attachNew(&buttonText, "test-font", "Press", 128, { 0,0,400,150 });
 
+	
 	/*
 	* INIITIALISE VALUES NEEDED FOR THE MAIN LOOP
 	*/
@@ -274,7 +275,7 @@ int main(int argc, char* argv[])
 		sc.update(deltaTime);
 		SDL_RenderPresent(c_RENDERER);
 		
-		
+		std::cout << deltaTime << std::endl;
 		last_time = curr_time;
 
 		//std::cout << getMessenger[10] << std::endl;

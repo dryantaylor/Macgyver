@@ -116,14 +116,18 @@ void Macgyver::AnimationHandler::update(unsigned int deltaTime)
 {
 
 	for (auto &animationPair : activeAnimations) {
+		
 		Animations::ActiveAnimation* animation = animationPair.second;
 		animation->frameTick += deltaTime;
 		Animations::AnimationData* activeAnimation = animation->activeAnimation;
+		if (animationPair.first == 1) {
+			std::cout << "Frame Tick: " << animation->frameTick << std::endl;
+		}
 
 		while (animation->frameTick > 
 			activeAnimation->frameTimes[animation->currFrame]) {
-			animation->currFrame++;
 			animation->frameTick -= activeAnimation->frameTimes[animation->currFrame];
+			animation->currFrame++;
 			//if previously on last frame
 			if (animation->currFrame == activeAnimation->numFrames) {
 				animation->currFrame = 0;
@@ -132,15 +136,15 @@ void Macgyver::AnimationHandler::update(unsigned int deltaTime)
 				if (!activeAnimation->doesLoop) {
 					animation->activeAnimation = animation->idleAnimation;
 				}
-			}
-
-			animation->attachedRenderable->texture =
-				activeAnimation->sprites[animation->currFrame];
-			
-			
+			}	
 		}
-
+		animation->attachedRenderable->texture =
+			activeAnimation->sprites[animation->currFrame];
+		if (animationPair.first == 1) {
+			std::cout << "Frame number: " << animation->currFrame << std::endl;
+		}
 	}
+	
 }
 
 Macgyver::AnimationHandler::AnimationHandler()

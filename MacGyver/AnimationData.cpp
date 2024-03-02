@@ -4,6 +4,7 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include <vector>
+#include <iostream>
 
 
 Macgyver::Animations::AnimationData::AnimationData(SDL_Renderer* renderer, std::string path)
@@ -66,6 +67,11 @@ Macgyver::Animations::AnimationData::AnimationData(SDL_Renderer* renderer, std::
         renderer,
         (std::string(SDL_GetBasePath()) + path + "/sprites.png").c_str()
     );
+    //DEBUG
+    if (fullSheet == NULL) {
+        std::cout << SDL_GetError() << std::endl;
+        return;
+    }
     sprites = new SDL_Texture * [numFrames];
     Uint32 format = 1;
     SDL_QueryTexture(fullSheet, &format, NULL, NULL, NULL);
