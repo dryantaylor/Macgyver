@@ -27,11 +27,13 @@
 
 #include "Messenger.h"
 
+
 #include "SingletonSerialiser.h"
 
 //extra components imports
 #include "PlayerController.h"
 #include "KeyPressedOverlay.h"
+#include "PlayerFSM.h"
 
 
 
@@ -178,8 +180,10 @@ int main(int argc, char* argv[])
 
 	Gameobjects::Component playerSprite;
 	Gameobjects::Component playerMovement;
+	Gameobjects::Component playerState;
 	playerController.addComponent(&playerSprite);
 	playerController.addComponent(&playerMovement);
+	playerController.addComponent(&playerState);
 
 	Gameobjects::Component cam;
 	camera.addComponent(&cam);
@@ -193,6 +197,7 @@ int main(int argc, char* argv[])
 
 	Components::Renderable::AttachNew(&playerSprite, "", 525, 410);
 	DemoProject::PlayerController::attachNew(&playerMovement);
+	DemoProject::PlayerFSM::attachNew(&playerState);
 
 	Components::Camera::AttachNew(&cam);
 

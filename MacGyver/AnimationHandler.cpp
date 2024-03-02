@@ -64,6 +64,14 @@ void Macgyver::AnimationHandler::changeActiveAnimation(unsigned int id, std::str
 	Animations::ActiveAnimation* animation = activeAnimations.at(id);
 	Animations::AnimationData* newAnim = animations.at(animationName);
 	if (newAnim != animation->activeAnimation) {
+		//Temporary fix until i work out a better wya#
+		if (newAnim->size.w != animation->activeAnimation->size.w ||
+			newAnim->size.h != animation->activeAnimation->size.h) {
+			animation->attachedRenderable->rect.w = newAnim->size.w;
+			animation->attachedRenderable->rect.h = newAnim->size.h;
+
+			//TODO:: AHHHHHH I HAVE TO REWRITE THIS AGAIN TO GET THE OFFSETS???
+		}
 		animation->activeAnimation = newAnim;
 		animation->currFrame = 0;
 		animation->frameTick = 0;
@@ -116,14 +124,10 @@ void Macgyver::AnimationHandler::update(unsigned int deltaTime)
 {
 
 	for (auto &animationPair : activeAnimations) {
-		
 		Animations::ActiveAnimation* animation = animationPair.second;
 		animation->frameTick += deltaTime;
 		Animations::AnimationData* activeAnimation = animation->activeAnimation;
-		if (animationPair.first == 1) {
-			std::cout << "Frame Tick: " << animation->frameTick << std::endl;
-		}
-
+		SDL_Rect* oldRect = &(activeAnimation->size);
 		while (animation->frameTick > 
 			activeAnimation->frameTimes[animation->currFrame]) {
 			animation->frameTick -= activeAnimation->frameTimes[animation->currFrame];
@@ -140,8 +144,12 @@ void Macgyver::AnimationHandler::update(unsigned int deltaTime)
 		}
 		animation->attachedRenderable->texture =
 			activeAnimation->sprites[animation->currFrame];
-		if (animationPair.first == 1) {
-			std::cout << "Frame number: " << animation->currFrame << std::endl;
+		if (oldRect->w != activeAnimation->size.w ||
+			oldRect->h != activeAnimation->size.h) {
+			animation->attachedRenderable->rect.w = activeAnimation->size.w;
+			animation->attachedRenderable->rect.h = activeAnimation->size.h;
+		
+			//TODO:: AHHHHHH I HAVE TO REWRITE THIS AGAIN TO GET THE OFFSETS???
 		}
 	}
 	

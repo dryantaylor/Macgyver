@@ -154,6 +154,7 @@
     <ClCompile Include="Messenger.cpp" />
     <ClCompile Include="Physics2D.cpp" />
     <ClCompile Include="PlayerController.cpp" />
+    <ClCompile Include="PlayerFSM.cpp" />
     <ClCompile Include="Renderable.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SingletonSerialiser.cpp" />
@@ -178,6 +179,7 @@
     <ClInclude Include="ComponentManager.h" />
     <ClInclude Include="Font.h" />
     <ClInclude Include="Force2D.h" />
+    <ClInclude Include="GameCOMPONENT_TYPES.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Globals.h" />
     <ClInclude Include="Input.h" />
@@ -187,6 +189,7 @@
     <ClInclude Include="MouseEnum.h" />
     <ClInclude Include="Physics2D.h" />
     <ClInclude Include="PlayerController.h" />
+    <ClInclude Include="PlayerFSM.h" />
     <ClInclude Include="Renderable.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SingletonSerialiser.h" />

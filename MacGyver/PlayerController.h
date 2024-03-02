@@ -8,7 +8,6 @@ namespace DemoProject {
 	struct PlayerControllerData {
 		float walkSpeed = 150;
 		float sprintSpeed = 300;
-		unsigned int id;
 	};
 
 	struct PlayerController {
