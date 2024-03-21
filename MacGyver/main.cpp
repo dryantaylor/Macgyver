@@ -34,7 +34,7 @@
 #include "PlayerController.h"
 #include "KeyPressedOverlay.h"
 #include "PlayerFSM.h"
-
+#include "InputBuffer.h"
 
 
 using namespace Macgyver;
@@ -181,9 +181,11 @@ int main(int argc, char* argv[])
 	Gameobjects::Component playerSprite;
 	Gameobjects::Component playerMovement;
 	Gameobjects::Component playerState;
+	Gameobjects::Component playerInputBuffer;
 	playerController.addComponent(&playerSprite);
 	playerController.addComponent(&playerMovement);
 	playerController.addComponent(&playerState);
+	playerController.addComponent(&playerInputBuffer);
 
 	Gameobjects::Component cam;
 	camera.addComponent(&cam);
@@ -198,6 +200,7 @@ int main(int argc, char* argv[])
 	Components::Renderable::AttachNew(&playerSprite, "", 525, 410);
 	DemoProject::PlayerController::attachNew(&playerMovement);
 	DemoProject::PlayerFSM::attachNew(&playerState);
+	DemoProject::InputBuffer::attachNew(&playerInputBuffer);
 
 	Components::Camera::AttachNew(&cam);
 
@@ -280,14 +283,14 @@ int main(int argc, char* argv[])
 		sc.update(deltaTime);
 		SDL_RenderPresent(c_RENDERER);
 		
-		std::cout << deltaTime << std::endl;
+		//std::cout << deltaTime << std::endl;
 		last_time = curr_time;
 
 		//std::cout << getMessenger[10] << std::endl;
-		//if (getMessenger[10] == 0b10) 
-		//{
-		//	std::cout << "pressed" << std::endl;
-		//}
+		if (getMessenger[10] == 0b10) 
+		{
+			std::cout << "pressed" << std::endl;
+		}
 	}
 	/*
 	* HANDLE CLEAN UP HERE

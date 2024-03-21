@@ -33,8 +33,7 @@ void DemoProject::PlayerController::update(Macgyver::Gameobjects::Component* sel
 
 	if (velocity.x != 0 || velocity.y != 0 ) {
 		if (Input::getInstance().isKeyDown(SDLK_LSHIFT)) {
-			velocity.scaleToMagnitude(playerData->sprintSpeed);
-			
+			velocity.scaleToMagnitude(playerData->sprintSpeed);	
 		}
 		else {
 			velocity.scaleToMagnitude(playerData->walkSpeed);

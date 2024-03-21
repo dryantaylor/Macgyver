@@ -149,6 +149,7 @@
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Globals.cpp" />
     <ClCompile Include="Input.cpp" />
+    <ClCompile Include="InputBuffer.cpp" />
     <ClCompile Include="KeyPressedOverlay.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Messenger.cpp" />
@@ -180,9 +181,11 @@
     <ClInclude Include="Font.h" />
     <ClInclude Include="Force2D.h" />
     <ClInclude Include="GameCOMPONENT_TYPES.h" />
+    <ClInclude Include="GameInputs.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Globals.h" />
     <ClInclude Include="Input.h" />
+    <ClInclude Include="InputBuffer.h" />
     <ClInclude Include="json.hpp" />
     <ClInclude Include="KeyPressedOverlay.h" />
     <ClInclude Include="Messenger.h" />

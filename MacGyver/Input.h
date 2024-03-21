@@ -1,6 +1,8 @@
 #pragma once
 #include <SDL.h>
 #include "MouseEnum.h"
+#include <vector>
+#include <map>
 
 #define getInput Macgyver::Input::getInstance()
 namespace Macgyver {
@@ -23,6 +25,14 @@ namespace Macgyver {
 		WARNING: ONLY CALL IN MAIN GAME LOOP
 		*/
 		void update();
+
+		int32_t getNumConnectedControllers();
+
+		void openController(int32_t id);
+
+		void closeController(int32_t id);
+
+		void closeAllControllers();
 		/**
 		Gets if the passed in key is held.
 		(NOTE: key will be converted to SDL_Scancode 
@@ -39,6 +49,10 @@ namespace Macgyver {
 		*/
 		bool isKeyDown(SDL_Scancode key);
 
+		bool controller_isButtonDown(int32_t id, SDL_GameControllerButton button);
+
+		int32_t controller_getAxisPosition(int32_t id, SDL_GameControllerAxis axis);
+
 		bool isMouseButtonDown(Mouse button);
 		
 		void getMousePosition(int* x, int* y);
@@ -49,7 +63,7 @@ namespace Macgyver {
 
 		void resetMouseWheelPos();
 	private:
-
+		std::map<int,SDL_Joystick*> controllers;
 		Input();
 		~Input();
 		///pointer to the internal SDL keyboard array
