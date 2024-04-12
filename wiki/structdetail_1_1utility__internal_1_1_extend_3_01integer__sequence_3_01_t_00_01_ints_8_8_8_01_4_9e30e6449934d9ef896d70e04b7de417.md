@@ -31,51 +31,6 @@ Macgyver
 
 </div>
 
-<div id="MSearchSelectWindow"
-onmouseover="return searchBox.OnSearchSelectShow()"
-onmouseout="return searchBox.OnSearchSelectHide()"
-onkeydown="return searchBox.OnSearchSelectKey(event)">
-
-</div>
-
-<div id="MSearchResultsWindow">
-
-<div id="MSearchResults">
-
-<div class="SRPage">
-
-<div id="SRIndex">
-
-<div id="SRResults">
-
-</div>
-
-<div id="Loading" class="SRStatus">
-
-Loading...
-
-</div>
-
-<div id="Searching" class="SRStatus">
-
-Searching...
-
-</div>
-
-<div id="NoMatches" class="SRStatus">
-
-No Matches
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 <div id="nav-path" class="navpath">
 
 - <a href="namespacedetail.html" class="el">detail</a>
