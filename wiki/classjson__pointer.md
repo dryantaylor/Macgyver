@@ -1,823 +1,1905 @@
-<div id="classjson__pointer">
+---
+generator: Doxygen 1.10.0
+lang: en-US
+title: "Macgyver: json_pointer\\< RefStringType \\> Class Template
+  Reference"
+viewport: width=device-width, initial-scale=1
+---
+
+<div id="top">
+
+<div id="titlearea">
+
+<table data-cellspacing="0" data-cellpadding="0">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr id="projectrow" class="odd">
+<td id="projectalign"><div id="projectname">
+Macgyver
+</div>
+<div id="projectbrief">
+2D game engine written in C++
+</div></td>
+</tr>
+</tbody>
+</table>
 
 </div>
 
-<span id="classjson__pointer" label="classjson__pointer"></span>
+<div id="main-nav">
+
+</div>
+
+<div id="MSearchSelectWindow"
+onmouseover="return searchBox.OnSearchSelectShow()"
+onmouseout="return searchBox.OnSearchSelectHide()"
+onkeydown="return searchBox.OnSearchSelectKey(event)">
+
+</div>
+
+<div id="MSearchResultsWindow">
+
+<div id="MSearchResults">
+
+<div class="SRPage">
+
+<div id="SRIndex">
+
+<div id="SRResults">
+
+</div>
+
+<div id="Loading" class="SRStatus">
+
+Loading...
+
+</div>
+
+<div id="Searching" class="SRStatus">
+
+Searching...
+
+</div>
+
+<div id="NoMatches" class="SRStatus">
+
+No Matches
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="header">
+
+<div class="summary">
+
+[Public Types](#pub-types) \| [Public Member Functions](#pub-methods) \|
+[Friends](#friends) \| [List of all
+members](classjson__pointer-members.html)
+
+</div>
+
+<div class="headertitle">
+
+<div class="title">
+
+json_pointer\< RefStringType \> Class Template Reference
+
+</div>
+
+</div>
+
+</div>
+
+<div class="contents">
+
+JSON Pointer defines a string syntax for identifying a specific value
+within a JSON document. [More...](#details)
+
+`#include <`<a href="json_8hpp_source.html" class="el"><code>json.hpp</code></a>`>`
+
+<table class="memberdecls">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd heading">
+<td colspan="2"><h2 id="public-types" class="groupheader"><span
+id="pub-types"></span> Public Types</h2></td>
+</tr>
+<tr id="r_a21dae78c5120aa3044d4c0fa1d970291"
+class="even memitem:a21dae78c5120aa3044d4c0fa1d970291">
+<td class="memItemLeft" style="text-align: right;"
+data-valign="top"><span id="a21dae78c5120aa3044d4c0fa1d970291"></span>
+using </td>
+<td class="memItemRight" data-valign="bottom"><strong>string_t</strong>
+= typename string_t_helper&lt;RefStringType&gt;::type</td>
+</tr>
+<tr class="odd separator:a21dae78c5120aa3044d4c0fa1d970291">
+<td colspan="2" class="memSeparator"> </td>
+</tr>
+</tbody>
+</table>
+
+<table class="memberdecls">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd heading">
+<td colspan="2"><h2 id="public-member-functions"
+class="groupheader"><span id="pub-methods"></span> Public Member
+Functions</h2></td>
+</tr>
+<tr id="r_a5288b8f5d6ff6faca37f664b98a16ecd"
+class="even memitem:a5288b8f5d6ff6faca37f664b98a16ecd">
+<td class="memItemLeft" style="text-align: right;"
+data-valign="top"> </td>
+<td class="memItemRight" data-valign="bottom"><a
+href="#a5288b8f5d6ff6faca37f664b98a16ecd" class="el">json_pointer</a>
+(const string_t &amp;s="")</td>
+</tr>
+<tr class="odd memdesc:a5288b8f5d6ff6faca37f664b98a16ecd">
+<td class="mdescLeft"> </td>
+<td class="mdescRight">create JSON pointer<br />
+</td>
+</tr>
+<tr class="even separator:a5288b8f5d6ff6faca37f664b98a16ecd">
+<td colspan="2" class="memSeparator"> </td>
+</tr>
+<tr id="r_a6b94e2003be4cd72c4f145bcea2578ec"
+class="odd memitem:a6b94e2003be4cd72c4f145bcea2578ec">
+<td class="memItemLeft" style="text-align: right;"
+data-valign="top">string_t </td>
+<td class="memItemRight" data-valign="bottom"><a
+href="#a6b94e2003be4cd72c4f145bcea2578ec" class="el">to_string</a> ()
+const</td>
+</tr>
+<tr class="even memdesc:a6b94e2003be4cd72c4f145bcea2578ec">
+<td class="mdescLeft"> </td>
+<td class="mdescRight">return a string representation of the JSON
+pointer<br />
+</td>
+</tr>
+<tr class="odd separator:a6b94e2003be4cd72c4f145bcea2578ec">
+<td colspan="2" class="memSeparator"> </td>
+</tr>
+<tr id="r_a97364e516620b02f1049f847b2ad43c9"
+class="even memitem:a97364e516620b02f1049f847b2ad43c9">
+<td class="memItemLeft" style="text-align: right;"
+data-valign="top"> </td>
+<td class="memItemRight" data-valign="bottom"><a
+href="#a97364e516620b02f1049f847b2ad43c9" class="el">operator
+string_t</a> () const</td>
+</tr>
+<tr class="odd memdesc:a97364e516620b02f1049f847b2ad43c9">
+<td class="mdescLeft"> </td>
+<td class="mdescRight">return a string representation of the JSON
+pointer<br />
+</td>
+</tr>
+<tr class="even separator:a97364e516620b02f1049f847b2ad43c9">
+<td colspan="2" class="memSeparator"> </td>
+</tr>
+<tr id="r_a8bb8e43c6e01a6370cd49ba130171219"
+class="odd memitem:a8bb8e43c6e01a6370cd49ba130171219">
+<td class="memItemLeft" style="text-align: right;" data-valign="top"><a
+href="classjson__pointer.html" class="el">json_pointer</a> &amp; </td>
+<td class="memItemRight" data-valign="bottom"><a
+href="#a8bb8e43c6e01a6370cd49ba130171219" class="el">operator/=</a>
+(const <a href="classjson__pointer.html" class="el">json_pointer</a>
+&amp;ptr)</td>
+</tr>
+<tr class="even memdesc:a8bb8e43c6e01a6370cd49ba130171219">
+<td class="mdescLeft"> </td>
+<td class="mdescRight">append another JSON pointer at the end of this
+JSON pointer<br />
+</td>
+</tr>
+<tr class="odd separator:a8bb8e43c6e01a6370cd49ba130171219">
+<td colspan="2" class="memSeparator"> </td>
+</tr>
+<tr id="r_aa810a9db8c1d6e67c4a3703dc66a18d4"
+class="even memitem:aa810a9db8c1d6e67c4a3703dc66a18d4">
+<td class="memItemLeft" style="text-align: right;" data-valign="top"><a
+href="classjson__pointer.html" class="el">json_pointer</a> &amp; </td>
+<td class="memItemRight" data-valign="bottom"><a
+href="#aa810a9db8c1d6e67c4a3703dc66a18d4" class="el">operator/=</a>
+(string_t token)</td>
+</tr>
+<tr class="odd memdesc:aa810a9db8c1d6e67c4a3703dc66a18d4">
+<td class="mdescLeft"> </td>
+<td class="mdescRight">append an unescaped reference token at the end of
+this JSON pointer<br />
+</td>
+</tr>
+<tr class="even separator:aa810a9db8c1d6e67c4a3703dc66a18d4">
+<td colspan="2" class="memSeparator"> </td>
+</tr>
+<tr id="r_a6c2bffffbf08b77259e0b658c841703c"
+class="odd memitem:a6c2bffffbf08b77259e0b658c841703c">
+<td class="memItemLeft" style="text-align: right;" data-valign="top"><a
+href="classjson__pointer.html" class="el">json_pointer</a> &amp; </td>
+<td class="memItemRight" data-valign="bottom"><a
+href="#a6c2bffffbf08b77259e0b658c841703c" class="el">operator/=</a>
+(std::size_t array_idx)</td>
+</tr>
+<tr class="even memdesc:a6c2bffffbf08b77259e0b658c841703c">
+<td class="mdescLeft"> </td>
+<td class="mdescRight">append an array index at the end of this JSON
+pointer<br />
+</td>
+</tr>
+<tr class="odd separator:a6c2bffffbf08b77259e0b658c841703c">
+<td colspan="2" class="memSeparator"> </td>
+</tr>
+<tr id="r_aa03c0c1206e171342d27a4583258858b"
+class="even memitem:aa03c0c1206e171342d27a4583258858b">
+<td class="memItemLeft" style="text-align: right;" data-valign="top"><a
+href="classjson__pointer.html" class="el">json_pointer</a> </td>
+<td class="memItemRight" data-valign="bottom"><a
+href="#aa03c0c1206e171342d27a4583258858b" class="el">parent_pointer</a>
+() const</td>
+</tr>
+<tr class="odd memdesc:aa03c0c1206e171342d27a4583258858b">
+<td class="mdescLeft"> </td>
+<td class="mdescRight">returns the parent of this JSON pointer<br />
+</td>
+</tr>
+<tr class="even separator:aa03c0c1206e171342d27a4583258858b">
+<td colspan="2" class="memSeparator"> </td>
+</tr>
+<tr id="r_a662118b470c87a1b564946c2602c49ce"
+class="odd memitem:a662118b470c87a1b564946c2602c49ce">
+<td class="memItemLeft" style="text-align: right;"
+data-valign="top">void </td>
+<td class="memItemRight" data-valign="bottom"><a
+href="#a662118b470c87a1b564946c2602c49ce" class="el">pop_back</a>
+()</td>
+</tr>
+<tr class="even memdesc:a662118b470c87a1b564946c2602c49ce">
+<td class="mdescLeft"> </td>
+<td class="mdescRight">remove last reference token<br />
+</td>
+</tr>
+<tr class="odd separator:a662118b470c87a1b564946c2602c49ce">
+<td colspan="2" class="memSeparator"> </td>
+</tr>
+<tr id="r_aba71e63e4032cfc46dd90aeb09e5cb0f"
+class="even memitem:aba71e63e4032cfc46dd90aeb09e5cb0f">
+<td class="memItemLeft" style="text-align: right;"
+data-valign="top">const string_t &amp; </td>
+<td class="memItemRight" data-valign="bottom"><a
+href="#aba71e63e4032cfc46dd90aeb09e5cb0f" class="el">back</a> ()
+const</td>
+</tr>
+<tr class="odd memdesc:aba71e63e4032cfc46dd90aeb09e5cb0f">
+<td class="mdescLeft"> </td>
+<td class="mdescRight">return last reference token<br />
+</td>
+</tr>
+<tr class="even separator:aba71e63e4032cfc46dd90aeb09e5cb0f">
+<td colspan="2" class="memSeparator"> </td>
+</tr>
+<tr id="r_adbe97f9c00a221fb7be88d940b39a24f"
+class="odd memitem:adbe97f9c00a221fb7be88d940b39a24f">
+<td class="memItemLeft" style="text-align: right;"
+data-valign="top">void </td>
+<td class="memItemRight" data-valign="bottom"><a
+href="#adbe97f9c00a221fb7be88d940b39a24f" class="el">push_back</a>
+(const string_t &amp;token)</td>
+</tr>
+<tr class="even memdesc:adbe97f9c00a221fb7be88d940b39a24f">
+<td class="mdescLeft"> </td>
+<td class="mdescRight">append an unescaped token at the end of the
+reference pointer<br />
+</td>
+</tr>
+<tr class="odd separator:adbe97f9c00a221fb7be88d940b39a24f">
+<td colspan="2" class="memSeparator"> </td>
+</tr>
+<tr id="r_a6fa4848eafc232ae1af91c3d2696897e"
+class="even memitem:a6fa4848eafc232ae1af91c3d2696897e">
+<td class="memItemLeft" style="text-align: right;"
+data-valign="top">void </td>
+<td class="memItemRight" data-valign="bottom"><a
+href="#a6fa4848eafc232ae1af91c3d2696897e" class="el">push_back</a>
+(string_t &amp;&amp;token)</td>
+</tr>
+<tr class="odd memdesc:a6fa4848eafc232ae1af91c3d2696897e">
+<td class="mdescLeft"> </td>
+<td class="mdescRight">append an unescaped token at the end of the
+reference pointer<br />
+</td>
+</tr>
+<tr class="even separator:a6fa4848eafc232ae1af91c3d2696897e">
+<td colspan="2" class="memSeparator"> </td>
+</tr>
+<tr id="r_a5c3d08bd0a0e99c3377db33600c68a64"
+class="odd memitem:a5c3d08bd0a0e99c3377db33600c68a64">
+<td class="memItemLeft" style="text-align: right;"
+data-valign="top">bool </td>
+<td class="memItemRight" data-valign="bottom"><a
+href="#a5c3d08bd0a0e99c3377db33600c68a64" class="el">empty</a> () const
+noexcept</td>
+</tr>
+<tr class="even memdesc:a5c3d08bd0a0e99c3377db33600c68a64">
+<td class="mdescLeft"> </td>
+<td class="mdescRight">return whether pointer points to the root
+document<br />
+</td>
+</tr>
+<tr class="odd separator:a5c3d08bd0a0e99c3377db33600c68a64">
+<td colspan="2" class="memSeparator"> </td>
+</tr>
+</tbody>
+</table>
+
+<table class="memberdecls">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd heading">
+<td colspan="2"><h2 id="friends" class="groupheader"><span
+id="friends"></span> Friends</h2></td>
+</tr>
+<tr id="r_ada3100cdb8700566051828f1355fa745"
+class="even memitem:ada3100cdb8700566051828f1355fa745">
+<td class="memItemLeft" style="text-align: right;"
+data-valign="top"><span id="ada3100cdb8700566051828f1355fa745"></span>
+class </td>
+<td class="memItemRight"
+data-valign="bottom"><strong>basic_json</strong></td>
+</tr>
+<tr class="odd separator:ada3100cdb8700566051828f1355fa745">
+<td colspan="2" class="memSeparator"> </td>
+</tr>
+<tr id="r_ad4140db2dd2f347f46f3abae0fc2156f"
+class="even memitem:ad4140db2dd2f347f46f3abae0fc2156f">
+<td class="memItemLeft" style="text-align: right;"
+data-valign="top">std::ostream &amp; </td>
+<td class="memItemRight" data-valign="bottom"><a
+href="#ad4140db2dd2f347f46f3abae0fc2156f"
+class="el">operator&lt;&lt;</a> (std::ostream &amp;o, const <a
+href="classjson__pointer.html" class="el">json_pointer</a>
+&amp;ptr)</td>
+</tr>
+<tr class="odd memdesc:ad4140db2dd2f347f46f3abae0fc2156f">
+<td class="mdescLeft"> </td>
+<td class="mdescRight">write string representation of the JSON pointer
+to stream<br />
+</td>
+</tr>
+<tr class="even separator:ad4140db2dd2f347f46f3abae0fc2156f">
+<td colspan="2" class="memSeparator"> </td>
+</tr>
+<tr id="r_a90a11fe6c7f37b1746a3ff9cb24b0d53"
+class="odd memitem:a90a11fe6c7f37b1746a3ff9cb24b0d53">
+<td class="memItemLeft" style="text-align: right;" data-valign="top"><a
+href="classjson__pointer.html" class="el">json_pointer</a> </td>
+<td class="memItemRight" data-valign="bottom"><a
+href="#a90a11fe6c7f37b1746a3ff9cb24b0d53" class="el">operator/</a>
+(const <a href="classjson__pointer.html" class="el">json_pointer</a>
+&amp;lhs, const <a href="classjson__pointer.html"
+class="el">json_pointer</a> &amp;rhs)</td>
+</tr>
+<tr class="even memdesc:a90a11fe6c7f37b1746a3ff9cb24b0d53">
+<td class="mdescLeft"> </td>
+<td class="mdescRight">create a new JSON pointer by appending the right
+JSON pointer at the end of the left JSON pointer<br />
+</td>
+</tr>
+<tr class="odd separator:a90a11fe6c7f37b1746a3ff9cb24b0d53">
+<td colspan="2" class="memSeparator"> </td>
+</tr>
+<tr id="r_a116956f4487af44732dd685e970679b0"
+class="even memitem:a116956f4487af44732dd685e970679b0">
+<td class="memItemLeft" style="text-align: right;" data-valign="top"><a
+href="classjson__pointer.html" class="el">json_pointer</a> </td>
+<td class="memItemRight" data-valign="bottom"><a
+href="#a116956f4487af44732dd685e970679b0" class="el">operator/</a>
+(const <a href="classjson__pointer.html" class="el">json_pointer</a>
+&amp;lhs, string_t token)</td>
+</tr>
+<tr class="odd memdesc:a116956f4487af44732dd685e970679b0">
+<td class="mdescLeft"> </td>
+<td class="mdescRight">create a new JSON pointer by appending the
+unescaped token at the end of the JSON pointer<br />
+</td>
+</tr>
+<tr class="even separator:a116956f4487af44732dd685e970679b0">
+<td colspan="2" class="memSeparator"> </td>
+</tr>
+<tr id="r_a29f6d4b492e784b9d196b05a4048c289"
+class="odd memitem:a29f6d4b492e784b9d196b05a4048c289">
+<td class="memItemLeft" style="text-align: right;" data-valign="top"><a
+href="classjson__pointer.html" class="el">json_pointer</a> </td>
+<td class="memItemRight" data-valign="bottom"><a
+href="#a29f6d4b492e784b9d196b05a4048c289" class="el">operator/</a>
+(const <a href="classjson__pointer.html" class="el">json_pointer</a>
+&amp;lhs, std::size_t array_idx)</td>
+</tr>
+<tr class="even memdesc:a29f6d4b492e784b9d196b05a4048c289">
+<td class="mdescLeft"> </td>
+<td class="mdescRight">create a new JSON pointer by appending the
+array-index-token at the end of the JSON pointer<br />
+</td>
+</tr>
+<tr class="odd separator:a29f6d4b492e784b9d196b05a4048c289">
+<td colspan="2" class="memSeparator"> </td>
+</tr>
+<tr id="r_a613a4889154f7ab2ee4efbe0fe147cf2"
+class="even memitem:a613a4889154f7ab2ee4efbe0fe147cf2">
+<td colspan="2" class="memTemplParams">template&lt;typename
+RefStringTypeLhs , typename RefStringTypeRhs &gt;</td>
+</tr>
+<tr class="odd memitem:a613a4889154f7ab2ee4efbe0fe147cf2">
+<td class="memTemplItemLeft" style="text-align: right;"
+data-valign="top">bool </td>
+<td class="memTemplItemRight" data-valign="bottom"><a
+href="#a613a4889154f7ab2ee4efbe0fe147cf2" class="el">operator==</a>
+(const <a href="classjson__pointer.html" class="el">json_pointer</a>&lt;
+RefStringTypeLhs &gt; &amp;lhs, const <a href="classjson__pointer.html"
+class="el">json_pointer</a>&lt; RefStringTypeRhs &gt; &amp;rhs)
+noexcept</td>
+</tr>
+<tr class="even memdesc:a613a4889154f7ab2ee4efbe0fe147cf2">
+<td class="mdescLeft"> </td>
+<td class="mdescRight">compares two JSON pointers for equality<br />
+</td>
+</tr>
+<tr class="odd separator:a613a4889154f7ab2ee4efbe0fe147cf2">
+<td colspan="2" class="memSeparator"> </td>
+</tr>
+<tr id="r_af6bf727798ad49870a709094e5ff981c"
+class="even memitem:af6bf727798ad49870a709094e5ff981c">
+<td colspan="2" class="memTemplParams">template&lt;typename
+RefStringTypeLhs , typename StringType &gt;</td>
+</tr>
+<tr class="odd memitem:af6bf727798ad49870a709094e5ff981c">
+<td class="memTemplItemLeft" style="text-align: right;"
+data-valign="top">bool </td>
+<td class="memTemplItemRight" data-valign="bottom"><a
+href="#af6bf727798ad49870a709094e5ff981c" class="el">operator==</a>
+(const <a href="classjson__pointer.html" class="el">json_pointer</a>&lt;
+RefStringTypeLhs &gt; &amp;lhs, const StringType &amp;rhs)</td>
+</tr>
+<tr class="even memdesc:af6bf727798ad49870a709094e5ff981c">
+<td class="mdescLeft"> </td>
+<td class="mdescRight">compares JSON pointer and string for
+equality<br />
+</td>
+</tr>
+<tr class="odd separator:af6bf727798ad49870a709094e5ff981c">
+<td colspan="2" class="memSeparator"> </td>
+</tr>
+<tr id="r_ae7aabbb2a365ddaac5192ccea3226bfb"
+class="even memitem:ae7aabbb2a365ddaac5192ccea3226bfb">
+<td colspan="2" class="memTemplParams">template&lt;typename
+RefStringTypeRhs , typename StringType &gt;</td>
+</tr>
+<tr class="odd memitem:ae7aabbb2a365ddaac5192ccea3226bfb">
+<td class="memTemplItemLeft" style="text-align: right;"
+data-valign="top">bool </td>
+<td class="memTemplItemRight" data-valign="bottom"><a
+href="#ae7aabbb2a365ddaac5192ccea3226bfb" class="el">operator==</a>
+(const StringType &amp;lhs, const <a href="classjson__pointer.html"
+class="el">json_pointer</a>&lt; RefStringTypeRhs &gt; &amp;rhs)</td>
+</tr>
+<tr class="even memdesc:ae7aabbb2a365ddaac5192ccea3226bfb">
+<td class="mdescLeft"> </td>
+<td class="mdescRight">compares string and JSON pointer for
+equality<br />
+</td>
+</tr>
+<tr class="odd separator:ae7aabbb2a365ddaac5192ccea3226bfb">
+<td colspan="2" class="memSeparator"> </td>
+</tr>
+<tr id="r_aa72a84c70e970b738f1262cfd8a66b4d"
+class="even memitem:aa72a84c70e970b738f1262cfd8a66b4d">
+<td colspan="2" class="memTemplParams">template&lt;typename
+RefStringTypeLhs , typename RefStringTypeRhs &gt;</td>
+</tr>
+<tr class="odd memitem:aa72a84c70e970b738f1262cfd8a66b4d">
+<td class="memTemplItemLeft" style="text-align: right;"
+data-valign="top">bool </td>
+<td class="memTemplItemRight" data-valign="bottom"><a
+href="#aa72a84c70e970b738f1262cfd8a66b4d" class="el">operator!=</a>
+(const <a href="classjson__pointer.html" class="el">json_pointer</a>&lt;
+RefStringTypeLhs &gt; &amp;lhs, const <a href="classjson__pointer.html"
+class="el">json_pointer</a>&lt; RefStringTypeRhs &gt; &amp;rhs)
+noexcept</td>
+</tr>
+<tr class="even memdesc:aa72a84c70e970b738f1262cfd8a66b4d">
+<td class="mdescLeft"> </td>
+<td class="mdescRight">compares two JSON pointers for inequality<br />
+</td>
+</tr>
+<tr class="odd separator:aa72a84c70e970b738f1262cfd8a66b4d">
+<td colspan="2" class="memSeparator"> </td>
+</tr>
+<tr id="r_ae0bb92b1f034ac1738d44eb7540f8f66"
+class="even memitem:ae0bb92b1f034ac1738d44eb7540f8f66">
+<td colspan="2" class="memTemplParams">template&lt;typename
+RefStringTypeLhs , typename StringType &gt;</td>
+</tr>
+<tr class="odd memitem:ae0bb92b1f034ac1738d44eb7540f8f66">
+<td class="memTemplItemLeft" style="text-align: right;"
+data-valign="top">bool </td>
+<td class="memTemplItemRight" data-valign="bottom"><a
+href="#ae0bb92b1f034ac1738d44eb7540f8f66" class="el">operator!=</a>
+(const <a href="classjson__pointer.html" class="el">json_pointer</a>&lt;
+RefStringTypeLhs &gt; &amp;lhs, const StringType &amp;rhs)</td>
+</tr>
+<tr class="even memdesc:ae0bb92b1f034ac1738d44eb7540f8f66">
+<td class="mdescLeft"> </td>
+<td class="mdescRight">compares JSON pointer and string for
+inequality<br />
+</td>
+</tr>
+<tr class="odd separator:ae0bb92b1f034ac1738d44eb7540f8f66">
+<td colspan="2" class="memSeparator"> </td>
+</tr>
+<tr id="r_a32b28c0ef5f1c96b646817a0c360d7e6"
+class="even memitem:a32b28c0ef5f1c96b646817a0c360d7e6">
+<td colspan="2" class="memTemplParams">template&lt;typename
+RefStringTypeRhs , typename StringType &gt;</td>
+</tr>
+<tr class="odd memitem:a32b28c0ef5f1c96b646817a0c360d7e6">
+<td class="memTemplItemLeft" style="text-align: right;"
+data-valign="top">bool </td>
+<td class="memTemplItemRight" data-valign="bottom"><a
+href="#a32b28c0ef5f1c96b646817a0c360d7e6" class="el">operator!=</a>
+(const StringType &amp;lhs, const <a href="classjson__pointer.html"
+class="el">json_pointer</a>&lt; RefStringTypeRhs &gt; &amp;rhs)</td>
+</tr>
+<tr class="even memdesc:a32b28c0ef5f1c96b646817a0c360d7e6">
+<td class="mdescLeft"> </td>
+<td class="mdescRight">compares string and JSON pointer for
+inequality<br />
+</td>
+</tr>
+<tr class="odd separator:a32b28c0ef5f1c96b646817a0c360d7e6">
+<td colspan="2" class="memSeparator"> </td>
+</tr>
+<tr id="r_af8c9bbaed20be0634a2e522f54265d96"
+class="even memitem:af8c9bbaed20be0634a2e522f54265d96">
+<td colspan="2" class="memTemplParams"><span
+id="af8c9bbaed20be0634a2e522f54265d96"></span> template&lt;typename
+RefStringTypeLhs , typename RefStringTypeRhs &gt;</td>
+</tr>
+<tr class="odd memitem:af8c9bbaed20be0634a2e522f54265d96">
+<td class="memTemplItemLeft" style="text-align: right;"
+data-valign="top">bool </td>
+<td class="memTemplItemRight"
+data-valign="bottom"><strong>operator&lt;</strong> (const <a
+href="classjson__pointer.html" class="el">json_pointer</a>&lt;
+RefStringTypeLhs &gt; &amp;lhs, const <a href="classjson__pointer.html"
+class="el">json_pointer</a>&lt; RefStringTypeRhs &gt; &amp;rhs)
+noexcept</td>
+</tr>
+<tr class="even memdesc:af8c9bbaed20be0634a2e522f54265d96">
+<td class="mdescLeft"> </td>
+<td class="mdescRight">compares two JSON pointer for less-than<br />
+</td>
+</tr>
+<tr class="odd separator:af8c9bbaed20be0634a2e522f54265d96">
+<td colspan="2" class="memSeparator"> </td>
+</tr>
+</tbody>
+</table>
+
+<span id="details"></span>
+
+## Detailed Description
+
+<div class="textblock">
+
+<div class="compoundTemplParams">
+
+template\<typename RefStringType\>  
+class json_pointer\< RefStringType \>
+
+</div>
 
 JSON Pointer defines a string syntax for identifying a specific value
 within a JSON document.
 
-\#include $<$json.hpp$>$
-
-<div class="DoxyCompactItemize">
-
-<span id="classjson__pointer_a21dae78c5120aa3044d4c0fa1d970291"
-label="classjson__pointer_a21dae78c5120aa3044d4c0fa1d970291"></span>
-using **string_t** = typename string_t_helper$<$RefStringType$>$::type
+See also  
+<https://json.nlohmann.me/api/json_pointer/>
 
 </div>
 
-<div class="DoxyCompactItemize">
+## Constructor & Destructor Documentation
 
-[json_pointer](#classjson__pointer_a5288b8f5d6ff6faca37f664b98a16ecd)
-(const string_t &s="")
+<span id="a5288b8f5d6ff6faca37f664b98a16ecd"></span>
 
-<div class="DoxyCompactList">
+## <span class="permalink">[◆ ](#a5288b8f5d6ff6faca37f664b98a16ecd)</span>json_pointer()
 
-*create JSON pointer*
+<div class="memitem">
 
-</div>
+<div class="memproto">
 
-string_t
-[to_string](#classjson__pointer_a6b94e2003be4cd72c4f145bcea2578ec) ()
-const
+<div class="memtemplate">
 
-<div class="DoxyCompactList">
-
-*return a string representation of the JSON pointer*
+template\<typename RefStringType \>
 
 </div>
 
-[operator string_t](#classjson__pointer_a97364e516620b02f1049f847b2ad43c9)
-() const
-
-<div class="DoxyCompactList">
-
-*return a string representation of the JSON pointer*
-
-</div>
-
-[json_pointer](#classjson__pointer) &
-[operator/=](#classjson__pointer_a8bb8e43c6e01a6370cd49ba130171219)
-(const [json_pointer](#classjson__pointer) &ptr)
-
-<div class="DoxyCompactList">
-
-*append another JSON pointer at the end of this JSON pointer*
-
-</div>
-
-[json_pointer](#classjson__pointer) &
-[operator/=](#classjson__pointer_aa810a9db8c1d6e67c4a3703dc66a18d4)
-(string_t token)
-
-<div class="DoxyCompactList">
-
-*append an unescaped reference token at the end of this JSON pointer*
-
-</div>
-
-[json_pointer](#classjson__pointer) &
-[operator/=](#classjson__pointer_a6c2bffffbf08b77259e0b658c841703c)
-(std::size_t array_idx)
-
-<div class="DoxyCompactList">
-
-*append an array index at the end of this JSON pointer*
+<table class="mlabels">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="mlabels-left"><table class="memname">
+<tbody>
+<tr class="odd">
+<td class="memname"><a href="classjson__pointer.html"
+class="el">json_pointer</a>&lt; RefStringType &gt;<a
+href="classjson__pointer.html" class="el">::json_pointer</a></td>
+<td>(</td>
+<td class="paramtype">const string_t &amp;</td>
+<td class="paramname"><span class="paramname"><em>s</em><span
+class="paramdefsep"> = </span><span
+class="paramdefval">""</span></span></td>
+<td>)</td>
+<td></td>
+</tr>
+</tbody>
+</table></td>
+<td class="mlabels-right"><span class="mlabels"><span
+class="mlabel">inline</span><span
+class="mlabel">explicit</span></span></td>
+</tr>
+</tbody>
+</table>
 
 </div>
 
-[json_pointer](#classjson__pointer)
-[parent_pointer](#classjson__pointer_aa03c0c1206e171342d27a4583258858b)
-() const
-
-<div class="DoxyCompactList">
-
-*returns the parent of this JSON pointer*
-
-</div>
-
-void [pop_back](#classjson__pointer_a662118b470c87a1b564946c2602c49ce)
-()
-
-<div class="DoxyCompactList">
-
-*remove last reference token*
-
-</div>
-
-const string_t &
-[back](#classjson__pointer_aba71e63e4032cfc46dd90aeb09e5cb0f) () const
-
-<div class="DoxyCompactList">
-
-*return last reference token*
-
-</div>
-
-void [push_back](#classjson__pointer_adbe97f9c00a221fb7be88d940b39a24f)
-(const string_t &token)
-
-<div class="DoxyCompactList">
-
-*append an unescaped token at the end of the reference pointer*
-
-</div>
-
-void [push_back](#classjson__pointer_a6fa4848eafc232ae1af91c3d2696897e)
-(string_t &&token)
-
-<div class="DoxyCompactList">
-
-*append an unescaped token at the end of the reference pointer*
-
-</div>
-
-bool [empty](#classjson__pointer_a5c3d08bd0a0e99c3377db33600c68a64) ()
-const noexcept
-
-<div class="DoxyCompactList">
-
-*return whether pointer points to the root document*
-
-</div>
-
-</div>
-
-<div class="DoxyCompactItemize">
-
-<span id="classjson__pointer_ada3100cdb8700566051828f1355fa745"
-label="classjson__pointer_ada3100cdb8700566051828f1355fa745"></span>
-class **basic_json**
-
-std::ostream &
-[operator$<$$<$](#classjson__pointer_ad4140db2dd2f347f46f3abae0fc2156f)
-(std::ostream &o, const [json_pointer](#classjson__pointer) &ptr)
-
-<div class="DoxyCompactList">
-
-*write string representation of the JSON pointer to stream*
-
-</div>
-
-[json_pointer](#classjson__pointer)
-[operator/](#classjson__pointer_a90a11fe6c7f37b1746a3ff9cb24b0d53)
-(const [json_pointer](#classjson__pointer) &lhs, const
-[json_pointer](#classjson__pointer) &rhs)
-
-<div class="DoxyCompactList">
-
-*create a new JSON pointer by appending the right JSON pointer at the
-end of the left JSON pointer*
-
-</div>
-
-[json_pointer](#classjson__pointer)
-[operator/](#classjson__pointer_a116956f4487af44732dd685e970679b0)
-(const [json_pointer](#classjson__pointer) &lhs, string_t token)
-
-<div class="DoxyCompactList">
-
-*create a new JSON pointer by appending the unescaped token at the end
-of the JSON pointer*
-
-</div>
-
-[json_pointer](#classjson__pointer)
-[operator/](#classjson__pointer_a29f6d4b492e784b9d196b05a4048c289)
-(const [json_pointer](#classjson__pointer) &lhs, std::size_t array_idx)
-
-<div class="DoxyCompactList">
-
-*create a new JSON pointer by appending the array-index-token at the end
-of the JSON pointer*
-
-</div>
-
-template$<$typename RefStringTypeLhs , typename RefStringTypeRhs $>$   
-bool [operator==](#classjson__pointer_a613a4889154f7ab2ee4efbe0fe147cf2)
-(const [json_pointer](#classjson__pointer)$<$ RefStringTypeLhs $>$ &lhs,
-const [json_pointer](#classjson__pointer)$<$ RefStringTypeRhs $>$ &rhs)
-noexcept
-
-<div class="DoxyCompactList">
-
-*compares two JSON pointers for equality*
-
-</div>
-
-template$<$typename RefStringTypeLhs , typename StringType $>$   
-bool [operator==](#classjson__pointer_af6bf727798ad49870a709094e5ff981c)
-(const [json_pointer](#classjson__pointer)$<$ RefStringTypeLhs $>$ &lhs,
-const StringType &rhs)
-
-<div class="DoxyCompactList">
-
-*compares JSON pointer and string for equality*
-
-</div>
-
-template$<$typename RefStringTypeRhs , typename StringType $>$   
-bool [operator==](#classjson__pointer_ae7aabbb2a365ddaac5192ccea3226bfb)
-(const StringType &lhs, const [json_pointer](#classjson__pointer)$<$
-RefStringTypeRhs $>$ &rhs)
-
-<div class="DoxyCompactList">
-
-*compares string and JSON pointer for equality*
-
-</div>
-
-template$<$typename RefStringTypeLhs , typename RefStringTypeRhs $>$   
-bool [operator!=](#classjson__pointer_aa72a84c70e970b738f1262cfd8a66b4d)
-(const [json_pointer](#classjson__pointer)$<$ RefStringTypeLhs $>$ &lhs,
-const [json_pointer](#classjson__pointer)$<$ RefStringTypeRhs $>$ &rhs)
-noexcept
-
-<div class="DoxyCompactList">
-
-*compares two JSON pointers for inequality*
-
-</div>
-
-template$<$typename RefStringTypeLhs , typename StringType $>$   
-bool [operator!=](#classjson__pointer_ae0bb92b1f034ac1738d44eb7540f8f66)
-(const [json_pointer](#classjson__pointer)$<$ RefStringTypeLhs $>$ &lhs,
-const StringType &rhs)
-
-<div class="DoxyCompactList">
-
-*compares JSON pointer and string for inequality*
-
-</div>
-
-template$<$typename RefStringTypeRhs , typename StringType $>$   
-bool [operator!=](#classjson__pointer_a32b28c0ef5f1c96b646817a0c360d7e6)
-(const StringType &lhs, const [json_pointer](#classjson__pointer)$<$
-RefStringTypeRhs $>$ &rhs)
-
-<div class="DoxyCompactList">
-
-*compares string and JSON pointer for inequality*
-
-</div>
-
-<span id="classjson__pointer_af8c9bbaed20be0634a2e522f54265d96"
-label="classjson__pointer_af8c9bbaed20be0634a2e522f54265d96"></span>
-template$<$typename RefStringTypeLhs , typename RefStringTypeRhs $>$   
-bool **operator$<$** (const [json_pointer](#classjson__pointer)$<$
-RefStringTypeLhs $>$ &lhs, const [json_pointer](#classjson__pointer)$<$
-RefStringTypeRhs $>$ &rhs) noexcept
-
-<div class="DoxyCompactList">
-
-*compares two JSON pointer for less-than*
-
-</div>
-
-</div>
-
-### template$<$typename RefStringType$>$ class json_pointer$<$ RefStringType $>$
-
-JSON Pointer defines a string syntax for identifying a specific value
-within a JSON document.
-
-<div class="DoxySeeAlso">
-
-See also
-[` https://json.nlohmann.me/api/json_pointer/`](https://json.nlohmann.me/api/json_pointer/)
-
-</div>
-
-<span id="classjson__pointer_a5288b8f5d6ff6faca37f664b98a16ecd"
-label="classjson__pointer_a5288b8f5d6ff6faca37f664b98a16ecd"></span>
-
-template$<$typename RefStringType $>$  
-[json_pointer](#classjson__pointer)$<$ RefStringType
-$>$[::json_pointer](#classjson__pointer) (
-
-<div class="DoxyParamCaption">
-
-s = ""
-
-</div>
-
-),
+<div class="memdoc">
 
 create JSON pointer
 
-<div class="DoxySeeAlso">
-
-See also
-[` https://json.nlohmann.me/api/json_pointer/json_pointer/`](https://json.nlohmann.me/api/json_pointer/json_pointer/)
+See also  
+<https://json.nlohmann.me/api/json_pointer/json_pointer/>
 
 </div>
 
-<span id="classjson__pointer_aba71e63e4032cfc46dd90aeb09e5cb0f"
-label="classjson__pointer_aba71e63e4032cfc46dd90aeb09e5cb0f"></span>
+</div>
 
-template$<$typename RefStringType $>$  
-const string_t & [json_pointer](#classjson__pointer)$<$ RefStringType
-$>$::back (
+## Member Function Documentation
 
-<div class="DoxyParamCaption">
+<span id="aba71e63e4032cfc46dd90aeb09e5cb0f"></span>
+
+## <span class="permalink">[◆ ](#aba71e63e4032cfc46dd90aeb09e5cb0f)</span>back()
+
+<div class="memitem">
+
+<div class="memproto">
+
+<div class="memtemplate">
+
+template\<typename RefStringType \>
 
 </div>
 
-) const
+<table class="mlabels">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="mlabels-left"><table class="memname">
+<tbody>
+<tr class="odd">
+<td class="memname">const string_t &amp; <a
+href="classjson__pointer.html" class="el">json_pointer</a>&lt;
+RefStringType &gt;::back</td>
+<td>(</td>
+<td class="paramname"><span class="paramname"></span></td>
+<td>)</td>
+<td>const</td>
+</tr>
+</tbody>
+</table></td>
+<td class="mlabels-right"><span class="mlabels"><span
+class="mlabel">inline</span></span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="memdoc">
 
 return last reference token
 
-<div class="DoxySeeAlso">
-
-See also
-[` https://json.nlohmann.me/api/json_pointer/back/`](https://json.nlohmann.me/api/json_pointer/back/)
+See also  
+<https://json.nlohmann.me/api/json_pointer/back/>
 
 </div>
 
-<span id="classjson__pointer_a5c3d08bd0a0e99c3377db33600c68a64"
-label="classjson__pointer_a5c3d08bd0a0e99c3377db33600c68a64"></span>
+</div>
 
-template$<$typename RefStringType $>$  
-bool [json_pointer](#classjson__pointer)$<$ RefStringType $>$::empty (
+<span id="a5c3d08bd0a0e99c3377db33600c68a64"></span>
 
-<div class="DoxyParamCaption">
+## <span class="permalink">[◆ ](#a5c3d08bd0a0e99c3377db33600c68a64)</span>empty()
+
+<div class="memitem">
+
+<div class="memproto">
+
+<div class="memtemplate">
+
+template\<typename RefStringType \>
 
 </div>
 
-) const,
+<table class="mlabels">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="mlabels-left"><table class="memname">
+<tbody>
+<tr class="odd">
+<td class="memname">bool <a href="classjson__pointer.html"
+class="el">json_pointer</a>&lt; RefStringType &gt;::empty</td>
+<td>(</td>
+<td class="paramname"><span class="paramname"></span></td>
+<td>)</td>
+<td>const</td>
+</tr>
+</tbody>
+</table></td>
+<td class="mlabels-right"><span class="mlabels"><span
+class="mlabel">inline</span><span
+class="mlabel">noexcept</span></span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="memdoc">
 
 return whether pointer points to the root document
 
-<div class="DoxySeeAlso">
-
-See also
-[` https://json.nlohmann.me/api/json_pointer/empty/`](https://json.nlohmann.me/api/json_pointer/empty/)
+See also  
+<https://json.nlohmann.me/api/json_pointer/empty/>
 
 </div>
 
-<span id="classjson__pointer_a97364e516620b02f1049f847b2ad43c9"
-label="classjson__pointer_a97364e516620b02f1049f847b2ad43c9"></span>
+</div>
 
-template$<$typename RefStringType $>$  
-[json_pointer](#classjson__pointer)$<$ RefStringType $>$::operator
-string_t (
+<span id="a97364e516620b02f1049f847b2ad43c9"></span>
 
-<div class="DoxyParamCaption">
+## <span class="permalink">[◆ ](#a97364e516620b02f1049f847b2ad43c9)</span>operator string_t()
+
+<div class="memitem">
+
+<div class="memproto">
+
+<div class="memtemplate">
+
+template\<typename RefStringType \>
 
 </div>
 
-) const
+<table class="mlabels">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="mlabels-left"><table class="memname">
+<tbody>
+<tr class="odd">
+<td class="memname"><a href="classjson__pointer.html"
+class="el">json_pointer</a>&lt; RefStringType &gt;::operator
+string_t</td>
+<td>(</td>
+<td class="paramname"><span class="paramname"></span></td>
+<td>)</td>
+<td>const</td>
+</tr>
+</tbody>
+</table></td>
+<td class="mlabels-right"><span class="mlabels"><span
+class="mlabel">inline</span></span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="memdoc">
 
 return a string representation of the JSON pointer
 
-<div class="DoxySeeAlso">
-
-See also
-[` https://json.nlohmann.me/api/json_pointer/operator_string/`](https://json.nlohmann.me/api/json_pointer/operator_string/)
+See also  
+<https://json.nlohmann.me/api/json_pointer/operator_string/>
 
 </div>
 
-<span id="classjson__pointer_a8bb8e43c6e01a6370cd49ba130171219"
-label="classjson__pointer_a8bb8e43c6e01a6370cd49ba130171219"></span>
+</div>
 
-template$<$typename RefStringType $>$  
-[json_pointer](#classjson__pointer) &
-[json_pointer](#classjson__pointer)$<$ RefStringType $>$::operator/= (
+<span id="a8bb8e43c6e01a6370cd49ba130171219"></span>
 
-<div class="DoxyParamCaption">
+## <span class="permalink">[◆ ](#a8bb8e43c6e01a6370cd49ba130171219)</span>operator/=() <span class="overload">\[1/3\]</span>
 
-ptr
+<div class="memitem">
+
+<div class="memproto">
+
+<div class="memtemplate">
+
+template\<typename RefStringType \>
 
 </div>
 
-)
+<table class="mlabels">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="mlabels-left"><table class="memname">
+<tbody>
+<tr class="odd">
+<td class="memname"><a href="classjson__pointer.html"
+class="el">json_pointer</a> &amp; <a href="classjson__pointer.html"
+class="el">json_pointer</a>&lt; RefStringType &gt;::operator/=</td>
+<td>(</td>
+<td class="paramtype">const <a href="classjson__pointer.html"
+class="el">json_pointer</a>&lt; RefStringType &gt; &amp;</td>
+<td class="paramname"><span class="paramname"><em>ptr</em></span></td>
+<td>)</td>
+<td></td>
+</tr>
+</tbody>
+</table></td>
+<td class="mlabels-right"><span class="mlabels"><span
+class="mlabel">inline</span></span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="memdoc">
 
 append another JSON pointer at the end of this JSON pointer
 
-<div class="DoxySeeAlso">
-
-See also
-[` https://json.nlohmann.me/api/json_pointer/operator_slasheq/`](https://json.nlohmann.me/api/json_pointer/operator_slasheq/)
+See also  
+<https://json.nlohmann.me/api/json_pointer/operator_slasheq/>
 
 </div>
 
-<span id="classjson__pointer_a6c2bffffbf08b77259e0b658c841703c"
-label="classjson__pointer_a6c2bffffbf08b77259e0b658c841703c"></span>
+</div>
 
-template$<$typename RefStringType $>$  
-[json_pointer](#classjson__pointer) &
-[json_pointer](#classjson__pointer)$<$ RefStringType $>$::operator/= (
+<span id="a6c2bffffbf08b77259e0b658c841703c"></span>
 
-<div class="DoxyParamCaption">
+## <span class="permalink">[◆ ](#a6c2bffffbf08b77259e0b658c841703c)</span>operator/=() <span class="overload">\[2/3\]</span>
 
-array_idx
+<div class="memitem">
+
+<div class="memproto">
+
+<div class="memtemplate">
+
+template\<typename RefStringType \>
 
 </div>
 
-)
+<table class="mlabels">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="mlabels-left"><table class="memname">
+<tbody>
+<tr class="odd">
+<td class="memname"><a href="classjson__pointer.html"
+class="el">json_pointer</a> &amp; <a href="classjson__pointer.html"
+class="el">json_pointer</a>&lt; RefStringType &gt;::operator/=</td>
+<td>(</td>
+<td class="paramtype">std::size_t</td>
+<td class="paramname"><span
+class="paramname"><em>array_idx</em></span></td>
+<td>)</td>
+<td></td>
+</tr>
+</tbody>
+</table></td>
+<td class="mlabels-right"><span class="mlabels"><span
+class="mlabel">inline</span></span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="memdoc">
 
 append an array index at the end of this JSON pointer
 
-<div class="DoxySeeAlso">
-
-See also
-[` https://json.nlohmann.me/api/json_pointer/operator_slasheq/`](https://json.nlohmann.me/api/json_pointer/operator_slasheq/)
+See also  
+<https://json.nlohmann.me/api/json_pointer/operator_slasheq/>
 
 </div>
 
-<span id="classjson__pointer_aa810a9db8c1d6e67c4a3703dc66a18d4"
-label="classjson__pointer_aa810a9db8c1d6e67c4a3703dc66a18d4"></span>
+</div>
 
-template$<$typename RefStringType $>$  
-[json_pointer](#classjson__pointer) &
-[json_pointer](#classjson__pointer)$<$ RefStringType $>$::operator/= (
+<span id="aa810a9db8c1d6e67c4a3703dc66a18d4"></span>
 
-<div class="DoxyParamCaption">
+## <span class="permalink">[◆ ](#aa810a9db8c1d6e67c4a3703dc66a18d4)</span>operator/=() <span class="overload">\[3/3\]</span>
 
-token
+<div class="memitem">
+
+<div class="memproto">
+
+<div class="memtemplate">
+
+template\<typename RefStringType \>
 
 </div>
 
-)
+<table class="mlabels">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="mlabels-left"><table class="memname">
+<tbody>
+<tr class="odd">
+<td class="memname"><a href="classjson__pointer.html"
+class="el">json_pointer</a> &amp; <a href="classjson__pointer.html"
+class="el">json_pointer</a>&lt; RefStringType &gt;::operator/=</td>
+<td>(</td>
+<td class="paramtype">string_t</td>
+<td class="paramname"><span class="paramname"><em>token</em></span></td>
+<td>)</td>
+<td></td>
+</tr>
+</tbody>
+</table></td>
+<td class="mlabels-right"><span class="mlabels"><span
+class="mlabel">inline</span></span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="memdoc">
 
 append an unescaped reference token at the end of this JSON pointer
 
-<div class="DoxySeeAlso">
-
-See also
-[` https://json.nlohmann.me/api/json_pointer/operator_slasheq/`](https://json.nlohmann.me/api/json_pointer/operator_slasheq/)
+See also  
+<https://json.nlohmann.me/api/json_pointer/operator_slasheq/>
 
 </div>
 
-<span id="classjson__pointer_aa03c0c1206e171342d27a4583258858b"
-label="classjson__pointer_aa03c0c1206e171342d27a4583258858b"></span>
+</div>
 
-template$<$typename RefStringType $>$  
-[json_pointer](#classjson__pointer)
-[json_pointer](#classjson__pointer)$<$ RefStringType $>$::parent_pointer
-(
+<span id="aa03c0c1206e171342d27a4583258858b"></span>
 
-<div class="DoxyParamCaption">
+## <span class="permalink">[◆ ](#aa03c0c1206e171342d27a4583258858b)</span>parent_pointer()
+
+<div class="memitem">
+
+<div class="memproto">
+
+<div class="memtemplate">
+
+template\<typename RefStringType \>
 
 </div>
 
-) const
+<table class="mlabels">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="mlabels-left"><table class="memname">
+<tbody>
+<tr class="odd">
+<td class="memname"><a href="classjson__pointer.html"
+class="el">json_pointer</a> <a href="classjson__pointer.html"
+class="el">json_pointer</a>&lt; RefStringType &gt;::parent_pointer</td>
+<td>(</td>
+<td class="paramname"><span class="paramname"></span></td>
+<td>)</td>
+<td>const</td>
+</tr>
+</tbody>
+</table></td>
+<td class="mlabels-right"><span class="mlabels"><span
+class="mlabel">inline</span></span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="memdoc">
 
 returns the parent of this JSON pointer
 
-<div class="DoxySeeAlso">
-
-See also
-[` https://json.nlohmann.me/api/json_pointer/parent_pointer/`](https://json.nlohmann.me/api/json_pointer/parent_pointer/)
+See also  
+<https://json.nlohmann.me/api/json_pointer/parent_pointer/>
 
 </div>
 
-<span id="classjson__pointer_a662118b470c87a1b564946c2602c49ce"
-label="classjson__pointer_a662118b470c87a1b564946c2602c49ce"></span>
+</div>
 
-template$<$typename RefStringType $>$  
-void [json_pointer](#classjson__pointer)$<$ RefStringType $>$::pop_back
-(
+<span id="a662118b470c87a1b564946c2602c49ce"></span>
 
-<div class="DoxyParamCaption">
+## <span class="permalink">[◆ ](#a662118b470c87a1b564946c2602c49ce)</span>pop_back()
+
+<div class="memitem">
+
+<div class="memproto">
+
+<div class="memtemplate">
+
+template\<typename RefStringType \>
 
 </div>
 
-)
+<table class="mlabels">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="mlabels-left"><table class="memname">
+<tbody>
+<tr class="odd">
+<td class="memname">void <a href="classjson__pointer.html"
+class="el">json_pointer</a>&lt; RefStringType &gt;::pop_back</td>
+<td>(</td>
+<td class="paramname"><span class="paramname"></span></td>
+<td>)</td>
+<td></td>
+</tr>
+</tbody>
+</table></td>
+<td class="mlabels-right"><span class="mlabels"><span
+class="mlabel">inline</span></span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="memdoc">
 
 remove last reference token
 
-<div class="DoxySeeAlso">
-
-See also
-[` https://json.nlohmann.me/api/json_pointer/pop_back/`](https://json.nlohmann.me/api/json_pointer/pop_back/)
+See also  
+<https://json.nlohmann.me/api/json_pointer/pop_back/>
 
 </div>
 
-<span id="classjson__pointer_adbe97f9c00a221fb7be88d940b39a24f"
-label="classjson__pointer_adbe97f9c00a221fb7be88d940b39a24f"></span>
+</div>
 
-template$<$typename RefStringType $>$  
-void [json_pointer](#classjson__pointer)$<$ RefStringType $>$::push_back
-(
+<span id="adbe97f9c00a221fb7be88d940b39a24f"></span>
 
-<div class="DoxyParamCaption">
+## <span class="permalink">[◆ ](#adbe97f9c00a221fb7be88d940b39a24f)</span>push_back() <span class="overload">\[1/2\]</span>
 
-token
+<div class="memitem">
+
+<div class="memproto">
+
+<div class="memtemplate">
+
+template\<typename RefStringType \>
 
 </div>
 
-)
+<table class="mlabels">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="mlabels-left"><table class="memname">
+<tbody>
+<tr class="odd">
+<td class="memname">void <a href="classjson__pointer.html"
+class="el">json_pointer</a>&lt; RefStringType &gt;::push_back</td>
+<td>(</td>
+<td class="paramtype">const string_t &amp;</td>
+<td class="paramname"><span class="paramname"><em>token</em></span></td>
+<td>)</td>
+<td></td>
+</tr>
+</tbody>
+</table></td>
+<td class="mlabels-right"><span class="mlabels"><span
+class="mlabel">inline</span></span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="memdoc">
 
 append an unescaped token at the end of the reference pointer
 
-<div class="DoxySeeAlso">
-
-See also
-[` https://json.nlohmann.me/api/json_pointer/push_back/`](https://json.nlohmann.me/api/json_pointer/push_back/)
+See also  
+<https://json.nlohmann.me/api/json_pointer/push_back/>
 
 </div>
 
-<span id="classjson__pointer_a6fa4848eafc232ae1af91c3d2696897e"
-label="classjson__pointer_a6fa4848eafc232ae1af91c3d2696897e"></span>
+</div>
 
-template$<$typename RefStringType $>$  
-void [json_pointer](#classjson__pointer)$<$ RefStringType $>$::push_back
-(
+<span id="a6fa4848eafc232ae1af91c3d2696897e"></span>
 
-<div class="DoxyParamCaption">
+## <span class="permalink">[◆ ](#a6fa4848eafc232ae1af91c3d2696897e)</span>push_back() <span class="overload">\[2/2\]</span>
 
-token
+<div class="memitem">
+
+<div class="memproto">
+
+<div class="memtemplate">
+
+template\<typename RefStringType \>
 
 </div>
 
-)
+<table class="mlabels">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="mlabels-left"><table class="memname">
+<tbody>
+<tr class="odd">
+<td class="memname">void <a href="classjson__pointer.html"
+class="el">json_pointer</a>&lt; RefStringType &gt;::push_back</td>
+<td>(</td>
+<td class="paramtype">string_t &amp;&amp;</td>
+<td class="paramname"><span class="paramname"><em>token</em></span></td>
+<td>)</td>
+<td></td>
+</tr>
+</tbody>
+</table></td>
+<td class="mlabels-right"><span class="mlabels"><span
+class="mlabel">inline</span></span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="memdoc">
 
 append an unescaped token at the end of the reference pointer
 
-<div class="DoxySeeAlso">
-
-See also
-[` https://json.nlohmann.me/api/json_pointer/push_back/`](https://json.nlohmann.me/api/json_pointer/push_back/)
+See also  
+<https://json.nlohmann.me/api/json_pointer/push_back/>
 
 </div>
 
-<span id="classjson__pointer_a6b94e2003be4cd72c4f145bcea2578ec"
-label="classjson__pointer_a6b94e2003be4cd72c4f145bcea2578ec"></span>
+</div>
 
-template$<$typename RefStringType $>$  
-string_t [json_pointer](#classjson__pointer)$<$ RefStringType
-$>$::to_string (
+<span id="a6b94e2003be4cd72c4f145bcea2578ec"></span>
 
-<div class="DoxyParamCaption">
+## <span class="permalink">[◆ ](#a6b94e2003be4cd72c4f145bcea2578ec)</span>to_string()
+
+<div class="memitem">
+
+<div class="memproto">
+
+<div class="memtemplate">
+
+template\<typename RefStringType \>
 
 </div>
 
-) const
+<table class="mlabels">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="mlabels-left"><table class="memname">
+<tbody>
+<tr class="odd">
+<td class="memname">string_t <a href="classjson__pointer.html"
+class="el">json_pointer</a>&lt; RefStringType &gt;::to_string</td>
+<td>(</td>
+<td class="paramname"><span class="paramname"></span></td>
+<td>)</td>
+<td>const</td>
+</tr>
+</tbody>
+</table></td>
+<td class="mlabels-right"><span class="mlabels"><span
+class="mlabel">inline</span></span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="memdoc">
 
 return a string representation of the JSON pointer
 
-<div class="DoxySeeAlso">
-
-See also
-[` https://json.nlohmann.me/api/json_pointer/to_string/`](https://json.nlohmann.me/api/json_pointer/to_string/)
+See also  
+<https://json.nlohmann.me/api/json_pointer/to_string/>
 
 </div>
 
-<span id="classjson__pointer_aa72a84c70e970b738f1262cfd8a66b4d"
-label="classjson__pointer_aa72a84c70e970b738f1262cfd8a66b4d"></span>
+</div>
 
-template$<$typename RefStringType $>$  
-template$<$typename RefStringTypeLhs , typename RefStringTypeRhs $>$  
-bool operator!= (
+## Friends And Related Symbol Documentation
 
-<div class="DoxyParamCaption">
+<span id="aa72a84c70e970b738f1262cfd8a66b4d"></span>
 
-lhs,
+## <span class="permalink">[◆ ](#aa72a84c70e970b738f1262cfd8a66b4d)</span>operator!= <span class="overload">\[1/3\]</span>
 
-rhs
+<div class="memitem">
+
+<div class="memproto">
+
+<div class="memtemplate">
+
+template\<typename RefStringType \>
 
 </div>
 
-)
+<div class="memtemplate">
+
+template\<typename RefStringTypeLhs , typename RefStringTypeRhs \>
+
+</div>
+
+<table class="mlabels">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="mlabels-left"><table class="memname">
+<tbody>
+<tr class="odd">
+<td class="memname">bool operator!=</td>
+<td>(</td>
+<td class="paramtype">const <a href="classjson__pointer.html"
+class="el">json_pointer</a>&lt; RefStringTypeLhs &gt; &amp;</td>
+<td class="paramname"><span class="paramname"><em>lhs</em>, </span></td>
+</tr>
+<tr class="even">
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const <a href="classjson__pointer.html"
+class="el">json_pointer</a>&lt; RefStringTypeRhs &gt; &amp;</td>
+<td class="paramname"><span class="paramname"><em>rhs</em></span> )</td>
+</tr>
+</tbody>
+</table></td>
+<td class="mlabels-right"><span class="mlabels"><span
+class="mlabel">friend</span></span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="memdoc">
 
 compares two JSON pointers for inequality
 
-<div class="DoxySeeAlso">
-
-See also
-[` https://json.nlohmann.me/api/json_pointer/operator_ne/`](https://json.nlohmann.me/api/json_pointer/operator_ne/)
+See also  
+<https://json.nlohmann.me/api/json_pointer/operator_ne/>
 
 </div>
 
-<span id="classjson__pointer_ae0bb92b1f034ac1738d44eb7540f8f66"
-label="classjson__pointer_ae0bb92b1f034ac1738d44eb7540f8f66"></span>
+</div>
 
-template$<$typename RefStringType $>$  
-template$<$typename RefStringTypeLhs , typename StringType $>$  
-bool operator!= (
+<span id="ae0bb92b1f034ac1738d44eb7540f8f66"></span>
 
-<div class="DoxyParamCaption">
+## <span class="permalink">[◆ ](#ae0bb92b1f034ac1738d44eb7540f8f66)</span>operator!= <span class="overload">\[2/3\]</span>
 
-lhs,
+<div class="memitem">
 
-rhs
+<div class="memproto">
+
+<div class="memtemplate">
+
+template\<typename RefStringType \>
 
 </div>
 
-)
+<div class="memtemplate">
+
+template\<typename RefStringTypeLhs , typename StringType \>
+
+</div>
+
+<table class="mlabels">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="mlabels-left"><table class="memname">
+<tbody>
+<tr class="odd">
+<td class="memname">bool operator!=</td>
+<td>(</td>
+<td class="paramtype">const <a href="classjson__pointer.html"
+class="el">json_pointer</a>&lt; RefStringTypeLhs &gt; &amp;</td>
+<td class="paramname"><span class="paramname"><em>lhs</em>, </span></td>
+</tr>
+<tr class="even">
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const StringType &amp;</td>
+<td class="paramname"><span class="paramname"><em>rhs</em></span> )</td>
+</tr>
+</tbody>
+</table></td>
+<td class="mlabels-right"><span class="mlabels"><span
+class="mlabel">friend</span></span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="memdoc">
 
 compares JSON pointer and string for inequality
 
-<div class="DoxySeeAlso">
-
-See also
-[` https://json.nlohmann.me/api/json_pointer/operator_ne/`](https://json.nlohmann.me/api/json_pointer/operator_ne/)
+See also  
+<https://json.nlohmann.me/api/json_pointer/operator_ne/>
 
 </div>
 
-<span id="classjson__pointer_a32b28c0ef5f1c96b646817a0c360d7e6"
-label="classjson__pointer_a32b28c0ef5f1c96b646817a0c360d7e6"></span>
+</div>
 
-template$<$typename RefStringType $>$  
-template$<$typename RefStringTypeRhs , typename StringType $>$  
-bool operator!= (
+<span id="a32b28c0ef5f1c96b646817a0c360d7e6"></span>
 
-<div class="DoxyParamCaption">
+## <span class="permalink">[◆ ](#a32b28c0ef5f1c96b646817a0c360d7e6)</span>operator!= <span class="overload">\[3/3\]</span>
 
-lhs,
+<div class="memitem">
 
-rhs
+<div class="memproto">
+
+<div class="memtemplate">
+
+template\<typename RefStringType \>
 
 </div>
 
-)
+<div class="memtemplate">
+
+template\<typename RefStringTypeRhs , typename StringType \>
+
+</div>
+
+<table class="mlabels">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="mlabels-left"><table class="memname">
+<tbody>
+<tr class="odd">
+<td class="memname">bool operator!=</td>
+<td>(</td>
+<td class="paramtype">const StringType &amp;</td>
+<td class="paramname"><span class="paramname"><em>lhs</em>, </span></td>
+</tr>
+<tr class="even">
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const <a href="classjson__pointer.html"
+class="el">json_pointer</a>&lt; RefStringTypeRhs &gt; &amp;</td>
+<td class="paramname"><span class="paramname"><em>rhs</em></span> )</td>
+</tr>
+</tbody>
+</table></td>
+<td class="mlabels-right"><span class="mlabels"><span
+class="mlabel">friend</span></span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="memdoc">
 
 compares string and JSON pointer for inequality
 
-<div class="DoxySeeAlso">
-
-See also
-[` https://json.nlohmann.me/api/json_pointer/operator_ne/`](https://json.nlohmann.me/api/json_pointer/operator_ne/)
+See also  
+<https://json.nlohmann.me/api/json_pointer/operator_ne/>
 
 </div>
 
-<span id="classjson__pointer_a90a11fe6c7f37b1746a3ff9cb24b0d53"
-label="classjson__pointer_a90a11fe6c7f37b1746a3ff9cb24b0d53"></span>
+</div>
 
-template$<$typename RefStringType $>$  
-[json_pointer](#classjson__pointer) operator/ (
+<span id="a90a11fe6c7f37b1746a3ff9cb24b0d53"></span>
 
-<div class="DoxyParamCaption">
+## <span class="permalink">[◆ ](#a90a11fe6c7f37b1746a3ff9cb24b0d53)</span>operator/ <span class="overload">\[1/3\]</span>
 
-lhs,
+<div class="memitem">
 
-rhs
+<div class="memproto">
+
+<div class="memtemplate">
+
+template\<typename RefStringType \>
 
 </div>
 
-)
+<table class="mlabels">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="mlabels-left"><table class="memname">
+<tbody>
+<tr class="odd">
+<td class="memname"><a href="classjson__pointer.html"
+class="el">json_pointer</a> operator/</td>
+<td>(</td>
+<td class="paramtype">const <a href="classjson__pointer.html"
+class="el">json_pointer</a>&lt; RefStringType &gt; &amp;</td>
+<td class="paramname"><span class="paramname"><em>lhs</em>, </span></td>
+</tr>
+<tr class="even">
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const <a href="classjson__pointer.html"
+class="el">json_pointer</a>&lt; RefStringType &gt; &amp;</td>
+<td class="paramname"><span class="paramname"><em>rhs</em></span> )</td>
+</tr>
+</tbody>
+</table></td>
+<td class="mlabels-right"><span class="mlabels"><span
+class="mlabel">friend</span></span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="memdoc">
 
 create a new JSON pointer by appending the right JSON pointer at the end
 of the left JSON pointer
 
-<div class="DoxySeeAlso">
-
-See also
-[` https://json.nlohmann.me/api/json_pointer/operator_slash/`](https://json.nlohmann.me/api/json_pointer/operator_slash/)
+See also  
+<https://json.nlohmann.me/api/json_pointer/operator_slash/>
 
 </div>
 
-<span id="classjson__pointer_a29f6d4b492e784b9d196b05a4048c289"
-label="classjson__pointer_a29f6d4b492e784b9d196b05a4048c289"></span>
+</div>
 
-template$<$typename RefStringType $>$  
-[json_pointer](#classjson__pointer) operator/ (
+<span id="a29f6d4b492e784b9d196b05a4048c289"></span>
 
-<div class="DoxyParamCaption">
+## <span class="permalink">[◆ ](#a29f6d4b492e784b9d196b05a4048c289)</span>operator/ <span class="overload">\[2/3\]</span>
 
-lhs,
+<div class="memitem">
 
-array_idx
+<div class="memproto">
+
+<div class="memtemplate">
+
+template\<typename RefStringType \>
 
 </div>
 
-)
+<table class="mlabels">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="mlabels-left"><table class="memname">
+<tbody>
+<tr class="odd">
+<td class="memname"><a href="classjson__pointer.html"
+class="el">json_pointer</a> operator/</td>
+<td>(</td>
+<td class="paramtype">const <a href="classjson__pointer.html"
+class="el">json_pointer</a>&lt; RefStringType &gt; &amp;</td>
+<td class="paramname"><span class="paramname"><em>lhs</em>, </span></td>
+</tr>
+<tr class="even">
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">std::size_t</td>
+<td class="paramname"><span
+class="paramname"><em>array_idx</em></span> )</td>
+</tr>
+</tbody>
+</table></td>
+<td class="mlabels-right"><span class="mlabels"><span
+class="mlabel">friend</span></span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="memdoc">
 
 create a new JSON pointer by appending the array-index-token at the end
 of the JSON pointer
 
-<div class="DoxySeeAlso">
-
-See also
-[` https://json.nlohmann.me/api/json_pointer/operator_slash/`](https://json.nlohmann.me/api/json_pointer/operator_slash/)
+See also  
+<https://json.nlohmann.me/api/json_pointer/operator_slash/>
 
 </div>
 
-<span id="classjson__pointer_a116956f4487af44732dd685e970679b0"
-label="classjson__pointer_a116956f4487af44732dd685e970679b0"></span>
+</div>
 
-template$<$typename RefStringType $>$  
-[json_pointer](#classjson__pointer) operator/ (
+<span id="a116956f4487af44732dd685e970679b0"></span>
 
-<div class="DoxyParamCaption">
+## <span class="permalink">[◆ ](#a116956f4487af44732dd685e970679b0)</span>operator/ <span class="overload">\[3/3\]</span>
 
-lhs,
+<div class="memitem">
 
-token
+<div class="memproto">
+
+<div class="memtemplate">
+
+template\<typename RefStringType \>
 
 </div>
 
-)
+<table class="mlabels">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="mlabels-left"><table class="memname">
+<tbody>
+<tr class="odd">
+<td class="memname"><a href="classjson__pointer.html"
+class="el">json_pointer</a> operator/</td>
+<td>(</td>
+<td class="paramtype">const <a href="classjson__pointer.html"
+class="el">json_pointer</a>&lt; RefStringType &gt; &amp;</td>
+<td class="paramname"><span class="paramname"><em>lhs</em>, </span></td>
+</tr>
+<tr class="even">
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">string_t</td>
+<td class="paramname"><span
+class="paramname"><em>token</em></span> )</td>
+</tr>
+</tbody>
+</table></td>
+<td class="mlabels-right"><span class="mlabels"><span
+class="mlabel">friend</span></span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="memdoc">
 
 create a new JSON pointer by appending the unescaped token at the end of
 the JSON pointer
 
-<div class="DoxySeeAlso">
-
-See also
-[` https://json.nlohmann.me/api/json_pointer/operator_slash/`](https://json.nlohmann.me/api/json_pointer/operator_slash/)
+See also  
+<https://json.nlohmann.me/api/json_pointer/operator_slash/>
 
 </div>
 
-<span id="classjson__pointer_ad4140db2dd2f347f46f3abae0fc2156f"
-label="classjson__pointer_ad4140db2dd2f347f46f3abae0fc2156f"></span>
+</div>
 
-template$<$typename RefStringType $>$  
-std::ostream & operator$<$$<$ (
+<span id="ad4140db2dd2f347f46f3abae0fc2156f"></span>
 
-<div class="DoxyParamCaption">
+## <span class="permalink">[◆ ](#ad4140db2dd2f347f46f3abae0fc2156f)</span>operator\<\<
 
-o,
+<div class="memitem">
 
-ptr
+<div class="memproto">
+
+<div class="memtemplate">
+
+template\<typename RefStringType \>
 
 </div>
 
-)
+<table class="mlabels">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="mlabels-left"><table class="memname">
+<tbody>
+<tr class="odd">
+<td class="memname">std::ostream &amp; operator&lt;&lt;</td>
+<td>(</td>
+<td class="paramtype">std::ostream &amp;</td>
+<td class="paramname"><span class="paramname"><em>o</em>, </span></td>
+</tr>
+<tr class="even">
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const <a href="classjson__pointer.html"
+class="el">json_pointer</a>&lt; RefStringType &gt; &amp;</td>
+<td class="paramname"><span class="paramname"><em>ptr</em></span> )</td>
+</tr>
+</tbody>
+</table></td>
+<td class="mlabels-right"><span class="mlabels"><span
+class="mlabel">friend</span></span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="memdoc">
 
 write string representation of the JSON pointer to stream
 
-<div class="DoxySeeAlso">
-
-See also
-[` https://json.nlohmann.me/api/basic_json/operator_ltlt/`](https://json.nlohmann.me/api/basic_json/operator_ltlt/)
+See also  
+<https://json.nlohmann.me/api/basic_json/operator_ltlt/>
 
 </div>
 
-<span id="classjson__pointer_a613a4889154f7ab2ee4efbe0fe147cf2"
-label="classjson__pointer_a613a4889154f7ab2ee4efbe0fe147cf2"></span>
+</div>
 
-template$<$typename RefStringType $>$  
-template$<$typename RefStringTypeLhs , typename RefStringTypeRhs $>$  
-bool operator== (
+<span id="a613a4889154f7ab2ee4efbe0fe147cf2"></span>
 
-<div class="DoxyParamCaption">
+## <span class="permalink">[◆ ](#a613a4889154f7ab2ee4efbe0fe147cf2)</span>operator== <span class="overload">\[1/3\]</span>
 
-lhs,
+<div class="memitem">
 
-rhs
+<div class="memproto">
+
+<div class="memtemplate">
+
+template\<typename RefStringType \>
 
 </div>
 
-)
+<div class="memtemplate">
+
+template\<typename RefStringTypeLhs , typename RefStringTypeRhs \>
+
+</div>
+
+<table class="mlabels">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="mlabels-left"><table class="memname">
+<tbody>
+<tr class="odd">
+<td class="memname">bool operator==</td>
+<td>(</td>
+<td class="paramtype">const <a href="classjson__pointer.html"
+class="el">json_pointer</a>&lt; RefStringTypeLhs &gt; &amp;</td>
+<td class="paramname"><span class="paramname"><em>lhs</em>, </span></td>
+</tr>
+<tr class="even">
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const <a href="classjson__pointer.html"
+class="el">json_pointer</a>&lt; RefStringTypeRhs &gt; &amp;</td>
+<td class="paramname"><span class="paramname"><em>rhs</em></span> )</td>
+</tr>
+</tbody>
+</table></td>
+<td class="mlabels-right"><span class="mlabels"><span
+class="mlabel">friend</span></span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="memdoc">
 
 compares two JSON pointers for equality
 
-<div class="DoxySeeAlso">
-
-See also
-[` https://json.nlohmann.me/api/json_pointer/operator_eq/`](https://json.nlohmann.me/api/json_pointer/operator_eq/)
+See also  
+<https://json.nlohmann.me/api/json_pointer/operator_eq/>
 
 </div>
 
-<span id="classjson__pointer_af6bf727798ad49870a709094e5ff981c"
-label="classjson__pointer_af6bf727798ad49870a709094e5ff981c"></span>
+</div>
 
-template$<$typename RefStringType $>$  
-template$<$typename RefStringTypeLhs , typename StringType $>$  
-bool operator== (
+<span id="af6bf727798ad49870a709094e5ff981c"></span>
 
-<div class="DoxyParamCaption">
+## <span class="permalink">[◆ ](#af6bf727798ad49870a709094e5ff981c)</span>operator== <span class="overload">\[2/3\]</span>
 
-lhs,
+<div class="memitem">
 
-rhs
+<div class="memproto">
+
+<div class="memtemplate">
+
+template\<typename RefStringType \>
 
 </div>
 
-)
+<div class="memtemplate">
+
+template\<typename RefStringTypeLhs , typename StringType \>
+
+</div>
+
+<table class="mlabels">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="mlabels-left"><table class="memname">
+<tbody>
+<tr class="odd">
+<td class="memname">bool operator==</td>
+<td>(</td>
+<td class="paramtype">const <a href="classjson__pointer.html"
+class="el">json_pointer</a>&lt; RefStringTypeLhs &gt; &amp;</td>
+<td class="paramname"><span class="paramname"><em>lhs</em>, </span></td>
+</tr>
+<tr class="even">
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const StringType &amp;</td>
+<td class="paramname"><span class="paramname"><em>rhs</em></span> )</td>
+</tr>
+</tbody>
+</table></td>
+<td class="mlabels-right"><span class="mlabels"><span
+class="mlabel">friend</span></span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="memdoc">
 
 compares JSON pointer and string for equality
 
-<div class="DoxySeeAlso">
-
-See also
-[` https://json.nlohmann.me/api/json_pointer/operator_eq/`](https://json.nlohmann.me/api/json_pointer/operator_eq/)
+See also  
+<https://json.nlohmann.me/api/json_pointer/operator_eq/>
 
 </div>
 
-<span id="classjson__pointer_ae7aabbb2a365ddaac5192ccea3226bfb"
-label="classjson__pointer_ae7aabbb2a365ddaac5192ccea3226bfb"></span>
+</div>
 
-template$<$typename RefStringType $>$  
-template$<$typename RefStringTypeRhs , typename StringType $>$  
-bool operator== (
+<span id="ae7aabbb2a365ddaac5192ccea3226bfb"></span>
 
-<div class="DoxyParamCaption">
+## <span class="permalink">[◆ ](#ae7aabbb2a365ddaac5192ccea3226bfb)</span>operator== <span class="overload">\[3/3\]</span>
 
-lhs,
+<div class="memitem">
 
-rhs
+<div class="memproto">
+
+<div class="memtemplate">
+
+template\<typename RefStringType \>
 
 </div>
 
-)
+<div class="memtemplate">
+
+template\<typename RefStringTypeRhs , typename StringType \>
+
+</div>
+
+<table class="mlabels">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="mlabels-left"><table class="memname">
+<tbody>
+<tr class="odd">
+<td class="memname">bool operator==</td>
+<td>(</td>
+<td class="paramtype">const StringType &amp;</td>
+<td class="paramname"><span class="paramname"><em>lhs</em>, </span></td>
+</tr>
+<tr class="even">
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const <a href="classjson__pointer.html"
+class="el">json_pointer</a>&lt; RefStringTypeRhs &gt; &amp;</td>
+<td class="paramname"><span class="paramname"><em>rhs</em></span> )</td>
+</tr>
+</tbody>
+</table></td>
+<td class="mlabels-right"><span class="mlabels"><span
+class="mlabel">friend</span></span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="memdoc">
 
 compares string and JSON pointer for equality
 
-<div class="DoxySeeAlso">
-
-See also
-[` https://json.nlohmann.me/api/json_pointer/operator_eq/`](https://json.nlohmann.me/api/json_pointer/operator_eq/)
+See also  
+<https://json.nlohmann.me/api/json_pointer/operator_eq/>
 
 </div>
+
+</div>
+
+------------------------------------------------------------------------
 
 The documentation for this class was generated from the following file:
 
-<div class="DoxyCompactItemize">
-
-MacGyver/json.hpp
+- MacGyver/<a href="json_8hpp_source.html" class="el">json.hpp</a>
 
 </div>
+
+------------------------------------------------------------------------
+
+<span class="small">Generated
+by [<img src="doxygen.svg" class="footer" width="104" height="31"
+alt="doxygen" />](https://www.doxygen.org/index.html) 1.10.0</span>
