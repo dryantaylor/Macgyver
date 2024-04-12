@@ -1,9 +1,5 @@
 \doxysection{Macgyver\+::Components\+::UI\+::UIMouse\+Detector\+Data Struct Reference}
 \hypertarget{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_mouse_detector_data}{}\label{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_mouse_detector_data}\index{Macgyver::Components::UI::UIMouseDetectorData@{Macgyver::Components::UI::UIMouseDetectorData}}
-
-
-{\ttfamily \#include $<$UIMouse\+Detector.\+h$>$}
-
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -12,17 +8,21 @@
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-SDL\+\_\+\+Rect \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_mouse_detector_data_a9481c3eac3a136dd9ba539c33d4e6d7a}{collider}}
+\Hypertarget{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_mouse_detector_data_a9481c3eac3a136dd9ba539c33d4e6d7a}\label{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_mouse_detector_data_a9481c3eac3a136dd9ba539c33d4e6d7a} 
+SDL\+\_\+\+Rect {\bfseries collider}
 \begin{DoxyCompactList}\small\item\em rect giving the bounds of the button \end{DoxyCompactList}\item 
-size\+\_\+t \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_mouse_detector_data_a6c5d3215693cf39eb1a60d92fc983e0d}{message\+Index}}
+\Hypertarget{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_mouse_detector_data_a6c5d3215693cf39eb1a60d92fc983e0d}\label{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_mouse_detector_data_a6c5d3215693cf39eb1a60d92fc983e0d} 
+size\+\_\+t {\bfseries message\+Index}
 \begin{DoxyCompactList}\small\item\em which messaganger cell to use \end{DoxyCompactList}\item 
 long long \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_mouse_detector_data_a1c5b9a178c29f0816de11c3791335af4}{hover\+Value}}
 \item 
 long long \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_mouse_detector_data_ad3d77c6c0ea7eda3e6b2e18103b68d12}{reset\+Value}}
 \item 
-SDL\+\_\+\+Point \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_mouse_detector_data_af74265e1378b3407046e92f150f938ff}{INTERNAL\+\_\+mouse\+Point}}
+\Hypertarget{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_mouse_detector_data_af74265e1378b3407046e92f150f938ff}\label{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_mouse_detector_data_af74265e1378b3407046e92f150f938ff} 
+SDL\+\_\+\+Point {\bfseries INTERNAL\+\_\+mouse\+Point}
 \begin{DoxyCompactList}\small\item\em used internally for bounds checking \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_mouse_detector_data_aea33e44b781e0d54297debb933c1fbeb}{pressed\+Prev\+Frame}}
+\Hypertarget{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_mouse_detector_data_aea33e44b781e0d54297debb933c1fbeb}\label{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_mouse_detector_data_aea33e44b781e0d54297debb933c1fbeb} 
+bool {\bfseries pressed\+Prev\+Frame}
 \begin{DoxyCompactList}\small\item\em used internally to handle button being released \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -37,7 +37,7 @@ Constructor for Mouse\+Detector\+Data
 
 
 \begin{DoxyParams}{Parameters}
-{\em collider} & Bounds of the detection with x,y set to 0, as the \doxylink{namespace_macgyver_1_1_components}{Components} transform is used for this\\
+{\em collider} & Bounds of the detection with x,y set to 0, as the Components transform is used for this\\
 \hline
 {\em message\+Index} & which cell of the \doxylink{class_macgyver_1_1_messenger}{Messenger} to change\\
 \hline
@@ -47,53 +47,13 @@ Constructor for Mouse\+Detector\+Data
 
 
 \doxysubsection{Member Data Documentation}
-\Hypertarget{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_mouse_detector_data_a9481c3eac3a136dd9ba539c33d4e6d7a}\label{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_mouse_detector_data_a9481c3eac3a136dd9ba539c33d4e6d7a} 
-\index{Macgyver::Components::UI::UIMouseDetectorData@{Macgyver::Components::UI::UIMouseDetectorData}!collider@{collider}}
-\index{collider@{collider}!Macgyver::Components::UI::UIMouseDetectorData@{Macgyver::Components::UI::UIMouseDetectorData}}
-\doxysubsubsection{\texorpdfstring{collider}{collider}}
-{\footnotesize\ttfamily SDL\+\_\+\+Rect Macgyver\+::\+Components\+::\+UI\+::\+UIMouse\+Detector\+Data\+::collider}
-
-
-
-rect giving the bounds of the button 
-
 \Hypertarget{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_mouse_detector_data_a1c5b9a178c29f0816de11c3791335af4}\label{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_mouse_detector_data_a1c5b9a178c29f0816de11c3791335af4} 
 \index{Macgyver::Components::UI::UIMouseDetectorData@{Macgyver::Components::UI::UIMouseDetectorData}!hoverValue@{hoverValue}}
 \index{hoverValue@{hoverValue}!Macgyver::Components::UI::UIMouseDetectorData@{Macgyver::Components::UI::UIMouseDetectorData}}
 \doxysubsubsection{\texorpdfstring{hoverValue}{hoverValue}}
 {\footnotesize\ttfamily long long Macgyver\+::\+Components\+::\+UI\+::\+UIMouse\+Detector\+Data\+::hover\+Value}
 
-value to set when button is being hovered over should be a value 2\texorpdfstring{$^\wedge$}{\string^}n \Hypertarget{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_mouse_detector_data_af74265e1378b3407046e92f150f938ff}\label{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_mouse_detector_data_af74265e1378b3407046e92f150f938ff} 
-\index{Macgyver::Components::UI::UIMouseDetectorData@{Macgyver::Components::UI::UIMouseDetectorData}!INTERNAL\_mousePoint@{INTERNAL\_mousePoint}}
-\index{INTERNAL\_mousePoint@{INTERNAL\_mousePoint}!Macgyver::Components::UI::UIMouseDetectorData@{Macgyver::Components::UI::UIMouseDetectorData}}
-\doxysubsubsection{\texorpdfstring{INTERNAL\_mousePoint}{INTERNAL\_mousePoint}}
-{\footnotesize\ttfamily SDL\+\_\+\+Point Macgyver\+::\+Components\+::\+UI\+::\+UIMouse\+Detector\+Data\+::\+INTERNAL\+\_\+mouse\+Point}
-
-
-
-used internally for bounds checking 
-
-\Hypertarget{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_mouse_detector_data_a6c5d3215693cf39eb1a60d92fc983e0d}\label{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_mouse_detector_data_a6c5d3215693cf39eb1a60d92fc983e0d} 
-\index{Macgyver::Components::UI::UIMouseDetectorData@{Macgyver::Components::UI::UIMouseDetectorData}!messageIndex@{messageIndex}}
-\index{messageIndex@{messageIndex}!Macgyver::Components::UI::UIMouseDetectorData@{Macgyver::Components::UI::UIMouseDetectorData}}
-\doxysubsubsection{\texorpdfstring{messageIndex}{messageIndex}}
-{\footnotesize\ttfamily size\+\_\+t Macgyver\+::\+Components\+::\+UI\+::\+UIMouse\+Detector\+Data\+::message\+Index}
-
-
-
-which messaganger cell to use 
-
-\Hypertarget{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_mouse_detector_data_aea33e44b781e0d54297debb933c1fbeb}\label{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_mouse_detector_data_aea33e44b781e0d54297debb933c1fbeb} 
-\index{Macgyver::Components::UI::UIMouseDetectorData@{Macgyver::Components::UI::UIMouseDetectorData}!pressedPrevFrame@{pressedPrevFrame}}
-\index{pressedPrevFrame@{pressedPrevFrame}!Macgyver::Components::UI::UIMouseDetectorData@{Macgyver::Components::UI::UIMouseDetectorData}}
-\doxysubsubsection{\texorpdfstring{pressedPrevFrame}{pressedPrevFrame}}
-{\footnotesize\ttfamily bool Macgyver\+::\+Components\+::\+UI\+::\+UIMouse\+Detector\+Data\+::pressed\+Prev\+Frame}
-
-
-
-used internally to handle button being released 
-
-\Hypertarget{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_mouse_detector_data_ad3d77c6c0ea7eda3e6b2e18103b68d12}\label{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_mouse_detector_data_ad3d77c6c0ea7eda3e6b2e18103b68d12} 
+value to set when button is being hovered over should be a value 2\texorpdfstring{$^\wedge$}{\string^}n \Hypertarget{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_mouse_detector_data_ad3d77c6c0ea7eda3e6b2e18103b68d12}\label{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_mouse_detector_data_ad3d77c6c0ea7eda3e6b2e18103b68d12} 
 \index{Macgyver::Components::UI::UIMouseDetectorData@{Macgyver::Components::UI::UIMouseDetectorData}!resetValue@{resetValue}}
 \index{resetValue@{resetValue}!Macgyver::Components::UI::UIMouseDetectorData@{Macgyver::Components::UI::UIMouseDetectorData}}
 \doxysubsubsection{\texorpdfstring{resetValue}{resetValue}}
@@ -103,5 +63,5 @@ equal to \texorpdfstring{$\sim$}{\string~}(2\texorpdfstring{$\ast$}{*}hover + ho
 
 The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Mac\+Gyver/\mbox{\hyperlink{_u_i_mouse_detector_8h}{UIMouse\+Detector.\+h}}\item 
-Mac\+Gyver/\mbox{\hyperlink{_u_i_mouse_detector_8cpp}{UIMouse\+Detector.\+cpp}}\end{DoxyCompactItemize}
+Mac\+Gyver/UIMouse\+Detector.\+h\item 
+Mac\+Gyver/UIMouse\+Detector.\+cpp\end{DoxyCompactItemize}

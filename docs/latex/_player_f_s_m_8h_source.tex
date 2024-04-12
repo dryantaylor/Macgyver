@@ -1,34 +1,34 @@
 \doxysection{Player\+FSM.\+h}
 \hypertarget{_player_f_s_m_8h_source}{}\label{_player_f_s_m_8h_source}\index{MacGyver/PlayerFSM.h@{MacGyver/PlayerFSM.h}}
-\mbox{\hyperlink{_player_f_s_m_8h}{Go to the documentation of this file.}}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_component_8h}{Component.h}}"{}}}
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_velocity_8h}{Velocity.h}}"{}}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_component_manager_8h}{ComponentManager.h}}"{}}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_component_data_8h}{ComponentData.h}}"{}}}
-\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_demo_project}{DemoProject}}\ \{}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Component.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Velocity.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}ComponentManager.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}ComponentData.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }DemoProject\ \{}
 \DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespace_demo_project_a2bad6902e5b656cdba32687b5c5232b4}{PlayerFSMstates}}\ \{}
-\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_demo_project_a2bad6902e5b656cdba32687b5c5232b4aaa58498bb2ac29738a5043335b7f998d}{LAUNCH}},}
-\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_demo_project_a2bad6902e5b656cdba32687b5c5232b4ad3fe757561a1fc96fde4a277f10fff5f}{IDLE}},}
-\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_demo_project_a2bad6902e5b656cdba32687b5c5232b4a3ebe50a610ecc1fe5047a9118fe65f4c}{WALK}},}
-\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_demo_project_a2bad6902e5b656cdba32687b5c5232b4a8b1f643f6d141f5db2bdb5491e9186ce}{RUN}}}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{enum}\ PlayerFSMstates\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ LAUNCH,}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ IDLE,}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ WALK,}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ RUN}
 \DoxyCodeLine{00013\ \ \ \ \ \};}
 \DoxyCodeLine{00014\ }
 \DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_demo_project_1_1_player_f_s_m_data}{PlayerFSMData}}\ \{}
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_demo_project_1_1_player_f_s_m_data_a473a00d30564ec39afa6126ef6d952ee}{PlayerFSMData}}(\mbox{\hyperlink{struct_macgyver_1_1_components_1_1_physics2_d_data}{Macgyver::Components::Physics2DData}}*\ phys);}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component}{Macgyver::Gameobjects::Component}}*\ \mbox{\hyperlink{struct_demo_project_1_1_player_f_s_m_data_aadfced4e471ea86be310db37d096d7cb}{PlayerRenderable}};}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_physics2_d_data}{Macgyver::Components::Physics2DData}}*\ \mbox{\hyperlink{struct_demo_project_1_1_player_f_s_m_data_ace02f2badab87b98ea35d70969fbf8c8}{physics}};}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_demo_project_a2bad6902e5b656cdba32687b5c5232b4}{PlayerFSMstates}}\ \mbox{\hyperlink{struct_demo_project_1_1_player_f_s_m_data_a2442cef4d88a43994b08341e0335911d}{currState}};}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_demo_project_1_1_player_f_s_m_data}{PlayerFSMData}}(\mbox{\hyperlink{struct_macgyver_1_1_components_1_1_physics2_d_data}{Macgyver::Components::Physics2DData}}*\ phys);}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component}{Macgyver::Gameobjects::Component}}*\ PlayerRenderable;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_physics2_d_data}{Macgyver::Components::Physics2DData}}*\ physics;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ PlayerFSMstates\ currState;}
 \DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_demo_project_1_1_player_f_s_m_data_adfe51f33b40188fbf0ad41e0f3515aa0}{internal\_animId}};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ internal\_animId;}
 \DoxyCodeLine{00022\ }
 \DoxyCodeLine{00023\ \ \ \ \ \};}
 \DoxyCodeLine{00024\ }
 \DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_demo_project_1_1_player_f_s_m}{PlayerFSM}}\ \{}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_demo_project_1_1_player_f_s_m_a90f11504b998825c56c261e84ad839af}{update}}(\mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component}{Macgyver::Gameobjects::Component}}*\ self,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ deltaTime);}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_demo_project_1_1_player_f_s_m_a33cb61ead3bd03150ea2d58f94bbdf91}{attachNew}}(\mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component}{Macgyver::Gameobjects::Component}}*\ comp);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ update(\mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component}{Macgyver::Gameobjects::Component}}*\ self,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ deltaTime);}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ attachNew(\mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component}{Macgyver::Gameobjects::Component}}*\ comp);}
 \DoxyCodeLine{00028\ \ \ \ \ \};}
 \DoxyCodeLine{00029\ \}}
 

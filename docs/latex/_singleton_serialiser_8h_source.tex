@@ -1,19 +1,19 @@
 \doxysection{Singleton\+Serialiser.\+h}
 \hypertarget{_singleton_serialiser_8h_source}{}\label{_singleton_serialiser_8h_source}\index{MacGyver/SingletonSerialiser.h@{MacGyver/SingletonSerialiser.h}}
-\mbox{\hyperlink{_singleton_serialiser_8h}{Go to the documentation of this file.}}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <string>}}
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{json_8hpp}{json.hpp}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}json.hpp"{}}}
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}iostream"{}}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_messenger_8h}{Messenger.h}}"{}}}
-\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_macgyver_1_1_serialisation}{Macgyver::Serialisation}}\ \{}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Messenger.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }Macgyver::Serialisation\ \{}
 \DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_macgyver_1_1_serialisation_1_1_singleton_serialiser}{SingletonSerialiser}}\ \{}
 \DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \mbox{\hyperlink{class_macgyver_1_1_serialisation_1_1_singleton_serialiser_a4d5e0ca66fec2bd8ccd2d0537e4e1edc}{serialiseMessenger}}();}
-\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_macgyver_1_1_serialisation_1_1_singleton_serialiser_a6bdc309d909d57bac71f62048476b250}{deserialiseMessenger}}(std::string\ serialised);}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::string\ serialiseMessenger();}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ deserialiseMessenger(std::string\ serialised);}
 \DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \mbox{\hyperlink{class_macgyver_1_1_serialisation_1_1_singleton_serialiser_a40a57b7f4cc3296a62f40f2ddfb32b6a}{serialiseAnimations}}();}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::string\ serialiseAnimations();}
 \DoxyCodeLine{00013\ \ \ \ \ }
 \DoxyCodeLine{00014\ \ \ \ \ \};}
 \DoxyCodeLine{00015\ \}}

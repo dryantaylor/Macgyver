@@ -1,21 +1,21 @@
 \doxysection{Vector3.\+h}
 \hypertarget{_vector3_8h_source}{}\label{_vector3_8h_source}\index{MacGyver/Vector3.h@{MacGyver/Vector3.h}}
-\mbox{\hyperlink{_vector3_8h}{Go to the documentation of this file.}}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
 \DoxyCodeLine{00003\ }
-\DoxyCodeLine{00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_macgyver_1_1_math}{Macgyver::Math}}\ \{}
+\DoxyCodeLine{00004\ \textcolor{keyword}{namespace\ }Macgyver::Math\ \{}
 \DoxyCodeLine{00005\ \ \ \ \ \textcolor{keyword}{class\ }Force2D;}
 \DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3}{Vector3}}\{}
 \DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3_a269eb4134e4f0a9c26060f83c18b5ae5}{x}},\ \mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3_ab872ad5413e66215ad419e81f7c5dcc9}{y}},\ \mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3_a379438d068bd4aa8514a28e36e02ed25}{z}};}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3_a61fb1b28cf667c8ef1a90bcd8b405b15}{Vector3}}(\textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3_a269eb4134e4f0a9c26060f83c18b5ae5}{x}}\ =\ 0,\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3_ab872ad5413e66215ad419e81f7c5dcc9}{y}}\ =\ 0,\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3_a379438d068bd4aa8514a28e36e02ed25}{z}}\ =\ 0);}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3}{Vector3}}\ \mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3_a1fa0960d05352fde9d6420458c326a99}{operator+}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3}{Vector3}}\&\ a);}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3}{Vector3}}\ \mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3_a36e719303c0357ca4e4e1a31e418a760}{operator-\/}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3}{Vector3}}\&\ a);}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3}{Vector3}}\ \mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3_a5b2ca2c882d54c96d9e587e98f22e68a}{operator*}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ b);}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3}{Vector3}}\ \mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3_a6a33e7667d05dd9db60a36038ab89568}{operator/}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ b);}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3}{Vector3}}\&\ \mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3_a2b28d645bb5a2b0f2a9def1e5e97d780}{operator+=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3}{Vector3}}\&\ a);}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ x,\ y,\ z;}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3_a61fb1b28cf667c8ef1a90bcd8b405b15}{Vector3}}(\textcolor{keywordtype}{float}\ x\ =\ 0,\ \textcolor{keywordtype}{float}\ y\ =\ 0,\ \textcolor{keywordtype}{float}\ z\ =\ 0);}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3}{Vector3}}\ operator+(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3}{Vector3}}\&\ a);}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3}{Vector3}}\ operator-\/(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3}{Vector3}}\&\ a);}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3}{Vector3}}\ operator*(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ b);}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3}{Vector3}}\ operator/(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ b);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3}{Vector3}}\&\ operator+=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3}{Vector3}}\&\ a);}
 \DoxyCodeLine{00027\ }
 \DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_math_1_1_force2_d}{Force2D}}\ \mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3_a279e0d8f02439f19d6d75af18650f7a3}{copyToForce2D}}();}
 \DoxyCodeLine{00036\ }

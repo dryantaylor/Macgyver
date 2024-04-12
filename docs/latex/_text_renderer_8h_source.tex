@@ -1,6 +1,6 @@
 \doxysection{Text\+Renderer.\+h}
 \hypertarget{_text_renderer_8h_source}{}\label{_text_renderer_8h_source}\index{MacGyver/TextRenderer.h@{MacGyver/TextRenderer.h}}
-\mbox{\hyperlink{_text_renderer_8h}{Go to the documentation of this file.}}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}SDL.h"{}}}
@@ -8,26 +8,26 @@
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <map>}}
 \DoxyCodeLine{00006\ }
-\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_font_8h}{Font.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Font.h"{}}}
 \DoxyCodeLine{00008\ }
 \DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ getTextRenderer\ Macgyver::UI::TextRenderer::getInstance()}}
-\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_macgyver_1_1_u_i}{Macgyver::UI}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }Macgyver::UI\ \{}
 \DoxyCodeLine{00011\ }
 \DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_macgyver_1_1_u_i_1_1_text_renderer}{TextRenderer}}\ \{}
 \DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_macgyver_1_1_u_i_1_1_text_renderer}{TextRenderer}}\&\ \mbox{\hyperlink{class_macgyver_1_1_u_i_1_1_text_renderer_ae1904e8d7d94438384c2a825f04022e9}{getInstance}}()\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_macgyver_1_1_u_i_1_1_text_renderer}{TextRenderer}}\&\ getInstance()\ \{}
 \DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_macgyver_1_1_u_i_1_1_text_renderer}{TextRenderer}}\ instance;}
 \DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
 \DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_u_i_1_1_text_renderer_a7e81a98e1d1513f4cfbfa918304dc392}{TextRenderer}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_macgyver_1_1_u_i_1_1_text_renderer}{TextRenderer}}\&)\ =\ \textcolor{keyword}{delete};}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_macgyver_1_1_u_i_1_1_text_renderer_a2a694e81c2b0b488c8edc2e470ee0dc8}{addFont}}(std::string\ textureName,\ \mbox{\hyperlink{class_macgyver_1_1_u_i_1_1_font}{Font}}*\ font);}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_macgyver_1_1_u_i_1_1_text_renderer_a8639b469c865217ba40018dd1b104e1e}{addFontUsage}}(std::string\ fontName);}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_macgyver_1_1_u_i_1_1_text_renderer_a634878bf3e7bbcbe0b68a70fb12d6849}{removeFontUsage}}(std::string\ fontName);}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_u_i_1_1_text_renderer}{TextRenderer}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_macgyver_1_1_u_i_1_1_text_renderer}{TextRenderer}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ addFont(std::string\ textureName,\ \mbox{\hyperlink{class_macgyver_1_1_u_i_1_1_font}{Font}}*\ font);}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ addFontUsage(std::string\ fontName);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ removeFontUsage(std::string\ fontName);}
 \DoxyCodeLine{00022\ }
 \DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
 \DoxyCodeLine{00024\ \textcolor{comment}{\ \ \ \ \ \ \ \ *\ TODO:\ ADD\ SCALING\ OF\ SIZE\ OF\ OUTPUT\ TEXT\ FROM\ SINGLE\ FONT}}
 \DoxyCodeLine{00025\ \textcolor{comment}{\ \ \ \ \ \ \ \ */}}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ SDL\_Texture*\ \mbox{\hyperlink{class_macgyver_1_1_u_i_1_1_text_renderer_a6f13cfb6440d0270308e17dc516f60aa}{displayText}}(SDL\_Renderer*\ renderer,std::string\ fontName\ ,\ std::string\ text,\ SDL\_Rect*\ dstRect,}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ SDL\_Texture*\ displayText(SDL\_Renderer*\ renderer,std::string\ fontName\ ,\ std::string\ text,\ SDL\_Rect*\ dstRect,}
 \DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ SDL\_Color\ displayColour\ =\ \{\ 255,255,255\ \},\ \textcolor{keywordtype}{int}\ ptSize\ =\ -\/1);}
 \DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{private}:}
 \DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ std::map<std::string,\ Font*>\ fonts;}

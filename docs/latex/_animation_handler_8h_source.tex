@@ -1,11 +1,11 @@
 \doxysection{Animation\+Handler.\+h}
 \hypertarget{_animation_handler_8h_source}{}\label{_animation_handler_8h_source}\index{MacGyver/AnimationHandler.h@{MacGyver/AnimationHandler.h}}
-\mbox{\hyperlink{_animation_handler_8h}{Go to the documentation of this file.}}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_animation_data_8h}{AnimationData.h}}"{}}}
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_active_animation_8h}{ActiveAnimation.h}}"{}}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_renderable_8h}{Renderable.h}}"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}AnimationData.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}ActiveAnimation.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Renderable.h"{}}}
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <SDL.h>}}
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <iostream>}}
 \DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <map>}}
@@ -13,7 +13,7 @@
 \DoxyCodeLine{00009\ }
 \DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ getAnimationHandler\ Macgyver::AnimationHandler::getInstance()}}
 \DoxyCodeLine{00011\ }
-\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_macgyver}{Macgyver}}\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }Macgyver\ \{}
 \DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_macgyver_1_1_animation_handler}{AnimationHandler}}\ \{}
 \DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{public}:}
 \DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_macgyver_1_1_animation_handler}{AnimationHandler}}\&\ \mbox{\hyperlink{class_macgyver_1_1_animation_handler_a47d6dc2ae1e4731dd83ad9dac28caa9f}{getInstance}}()\ \{}
@@ -21,8 +21,8 @@
 \DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
 \DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00035\ }
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_animation_handler_a501210dbc0431a6d49db5ce24a5a5ecc}{AnimationHandler}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_macgyver_1_1_animation_handler}{AnimationHandler}}\&)\ =\ \textcolor{keyword}{delete};}
-\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_animation_handler}{AnimationHandler}}\&\ \mbox{\hyperlink{class_macgyver_1_1_animation_handler_ae3a3c12c386e633a346614980739cde0}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_macgyver_1_1_animation_handler}{AnimationHandler}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_animation_handler}{AnimationHandler}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_macgyver_1_1_animation_handler}{AnimationHandler}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_animation_handler}{AnimationHandler}}\&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_macgyver_1_1_animation_handler}{AnimationHandler}}\&)\ =\ \textcolor{keyword}{delete};}
 \DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_macgyver_1_1_animation_handler_a367dc496d779b11d8d3e38bf9c0ace0b}{attachRenderer}}(SDL\_Renderer*\ renderer);}
 \DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_macgyver_1_1_animation_handler_ab56e8354ac281aef131e2cef2d751c7f}{addAnimation}}(std::string\ name,\ std::string\ path);}

@@ -15,11 +15,12 @@ void \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component_ab56e2f9909e7
 \item 
 \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_component_data}{Components\+::\+Component\+Data}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component_ae5f3db39ad5c8f64175b92e402bd7bf4}{get\+Data}} (std\+::size\+\_\+t data\+Type\+Hash)
 \item 
-\mbox{\hyperlink{struct_macgyver_1_1_components_1_1_component_data}{Components\+::\+Component\+Data}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component_a6006ee28b1878a4889e0ca10c655675d}{get\+Data}} (int index)
+\Hypertarget{class_macgyver_1_1_gameobjects_1_1_component_a6006ee28b1878a4889e0ca10c655675d}\label{class_macgyver_1_1_gameobjects_1_1_component_a6006ee28b1878a4889e0ca10c655675d} 
+\mbox{\hyperlink{struct_macgyver_1_1_components_1_1_component_data}{Components\+::\+Component\+Data}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Data} (int index)
 \item 
-\mbox{\hyperlink{_component_manager_8h_a000c4886ea24a22c74789206e3cc63e2}{COMPONENT\+\_\+\+TYPE}} \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component_a50c295e01fe69a2f43685e9890a5359f}{get\+Component\+Properties}} ()
+COMPONENT\+\_\+\+TYPE \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component_a50c295e01fe69a2f43685e9890a5359f}{get\+Component\+Properties}} ()
 \item 
-void \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component_a0123c164d78ecafbc08686b110997915}{set\+Component\+Properties}} (\mbox{\hyperlink{_component_manager_8h_a000c4886ea24a22c74789206e3cc63e2}{COMPONENT\+\_\+\+TYPE}} types)
+void \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component_a0123c164d78ecafbc08686b110997915}{set\+Component\+Properties}} (COMPONENT\+\_\+\+TYPE types)
 \item 
 \mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3}{Macgyver\+::\+Math\+::\+Vector3}} \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component_ae5d464e0bce97db3047dc42f66325d92}{get\+World\+Transform}} ()
 \item 
@@ -34,7 +35,8 @@ std\+::function$<$ void(\mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_comp
 \item 
 std\+::function$<$ void(\mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component}{Component}} \texorpdfstring{$\ast$}{*}) \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component_a667da47a162a7c56e2f62458448e9f8e}{physics\+Update}} )
 \item 
-bool \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component_ad86fb273f0ca9fd4bd0d80b3dc3e6e46}{enabled}} = true
+\Hypertarget{class_macgyver_1_1_gameobjects_1_1_component_ad86fb273f0ca9fd4bd0d80b3dc3e6e46}\label{class_macgyver_1_1_gameobjects_1_1_component_ad86fb273f0ca9fd4bd0d80b3dc3e6e46} 
+bool {\bfseries enabled} = true
 \end{DoxyCompactItemize}
 
 
@@ -70,23 +72,17 @@ Add a component data object to this \doxylink{class_macgyver_1_1_gameobjects_1_1
 \index{Macgyver::Gameobjects::Component@{Macgyver::Gameobjects::Component}!getComponentProperties@{getComponentProperties}}
 \index{getComponentProperties@{getComponentProperties}!Macgyver::Gameobjects::Component@{Macgyver::Gameobjects::Component}}
 \doxysubsubsection{\texorpdfstring{getComponentProperties()}{getComponentProperties()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_component_manager_8h_a000c4886ea24a22c74789206e3cc63e2}{COMPONENT\+\_\+\+TYPE}} Gameobjects\+::\+Component\+::get\+Component\+Properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily COMPONENT\+\_\+\+TYPE Gameobjects\+::\+Component\+::get\+Component\+Properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 Gets the flags/properties/types this component has set as a Uint
 
 \begin{DoxyReturn}{Returns}
 COMPONENT\+\_\+\+TYPE/\+Uint representing the flags set 
 \end{DoxyReturn}
-\Hypertarget{class_macgyver_1_1_gameobjects_1_1_component_a6006ee28b1878a4889e0ca10c655675d}\label{class_macgyver_1_1_gameobjects_1_1_component_a6006ee28b1878a4889e0ca10c655675d} 
-\index{Macgyver::Gameobjects::Component@{Macgyver::Gameobjects::Component}!getData@{getData}}
-\index{getData@{getData}!Macgyver::Gameobjects::Component@{Macgyver::Gameobjects::Component}}
-\doxysubsubsection{\texorpdfstring{getData()}{getData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_component_data}{Components\+::\+Component\+Data}} \texorpdfstring{$\ast$}{*} Macgyver\+::\+Gameobjects\+::\+Component\+::get\+Data (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
-
 \Hypertarget{class_macgyver_1_1_gameobjects_1_1_component_ae5f3db39ad5c8f64175b92e402bd7bf4}\label{class_macgyver_1_1_gameobjects_1_1_component_ae5f3db39ad5c8f64175b92e402bd7bf4} 
 \index{Macgyver::Gameobjects::Component@{Macgyver::Gameobjects::Component}!getData@{getData}}
 \index{getData@{getData}!Macgyver::Gameobjects::Component@{Macgyver::Gameobjects::Component}}
-\doxysubsubsection{\texorpdfstring{getData()}{getData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_component_data}{Components\+::\+Component\+Data}} \texorpdfstring{$\ast$}{*} Macgyver\+::\+Gameobjects\+::\+Component\+::get\+Data (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{data\+Type\+Hash }\end{DoxyParamCaption})}
 
 Gets a pointer to an attached data object of the correct type. Or nullptr if no data of the correct type exists. Data can be casted back to the needed type after being returned from the function.
@@ -126,7 +122,7 @@ Gets the absoloute transform of this \doxylink{class_macgyver_1_1_gameobjects_1_
 \index{Macgyver::Gameobjects::Component@{Macgyver::Gameobjects::Component}!setComponentProperties@{setComponentProperties}}
 \index{setComponentProperties@{setComponentProperties}!Macgyver::Gameobjects::Component@{Macgyver::Gameobjects::Component}}
 \doxysubsubsection{\texorpdfstring{setComponentProperties()}{setComponentProperties()}}
-{\footnotesize\ttfamily void Gameobjects\+::\+Component\+::set\+Component\+Properties (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_component_manager_8h_a000c4886ea24a22c74789206e3cc63e2}{COMPONENT\+\_\+\+TYPE}}}]{types }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Gameobjects\+::\+Component\+::set\+Component\+Properties (\begin{DoxyParamCaption}\item[{COMPONENT\+\_\+\+TYPE}]{types }\end{DoxyParamCaption})}
 
 Sets the Component\+Properties/flags/types this component has
 
@@ -138,12 +134,6 @@ Sets the Component\+Properties/flags/types this component has
 
 
 \doxysubsection{Member Data Documentation}
-\Hypertarget{class_macgyver_1_1_gameobjects_1_1_component_ad86fb273f0ca9fd4bd0d80b3dc3e6e46}\label{class_macgyver_1_1_gameobjects_1_1_component_ad86fb273f0ca9fd4bd0d80b3dc3e6e46} 
-\index{Macgyver::Gameobjects::Component@{Macgyver::Gameobjects::Component}!enabled@{enabled}}
-\index{enabled@{enabled}!Macgyver::Gameobjects::Component@{Macgyver::Gameobjects::Component}}
-\doxysubsubsection{\texorpdfstring{enabled}{enabled}}
-{\footnotesize\ttfamily bool Macgyver\+::\+Gameobjects\+::\+Component\+::enabled = true}
-
 \Hypertarget{class_macgyver_1_1_gameobjects_1_1_component_a8c731b26091d06f104caceec257a8127}\label{class_macgyver_1_1_gameobjects_1_1_component_a8c731b26091d06f104caceec257a8127} 
 \index{Macgyver::Gameobjects::Component@{Macgyver::Gameobjects::Component}!localTransform@{localTransform}}
 \index{localTransform@{localTransform}!Macgyver::Gameobjects::Component@{Macgyver::Gameobjects::Component}}
@@ -166,5 +156,5 @@ update function of the \doxylink{class_macgyver_1_1_gameobjects_1_1_component}{C
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Mac\+Gyver/\mbox{\hyperlink{_component_8h}{Component.\+h}}\item 
-Mac\+Gyver/\mbox{\hyperlink{_component_8cpp}{Component.\+cpp}}\end{DoxyCompactItemize}
+Mac\+Gyver/Component.\+h\item 
+Mac\+Gyver/Component.\+cpp\end{DoxyCompactItemize}

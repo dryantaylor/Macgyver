@@ -1,34 +1,34 @@
 \doxysection{Component\+Manager.\+h}
 \hypertarget{_component_manager_8h_source}{}\label{_component_manager_8h_source}\index{MacGyver/ComponentManager.h@{MacGyver/ComponentManager.h}}
-\mbox{\hyperlink{_component_manager_8h}{Go to the documentation of this file.}}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00002\ }
 \DoxyCodeLine{00003\ }
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ COMPONENT\_TYPE\ unsigned\ int}}
 \DoxyCodeLine{00005\ }
-\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_macgyver_1_1_components}{Macgyver::Components}}\ \{}
-\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13b}{COMPONENT\_TYPES}}:\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \{}
-\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13ba2ecdbcf86407ed6159ec835005dafa96}{NONE}}\ =\ 0,}
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }Macgyver::Components\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{enum}\ COMPONENT\_TYPES:\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ NONE\ =\ 0,}
 \DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Commitment\ to\ have\ a\ RenderableData\ data\ attached}}
-\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13ba9537e1c289252492866ff1462005d14a}{RENDERABLE}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0b00000000000000000000000000000001,}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ RENDERABLE\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0b00000000000000000000000000000001,}
 \DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{comment}{//commitment\ to\ handle\ sprite\ drawing}}
-\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13bac4f8b7ea72ba599a974a7d94a349da7d}{RENDERER}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0b00000000000000000000000000000010,}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ RENDERER\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0b00000000000000000000000000000010,}
 \DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Commitment\ to\ have\ Physics\ 2D\ data\ with\ a\ collision\ box}}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13bae1cc7e140bafbb1b7a020f0236319085}{COLLIDER}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0b00000000000000000000000000000100,}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ COLLIDER\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0b00000000000000000000000000000100,}
 \DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Commitment\ to\ have\ Physics2DData\ where\ velocity\ will\ act\ on\ GameObjects\ Transform}}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13bab028c2147bb9a314bcbbae068aca8323}{VELOCITY}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0b00000000000000000000000000001000,}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ VELOCITY\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0b00000000000000000000000000001000,}
 \DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Same\ commitment\ as\ PHYSICS2D\_VELOCITY\ but\ allowing\ gravity\ to\ act\ on\ it}}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13ba4186d5934635a2f8a0e44727fb376be7}{GRAV\_IMPACTED}}\ \ \ \ \ \ \ \ \ \ \ =\ 0b00000000000000000000000000010000,}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ GRAV\_IMPACTED\ \ \ \ \ \ \ \ \ \ \ =\ 0b00000000000000000000000000010000,}
 \DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{comment}{//commitment\ to\ only\ have\ one\ in\ the\ scene}}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13ba42a0683bafec826fe6ddc2ab2b7bc77c}{GRAV\_IMPACTING}}\ \ \ \ \ \ \ \ \ \ =\ 0b00000000000000000000000000100000,}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ GRAV\_IMPACTING\ \ \ \ \ \ \ \ \ \ =\ 0b00000000000000000000000000100000,}
 \DoxyCodeLine{00024\ }
 \DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Don't\ update\ with\ other\ objects,\ call\ UIUpdate\ at\ after\ all\ world\ objects\ are\ done\ updating}}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13ba31734a794c3ef85dbc28eccc20ff9c18}{UI\_RENDERABLE}}\ \ \ \ \ \ \ \ \ \ \ =\ 0b00000000000000000000000001000000,}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13bafbc87d9b0a73087989ecf7b782afb1e1}{UI\_INTERACTABLE}}\ \ \ \ \ \ \ \ \ =\ 0b00000000000000000000000010000000}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ UI\_RENDERABLE\ \ \ \ \ \ \ \ \ \ \ =\ 0b00000000000000000000000001000000,}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ UI\_INTERACTABLE\ \ \ \ \ \ \ \ \ =\ 0b00000000000000000000000010000000}
 \DoxyCodeLine{00028\ \ \ \ \ \};}
-\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespace_macgyver_1_1_components_adf8e52c89f8f1a34e495e2d4296639f7}{MIN\_PLAYER\_TYPE\_VAL}}\ =\ 128U\ <<\ 1;}
-\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_macgyver_1_1_components_a5fd5bd45d4c15a2db35b10362891c9c4}{hasProperty}}(\mbox{\hyperlink{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13b}{COMPONENT\_TYPES}}\ targetType,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ component);}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ MIN\_PLAYER\_TYPE\_VAL\ =\ 128U\ <<\ 1;}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{bool}\ hasProperty(COMPONENT\_TYPES\ targetType,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ component);}
 \DoxyCodeLine{00039\ \};}
 
 \end{DoxyCode}

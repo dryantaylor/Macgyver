@@ -7,9 +7,11 @@
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_macgyver_1_1_animation_handler_a501210dbc0431a6d49db5ce24a5a5ecc}{Animation\+Handler}} (const \mbox{\hyperlink{class_macgyver_1_1_animation_handler}{Animation\+Handler}} \&)=delete
+\Hypertarget{class_macgyver_1_1_animation_handler_a501210dbc0431a6d49db5ce24a5a5ecc}\label{class_macgyver_1_1_animation_handler_a501210dbc0431a6d49db5ce24a5a5ecc} 
+{\bfseries Animation\+Handler} (const \mbox{\hyperlink{class_macgyver_1_1_animation_handler}{Animation\+Handler}} \&)=delete
 \item 
-\mbox{\hyperlink{class_macgyver_1_1_animation_handler}{Animation\+Handler}} \& \mbox{\hyperlink{class_macgyver_1_1_animation_handler_ae3a3c12c386e633a346614980739cde0}{operator=}} (const \mbox{\hyperlink{class_macgyver_1_1_animation_handler}{Animation\+Handler}} \&)=delete
+\Hypertarget{class_macgyver_1_1_animation_handler_ae3a3c12c386e633a346614980739cde0}\label{class_macgyver_1_1_animation_handler_ae3a3c12c386e633a346614980739cde0} 
+\mbox{\hyperlink{class_macgyver_1_1_animation_handler}{Animation\+Handler}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_macgyver_1_1_animation_handler}{Animation\+Handler}} \&)=delete
 \item 
 void \mbox{\hyperlink{class_macgyver_1_1_animation_handler_a367dc496d779b11d8d3e38bf9c0ace0b}{attach\+Renderer}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer)
 \item 
@@ -48,15 +50,6 @@ static \mbox{\hyperlink{class_macgyver_1_1_animation_handler}{Animation\+Handler
 Stores a set of animations stored as a name e.\+g "{}\+Player/walk"{} mapped to an Animation\+Data object. Methods within components can call to load new Animation objects or close them. They can bind a RENDERABLE component to a loaded animation which creates a new entry into a map which corresponds to an ID to access that animation at any time. Each entry will have a unique tick count/ frame and can change between animations through method calls via this singleton handler class.
 
 ADD A RENDERER TO THIS CLASS BEFORE LOADING ANY COMPONENTS. 
-
-\doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{class_macgyver_1_1_animation_handler_a501210dbc0431a6d49db5ce24a5a5ecc}\label{class_macgyver_1_1_animation_handler_a501210dbc0431a6d49db5ce24a5a5ecc} 
-\index{Macgyver::AnimationHandler@{Macgyver::AnimationHandler}!AnimationHandler@{AnimationHandler}}
-\index{AnimationHandler@{AnimationHandler}!Macgyver::AnimationHandler@{Macgyver::AnimationHandler}}
-\doxysubsubsection{\texorpdfstring{AnimationHandler()}{AnimationHandler()}}
-{\footnotesize\ttfamily Macgyver\+::\+Animation\+Handler\+::\+Animation\+Handler (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_macgyver_1_1_animation_handler}{Animation\+Handler}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
-
-
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{class_macgyver_1_1_animation_handler_a02b91d7c0f27c300f963afe2b54a51b0}\label{class_macgyver_1_1_animation_handler_a02b91d7c0f27c300f963afe2b54a51b0} 
@@ -225,13 +218,7 @@ Gives the frame number and current tick of the animation given by id.
 \doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
 {\footnotesize\ttfamily static \mbox{\hyperlink{class_macgyver_1_1_animation_handler}{Animation\+Handler}} \& Macgyver\+::\+Animation\+Handler\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
-Thread safe singleton. Gets the instance of the \doxylink{class_macgyver_1_1_animation_handler}{Animation\+Handler}. If one does not exist it creates one and returns that. \Hypertarget{class_macgyver_1_1_animation_handler_ae3a3c12c386e633a346614980739cde0}\label{class_macgyver_1_1_animation_handler_ae3a3c12c386e633a346614980739cde0} 
-\index{Macgyver::AnimationHandler@{Macgyver::AnimationHandler}!operator=@{operator=}}
-\index{operator=@{operator=}!Macgyver::AnimationHandler@{Macgyver::AnimationHandler}}
-\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_macgyver_1_1_animation_handler}{Animation\+Handler}} \& Macgyver\+::\+Animation\+Handler\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_macgyver_1_1_animation_handler}{Animation\+Handler}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
-
-\Hypertarget{class_macgyver_1_1_animation_handler_aaed2122d1268881c37da014864dd777d}\label{class_macgyver_1_1_animation_handler_aaed2122d1268881c37da014864dd777d} 
+Thread safe singleton. Gets the instance of the \doxylink{class_macgyver_1_1_animation_handler}{Animation\+Handler}. If one does not exist it creates one and returns that. \Hypertarget{class_macgyver_1_1_animation_handler_aaed2122d1268881c37da014864dd777d}\label{class_macgyver_1_1_animation_handler_aaed2122d1268881c37da014864dd777d} 
 \index{Macgyver::AnimationHandler@{Macgyver::AnimationHandler}!update@{update}}
 \index{update@{update}!Macgyver::AnimationHandler@{Macgyver::AnimationHandler}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}}
@@ -248,5 +235,5 @@ checks all active animations for any frame changes called by the main game loop 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Mac\+Gyver/\mbox{\hyperlink{_animation_handler_8h}{Animation\+Handler.\+h}}\item 
-Mac\+Gyver/\mbox{\hyperlink{_animation_handler_8cpp}{Animation\+Handler.\+cpp}}\end{DoxyCompactItemize}
+Mac\+Gyver/Animation\+Handler.\+h\item 
+Mac\+Gyver/Animation\+Handler.\+cpp\end{DoxyCompactItemize}

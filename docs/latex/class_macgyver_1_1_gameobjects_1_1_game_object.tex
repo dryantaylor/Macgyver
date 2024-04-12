@@ -11,7 +11,7 @@
 \item 
 void \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_game_object_aa2748c9b76c5d316ebea2731cc2ddcbf}{add\+Component}} (\mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component}{Component}} \texorpdfstring{$\ast$}{*}comp)
 \item 
-std\+::vector$<$ \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component}{Component}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_game_object_a6947bfb7c95b76e590a285c39b29f91d}{get\+Components\+With\+Property}} (\mbox{\hyperlink{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13b}{Components\+::\+COMPONENT\+\_\+\+TYPES}} type)
+std\+::vector$<$ \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component}{Component}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_game_object_a6947bfb7c95b76e590a285c39b29f91d}{get\+Components\+With\+Property}} (Components\+::\+COMPONENT\+\_\+\+TYPES type)
 \item 
 void \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_game_object_a6ffd10b6c9510d1f9ea502017d6d92ef}{update}} (unsigned int delta\+Time)
 \item 
@@ -20,11 +20,14 @@ void \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_game_object_a6ffd10b6c9
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3}{Math\+::\+Vector3}} \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_game_object_adad86c5feb1cd727e4919727348b659c}{transform}}
+\Hypertarget{class_macgyver_1_1_gameobjects_1_1_game_object_adad86c5feb1cd727e4919727348b659c}\label{class_macgyver_1_1_gameobjects_1_1_game_object_adad86c5feb1cd727e4919727348b659c} 
+\mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3}{Math\+::\+Vector3}} {\bfseries transform}
 \begin{DoxyCompactList}\small\item\em Represents the position of the object in world space. \end{DoxyCompactList}\item 
-std\+::vector$<$ \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component}{Macgyver\+::\+Gameobjects\+::\+Component}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_game_object_a526e591b65196a1af90d294db7306c39}{components}} = \{\}
+\Hypertarget{class_macgyver_1_1_gameobjects_1_1_game_object_a526e591b65196a1af90d294db7306c39}\label{class_macgyver_1_1_gameobjects_1_1_game_object_a526e591b65196a1af90d294db7306c39} 
+std\+::vector$<$ \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component}{Macgyver\+::\+Gameobjects\+::\+Component}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries components} = \{\}
 \begin{DoxyCompactList}\small\item\em Stores all the components of the object. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_game_object_a05e878d991b30cd3f01efd7142bef25f}{enabled}} = true
+\Hypertarget{class_macgyver_1_1_gameobjects_1_1_game_object_a05e878d991b30cd3f01efd7142bef25f}\label{class_macgyver_1_1_gameobjects_1_1_game_object_a05e878d991b30cd3f01efd7142bef25f} 
+bool {\bfseries enabled} = true
 \end{DoxyCompactItemize}
 
 
@@ -67,7 +70,7 @@ Adds a \doxylink{class_macgyver_1_1_gameobjects_1_1_component}{Component} to the
 \index{Macgyver::Gameobjects::GameObject@{Macgyver::Gameobjects::GameObject}!getComponentsWithProperty@{getComponentsWithProperty}}
 \index{getComponentsWithProperty@{getComponentsWithProperty}!Macgyver::Gameobjects::GameObject@{Macgyver::Gameobjects::GameObject}}
 \doxysubsubsection{\texorpdfstring{getComponentsWithProperty()}{getComponentsWithProperty()}}
-{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component}{Gameobjects\+::\+Component}} \texorpdfstring{$\ast$}{*} $>$ Gameobjects\+::\+Game\+Object\+::get\+Components\+With\+Property (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13b}{Components\+::\+COMPONENT\+\_\+\+TYPES}}}]{type }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component}{Gameobjects\+::\+Component}} \texorpdfstring{$\ast$}{*} $>$ Gameobjects\+::\+Game\+Object\+::get\+Components\+With\+Property (\begin{DoxyParamCaption}\item[{Components\+::\+COMPONENT\+\_\+\+TYPES}]{type }\end{DoxyParamCaption})}
 
 Gets all components attached to the object which have the given flag set.
 
@@ -105,36 +108,7 @@ Objects update method. Calls the update method of all attached components
 \end{DoxyParams}
 
 
-\doxysubsection{Member Data Documentation}
-\Hypertarget{class_macgyver_1_1_gameobjects_1_1_game_object_a526e591b65196a1af90d294db7306c39}\label{class_macgyver_1_1_gameobjects_1_1_game_object_a526e591b65196a1af90d294db7306c39} 
-\index{Macgyver::Gameobjects::GameObject@{Macgyver::Gameobjects::GameObject}!components@{components}}
-\index{components@{components}!Macgyver::Gameobjects::GameObject@{Macgyver::Gameobjects::GameObject}}
-\doxysubsubsection{\texorpdfstring{components}{components}}
-{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component}{Macgyver\+::\+Gameobjects\+::\+Component}}\texorpdfstring{$\ast$}{*}$>$ Macgyver\+::\+Gameobjects\+::\+Game\+Object\+::components = \{\}}
-
-
-
-Stores all the components of the object. 
-
-\Hypertarget{class_macgyver_1_1_gameobjects_1_1_game_object_a05e878d991b30cd3f01efd7142bef25f}\label{class_macgyver_1_1_gameobjects_1_1_game_object_a05e878d991b30cd3f01efd7142bef25f} 
-\index{Macgyver::Gameobjects::GameObject@{Macgyver::Gameobjects::GameObject}!enabled@{enabled}}
-\index{enabled@{enabled}!Macgyver::Gameobjects::GameObject@{Macgyver::Gameobjects::GameObject}}
-\doxysubsubsection{\texorpdfstring{enabled}{enabled}}
-{\footnotesize\ttfamily bool Macgyver\+::\+Gameobjects\+::\+Game\+Object\+::enabled = true}
-
-\Hypertarget{class_macgyver_1_1_gameobjects_1_1_game_object_adad86c5feb1cd727e4919727348b659c}\label{class_macgyver_1_1_gameobjects_1_1_game_object_adad86c5feb1cd727e4919727348b659c} 
-\index{Macgyver::Gameobjects::GameObject@{Macgyver::Gameobjects::GameObject}!transform@{transform}}
-\index{transform@{transform}!Macgyver::Gameobjects::GameObject@{Macgyver::Gameobjects::GameObject}}
-\doxysubsubsection{\texorpdfstring{transform}{transform}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_macgyver_1_1_math_1_1_vector3}{Math\+::\+Vector3}} Macgyver\+::\+Gameobjects\+::\+Game\+Object\+::transform}
-
-
-
-Represents the position of the object in world space. 
-
-
-
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Mac\+Gyver/\mbox{\hyperlink{_game_object_8h}{Game\+Object.\+h}}\item 
-Mac\+Gyver/\mbox{\hyperlink{_game_object_8cpp}{Game\+Object.\+cpp}}\end{DoxyCompactItemize}
+Mac\+Gyver/Game\+Object.\+h\item 
+Mac\+Gyver/Game\+Object.\+cpp\end{DoxyCompactItemize}

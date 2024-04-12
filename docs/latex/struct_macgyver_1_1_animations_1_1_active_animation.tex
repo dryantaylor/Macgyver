@@ -7,74 +7,26 @@
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-unsigned int \mbox{\hyperlink{struct_macgyver_1_1_animations_1_1_active_animation_ae0842eecd0834fa3fa698fab31990fcc}{curr\+Frame}} = 0
+\Hypertarget{struct_macgyver_1_1_animations_1_1_active_animation_ae0842eecd0834fa3fa698fab31990fcc}\label{struct_macgyver_1_1_animations_1_1_active_animation_ae0842eecd0834fa3fa698fab31990fcc} 
+unsigned int {\bfseries curr\+Frame} = 0
 \begin{DoxyCompactList}\small\item\em current frame of the animation \end{DoxyCompactList}\item 
-unsigned int \mbox{\hyperlink{struct_macgyver_1_1_animations_1_1_active_animation_a8bd50bf4a52aecbc3a8555281216fa25}{frame\+Tick}} = 0
+\Hypertarget{struct_macgyver_1_1_animations_1_1_active_animation_a8bd50bf4a52aecbc3a8555281216fa25}\label{struct_macgyver_1_1_animations_1_1_active_animation_a8bd50bf4a52aecbc3a8555281216fa25} 
+unsigned int {\bfseries frame\+Tick} = 0
 \begin{DoxyCompactList}\small\item\em how many ms/ticks into the current frame of the animation \end{DoxyCompactList}\item 
-\mbox{\hyperlink{struct_macgyver_1_1_animations_1_1_animation_data}{Animation\+Data}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_macgyver_1_1_animations_1_1_active_animation_a763ee7bba42a0dd413ee9b08b7197931}{active\+Animation}}
+\Hypertarget{struct_macgyver_1_1_animations_1_1_active_animation_a763ee7bba42a0dd413ee9b08b7197931}\label{struct_macgyver_1_1_animations_1_1_active_animation_a763ee7bba42a0dd413ee9b08b7197931} 
+\mbox{\hyperlink{struct_macgyver_1_1_animations_1_1_animation_data}{Animation\+Data}} \texorpdfstring{$\ast$}{*} {\bfseries active\+Animation}
 \begin{DoxyCompactList}\small\item\em pointer to the animation currently being animated \end{DoxyCompactList}\item 
-\mbox{\hyperlink{struct_macgyver_1_1_animations_1_1_animation_data}{Animation\+Data}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_macgyver_1_1_animations_1_1_active_animation_a0d1b21f53e77311864908ad6a7667a79}{idle\+Animation}}
+\Hypertarget{struct_macgyver_1_1_animations_1_1_active_animation_a0d1b21f53e77311864908ad6a7667a79}\label{struct_macgyver_1_1_animations_1_1_active_animation_a0d1b21f53e77311864908ad6a7667a79} 
+\mbox{\hyperlink{struct_macgyver_1_1_animations_1_1_animation_data}{Animation\+Data}} \texorpdfstring{$\ast$}{*} {\bfseries idle\+Animation}
 \begin{DoxyCompactList}\small\item\em fall back animation when a non-\/looping active animation finishes \end{DoxyCompactList}\item 
-\mbox{\hyperlink{struct_macgyver_1_1_components_1_1_renderable_data}{Components\+::\+Renderable\+Data}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_macgyver_1_1_animations_1_1_active_animation_a828150153ed9bcfcf8e5ef9de4d4ee01}{attached\+Renderable}}
+\Hypertarget{struct_macgyver_1_1_animations_1_1_active_animation_a828150153ed9bcfcf8e5ef9de4d4ee01}\label{struct_macgyver_1_1_animations_1_1_active_animation_a828150153ed9bcfcf8e5ef9de4d4ee01} 
+\mbox{\hyperlink{struct_macgyver_1_1_components_1_1_renderable_data}{Components\+::\+Renderable\+Data}} \texorpdfstring{$\ast$}{*} {\bfseries attached\+Renderable}
 \begin{DoxyCompactList}\small\item\em the renderable object to target the animation \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Holds an animation currently being ran each frame 
 
-\doxysubsection{Member Data Documentation}
-\Hypertarget{struct_macgyver_1_1_animations_1_1_active_animation_a763ee7bba42a0dd413ee9b08b7197931}\label{struct_macgyver_1_1_animations_1_1_active_animation_a763ee7bba42a0dd413ee9b08b7197931} 
-\index{Macgyver::Animations::ActiveAnimation@{Macgyver::Animations::ActiveAnimation}!activeAnimation@{activeAnimation}}
-\index{activeAnimation@{activeAnimation}!Macgyver::Animations::ActiveAnimation@{Macgyver::Animations::ActiveAnimation}}
-\doxysubsubsection{\texorpdfstring{activeAnimation}{activeAnimation}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_macgyver_1_1_animations_1_1_animation_data}{Animation\+Data}}\texorpdfstring{$\ast$}{*} Macgyver\+::\+Animations\+::\+Active\+Animation\+::active\+Animation}
-
-
-
-pointer to the animation currently being animated 
-
-\Hypertarget{struct_macgyver_1_1_animations_1_1_active_animation_a828150153ed9bcfcf8e5ef9de4d4ee01}\label{struct_macgyver_1_1_animations_1_1_active_animation_a828150153ed9bcfcf8e5ef9de4d4ee01} 
-\index{Macgyver::Animations::ActiveAnimation@{Macgyver::Animations::ActiveAnimation}!attachedRenderable@{attachedRenderable}}
-\index{attachedRenderable@{attachedRenderable}!Macgyver::Animations::ActiveAnimation@{Macgyver::Animations::ActiveAnimation}}
-\doxysubsubsection{\texorpdfstring{attachedRenderable}{attachedRenderable}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_renderable_data}{Components\+::\+Renderable\+Data}}\texorpdfstring{$\ast$}{*} Macgyver\+::\+Animations\+::\+Active\+Animation\+::attached\+Renderable}
-
-
-
-the renderable object to target the animation 
-
-\Hypertarget{struct_macgyver_1_1_animations_1_1_active_animation_ae0842eecd0834fa3fa698fab31990fcc}\label{struct_macgyver_1_1_animations_1_1_active_animation_ae0842eecd0834fa3fa698fab31990fcc} 
-\index{Macgyver::Animations::ActiveAnimation@{Macgyver::Animations::ActiveAnimation}!currFrame@{currFrame}}
-\index{currFrame@{currFrame}!Macgyver::Animations::ActiveAnimation@{Macgyver::Animations::ActiveAnimation}}
-\doxysubsubsection{\texorpdfstring{currFrame}{currFrame}}
-{\footnotesize\ttfamily unsigned int Macgyver\+::\+Animations\+::\+Active\+Animation\+::curr\+Frame = 0}
-
-
-
-current frame of the animation 
-
-\Hypertarget{struct_macgyver_1_1_animations_1_1_active_animation_a8bd50bf4a52aecbc3a8555281216fa25}\label{struct_macgyver_1_1_animations_1_1_active_animation_a8bd50bf4a52aecbc3a8555281216fa25} 
-\index{Macgyver::Animations::ActiveAnimation@{Macgyver::Animations::ActiveAnimation}!frameTick@{frameTick}}
-\index{frameTick@{frameTick}!Macgyver::Animations::ActiveAnimation@{Macgyver::Animations::ActiveAnimation}}
-\doxysubsubsection{\texorpdfstring{frameTick}{frameTick}}
-{\footnotesize\ttfamily unsigned int Macgyver\+::\+Animations\+::\+Active\+Animation\+::frame\+Tick = 0}
-
-
-
-how many ms/ticks into the current frame of the animation 
-
-\Hypertarget{struct_macgyver_1_1_animations_1_1_active_animation_a0d1b21f53e77311864908ad6a7667a79}\label{struct_macgyver_1_1_animations_1_1_active_animation_a0d1b21f53e77311864908ad6a7667a79} 
-\index{Macgyver::Animations::ActiveAnimation@{Macgyver::Animations::ActiveAnimation}!idleAnimation@{idleAnimation}}
-\index{idleAnimation@{idleAnimation}!Macgyver::Animations::ActiveAnimation@{Macgyver::Animations::ActiveAnimation}}
-\doxysubsubsection{\texorpdfstring{idleAnimation}{idleAnimation}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_macgyver_1_1_animations_1_1_animation_data}{Animation\+Data}}\texorpdfstring{$\ast$}{*} Macgyver\+::\+Animations\+::\+Active\+Animation\+::idle\+Animation}
-
-
-
-fall back animation when a non-\/looping active animation finishes 
-
-
-
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Mac\+Gyver/\mbox{\hyperlink{_active_animation_8h}{Active\+Animation.\+h}}\end{DoxyCompactItemize}
+Mac\+Gyver/Active\+Animation.\+h\end{DoxyCompactItemize}

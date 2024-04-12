@@ -11,7 +11,7 @@
 \item 
 void \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_scene_aeb1721685fd2c0f4049f2d052a1cd84c}{add\+Object}} (\mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}obj)
 \item 
-std\+::vector$<$ \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component}{Component}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_scene_a58460843bde423dd9435dc69fd33f383}{get\+Components\+In\+World\+By\+Type}} (\mbox{\hyperlink{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13b}{Components\+::\+COMPONENT\+\_\+\+TYPES}} type)
+std\+::vector$<$ \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component}{Component}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_scene_a58460843bde423dd9435dc69fd33f383}{get\+Components\+In\+World\+By\+Type}} (Components\+::\+COMPONENT\+\_\+\+TYPES type)
 \item 
 void \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_scene_aa88683c13dc882a21d75bacd2ef4b8c4}{update}} (unsigned int delta\+Time)
 \item 
@@ -20,7 +20,8 @@ void \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_scene_ab639051b72eb4568
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_scene_a3fadb341532b9c8d259b05fa3d3f6c95}{scene\+\_\+\+RENDERER}}
+\Hypertarget{class_macgyver_1_1_gameobjects_1_1_scene_a3fadb341532b9c8d259b05fa3d3f6c95}\label{class_macgyver_1_1_gameobjects_1_1_scene_a3fadb341532b9c8d259b05fa3d3f6c95} 
+SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*} {\bfseries scene\+\_\+\+RENDERER}
 \begin{DoxyCompactList}\small\item\em sdl renderer used for the scene \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -54,9 +55,9 @@ Adds a \doxylink{class_macgyver_1_1_gameobjects_1_1_game_object}{Game\+Object} i
 \index{Macgyver::Gameobjects::Scene@{Macgyver::Gameobjects::Scene}!getComponentsInWorldByType@{getComponentsInWorldByType}}
 \index{getComponentsInWorldByType@{getComponentsInWorldByType}!Macgyver::Gameobjects::Scene@{Macgyver::Gameobjects::Scene}}
 \doxysubsubsection{\texorpdfstring{getComponentsInWorldByType()}{getComponentsInWorldByType()}}
-{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component}{Gameobjects\+::\+Component}} \texorpdfstring{$\ast$}{*} $>$ Gameobjects\+::\+Scene\+::get\+Components\+In\+World\+By\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13b}{Components\+::\+COMPONENT\+\_\+\+TYPES}}}]{type }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component}{Gameobjects\+::\+Component}} \texorpdfstring{$\ast$}{*} $>$ Gameobjects\+::\+Scene\+::get\+Components\+In\+World\+By\+Type (\begin{DoxyParamCaption}\item[{Components\+::\+COMPONENT\+\_\+\+TYPES}]{type }\end{DoxyParamCaption})}
 
-Returns all \doxylink{namespace_macgyver_1_1_components}{Components} in the scene which have a specific type
+Returns all Components in the scene which have a specific type
 
 
 \begin{DoxyParams}{Parameters}
@@ -64,7 +65,7 @@ Returns all \doxylink{namespace_macgyver_1_1_components}{Components} in the scen
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-a vector containing pointers to all the \doxylink{namespace_macgyver_1_1_components}{Components} in the scene which match the flag given 
+a vector containing pointers to all the Components in the scene which match the flag given 
 \end{DoxyReturn}
 \Hypertarget{class_macgyver_1_1_gameobjects_1_1_scene_ab639051b72eb45680720f0646972dd68}\label{class_macgyver_1_1_gameobjects_1_1_scene_ab639051b72eb45680720f0646972dd68} 
 \index{Macgyver::Gameobjects::Scene@{Macgyver::Gameobjects::Scene}!physicsUpdate@{physicsUpdate}}
@@ -96,20 +97,7 @@ Update method for the scene to be called once in the main game loop after updati
 \end{DoxyParams}
 
 
-\doxysubsection{Member Data Documentation}
-\Hypertarget{class_macgyver_1_1_gameobjects_1_1_scene_a3fadb341532b9c8d259b05fa3d3f6c95}\label{class_macgyver_1_1_gameobjects_1_1_scene_a3fadb341532b9c8d259b05fa3d3f6c95} 
-\index{Macgyver::Gameobjects::Scene@{Macgyver::Gameobjects::Scene}!scene\_RENDERER@{scene\_RENDERER}}
-\index{scene\_RENDERER@{scene\_RENDERER}!Macgyver::Gameobjects::Scene@{Macgyver::Gameobjects::Scene}}
-\doxysubsubsection{\texorpdfstring{scene\_RENDERER}{scene\_RENDERER}}
-{\footnotesize\ttfamily SDL\+\_\+\+Renderer\texorpdfstring{$\ast$}{*} Macgyver\+::\+Gameobjects\+::\+Scene\+::scene\+\_\+\+RENDERER}
-
-
-
-sdl renderer used for the scene 
-
-
-
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Mac\+Gyver/\mbox{\hyperlink{_scene_8h}{Scene.\+h}}\item 
-Mac\+Gyver/\mbox{\hyperlink{_scene_8cpp}{Scene.\+cpp}}\end{DoxyCompactItemize}
+Mac\+Gyver/Scene.\+h\item 
+Mac\+Gyver/Scene.\+cpp\end{DoxyCompactItemize}

@@ -14,9 +14,11 @@ a template for a bidirectional iterator for the \doxylink{classbasic__json}{basi
 \item 
 using \mbox{\hyperlink{classdetail_1_1iter__impl_a8fa317aaddc3dc7c58264e52e295c43e}{iterator\+\_\+category}} = std\+::bidirectional\+\_\+iterator\+\_\+tag
 \item 
-using \mbox{\hyperlink{classdetail_1_1iter__impl_ab6c453d3fea1df38fa45fd4f97ea42df}{value\+\_\+type}} = typename Basic\+Json\+Type\+::value\+\_\+type
+\Hypertarget{classdetail_1_1iter__impl_ab6c453d3fea1df38fa45fd4f97ea42df}\label{classdetail_1_1iter__impl_ab6c453d3fea1df38fa45fd4f97ea42df} 
+using {\bfseries value\+\_\+type} = typename Basic\+Json\+Type\+::value\+\_\+type
 \begin{DoxyCompactList}\small\item\em the type of the values when the iterator is dereferenced \end{DoxyCompactList}\item 
-using \mbox{\hyperlink{classdetail_1_1iter__impl_a6d51e1372282929d1c240223aa973c6e}{difference\+\_\+type}} = typename Basic\+Json\+Type\+::difference\+\_\+type
+\Hypertarget{classdetail_1_1iter__impl_a6d51e1372282929d1c240223aa973c6e}\label{classdetail_1_1iter__impl_a6d51e1372282929d1c240223aa973c6e} 
+using {\bfseries difference\+\_\+type} = typename Basic\+Json\+Type\+::difference\+\_\+type
 \begin{DoxyCompactList}\small\item\em a type to represent differences between iterators \end{DoxyCompactList}\item 
 using \mbox{\hyperlink{classdetail_1_1iter__impl_a5f32f4fdd48a9b92ecb156af6421b1b8}{pointer}}
 \begin{DoxyCompactList}\small\item\em defines a pointer to the type iterated over (value\+\_\+type) \end{DoxyCompactList}\item 
@@ -25,13 +27,11 @@ using \mbox{\hyperlink{classdetail_1_1iter__impl_ac0cfb3a9727e77580cb1beada093ee
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classdetail_1_1iter__impl_ac628b24caf15abd25a3d4d1ad0c3fe0a}{iter\+\_\+impl}} ()=default
+\Hypertarget{classdetail_1_1iter__impl_a8b8e30542bd3aa542201448ea8fd7089}\label{classdetail_1_1iter__impl_a8b8e30542bd3aa542201448ea8fd7089} 
+{\bfseries iter\+\_\+impl} (\mbox{\hyperlink{classdetail_1_1iter__impl}{iter\+\_\+impl}} \&\&) noexcept=default
 \item 
-\mbox{\hyperlink{classdetail_1_1iter__impl_a037bc5575c7368ba5b3fab3d0390d5d8}{\texorpdfstring{$\sim$}{\string~}iter\+\_\+impl}} ()=default
-\item 
-\mbox{\hyperlink{classdetail_1_1iter__impl_a8b8e30542bd3aa542201448ea8fd7089}{iter\+\_\+impl}} (\mbox{\hyperlink{classdetail_1_1iter__impl}{iter\+\_\+impl}} \&\&) noexcept=default
-\item 
-\mbox{\hyperlink{classdetail_1_1iter__impl}{iter\+\_\+impl}} \& \mbox{\hyperlink{classdetail_1_1iter__impl_a3e705d46278a4048c26f297b1b433393}{operator=}} (\mbox{\hyperlink{classdetail_1_1iter__impl}{iter\+\_\+impl}} \&\&) noexcept=default
+\Hypertarget{classdetail_1_1iter__impl_a3e705d46278a4048c26f297b1b433393}\label{classdetail_1_1iter__impl_a3e705d46278a4048c26f297b1b433393} 
+\mbox{\hyperlink{classdetail_1_1iter__impl}{iter\+\_\+impl}} \& {\bfseries operator=} (\mbox{\hyperlink{classdetail_1_1iter__impl}{iter\+\_\+impl}} \&\&) noexcept=default
 \item 
 \mbox{\hyperlink{classdetail_1_1iter__impl_a21ce449bdce08e15eaf8333322a81039}{iter\+\_\+impl}} (\mbox{\hyperlink{classdetail_1_1iter__impl_a5f32f4fdd48a9b92ecb156af6421b1b8}{pointer}} \mbox{\hyperlink{namespacedetail_a917c3efabea8a20dc72d9ae2c673d632aa8cfde6331bd59eb2ac96f8911c4b666}{object}}) noexcept
 \begin{DoxyCompactList}\small\item\em constructor for a given JSON instance \end{DoxyCompactList}\item 
@@ -43,7 +43,8 @@ using \mbox{\hyperlink{classdetail_1_1iter__impl_ac0cfb3a9727e77580cb1beada093ee
 \begin{DoxyCompactList}\small\item\em converting constructor \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classdetail_1_1iter__impl}{iter\+\_\+impl}} \& \mbox{\hyperlink{classdetail_1_1iter__impl_a228140be2554afd5dfe54d4194780b7c}{operator=}} (const \mbox{\hyperlink{classdetail_1_1iter__impl}{iter\+\_\+impl}}$<$ typename std\+::remove\+\_\+const$<$ Basic\+Json\+Type $>$\+::type $>$ \&other) noexcept
 \begin{DoxyCompactList}\small\item\em converting assignment \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classdetail_1_1iter__impl_ab3a9cbf054745890847c27896f636ecc}{switch}} (m\+\_\+object-\/$>$m\+\_\+data.\+m\+\_\+type)
+\Hypertarget{classdetail_1_1iter__impl_ab3a9cbf054745890847c27896f636ecc}\label{classdetail_1_1iter__impl_ab3a9cbf054745890847c27896f636ecc} 
+{\bfseries switch} (m\+\_\+object-\/$>$m\+\_\+data.\+m\+\_\+type)
 \item 
 void \mbox{\hyperlink{classdetail_1_1iter__impl_afc94db3b8f35616347c25fae68e09509}{set\+\_\+end}} () noexcept
 \begin{DoxyCompactList}\small\item\em set the iterator past the last value \end{DoxyCompactList}\item 
@@ -59,9 +60,9 @@ void \mbox{\hyperlink{classdetail_1_1iter__impl_afc94db3b8f35616347c25fae68e0950
 \begin{DoxyCompactList}\small\item\em post-\/decrement (it--) \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classdetail_1_1iter__impl}{iter\+\_\+impl}} \& \mbox{\hyperlink{classdetail_1_1iter__impl_a3b7d07348aaaaf3eda9bd98b7d80415f}{operator-\/-\/}} ()
 \begin{DoxyCompactList}\small\item\em pre-\/decrement (--it) \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Iter\+Impl , \mbox{\hyperlink{namespacedetail_a469b9c0b78404c24509a221801bc4c26}{detail\+::enable\+\_\+if\+\_\+t}}$<$(std\+::is\+\_\+same$<$ Iter\+Impl, \mbox{\hyperlink{classdetail_1_1iter__impl}{iter\+\_\+impl}} $>$\mbox{\hyperlink{classdetail_1_1iter__impl_a96557c87bc9b3adf6aa0b1a6b6209525}{\+::value}}\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}std\+::is\+\_\+same$<$ Iter\+Impl, other\+\_\+iter\+\_\+impl $>$\mbox{\hyperlink{classdetail_1_1iter__impl_a96557c87bc9b3adf6aa0b1a6b6209525}{\+::value}}), std\+::nullptr\+\_\+t $>$  = nullptr$>$ }\\bool \mbox{\hyperlink{classdetail_1_1iter__impl_a57b4e1eee4a3cdb3c0683cf64979da8d}{operator==}} (const Iter\+Impl \&other) const
+{\footnotesize template$<$typename Iter\+Impl , detail\+::enable\+\_\+if\+\_\+t$<$(std\+::is\+\_\+same$<$ Iter\+Impl, \mbox{\hyperlink{classdetail_1_1iter__impl}{iter\+\_\+impl}} $>$\mbox{\hyperlink{classdetail_1_1iter__impl_a96557c87bc9b3adf6aa0b1a6b6209525}{\+::value}}\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}std\+::is\+\_\+same$<$ Iter\+Impl, other\+\_\+iter\+\_\+impl $>$\mbox{\hyperlink{classdetail_1_1iter__impl_a96557c87bc9b3adf6aa0b1a6b6209525}{\+::value}}), std\+::nullptr\+\_\+t $>$  = nullptr$>$ }\\bool \mbox{\hyperlink{classdetail_1_1iter__impl_a57b4e1eee4a3cdb3c0683cf64979da8d}{operator==}} (const Iter\+Impl \&other) const
 \begin{DoxyCompactList}\small\item\em comparison\+: equal \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Iter\+Impl , \mbox{\hyperlink{namespacedetail_a469b9c0b78404c24509a221801bc4c26}{detail\+::enable\+\_\+if\+\_\+t}}$<$(std\+::is\+\_\+same$<$ Iter\+Impl, \mbox{\hyperlink{classdetail_1_1iter__impl}{iter\+\_\+impl}} $>$\mbox{\hyperlink{classdetail_1_1iter__impl_a96557c87bc9b3adf6aa0b1a6b6209525}{\+::value}}\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}std\+::is\+\_\+same$<$ Iter\+Impl, other\+\_\+iter\+\_\+impl $>$\mbox{\hyperlink{classdetail_1_1iter__impl_a96557c87bc9b3adf6aa0b1a6b6209525}{\+::value}}), std\+::nullptr\+\_\+t $>$  = nullptr$>$ }\\bool \mbox{\hyperlink{classdetail_1_1iter__impl_ae52db5f16f00edc13c848fe99e4c521b}{operator!=}} (const Iter\+Impl \&other) const
+{\footnotesize template$<$typename Iter\+Impl , detail\+::enable\+\_\+if\+\_\+t$<$(std\+::is\+\_\+same$<$ Iter\+Impl, \mbox{\hyperlink{classdetail_1_1iter__impl}{iter\+\_\+impl}} $>$\mbox{\hyperlink{classdetail_1_1iter__impl_a96557c87bc9b3adf6aa0b1a6b6209525}{\+::value}}\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}std\+::is\+\_\+same$<$ Iter\+Impl, other\+\_\+iter\+\_\+impl $>$\mbox{\hyperlink{classdetail_1_1iter__impl_a96557c87bc9b3adf6aa0b1a6b6209525}{\+::value}}), std\+::nullptr\+\_\+t $>$  = nullptr$>$ }\\bool \mbox{\hyperlink{classdetail_1_1iter__impl_ae52db5f16f00edc13c848fe99e4c521b}{operator!=}} (const Iter\+Impl \&other) const
 \begin{DoxyCompactList}\small\item\em comparison\+: not equal \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classdetail_1_1iter__impl_a339df296df7f5d014d5c7cedf40497da}{operator$<$}} (const \mbox{\hyperlink{classdetail_1_1iter__impl}{iter\+\_\+impl}} \&other) const
 \begin{DoxyCompactList}\small\item\em comparison\+: smaller \end{DoxyCompactList}\item 
@@ -90,11 +91,14 @@ const object\+\_\+t\+::key\+\_\+type \& \mbox{\hyperlink{classdetail_1_1iter__im
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{json_8hpp_a2cf645f34610e7f7d6e09ab88a2ab917}{JSON\+\_\+\+PRIVATE\+\_\+\+UNLESS\+\_\+\+TESTED}} \+: void set\+\_\+begin() noexcept \{ \mbox{\hyperlink{json_8hpp_a69f131cff49da1989667220173fbeae6}{JSON\+\_\+\+ASSERT}}(m\+\_\+object != nullptr)
+\Hypertarget{classdetail_1_1iter__impl_ae146c1c7a0b8a46e353b1bbe181f7743}\label{classdetail_1_1iter__impl_ae146c1c7a0b8a46e353b1bbe181f7743} 
+JSON\+\_\+\+PRIVATE\+\_\+\+UNLESS\+\_\+\+TESTED \+: void set\+\_\+begin() noexcept \{ JSON\+\_\+\+ASSERT(m\+\_\+object != nullptr)
 \item 
-\mbox{\hyperlink{json_8hpp_a2cf645f34610e7f7d6e09ab88a2ab917}{JSON\+\_\+\+PRIVATE\+\_\+\+UNLESS\+\_\+\+TESTED}} \+: \mbox{\hyperlink{classdetail_1_1iter__impl_a5f32f4fdd48a9b92ecb156af6421b1b8}{pointer}} m\+\_\+object = nullptr
+\Hypertarget{classdetail_1_1iter__impl_a392b5af6ea3449fe31ab7aafa5db4774}\label{classdetail_1_1iter__impl_a392b5af6ea3449fe31ab7aafa5db4774} 
+JSON\+\_\+\+PRIVATE\+\_\+\+UNLESS\+\_\+\+TESTED \+: \mbox{\hyperlink{classdetail_1_1iter__impl_a5f32f4fdd48a9b92ecb156af6421b1b8}{pointer}} m\+\_\+object = nullptr
 \item 
-\mbox{\hyperlink{structdetail_1_1internal__iterator}{internal\+\_\+iterator}}$<$ typename std\+::remove\+\_\+const$<$ Basic\+Json\+Type $>$\+::type $>$ \mbox{\hyperlink{classdetail_1_1iter__impl_a79b7b8c6b778d9f7e76b086b45d9ea2e}{m\+\_\+it}} \{\}
+\Hypertarget{classdetail_1_1iter__impl_a79b7b8c6b778d9f7e76b086b45d9ea2e}\label{classdetail_1_1iter__impl_a79b7b8c6b778d9f7e76b086b45d9ea2e} 
+\mbox{\hyperlink{structdetail_1_1internal__iterator}{internal\+\_\+iterator}}$<$ typename std\+::remove\+\_\+const$<$ Basic\+Json\+Type $>$\+::type $>$ {\bfseries m\+\_\+it} \{\}
 \begin{DoxyCompactList}\small\item\em the actual iterator of the associated instance \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Friends}
 \begin{DoxyCompactItemize}
@@ -120,17 +124,6 @@ version 1.\+0.\+0, simplified in version 2.\+0.\+9, change to bidirectional iter
 
 
 \doxysubsection{Member Typedef Documentation}
-\Hypertarget{classdetail_1_1iter__impl_a6d51e1372282929d1c240223aa973c6e}\label{classdetail_1_1iter__impl_a6d51e1372282929d1c240223aa973c6e} 
-\index{detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}!difference\_type@{difference\_type}}
-\index{difference\_type@{difference\_type}!detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}}
-\doxysubsubsection{\texorpdfstring{difference\_type}{difference\_type}}
-{\footnotesize\ttfamily template$<$typename Basic\+Json\+Type $>$ \\
-using \mbox{\hyperlink{classdetail_1_1iter__impl}{detail\+::iter\+\_\+impl}}$<$ Basic\+Json\+Type $>$\+::difference\+\_\+type = typename Basic\+Json\+Type\+::difference\+\_\+type}
-
-
-
-a type to represent differences between iterators 
-
 \Hypertarget{classdetail_1_1iter__impl_a8fa317aaddc3dc7c58264e52e295c43e}\label{classdetail_1_1iter__impl_a8fa317aaddc3dc7c58264e52e295c43e} 
 \index{detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}!iterator\_category@{iterator\_category}}
 \index{iterator\_category@{iterator\_category}!detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}}
@@ -175,45 +168,13 @@ using \mbox{\hyperlink{classdetail_1_1iter__impl}{detail\+::iter\+\_\+impl}}$<$ 
 
 defines a reference to the type iterated over (value\+\_\+type) 
 
-\Hypertarget{classdetail_1_1iter__impl_ab6c453d3fea1df38fa45fd4f97ea42df}\label{classdetail_1_1iter__impl_ab6c453d3fea1df38fa45fd4f97ea42df} 
-\index{detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}!value\_type@{value\_type}}
-\index{value\_type@{value\_type}!detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}}
-\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
-{\footnotesize\ttfamily template$<$typename Basic\+Json\+Type $>$ \\
-using \mbox{\hyperlink{classdetail_1_1iter__impl}{detail\+::iter\+\_\+impl}}$<$ Basic\+Json\+Type $>$\+::value\+\_\+type = typename Basic\+Json\+Type\+::value\+\_\+type}
-
-
-
-the type of the values when the iterator is dereferenced 
-
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classdetail_1_1iter__impl_ac628b24caf15abd25a3d4d1ad0c3fe0a}\label{classdetail_1_1iter__impl_ac628b24caf15abd25a3d4d1ad0c3fe0a} 
-\index{detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}!iter\_impl@{iter\_impl}}
-\index{iter\_impl@{iter\_impl}!detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}}
-\doxysubsubsection{\texorpdfstring{iter\_impl()}{iter\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
-{\footnotesize\ttfamily template$<$typename Basic\+Json\+Type $>$ \\
-\mbox{\hyperlink{classdetail_1_1iter__impl}{detail\+::iter\+\_\+impl}}$<$ Basic\+Json\+Type $>$\+::iter\+\_\+impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
-
-\Hypertarget{classdetail_1_1iter__impl_a037bc5575c7368ba5b3fab3d0390d5d8}\label{classdetail_1_1iter__impl_a037bc5575c7368ba5b3fab3d0390d5d8} 
-\index{detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}!````~iter\_impl@{\texorpdfstring{$\sim$}{\string~}iter\_impl}}
-\index{````~iter\_impl@{\texorpdfstring{$\sim$}{\string~}iter\_impl}!detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}}
-\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}iter\_impl()}{\string~iter\_impl()}}
-{\footnotesize\ttfamily template$<$typename Basic\+Json\+Type $>$ \\
-\mbox{\hyperlink{classdetail_1_1iter__impl}{detail\+::iter\+\_\+impl}}$<$ Basic\+Json\+Type $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classdetail_1_1iter__impl}{iter\+\_\+impl}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
-
-\Hypertarget{classdetail_1_1iter__impl_a8b8e30542bd3aa542201448ea8fd7089}\label{classdetail_1_1iter__impl_a8b8e30542bd3aa542201448ea8fd7089} 
-\index{detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}!iter\_impl@{iter\_impl}}
-\index{iter\_impl@{iter\_impl}!detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}}
-\doxysubsubsection{\texorpdfstring{iter\_impl()}{iter\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
-{\footnotesize\ttfamily template$<$typename Basic\+Json\+Type $>$ \\
-\mbox{\hyperlink{classdetail_1_1iter__impl}{detail\+::iter\+\_\+impl}}$<$ Basic\+Json\+Type $>$\+::iter\+\_\+impl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdetail_1_1iter__impl}{iter\+\_\+impl}}$<$ Basic\+Json\+Type $>$ \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
-
 \Hypertarget{classdetail_1_1iter__impl_a21ce449bdce08e15eaf8333322a81039}\label{classdetail_1_1iter__impl_a21ce449bdce08e15eaf8333322a81039} 
 \index{detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}!iter\_impl@{iter\_impl}}
 \index{iter\_impl@{iter\_impl}!detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}}
-\doxysubsubsection{\texorpdfstring{iter\_impl()}{iter\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+\doxysubsubsection{\texorpdfstring{iter\_impl()}{iter\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
 {\footnotesize\ttfamily template$<$typename Basic\+Json\+Type $>$ \\
 \mbox{\hyperlink{classdetail_1_1iter__impl}{detail\+::iter\+\_\+impl}}$<$ Basic\+Json\+Type $>$\+::iter\+\_\+impl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdetail_1_1iter__impl_a5f32f4fdd48a9b92ecb156af6421b1b8}{pointer}}}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [noexcept]}}
 
@@ -235,7 +196,7 @@ The iterator is initialized; i.\+e. {\ttfamily m\+\_\+object != nullptr}.
 \Hypertarget{classdetail_1_1iter__impl_af8d8847a82d9dab28bd4650ed13a7c90}\label{classdetail_1_1iter__impl_af8d8847a82d9dab28bd4650ed13a7c90} 
 \index{detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}!iter\_impl@{iter\_impl}}
 \index{iter\_impl@{iter\_impl}!detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}}
-\doxysubsubsection{\texorpdfstring{iter\_impl()}{iter\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+\doxysubsubsection{\texorpdfstring{iter\_impl()}{iter\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
 {\footnotesize\ttfamily template$<$typename Basic\+Json\+Type $>$ \\
 \mbox{\hyperlink{classdetail_1_1iter__impl}{detail\+::iter\+\_\+impl}}$<$ Basic\+Json\+Type $>$\+::iter\+\_\+impl (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classdetail_1_1iter__impl}{iter\+\_\+impl}}$<$ const Basic\+Json\+Type $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
@@ -257,7 +218,7 @@ This copy constructor had to be defined explicitly to circumvent a bug occurring
 \Hypertarget{classdetail_1_1iter__impl_a26079f33eb8a16683577cf3782558f26}\label{classdetail_1_1iter__impl_a26079f33eb8a16683577cf3782558f26} 
 \index{detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}!iter\_impl@{iter\_impl}}
 \index{iter\_impl@{iter\_impl}!detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}}
-\doxysubsubsection{\texorpdfstring{iter\_impl()}{iter\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+\doxysubsubsection{\texorpdfstring{iter\_impl()}{iter\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
 {\footnotesize\ttfamily template$<$typename Basic\+Json\+Type $>$ \\
 \mbox{\hyperlink{classdetail_1_1iter__impl}{detail\+::iter\+\_\+impl}}$<$ Basic\+Json\+Type $>$\+::iter\+\_\+impl (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classdetail_1_1iter__impl}{iter\+\_\+impl}}$<$ typename std\+::remove\+\_\+const$<$ Basic\+Json\+Type $>$\+::type $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
@@ -295,7 +256,7 @@ The iterator is initialized; i.\+e. {\ttfamily m\+\_\+object != nullptr}.
 \index{operator"!=@{operator"!=}!detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}}
 \doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
 {\footnotesize\ttfamily template$<$typename Basic\+Json\+Type $>$ \\
-template$<$typename Iter\+Impl , \mbox{\hyperlink{namespacedetail_a469b9c0b78404c24509a221801bc4c26}{detail\+::enable\+\_\+if\+\_\+t}}$<$(std\+::is\+\_\+same$<$ Iter\+Impl, \mbox{\hyperlink{classdetail_1_1iter__impl}{iter\+\_\+impl}} $>$\mbox{\hyperlink{classdetail_1_1iter__impl_a96557c87bc9b3adf6aa0b1a6b6209525}{\+::value}}\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}std\+::is\+\_\+same$<$ Iter\+Impl, other\+\_\+iter\+\_\+impl $>$\mbox{\hyperlink{classdetail_1_1iter__impl_a96557c87bc9b3adf6aa0b1a6b6209525}{\+::value}}), std\+::nullptr\+\_\+t $>$  = nullptr$>$ \\
+template$<$typename Iter\+Impl , detail\+::enable\+\_\+if\+\_\+t$<$(std\+::is\+\_\+same$<$ Iter\+Impl, \mbox{\hyperlink{classdetail_1_1iter__impl}{iter\+\_\+impl}} $>$\mbox{\hyperlink{classdetail_1_1iter__impl_a96557c87bc9b3adf6aa0b1a6b6209525}{\+::value}}\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}std\+::is\+\_\+same$<$ Iter\+Impl, other\+\_\+iter\+\_\+impl $>$\mbox{\hyperlink{classdetail_1_1iter__impl_a96557c87bc9b3adf6aa0b1a6b6209525}{\+::value}}), std\+::nullptr\+\_\+t $>$  = nullptr$>$ \\
 bool \mbox{\hyperlink{classdetail_1_1iter__impl}{detail\+::iter\+\_\+impl}}$<$ Basic\+Json\+Type $>$\+::operator!= (\begin{DoxyParamCaption}\item[{const Iter\+Impl \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
@@ -490,7 +451,7 @@ The iterator is initialized; i.\+e. {\ttfamily m\+\_\+object != nullptr}.
 \Hypertarget{classdetail_1_1iter__impl_ae347fdf39e75d13ce488335ef1529b27}\label{classdetail_1_1iter__impl_ae347fdf39e75d13ce488335ef1529b27} 
 \index{detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}!operator=@{operator=}}
 \index{operator=@{operator=}!detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}}
-\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename Basic\+Json\+Type $>$ \\
 \mbox{\hyperlink{classdetail_1_1iter__impl}{iter\+\_\+impl}} \& \mbox{\hyperlink{classdetail_1_1iter__impl}{detail\+::iter\+\_\+impl}}$<$ Basic\+Json\+Type $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classdetail_1_1iter__impl}{iter\+\_\+impl}}$<$ const Basic\+Json\+Type $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
@@ -512,7 +473,7 @@ It is not checked whether {\itshape other} is initialized.
 \Hypertarget{classdetail_1_1iter__impl_a228140be2554afd5dfe54d4194780b7c}\label{classdetail_1_1iter__impl_a228140be2554afd5dfe54d4194780b7c} 
 \index{detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}!operator=@{operator=}}
 \index{operator=@{operator=}!detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}}
-\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily template$<$typename Basic\+Json\+Type $>$ \\
 \mbox{\hyperlink{classdetail_1_1iter__impl}{iter\+\_\+impl}} \& \mbox{\hyperlink{classdetail_1_1iter__impl}{detail\+::iter\+\_\+impl}}$<$ Basic\+Json\+Type $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classdetail_1_1iter__impl}{iter\+\_\+impl}}$<$ typename std\+::remove\+\_\+const$<$ Basic\+Json\+Type $>$\+::type $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
@@ -531,19 +492,12 @@ const/non-\/const iterator
 \begin{DoxyNote}{Note}
 It is not checked whether {\itshape other} is initialized. 
 \end{DoxyNote}
-\Hypertarget{classdetail_1_1iter__impl_a3e705d46278a4048c26f297b1b433393}\label{classdetail_1_1iter__impl_a3e705d46278a4048c26f297b1b433393} 
-\index{detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}!operator=@{operator=}}
-\index{operator=@{operator=}!detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}}
-\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily template$<$typename Basic\+Json\+Type $>$ \\
-\mbox{\hyperlink{classdetail_1_1iter__impl}{iter\+\_\+impl}} \& \mbox{\hyperlink{classdetail_1_1iter__impl}{detail\+::iter\+\_\+impl}}$<$ Basic\+Json\+Type $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdetail_1_1iter__impl}{iter\+\_\+impl}}$<$ Basic\+Json\+Type $>$ \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
-
 \Hypertarget{classdetail_1_1iter__impl_a57b4e1eee4a3cdb3c0683cf64979da8d}\label{classdetail_1_1iter__impl_a57b4e1eee4a3cdb3c0683cf64979da8d} 
 \index{detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}!operator==@{operator==}}
 \index{operator==@{operator==}!detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}}
 \doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
 {\footnotesize\ttfamily template$<$typename Basic\+Json\+Type $>$ \\
-template$<$typename Iter\+Impl , \mbox{\hyperlink{namespacedetail_a469b9c0b78404c24509a221801bc4c26}{detail\+::enable\+\_\+if\+\_\+t}}$<$(std\+::is\+\_\+same$<$ Iter\+Impl, \mbox{\hyperlink{classdetail_1_1iter__impl}{iter\+\_\+impl}} $>$\mbox{\hyperlink{classdetail_1_1iter__impl_a96557c87bc9b3adf6aa0b1a6b6209525}{\+::value}}\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}std\+::is\+\_\+same$<$ Iter\+Impl, other\+\_\+iter\+\_\+impl $>$\mbox{\hyperlink{classdetail_1_1iter__impl_a96557c87bc9b3adf6aa0b1a6b6209525}{\+::value}}), std\+::nullptr\+\_\+t $>$  = nullptr$>$ \\
+template$<$typename Iter\+Impl , detail\+::enable\+\_\+if\+\_\+t$<$(std\+::is\+\_\+same$<$ Iter\+Impl, \mbox{\hyperlink{classdetail_1_1iter__impl}{iter\+\_\+impl}} $>$\mbox{\hyperlink{classdetail_1_1iter__impl_a96557c87bc9b3adf6aa0b1a6b6209525}{\+::value}}\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}std\+::is\+\_\+same$<$ Iter\+Impl, other\+\_\+iter\+\_\+impl $>$\mbox{\hyperlink{classdetail_1_1iter__impl_a96557c87bc9b3adf6aa0b1a6b6209525}{\+::value}}), std\+::nullptr\+\_\+t $>$  = nullptr$>$ \\
 bool \mbox{\hyperlink{classdetail_1_1iter__impl}{detail\+::iter\+\_\+impl}}$<$ Basic\+Json\+Type $>$\+::operator== (\begin{DoxyParamCaption}\item[{const Iter\+Impl \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
@@ -609,13 +563,6 @@ set the iterator past the last value
 \begin{DoxyPrecond}{Precondition}
 The iterator is initialized; i.\+e. {\ttfamily m\+\_\+object != nullptr}. 
 \end{DoxyPrecond}
-\Hypertarget{classdetail_1_1iter__impl_ab3a9cbf054745890847c27896f636ecc}\label{classdetail_1_1iter__impl_ab3a9cbf054745890847c27896f636ecc} 
-\index{detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}!switch@{switch}}
-\index{switch@{switch}!detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}}
-\doxysubsubsection{\texorpdfstring{switch()}{switch()}}
-{\footnotesize\ttfamily template$<$typename Basic\+Json\+Type $>$ \\
-\mbox{\hyperlink{classdetail_1_1iter__impl}{detail\+::iter\+\_\+impl}}$<$ Basic\+Json\+Type $>$\+::switch (\begin{DoxyParamCaption}\item[{m\+\_\+object-\/$>$m\+\_\+data.}]{m\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
 \Hypertarget{classdetail_1_1iter__impl_a96557c87bc9b3adf6aa0b1a6b6209525}\label{classdetail_1_1iter__impl_a96557c87bc9b3adf6aa0b1a6b6209525} 
 \index{detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}!value@{value}}
 \index{value@{value}!detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}}
@@ -649,34 +596,6 @@ The iterator is initialized; i.\+e. {\ttfamily m\+\_\+object != nullptr}.
 \end{DoxyPrecond}
 
 
-\doxysubsection{Member Data Documentation}
-\Hypertarget{classdetail_1_1iter__impl_ae146c1c7a0b8a46e353b1bbe181f7743}\label{classdetail_1_1iter__impl_ae146c1c7a0b8a46e353b1bbe181f7743} 
-\index{detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}!\_\_pad0\_\_@{\_\_pad0\_\_}}
-\index{\_\_pad0\_\_@{\_\_pad0\_\_}!detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}}
-\doxysubsubsection{\texorpdfstring{\_\_pad0\_\_}{\_\_pad0\_\_}}
-{\footnotesize\ttfamily template$<$typename Basic\+Json\+Type $>$ \\
-\mbox{\hyperlink{json_8hpp_a2cf645f34610e7f7d6e09ab88a2ab917}{JSON\+\_\+\+PRIVATE\+\_\+\+UNLESS\+\_\+\+TESTED}} \mbox{\hyperlink{classdetail_1_1iter__impl}{detail\+::iter\+\_\+impl}}$<$ Basic\+Json\+Type $>$\+::\+\_\+\+\_\+pad0\+\_\+\+\_\+}
-
-\Hypertarget{classdetail_1_1iter__impl_a392b5af6ea3449fe31ab7aafa5db4774}\label{classdetail_1_1iter__impl_a392b5af6ea3449fe31ab7aafa5db4774} 
-\index{detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}!\_\_pad1\_\_@{\_\_pad1\_\_}}
-\index{\_\_pad1\_\_@{\_\_pad1\_\_}!detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}}
-\doxysubsubsection{\texorpdfstring{\_\_pad1\_\_}{\_\_pad1\_\_}}
-{\footnotesize\ttfamily template$<$typename Basic\+Json\+Type $>$ \\
-\mbox{\hyperlink{json_8hpp_a2cf645f34610e7f7d6e09ab88a2ab917}{JSON\+\_\+\+PRIVATE\+\_\+\+UNLESS\+\_\+\+TESTED}} \mbox{\hyperlink{classdetail_1_1iter__impl}{detail\+::iter\+\_\+impl}}$<$ Basic\+Json\+Type $>$\+::\+\_\+\+\_\+pad1\+\_\+\+\_\+}
-
-\Hypertarget{classdetail_1_1iter__impl_a79b7b8c6b778d9f7e76b086b45d9ea2e}\label{classdetail_1_1iter__impl_a79b7b8c6b778d9f7e76b086b45d9ea2e} 
-\index{detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}!m\_it@{m\_it}}
-\index{m\_it@{m\_it}!detail::iter\_impl$<$ BasicJsonType $>$@{detail::iter\_impl$<$ BasicJsonType $>$}}
-\doxysubsubsection{\texorpdfstring{m\_it}{m\_it}}
-{\footnotesize\ttfamily template$<$typename Basic\+Json\+Type $>$ \\
-\mbox{\hyperlink{structdetail_1_1internal__iterator}{internal\+\_\+iterator}}$<$typename std\+::remove\+\_\+const$<$Basic\+Json\+Type$>$\+::type$>$ \mbox{\hyperlink{classdetail_1_1iter__impl}{detail\+::iter\+\_\+impl}}$<$ Basic\+Json\+Type $>$\+::m\+\_\+it \{\}}
-
-
-
-the actual iterator of the associated instance 
-
-
-
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Mac\+Gyver/\mbox{\hyperlink{json_8hpp}{json.\+hpp}}\end{DoxyCompactItemize}
+Mac\+Gyver/json.\+hpp\end{DoxyCompactItemize}

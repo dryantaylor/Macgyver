@@ -1,16 +1,16 @@
 \doxysection{Game\+Object.\+h}
 \hypertarget{_game_object_8h_source}{}\label{_game_object_8h_source}\index{MacGyver/GameObject.h@{MacGyver/GameObject.h}}
-\mbox{\hyperlink{_game_object_8h}{Go to the documentation of this file.}}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <typeinfo>}}
 \DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <typeindex>}}
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
 \DoxyCodeLine{00005\ }
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_vector3_8h}{Vector3.h}}"{}}}
-\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_component_manager_8h}{ComponentManager.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Vector3.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}ComponentManager.h"{}}}
 \DoxyCodeLine{00008\ }
-\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_macgyver_1_1_gameobjects}{Macgyver::Gameobjects}}\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }Macgyver::Gameobjects\ \{}
 \DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{class\ }Component;}
 \DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{class\ }Scene;}
 \DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_game_object}{GameObject}}\ \{}
@@ -21,13 +21,13 @@
 \DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_game_object_a0273c889cea933c2fd9eaba9104f8cb8}{GameObject}}(\textcolor{keywordtype}{int}\ x\ =\ 0,\ \textcolor{keywordtype}{int}\ y\ =\ 0,\ \textcolor{keywordtype}{int}\ z\ =\ 0);}
 \DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_game_object_aa2748c9b76c5d316ebea2731cc2ddcbf}{addComponent}}(\mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component}{Component}}*\ comp);}
 \DoxyCodeLine{00035\ }
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ std::vector<Component*>\ \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_game_object_a6947bfb7c95b76e590a285c39b29f91d}{getComponentsWithProperty}}(\mbox{\hyperlink{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13b}{Components::COMPONENT\_TYPES}}\ type);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ std::vector<Component*>\ \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_game_object_a6947bfb7c95b76e590a285c39b29f91d}{getComponentsWithProperty}}(Components::COMPONENT\_TYPES\ type);}
 \DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_game_object_a6ffd10b6c9510d1f9ea502017d6d92ef}{update}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ deltaTime);}
 \DoxyCodeLine{00054\ }
 \DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_scene}{Scene}}*\ \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_game_object_a6be9d2a46c2b8432494ded09f7c93e06}{getParentScene}}();}
 \DoxyCodeLine{00061\ }
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_game_object_a05e878d991b30cd3f01efd7142bef25f}{enabled}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ enabled\ =\ \textcolor{keyword}{true};}
 \DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{private}:}
 \DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_scene}{Scene}}*\ parentScene;}
 \DoxyCodeLine{00066\ \ \ \ \ \};}
