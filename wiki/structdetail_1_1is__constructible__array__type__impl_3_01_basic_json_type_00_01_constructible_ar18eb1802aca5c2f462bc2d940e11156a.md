@@ -1,0 +1,101 @@
+---
+generator: Doxygen 1.10.0
+lang: en-US
+title: "Macgyver: detail::is_constructible_array_type_impl\\<
+  BasicJsonType, ConstructibleArrayType, enable_if_t\\< std::is_same\\<
+  ConstructibleArrayType, typename BasicJsonType::value_type \\>::value
+  \\> \\> Struct Template Reference"
+viewport: width=device-width, initial-scale=1
+---
+
+<div id="top">
+
+<div id="titlearea">
+
+<table data-cellspacing="0" data-cellpadding="0">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr id="projectrow" class="odd">
+<td id="projectalign"><div id="projectname">
+Macgyver
+</div>
+<div id="projectbrief">
+2D game engine written in C++
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div id="main-nav">
+
+</div>
+
+<div id="nav-path" class="navpath">
+
+- <a href="namespacedetail.html" class="el">detail</a>
+- <a
+  href="structdetail_1_1is__constructible__array__type__impl_3_01_basic_json_type_00_01_constructible_ar18eb1802aca5c2f462bc2d940e11156a.html"
+  class="el">is_constructible_array_type_impl&lt; BasicJsonType,
+  ConstructibleArrayType, enable_if_t&lt; std::is_same&lt;
+  ConstructibleArrayType, typename BasicJsonType::value_type &gt;::value
+  &gt; &gt;</a>
+
+</div>
+
+</div>
+
+<div class="header">
+
+<div class="headertitle">
+
+<div class="title">
+
+detail::is_constructible_array_type_impl\< BasicJsonType,
+ConstructibleArrayType, enable_if_t\< std::is_same\<
+ConstructibleArrayType, typename BasicJsonType::value_type \>::value \>
+\> Struct Template Reference
+
+</div>
+
+</div>
+
+</div>
+
+<div class="contents">
+
+<div class="dynheader">
+
+Inheritance diagram for detail::is_constructible_array_type_impl\<
+BasicJsonType, ConstructibleArrayType, enable_if_t\< std::is_same\<
+ConstructibleArrayType, typename BasicJsonType::value_type \>::value \>
+\>:
+
+</div>
+
+<div class="dyncontent">
+
+<div class="center">
+
+![](structdetail_1_1is__constructible__array__type__impl_3_01_basic_json_type_00_01_constructible_ar18eb1802aca5c2f462bc2d940e11156a.png)
+
+</div>
+
+</div>
+
+------------------------------------------------------------------------
+
+The documentation for this struct was generated from the following file:
+
+- MacGyver/<a href="json_8hpp_source.html" class="el">json.hpp</a>
+
+</div>
+
+------------------------------------------------------------------------
+
+<span class="small">Generated
+by [<img src="doxygen.svg" class="footer" width="104" height="31"
+alt="doxygen" />](https://www.doxygen.org/index.html) 1.10.0</span>

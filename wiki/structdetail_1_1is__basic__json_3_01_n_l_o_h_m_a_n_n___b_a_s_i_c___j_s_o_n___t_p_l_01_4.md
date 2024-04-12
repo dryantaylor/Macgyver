@@ -1,0 +1,91 @@
+---
+generator: Doxygen 1.10.0
+lang: en-US
+title: "Macgyver: detail::is_basic_json\\< NLOHMANN_BASIC_JSON_TPL \\>
+  Struct Reference"
+viewport: width=device-width, initial-scale=1
+---
+
+<div id="top">
+
+<div id="titlearea">
+
+<table data-cellspacing="0" data-cellpadding="0">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr id="projectrow" class="odd">
+<td id="projectalign"><div id="projectname">
+Macgyver
+</div>
+<div id="projectbrief">
+2D game engine written in C++
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div id="main-nav">
+
+</div>
+
+<div id="nav-path" class="navpath">
+
+- <a href="namespacedetail.html" class="el">detail</a>
+- <a
+  href="structdetail_1_1is__basic__json_3_01_n_l_o_h_m_a_n_n___b_a_s_i_c___j_s_o_n___t_p_l_01_4.html"
+  class="el">is_basic_json&lt; NLOHMANN_BASIC_JSON_TPL &gt;</a>
+
+</div>
+
+</div>
+
+<div class="header">
+
+<div class="headertitle">
+
+<div class="title">
+
+detail::is_basic_json\< NLOHMANN_BASIC_JSON_TPL \> Struct Reference
+
+</div>
+
+</div>
+
+</div>
+
+<div class="contents">
+
+<div class="dynheader">
+
+Inheritance diagram for detail::is_basic_json\< NLOHMANN_BASIC_JSON_TPL
+\>:
+
+</div>
+
+<div class="dyncontent">
+
+<div class="center">
+
+![](structdetail_1_1is__basic__json_3_01_n_l_o_h_m_a_n_n___b_a_s_i_c___j_s_o_n___t_p_l_01_4.png)
+
+</div>
+
+</div>
+
+------------------------------------------------------------------------
+
+The documentation for this struct was generated from the following file:
+
+- MacGyver/<a href="json_8hpp_source.html" class="el">json.hpp</a>
+
+</div>
+
+------------------------------------------------------------------------
+
+<span class="small">Generated
+by [<img src="doxygen.svg" class="footer" width="104" height="31"
+alt="doxygen" />](https://www.doxygen.org/index.html) 1.10.0</span>

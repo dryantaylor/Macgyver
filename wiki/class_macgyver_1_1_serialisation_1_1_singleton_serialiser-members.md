@@ -1,0 +1,84 @@
+---
+generator: Doxygen 1.10.0
+lang: en-US
+title: "Macgyver: Member List"
+viewport: width=device-width, initial-scale=1
+---
+
+<div id="top">
+
+<div id="titlearea">
+
+<table data-cellspacing="0" data-cellpadding="0">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr id="projectrow" class="odd">
+<td id="projectalign"><div id="projectname">
+Macgyver
+</div>
+<div id="projectbrief">
+2D game engine written in C++
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div id="main-nav">
+
+</div>
+
+<div id="nav-path" class="navpath">
+
+- **Macgyver**
+- **Serialisation**
+- <a href="class_macgyver_1_1_serialisation_1_1_singleton_serialiser.html"
+  class="el">SingletonSerialiser</a>
+
+</div>
+
+</div>
+
+<div class="header">
+
+<div class="headertitle">
+
+<div class="title">
+
+Macgyver::Serialisation::SingletonSerialiser Member List
+
+</div>
+
+</div>
+
+</div>
+
+<div class="contents">
+
+This is the complete list of members for
+<a href="class_macgyver_1_1_serialisation_1_1_singleton_serialiser.html"
+class="el">Macgyver::Serialisation::SingletonSerialiser</a>, including
+all inherited members.
+
+|                                                                                                                                       |                                                                          |                                    |
+|---------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|------------------------------------|
+| **deserialiseMessenger**(std::string serialised) (defined in <a href="class_macgyver_1_1_serialisation_1_1_singleton_serialiser.html" 
+ class="el">Macgyver::Serialisation::SingletonSerialiser</a>)                                                                           | <a href="class_macgyver_1_1_serialisation_1_1_singleton_serialiser.html" 
+                                                                                                                                         class="el">Macgyver::Serialisation::SingletonSerialiser</a>               | <span class="mlabel">static</span> |
+| **serialiseAnimations**() (defined in <a href="class_macgyver_1_1_serialisation_1_1_singleton_serialiser.html"                        
+ class="el">Macgyver::Serialisation::SingletonSerialiser</a>)                                                                           | <a href="class_macgyver_1_1_serialisation_1_1_singleton_serialiser.html" 
+                                                                                                                                         class="el">Macgyver::Serialisation::SingletonSerialiser</a>               | <span class="mlabel">static</span> |
+| **serialiseMessenger**() (defined in <a href="class_macgyver_1_1_serialisation_1_1_singleton_serialiser.html"                         
+ class="el">Macgyver::Serialisation::SingletonSerialiser</a>)                                                                           | <a href="class_macgyver_1_1_serialisation_1_1_singleton_serialiser.html" 
+                                                                                                                                         class="el">Macgyver::Serialisation::SingletonSerialiser</a>               | <span class="mlabel">static</span> |
+
+</div>
+
+------------------------------------------------------------------------
+
+<span class="small">Generated
+by [<img src="doxygen.svg" class="footer" width="104" height="31"
+alt="doxygen" />](https://www.doxygen.org/index.html) 1.10.0</span>
