@@ -1,12 +1,12 @@
 #pragma once
 #include "ComponentData.h"
 namespace Macgyver::Components {
-	/*
+	/**
 	Wrapper around a Component Data struct to hold it's type
 	and a pointer to the Data struct
 	*/
 	struct ComponentDataWrapper {
-		/*
+		/**
 		Constructor for the struct
 
 		@param data type of the object calculated using

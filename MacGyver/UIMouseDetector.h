@@ -6,20 +6,20 @@
 
 namespace Macgyver::Components::UI {
 
-	/*
+	/**
 	* Component to handle the mouse detection of a
 	* button. Handles both location and mouse clicking
 	* Sets 2 bits in a given Messenger cell.
 	*/
 	struct UIMouseDetector {
-		/*
+		/**
         * Camera's update method, calls the draw function at the end.
         *
         * @param self pointer to the Component which the camera is part of
         * @param deltaTime time in milliseconds since last frame and this one
         */
 		static void update(Gameobjects::Component* self, unsigned int deltaTime);
-		/*
+		/**
         * Attaches a new MouseDetector to an existing Component.
         * Note: a Component should only have one thing attached to it
         *
@@ -30,7 +30,7 @@ namespace Macgyver::Components::UI {
 	};
 
 	struct UIMouseDetectorData {
-		/*
+		/**
 		* Constructor for MouseDetectorData
 		* 
 		* @param collider Bounds of the detection with 

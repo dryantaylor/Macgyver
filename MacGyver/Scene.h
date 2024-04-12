@@ -6,7 +6,7 @@
 namespace Macgyver::Gameobjects {
 	class GameObject;
 	class Component;
-	/*
+	/**
 	Class to represent a group of objects in the world at once
 	*/
 	class Scene {
@@ -14,18 +14,18 @@ namespace Macgyver::Gameobjects {
 	public:
 		///sdl renderer used for the scene
 		SDL_Renderer* scene_RENDERER;
-		/*
+		/**
 		Default Contsructor
 		*/
 		Scene();
-		/*
+		/**
 		Adds a GameObject instance to the scene
 
 		@param obj GameObject instance to be added to this scene
 		*/
 		void addObject(GameObject* obj);
 
-		/*
+		/**
 		Returns all Components in the scene which have a
 		specific type
 		
@@ -36,7 +36,7 @@ namespace Macgyver::Gameobjects {
 		*/
 		std::vector<Component*> getComponentsInWorldByType(Components::COMPONENT_TYPES type);
 		
-		/*
+		/**
 		Update method for the scene
 		to be called once in the main game loop after updating input
 		and clearing the renderer.
@@ -47,7 +47,7 @@ namespace Macgyver::Gameobjects {
 		*/
 		void update(unsigned int deltaTime);
 
-		/*
+		/**
 		physics update method for the scene.
 		
 		NOTE: physics updates 50 times per second (every 20ms)

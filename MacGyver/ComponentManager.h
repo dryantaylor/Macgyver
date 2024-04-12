@@ -4,7 +4,7 @@
 #define COMPONENT_TYPE unsigned int
 
 namespace Macgyver::Components {
-	/*
+	/**
 	Enum giving all the possible built-in flags for a component to have
 	*/
 	enum COMPONENT_TYPES: unsigned int {
@@ -27,7 +27,7 @@ namespace Macgyver::Components {
 		UI_INTERACTABLE         = 0b00000000000000000000000010000000
 	};
 	constexpr unsigned int MIN_PLAYER_TYPE_VAL = 128U << 1;
-	/*
+	/**
 	Gets if a component has a given flag or not
 
 	@param targetType type/flag to check for

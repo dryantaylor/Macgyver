@@ -8,7 +8,7 @@
 namespace Macgyver::Components::UI {
 
 	struct UIRenderableData {
-		/*
+		/**
 		* Constructor to create a UIRenderableDataStruct
 		* 
 		* @param self component to attach this to
@@ -17,7 +17,7 @@ namespace Macgyver::Components::UI {
 		* @param height height to render image at
 		*/
 		UIRenderableData(Gameobjects::Component* self, std::string path, int width, int height);
-		/*
+		/**
 		* Constructor to create a UIRenderableDataStruct
 		*
 		* @param texture texture to render

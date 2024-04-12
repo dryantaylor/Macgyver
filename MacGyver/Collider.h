@@ -3,7 +3,7 @@
 #include "Component.h"
 namespace Macgyver::Components {
 	struct Collider {
-		/*
+		/**
 		Colliders update method, does nothing.
 
 		@param self pointer to the Component which the Collider is part of
@@ -11,7 +11,7 @@ namespace Macgyver::Components {
 		*/
 		static void update(Gameobjects::Component* self, unsigned int deltaTime);
 	
-		/*
+		/**
 		Collider's physics update, updates the parent GameObject's
 		transform by velocity * physicsDeltaTime units each call.
 
@@ -19,7 +19,7 @@ namespace Macgyver::Components {
 		*/
 		static void physicsUpdate(Gameobjects::Component* self);
 
-		/*
+		/**
 		Attaches a new Collider to an existing Component.
 		Note: a Component should only have one thing attached to it
 

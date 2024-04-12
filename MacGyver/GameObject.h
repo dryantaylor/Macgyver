@@ -9,7 +9,7 @@
 namespace Macgyver::Gameobjects {
 	class Component;
 	class Scene;
-	/*
+	/**
 	Class which represents a single object in the world
 	*/
 	class GameObject {
@@ -19,7 +19,7 @@ namespace Macgyver::Gameobjects {
 		Math::Vector3 transform;
 	    /// Stores all the components of the object
 	    std::vector<Macgyver::Gameobjects::Component*> components = {};
-		/*
+		/**
 		Initialises an object and sets its position
 		
 		@param x horizontal position in world space, defualt 0
@@ -27,13 +27,13 @@ namespace Macgyver::Gameobjects {
 		@param z layer height (used for the camera), defualt 0
 		*/
 		GameObject(int x = 0, int y = 0, int z = 0);
-		/*
+		/**
 		Adds a Component to the object
 		@param comp pointer to the component to add
 		*/
 		void addComponent(Component* comp);
 
-		/*
+		/**
 		Gets all components attached to the object which have
 		the given flag set.
 
@@ -44,7 +44,7 @@ namespace Macgyver::Gameobjects {
 		*/
 		std::vector<Component*> getComponentsWithProperty(Components::COMPONENT_TYPES type);
 		
-		/*
+		/**
 		Objects update method. Calls the update method
 		of all attached components
 
@@ -52,7 +52,7 @@ namespace Macgyver::Gameobjects {
 		*/
 		void update(unsigned int deltaTime);
 
-		/*
+		/**
 		Gets a pointer to the Objects parent Scene
 
 		@returns pointer to parent Scene object

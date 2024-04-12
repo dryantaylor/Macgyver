@@ -8,12 +8,12 @@
 
 namespace Macgyver::Components::UI {
 
-	/*
+	/**
 	* Component to handle UI renderable Components
 	* draws them above the normal Renderable Components
 	*/
 	struct UICamera {
-		/*
+		/**
 		* Draws components to the screen based off their
 		* absoloute position (0,0) top left to (720,1280)
 		* bottom right
@@ -23,7 +23,7 @@ namespace Macgyver::Components::UI {
 		*/
 		static void draw(Gameobjects::Component* self);
 
-		/*
+		/**
 		UI Camera's update method, calls the draw function at the end.
 
 		@param self pointer to the Component which the UI camera is part of
@@ -31,7 +31,7 @@ namespace Macgyver::Components::UI {
 		*/
 		static void update(Gameobjects::Component* self, unsigned int deltaTime);
 
-		/*
+		/**
 		Attaches a new UICamera to an existing Component.
 		Note: a Component should only have one thing attached to it
 

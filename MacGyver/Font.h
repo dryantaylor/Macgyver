@@ -6,7 +6,7 @@
 namespace Macgyver::UI {
 	class Font {
 	public:
-		/*
+		/**
 		* Constructor for the Font class
 		*/
 		Font(SDL_Renderer* renderer,std::string fontName, unsigned int ptSize);

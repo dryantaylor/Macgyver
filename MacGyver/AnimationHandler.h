@@ -10,7 +10,7 @@
 #define getAnimationHandler Macgyver::AnimationHandler::getInstance()
 
 namespace Macgyver {
-	/*
+	/**
     Stores a set of animations stored as a name e.g "Player/walk"
     mapped to an AnimationData object. Methods within components
     can call to load new Animation objects or close them.
@@ -24,7 +24,7 @@ namespace Macgyver {
     */
 	class AnimationHandler {
 	public:
-		/*
+		/**
 		Thread safe singleton. Gets the instance of the AnimationHandler.
 		If one does not exist it creates one and returns that.
 		*/
@@ -36,12 +36,12 @@ namespace Macgyver {
 		AnimationHandler(const AnimationHandler&) = delete;
 		AnimationHandler& operator=(const AnimationHandler&) = delete;
 		
-		/*
+		/**
 		CALL ONLY ONCE IN MAIN LOOP
 		attaches an SDL_Renderer* for use when creating new animations
 		*/
 		void attachRenderer(SDL_Renderer* renderer);
-		/*
+		/**
 		Load an animation from file and add it to the animations.
 		
 		@param name name the animation will be stored as and referenced by
@@ -53,7 +53,7 @@ namespace Macgyver {
 		          the name provided). False otherwise
 		*/
 		bool addAnimation(std::string name, std::string path);
-		/*
+		/**
 		Add an animation from already existing AnimationData*
 		Not sure why this would be used but creating it just in case.
 		WARNING: May be removed.
@@ -69,18 +69,18 @@ namespace Macgyver {
 		*/
 		bool addAnimation(std::string name, Animations::AnimationData* animation);
 
-		/*
+		/**
 		Closes the animation data of the animation given as name
 
 		@param name name of the animation to close
 		*/
 		void closeAnimationData(std::string name);
 
-		/*
+		/**
 		Closes all animation data objects stored in the class
 		*/
 		void closeAllAnimationData();
-		/*
+		/**
 		begins animating a renderable component and sets the idle animation
 		to the animation stored with the name provided. Active animation
 		will defualt to this as well. 
@@ -101,7 +101,7 @@ namespace Macgyver {
 		*/
 		unsigned int beginAnimation(Components::RenderableData* attachedRenderable, std::string animName);
 
-		/*
+		/**
 		Given an id for an animation currently being managed, and a
 		name of the animation to change it to change the animation from the current
 		animation to the new one, and reset it's current frame and time along that
@@ -114,7 +114,7 @@ namespace Macgyver {
 		*/
 		void changeActiveAnimation(unsigned int id, std::string animationName);
 
-		/*
+		/**
 		Given an id for an animation currently being managed, change the current
 		frame of that animation to frame. 
 		WARNING: passing in a value higher than the number of frames may cause
@@ -128,7 +128,7 @@ namespace Macgyver {
 		*/
 		void changeCurrentFrame(unsigned int id, unsigned int frame);
 
-		/*
+		/**
 		Given an id for an animation currently being managed, change the current
 		tick of that animation (tick meaning how far into the frame it is).
 		Does not check for id being valid
@@ -139,7 +139,7 @@ namespace Macgyver {
 		*/
 		void changeCurrentTick(unsigned int id, unsigned int tick);
 
-		/*
+		/**
 		Gives the frame number and current tick of the animation given by id.
 
 		@param id id of the managed animation as given by beginAnimation
@@ -152,7 +152,7 @@ namespace Macgyver {
 		*/
 		void getCurrentFrameProperties(unsigned int id, unsigned int* outFrameNumber, unsigned int* outTick);
 		
-		/*
+		/**
 		Closes the active animation given by id, and frees the id to be used
 		again.
 
@@ -160,12 +160,12 @@ namespace Macgyver {
 		*/
 		void closeActiveAnimation(unsigned int id);
 
-		/*
+		/**
 		closes all active animations
 		*/
 		void closeAllActiveAnimations();
 
-		/*
+		/**
 		checks all active animations for any frame changes
 		called by the main game loop not individual objects
 

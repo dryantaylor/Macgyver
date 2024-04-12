@@ -5,6 +5,7 @@
 #include <map>
 
 #define getInput Macgyver::Input::getInstance()
+
 namespace Macgyver {
 	/**
 	Static class to handle checking for input in the engine

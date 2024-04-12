@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['shifts_5fdown_0',['SHIFTS_DOWN',['../namespace_demo_project_1_1_game_inputs.html#ad38a79a79838a8120116e86a46817109aca38464e578af33c183cf0dd187676b2',1,'DemoProject::GameInputs']]],
+  ['shifts_5fdownleft_1',['SHIFTS_DOWNLEFT',['../namespace_demo_project_1_1_game_inputs.html#ad38a79a79838a8120116e86a46817109aecbfa490ba3a4f1a74dd5645ba5f87bb',1,'DemoProject::GameInputs']]],
+  ['shifts_5fdownright_2',['SHIFTS_DOWNRIGHT',['../namespace_demo_project_1_1_game_inputs.html#ad38a79a79838a8120116e86a46817109a7e5c0523b4e79c5790c629c1bfe3a05b',1,'DemoProject::GameInputs']]],
+  ['shifts_5fhkick_3',['SHIFTS_HKICK',['../namespace_demo_project_1_1_game_inputs.html#ad38a79a79838a8120116e86a46817109a6dd2bfb9b41032770756ac90c14710cf',1,'DemoProject::GameInputs']]],
+  ['shifts_5fhpunch_4',['SHIFTS_HPUNCH',['../namespace_demo_project_1_1_game_inputs.html#ad38a79a79838a8120116e86a46817109a6491bf229accacc18e6e63ec3b4728de',1,'DemoProject::GameInputs']]],
+  ['shifts_5fleft_5',['SHIFTS_LEFT',['../namespace_demo_project_1_1_game_inputs.html#ad38a79a79838a8120116e86a46817109ace1db37de10ae1e0c6bf58b39f15fb39',1,'DemoProject::GameInputs']]],
+  ['shifts_5flkick_6',['SHIFTS_LKICK',['../namespace_demo_project_1_1_game_inputs.html#ad38a79a79838a8120116e86a46817109a26ba001a99f62a43c019161b9bf77992',1,'DemoProject::GameInputs']]],
+  ['shifts_5flpunch_7',['SHIFTS_LPUNCH',['../namespace_demo_project_1_1_game_inputs.html#ad38a79a79838a8120116e86a46817109ab8f0cf2d2ccbc86b4e26fd5b2c866c9b',1,'DemoProject::GameInputs']]],
+  ['shifts_5fmkick_8',['SHIFTS_MKICK',['../namespace_demo_project_1_1_game_inputs.html#ad38a79a79838a8120116e86a46817109a69dc343fcfb84684f1aaf836c31a704b',1,'DemoProject::GameInputs']]],
+  ['shifts_5fmpunch_9',['SHIFTS_MPUNCH',['../namespace_demo_project_1_1_game_inputs.html#ad38a79a79838a8120116e86a46817109a5359ca59d28a51527ced2ac3e67dcb86',1,'DemoProject::GameInputs']]],
+  ['shifts_5fright_10',['SHIFTS_RIGHT',['../namespace_demo_project_1_1_game_inputs.html#ad38a79a79838a8120116e86a46817109a20f9643b649cd79dc24989e0e221056e',1,'DemoProject::GameInputs']]],
+  ['shifts_5fup_11',['SHIFTS_UP',['../namespace_demo_project_1_1_game_inputs.html#ad38a79a79838a8120116e86a46817109abaff6ff5679ba008794dc72382661c53',1,'DemoProject::GameInputs']]],
+  ['shifts_5fupleft_12',['SHIFTS_UPLEFT',['../namespace_demo_project_1_1_game_inputs.html#ad38a79a79838a8120116e86a46817109ae99051a98f1372376c1158142a3d9791',1,'DemoProject::GameInputs']]],
+  ['shifts_5fupright_13',['SHIFTS_UPRIGHT',['../namespace_demo_project_1_1_game_inputs.html#ad38a79a79838a8120116e86a46817109a6132137602e00e456dcba13a5f53e877',1,'DemoProject::GameInputs']]],
+  ['store_14',['store',['../namespacedetail.html#a7c070b2bf3d61e3d8b8013f6fb18d592a8cd892b7b97ef9489ae4479d3f4ef0fc',1,'detail']]],
+  ['strict_15',['strict',['../namespacedetail.html#abe7cfa1fd8fa706ff4392bff9d1a8298a2133fd717402a7966ee88d06f9e0b792',1,'detail']]],
+  ['string_16',['string',['../namespacedetail.html#a917c3efabea8a20dc72d9ae2c673d632ab45cffe084dd3d20d928bee85e7b0f21',1,'detail']]]
+];

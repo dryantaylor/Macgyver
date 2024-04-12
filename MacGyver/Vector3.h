@@ -3,7 +3,7 @@
 
 namespace Macgyver::Math {
 	class Force2D;
-	/*
+	/**
 	Class to represent a 3 dimensional vector
 	x -> represents horizontal
 	y -> represents vertical
@@ -12,8 +12,8 @@ namespace Macgyver::Math {
 	class Vector3{
 	public:
 		float x, y, z;
-		/*
-		Contrustor for the class
+		/**
+		Contructor for the class
 		@param x x-value for the vector, default 0
 		@param y y-value for the vector, default 0
 		@param z z-value for the vector, default 0
@@ -25,7 +25,7 @@ namespace Macgyver::Math {
 		Vector3 operator/(const float b);
 		Vector3& operator+=(const Vector3& a);
 
-		/*
+		/**
 		Creates a new force 2D object with the same x and y components as this
 		object
 

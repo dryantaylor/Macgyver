@@ -11,11 +11,11 @@
 
 namespace Macgyver::Components::UI {
 
-	/*
+	/**
 	Struct to hold a UIRenderable Component
 	*/
 	struct UIRenderable {
-		/*
+		/**
 		UIRenderables update method, does nothing.
 
 		@param self pointer to the Component which the renderable is part of
@@ -23,7 +23,7 @@ namespace Macgyver::Components::UI {
 		*/
 		static void update(Gameobjects::Component* self, unsigned int deltaTime);
 
-		/*
+		/**
 		Attaches a new UIRenderable to an existing Component.
 		Note: a Component should only have one thing attached to it
 

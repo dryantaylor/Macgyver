@@ -5,11 +5,11 @@
 #include "SDL.h"
 namespace Macgyver::Components::UI {
 
-	/*
+	/**
 	* Component to handle UI text
 	*/
 	struct Text {
-		/*
+		/**
 		Text's update method.
 
 		@param self pointer to the Component which the Velocity is part of
@@ -21,7 +21,7 @@ namespace Macgyver::Components::UI {
 	
 	};
 
-	/*
+	/**
 	* Struct to hold data about text being rendered to the screen
 	*/
 	struct TextData {

@@ -4,11 +4,11 @@
 #include "Component.h"
 namespace Macgyver::Components {
 
-	/*
+	/**
 	Struct to handle velocity of an Object
 	*/
 	struct Velocity {
-		/*
+		/**
 		Velocity's update method, does nothing.
 
 		@param self pointer to the Component which the Velocity is part of
@@ -16,7 +16,7 @@ namespace Macgyver::Components {
 		*/
 		static void update(Gameobjects::Component* self ,unsigned int deltaTime);
 		
-		/*
+		/**
 		Velocity's physics update, updates the parent GameObject's
 		transform by velocity * physicsDeltaTime units each call.
 

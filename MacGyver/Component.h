@@ -1,12 +1,7 @@
 #pragma once
-#include <string>
-#include <typeindex>
-#include <typeinfo>
-#include <map>
+
 #include <functional>
 #include <vector>
-#include <typeinfo>
-
 #include "ComponentDataWrapper.h"
 #include "ComponentManager.h"
 #include "Vector3.h"
@@ -14,26 +9,26 @@
 namespace Macgyver::Gameobjects{
 	class Scene;
 	class GameObject;
-	/*
+	/**
 	Stores a Component of a GameObject
 	*/
 	class Component {
 		friend GameObject;
 	public:
-		/*
+		/**
 		Default Constructor, initialises everything to empty.
 		Use when attaching a component type to this object.
 		*/
 		Component();
 
-		/*
+		/**
 		Gets the parent GameObject of this component
 
 		@returns pointer to the parent GameObject instance
 		*/
 		GameObject* getParent();
 
-		/*
+		/**
 		Add a component data object to this Component
 		
 		@param data pointer to the data object casted to the generic
@@ -44,7 +39,7 @@ namespace Macgyver::Gameobjects{
 		*/
 		void addData(Components::ComponentData* data, std::size_t dataTypeHash);
 
-		/*
+		/**
 		Gets a pointer to an attached data object of the correct type.
 		Or nullptr if no data of the correct type exists.
 		Data can be casted back to the needed type after being
@@ -58,27 +53,27 @@ namespace Macgyver::Gameobjects{
 		Components::ComponentData* getData(std::size_t dataTypeHash);
 
 		Components::ComponentData* getData(int index);
-		/*
+		/**
 		Gets the flags/properties/types this component has set as a Uint
 
 		@returns COMPONENT_TYPE/Uint representing the flags set
 		*/
 		COMPONENT_TYPE getComponentProperties();
 
-		/*
+		/**
 	    Sets the ComponentProperties/flags/types this component has
 		
 		@param types flags to set this component to
 		*/
 		void setComponentProperties(COMPONENT_TYPE types);
 
-		/*
+		/**
 		Gets the absoloute transform of this Component.
 		(Not the transform relative to it's parent GameObject)
 		*/
 		Macgyver::Math::Vector3 getWorldTransform();
 
-		/*
+		/**
 		Gets the Scecne this Component is in.
 		*/
 		Scene* getWorldScene();

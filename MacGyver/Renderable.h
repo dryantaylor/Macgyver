@@ -8,11 +8,11 @@
 #include "Component.h"
 
 namespace Macgyver::Components {
-	/*
+	/**
 	Struct to hold data needed for a component to render data.
 	*/
 	struct RenderableData {
-		/*
+		/**
 		Creates a RenderableData struct
 		
 		@param self pointer to the Component this will be attacheed to
@@ -22,7 +22,7 @@ namespace Macgyver::Components {
 		*/
 		RenderableData(Gameobjects::Component* self, std::string path, int width, int height);
 		
-		/*
+		/**
 		Destructor for RenderableData, closes the texture if one is present
 		*/
 		~RenderableData();
