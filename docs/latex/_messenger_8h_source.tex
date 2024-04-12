@@ -1,0 +1,32 @@
+\doxysection{Messenger.\+h}
+\hypertarget{_messenger_8h_source}{}\label{_messenger_8h_source}\index{MacGyver/Messenger.h@{MacGyver/Messenger.h}}
+\mbox{\hyperlink{_messenger_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ getMessenger\ Macgyver::Messenger::getInstance()}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_macgyver}{Macgyver}}\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_macgyver_1_1_messenger}{Messenger}}\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_macgyver_1_1_messenger}{Messenger}}\&\ \mbox{\hyperlink{class_macgyver_1_1_messenger_a3b2a7c49a10d58d6dc32ab870e2e46de}{getInstance}}()\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_macgyver_1_1_messenger}{Messenger}}\ instance;}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_messenger_aec0cf5408ee349ffa57ddf8ee482dbe8}{Messenger}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_macgyver_1_1_messenger}{Messenger}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_messenger}{Messenger}}\&\ \mbox{\hyperlink{class_macgyver_1_1_messenger_a10e8c390f5c53ab70f27f1d8c68fea2e}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_macgyver_1_1_messenger}{Messenger}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\&\ \mbox{\hyperlink{class_macgyver_1_1_messenger_a839066ac041de89ea2280af94ea7b8de}{operator[]}}(\textcolor{keywordtype}{size\_t}\ idx)\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_macgyver_1_1_messenger_a4537f3a4e10f292ccc3d782f2320d8ef}{data}}[idx];\ \}}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\&\ \mbox{\hyperlink{class_macgyver_1_1_messenger_a5ee3679f52cc13f507bb0dd5bea877fd}{operator[]}}(\textcolor{keywordtype}{size\_t}\ idx)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_macgyver_1_1_messenger_a4537f3a4e10f292ccc3d782f2320d8ef}{data}}[idx];\ \}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_macgyver_1_1_messenger_a2a4c2bbb18a6d40ac59917078a6ece2c}{setDataSize}}(\textcolor{keywordtype}{size\_t}\ newSize);}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{class_macgyver_1_1_messenger_a37b3d32a3eac1a377ba88ed5aaa0c695}{getDataSize}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}*\ \mbox{\hyperlink{class_macgyver_1_1_messenger_a4537f3a4e10f292ccc3d782f2320d8ef}{data}};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ size;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_messenger}{Messenger}}();}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_messenger}{\string~Messenger}}();}
+\DoxyCodeLine{00024\ \ \ \ \ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \}}
+
+\end{DoxyCode}

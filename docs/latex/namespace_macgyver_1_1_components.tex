@@ -1,0 +1,132 @@
+\doxysection{Macgyver\+::Components Namespace Reference}
+\hypertarget{namespace_macgyver_1_1_components}{}\label{namespace_macgyver_1_1_components}\index{Macgyver::Components@{Macgyver::Components}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_macgyver_1_1_components_1_1_u_i}{UI}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_camera}{Camera}}
+\item 
+struct \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_collider}{Collider}}
+\item 
+struct \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_component_data}{Component\+Data}}
+\item 
+struct \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_component_data_wrapper}{Component\+Data\+Wrapper}}
+\item 
+struct \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_physics2_d_data}{Physics2\+DData}}
+\item 
+struct {\bfseries Physics\+Constants}
+\item 
+struct \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_renderable}{Renderable}}
+\item 
+struct \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_renderable_data}{Renderable\+Data}}
+\item 
+struct \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_velocity}{Velocity}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13b}{COMPONENT\+\_\+\+TYPES}} \+: unsigned int \{ \newline
+\mbox{\hyperlink{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13ba2ecdbcf86407ed6159ec835005dafa96}{NONE}} = 0
+, \mbox{\hyperlink{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13ba9537e1c289252492866ff1462005d14a}{RENDERABLE}} = 0b00000000000000000000000000000001
+, \mbox{\hyperlink{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13bac4f8b7ea72ba599a974a7d94a349da7d}{RENDERER}} = 0b00000000000000000000000000000010
+, \mbox{\hyperlink{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13bae1cc7e140bafbb1b7a020f0236319085}{COLLIDER}} = 0b00000000000000000000000000000100
+, \newline
+\mbox{\hyperlink{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13bab028c2147bb9a314bcbbae068aca8323}{VELOCITY}} = 0b00000000000000000000000000001000
+, \mbox{\hyperlink{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13ba4186d5934635a2f8a0e44727fb376be7}{GRAV\+\_\+\+IMPACTED}} = 0b00000000000000000000000000010000
+, \mbox{\hyperlink{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13ba42a0683bafec826fe6ddc2ab2b7bc77c}{GRAV\+\_\+\+IMPACTING}} = 0b00000000000000000000000000100000
+, \mbox{\hyperlink{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13ba31734a794c3ef85dbc28eccc20ff9c18}{UI\+\_\+\+RENDERABLE}} = 0b00000000000000000000000001000000
+, \newline
+\mbox{\hyperlink{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13bafbc87d9b0a73087989ecf7b782afb1e1}{UI\+\_\+\+INTERACTABLE}} = 0b00000000000000000000000010000000
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespace_macgyver_1_1_components_a5fd5bd45d4c15a2db35b10362891c9c4}{has\+Property}} (\mbox{\hyperlink{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13b}{COMPONENT\+\_\+\+TYPES}} target\+Type, unsigned int component)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr unsigned int \mbox{\hyperlink{namespace_macgyver_1_1_components_adf8e52c89f8f1a34e495e2d4296639f7}{MIN\+\_\+\+PLAYER\+\_\+\+TYPE\+\_\+\+VAL}} = 128U $<$$<$ 1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13b}\label{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13b} 
+\index{Macgyver::Components@{Macgyver::Components}!COMPONENT\_TYPES@{COMPONENT\_TYPES}}
+\index{COMPONENT\_TYPES@{COMPONENT\_TYPES}!Macgyver::Components@{Macgyver::Components}}
+\doxysubsubsection{\texorpdfstring{COMPONENT\_TYPES}{COMPONENT\_TYPES}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13b}{Macgyver\+::\+Components\+::\+COMPONENT\+\_\+\+TYPES}} \+: unsigned int}
+
+Enum giving all the possible built-\/in flags for a component to have \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NONE@{NONE}!Macgyver::Components@{Macgyver::Components}}\index{Macgyver::Components@{Macgyver::Components}!NONE@{NONE}}}\Hypertarget{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13ba2ecdbcf86407ed6159ec835005dafa96}\label{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13ba2ecdbcf86407ed6159ec835005dafa96} 
+NONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RENDERABLE@{RENDERABLE}!Macgyver::Components@{Macgyver::Components}}\index{Macgyver::Components@{Macgyver::Components}!RENDERABLE@{RENDERABLE}}}\Hypertarget{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13ba9537e1c289252492866ff1462005d14a}\label{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13ba9537e1c289252492866ff1462005d14a} 
+RENDERABLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RENDERER@{RENDERER}!Macgyver::Components@{Macgyver::Components}}\index{Macgyver::Components@{Macgyver::Components}!RENDERER@{RENDERER}}}\Hypertarget{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13bac4f8b7ea72ba599a974a7d94a349da7d}\label{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13bac4f8b7ea72ba599a974a7d94a349da7d} 
+RENDERER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{COLLIDER@{COLLIDER}!Macgyver::Components@{Macgyver::Components}}\index{Macgyver::Components@{Macgyver::Components}!COLLIDER@{COLLIDER}}}\Hypertarget{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13bae1cc7e140bafbb1b7a020f0236319085}\label{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13bae1cc7e140bafbb1b7a020f0236319085} 
+COLLIDER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VELOCITY@{VELOCITY}!Macgyver::Components@{Macgyver::Components}}\index{Macgyver::Components@{Macgyver::Components}!VELOCITY@{VELOCITY}}}\Hypertarget{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13bab028c2147bb9a314bcbbae068aca8323}\label{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13bab028c2147bb9a314bcbbae068aca8323} 
+VELOCITY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GRAV\_IMPACTED@{GRAV\_IMPACTED}!Macgyver::Components@{Macgyver::Components}}\index{Macgyver::Components@{Macgyver::Components}!GRAV\_IMPACTED@{GRAV\_IMPACTED}}}\Hypertarget{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13ba4186d5934635a2f8a0e44727fb376be7}\label{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13ba4186d5934635a2f8a0e44727fb376be7} 
+GRAV\+\_\+\+IMPACTED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GRAV\_IMPACTING@{GRAV\_IMPACTING}!Macgyver::Components@{Macgyver::Components}}\index{Macgyver::Components@{Macgyver::Components}!GRAV\_IMPACTING@{GRAV\_IMPACTING}}}\Hypertarget{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13ba42a0683bafec826fe6ddc2ab2b7bc77c}\label{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13ba42a0683bafec826fe6ddc2ab2b7bc77c} 
+GRAV\+\_\+\+IMPACTING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UI\_RENDERABLE@{UI\_RENDERABLE}!Macgyver::Components@{Macgyver::Components}}\index{Macgyver::Components@{Macgyver::Components}!UI\_RENDERABLE@{UI\_RENDERABLE}}}\Hypertarget{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13ba31734a794c3ef85dbc28eccc20ff9c18}\label{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13ba31734a794c3ef85dbc28eccc20ff9c18} 
+UI\+\_\+\+RENDERABLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UI\_INTERACTABLE@{UI\_INTERACTABLE}!Macgyver::Components@{Macgyver::Components}}\index{Macgyver::Components@{Macgyver::Components}!UI\_INTERACTABLE@{UI\_INTERACTABLE}}}\Hypertarget{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13bafbc87d9b0a73087989ecf7b782afb1e1}\label{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13bafbc87d9b0a73087989ecf7b782afb1e1} 
+UI\+\_\+\+INTERACTABLE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_macgyver_1_1_components_a5fd5bd45d4c15a2db35b10362891c9c4}\label{namespace_macgyver_1_1_components_a5fd5bd45d4c15a2db35b10362891c9c4} 
+\index{Macgyver::Components@{Macgyver::Components}!hasProperty@{hasProperty}}
+\index{hasProperty@{hasProperty}!Macgyver::Components@{Macgyver::Components}}
+\doxysubsubsection{\texorpdfstring{hasProperty()}{hasProperty()}}
+{\footnotesize\ttfamily bool Macgyver\+::\+Components\+::has\+Property (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_macgyver_1_1_components_a5af259e485758c79cbdd6b599294f13b}{COMPONENT\+\_\+\+TYPES}}}]{target\+Type,  }\item[{unsigned int}]{component }\end{DoxyParamCaption})}
+
+Gets if a component has a given flag or not
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Type} & type/flag to check for \\
+\hline
+{\em component} & flags of the component being checked\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the flag is set, false if not 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespace_macgyver_1_1_components_adf8e52c89f8f1a34e495e2d4296639f7}\label{namespace_macgyver_1_1_components_adf8e52c89f8f1a34e495e2d4296639f7} 
+\index{Macgyver::Components@{Macgyver::Components}!MIN\_PLAYER\_TYPE\_VAL@{MIN\_PLAYER\_TYPE\_VAL}}
+\index{MIN\_PLAYER\_TYPE\_VAL@{MIN\_PLAYER\_TYPE\_VAL}!Macgyver::Components@{Macgyver::Components}}
+\doxysubsubsection{\texorpdfstring{MIN\_PLAYER\_TYPE\_VAL}{MIN\_PLAYER\_TYPE\_VAL}}
+{\footnotesize\ttfamily constexpr unsigned int Macgyver\+::\+Components\+::\+MIN\+\_\+\+PLAYER\+\_\+\+TYPE\+\_\+\+VAL = 128U $<$$<$ 1\hspace{0.3cm}{\ttfamily [constexpr]}}
+

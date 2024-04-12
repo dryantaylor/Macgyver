@@ -1,0 +1,62 @@
+\doxysection{Input.\+h}
+\hypertarget{_input_8h_source}{}\label{_input_8h_source}\index{MacGyver/Input.h@{MacGyver/Input.h}}
+\mbox{\hyperlink{_input_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <SDL.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_mouse_enum_8h}{MouseEnum.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ getInput\ Macgyver::Input::getInstance()}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_macgyver}{Macgyver}}\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_macgyver_1_1_input}{Input}}\{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_macgyver_1_1_input}{Input}}\&\ \mbox{\hyperlink{class_macgyver_1_1_input_a11eb22606ddadbda7ac5cf18ebec6791}{getInstance}}()\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_macgyver_1_1_input}{Input}}\ instance;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_input_aa549c145e33d88afc8429ca1bbc19e97}{Input}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_macgyver_1_1_input}{Input}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_input}{Input}}\&\ \mbox{\hyperlink{class_macgyver_1_1_input_ac7a8c34f3c9b323e84824180d3a09caf}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_macgyver_1_1_input}{Input}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_macgyver_1_1_input_aa7fe26710dd863d11737bf2f6de4ad05}{update}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ int32\_t\ \mbox{\hyperlink{class_macgyver_1_1_input_ae73e96dc600dc4ad8f7fa1ae70028cb8}{getNumConnectedControllers}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_macgyver_1_1_input_a706993466d0351f896d3085c0ccc7151}{openController}}(int32\_t\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_macgyver_1_1_input_a7a3fa8f8de42ac0c23c0240ec24fdaad}{closeController}}(int32\_t\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_macgyver_1_1_input_aa1f98ea533a7b8f804a161d14b706177}{closeAllControllers}}();}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_macgyver_1_1_input_a86e88130554b44ac6f32d82f6f22939e}{isKeyDown}}(SDL\_KeyCode\ key);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_macgyver_1_1_input_a86e88130554b44ac6f32d82f6f22939e}{isKeyDown}}(SDL\_Scancode\ key);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_macgyver_1_1_input_afaa09a631dde90b69a6ffecd7eff86a1}{controller\_isButtonDown}}(int32\_t\ \textcolor{keywordtype}{id},\ SDL\_GameControllerButton\ button);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ int32\_t\ \mbox{\hyperlink{class_macgyver_1_1_input_a6e842a64394b7a03518bb1c85d680451}{controller\_getAxisPosition}}(int32\_t\ \textcolor{keywordtype}{id},\ SDL\_GameControllerAxis\ axis);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_macgyver_1_1_input_a770ae5773f9289f1f5fe875dea9063a2}{isMouseButtonDown}}(\mbox{\hyperlink{namespace_macgyver_ae582c9eef40dbd70ba38f9843bcb7a65}{Mouse}}\ button);}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_macgyver_1_1_input_ac7ef525d05f77cf03ebdad47a6a0dc39}{getMousePosition}}(\textcolor{keywordtype}{int}*\ x,\ \textcolor{keywordtype}{int}*\ y);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_macgyver_1_1_input_abccc56a82c0993df8ce798eca48d2a3f}{INTERNAL\_addMouseWheel}}(\textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_macgyver_1_1_input_a944cedbcc3b64dca80b0799bd7eebe5f}{getMouseWheelPos}}();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_macgyver_1_1_input_a951c054b0508b3fae8e8ae9d084a8846}{resetMouseWheelPos}}();}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ std::map<int,SDL\_Joystick*>\ controllers;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_input}{Input}}();}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_input}{\string~Input}}();}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ Uint8*\ keyboardState;}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{comment}{//state\ of\ the\ mouse}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ Uint32\ mouseState;}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ *x,\ *y;}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ wheelPos;}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \};}
+\DoxyCodeLine{00078\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,107 @@
+\doxysection{Macgyver\+::Components\+::UI\+::Text\+Data Struct Reference}
+\hypertarget{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data}{}\label{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data}\index{Macgyver::Components::UI::TextData@{Macgyver::Components::UI::TextData}}
+
+
+{\ttfamily \#include $<$Text.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_a53fff2e180b23670655d1144b530b0d6}{Text\+Data}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer, std\+::string txt, std\+::string fnt, unsigned int \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_a53f25e47d34ec0e2598cb52c023a7a95}{pt\+Size}}, SDL\+\_\+\+Rect rect)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_aeed5e9eaeab783aedf28b5ffd204a689}{text}}
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_macgyver_1_1_components_1_1_u_i_1_1_text}{Text} currently being rendered. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_a7ec87ed9e7219d2648db89305f29542c}{font}}
+\begin{DoxyCompactList}\small\item\em name of font being used to render text \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_a53f25e47d34ec0e2598cb52c023a7a95}{pt\+Size}}
+\begin{DoxyCompactList}\small\item\em size the text is being rendered at \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_a1762f7a47312594561cbd2818a259bc8}{INTERNAL\+\_\+cached\+Text}}
+\item 
+std\+::string \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_ada936f2caccf604e78f53d5979bd4e4f}{INTERNAL\+\_\+cached\+Font}}
+\item 
+unsigned int \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_ad544ca9d278db1cafa0f7d93dddeec8f}{INTERNAL\+\_\+cached\+Pt\+Size}}
+\item 
+SDL\+\_\+\+Rect \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_afa8e9a0b8fc0ba2e20086e8bee510254}{text\+Boundries}}
+\begin{DoxyCompactList}\small\item\em boundry for the text to be rendered in \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Struct to hold data about text being rendered to the screen 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_a53fff2e180b23670655d1144b530b0d6}\label{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_a53fff2e180b23670655d1144b530b0d6} 
+\index{Macgyver::Components::UI::TextData@{Macgyver::Components::UI::TextData}!TextData@{TextData}}
+\index{TextData@{TextData}!Macgyver::Components::UI::TextData@{Macgyver::Components::UI::TextData}}
+\doxysubsubsection{\texorpdfstring{TextData()}{TextData()}}
+{\footnotesize\ttfamily Macgyver\+::\+Components\+::\+UI\+::\+Text\+Data\+::\+Text\+Data (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer,  }\item[{std\+::string}]{txt,  }\item[{std\+::string}]{fnt,  }\item[{unsigned int}]{pt\+Size,  }\item[{SDL\+\_\+\+Rect}]{rect }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_a7ec87ed9e7219d2648db89305f29542c}\label{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_a7ec87ed9e7219d2648db89305f29542c} 
+\index{Macgyver::Components::UI::TextData@{Macgyver::Components::UI::TextData}!font@{font}}
+\index{font@{font}!Macgyver::Components::UI::TextData@{Macgyver::Components::UI::TextData}}
+\doxysubsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily std\+::string Macgyver\+::\+Components\+::\+UI\+::\+Text\+Data\+::font}
+
+
+
+name of font being used to render text 
+
+\Hypertarget{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_ada936f2caccf604e78f53d5979bd4e4f}\label{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_ada936f2caccf604e78f53d5979bd4e4f} 
+\index{Macgyver::Components::UI::TextData@{Macgyver::Components::UI::TextData}!INTERNAL\_cachedFont@{INTERNAL\_cachedFont}}
+\index{INTERNAL\_cachedFont@{INTERNAL\_cachedFont}!Macgyver::Components::UI::TextData@{Macgyver::Components::UI::TextData}}
+\doxysubsubsection{\texorpdfstring{INTERNAL\_cachedFont}{INTERNAL\_cachedFont}}
+{\footnotesize\ttfamily std\+::string Macgyver\+::\+Components\+::\+UI\+::\+Text\+Data\+::\+INTERNAL\+\_\+cached\+Font}
+
+\Hypertarget{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_ad544ca9d278db1cafa0f7d93dddeec8f}\label{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_ad544ca9d278db1cafa0f7d93dddeec8f} 
+\index{Macgyver::Components::UI::TextData@{Macgyver::Components::UI::TextData}!INTERNAL\_cachedPtSize@{INTERNAL\_cachedPtSize}}
+\index{INTERNAL\_cachedPtSize@{INTERNAL\_cachedPtSize}!Macgyver::Components::UI::TextData@{Macgyver::Components::UI::TextData}}
+\doxysubsubsection{\texorpdfstring{INTERNAL\_cachedPtSize}{INTERNAL\_cachedPtSize}}
+{\footnotesize\ttfamily unsigned int Macgyver\+::\+Components\+::\+UI\+::\+Text\+Data\+::\+INTERNAL\+\_\+cached\+Pt\+Size}
+
+\Hypertarget{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_a1762f7a47312594561cbd2818a259bc8}\label{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_a1762f7a47312594561cbd2818a259bc8} 
+\index{Macgyver::Components::UI::TextData@{Macgyver::Components::UI::TextData}!INTERNAL\_cachedText@{INTERNAL\_cachedText}}
+\index{INTERNAL\_cachedText@{INTERNAL\_cachedText}!Macgyver::Components::UI::TextData@{Macgyver::Components::UI::TextData}}
+\doxysubsubsection{\texorpdfstring{INTERNAL\_cachedText}{INTERNAL\_cachedText}}
+{\footnotesize\ttfamily std\+::string Macgyver\+::\+Components\+::\+UI\+::\+Text\+Data\+::\+INTERNAL\+\_\+cached\+Text}
+
+following data is used for tracking changes between frames \Hypertarget{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_a53f25e47d34ec0e2598cb52c023a7a95}\label{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_a53f25e47d34ec0e2598cb52c023a7a95} 
+\index{Macgyver::Components::UI::TextData@{Macgyver::Components::UI::TextData}!ptSize@{ptSize}}
+\index{ptSize@{ptSize}!Macgyver::Components::UI::TextData@{Macgyver::Components::UI::TextData}}
+\doxysubsubsection{\texorpdfstring{ptSize}{ptSize}}
+{\footnotesize\ttfamily unsigned int Macgyver\+::\+Components\+::\+UI\+::\+Text\+Data\+::pt\+Size}
+
+
+
+size the text is being rendered at 
+
+\Hypertarget{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_aeed5e9eaeab783aedf28b5ffd204a689}\label{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_aeed5e9eaeab783aedf28b5ffd204a689} 
+\index{Macgyver::Components::UI::TextData@{Macgyver::Components::UI::TextData}!text@{text}}
+\index{text@{text}!Macgyver::Components::UI::TextData@{Macgyver::Components::UI::TextData}}
+\doxysubsubsection{\texorpdfstring{text}{text}}
+{\footnotesize\ttfamily std\+::string Macgyver\+::\+Components\+::\+UI\+::\+Text\+Data\+::text}
+
+
+
+\doxylink{struct_macgyver_1_1_components_1_1_u_i_1_1_text}{Text} currently being rendered. 
+
+\Hypertarget{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_afa8e9a0b8fc0ba2e20086e8bee510254}\label{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_afa8e9a0b8fc0ba2e20086e8bee510254} 
+\index{Macgyver::Components::UI::TextData@{Macgyver::Components::UI::TextData}!textBoundries@{textBoundries}}
+\index{textBoundries@{textBoundries}!Macgyver::Components::UI::TextData@{Macgyver::Components::UI::TextData}}
+\doxysubsubsection{\texorpdfstring{textBoundries}{textBoundries}}
+{\footnotesize\ttfamily SDL\+\_\+\+Rect Macgyver\+::\+Components\+::\+UI\+::\+Text\+Data\+::text\+Boundries}
+
+
+
+boundry for the text to be rendered in 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Mac\+Gyver/\mbox{\hyperlink{_text_8h}{Text.\+h}}\item 
+Mac\+Gyver/\mbox{\hyperlink{_text_8cpp}{Text.\+cpp}}\end{DoxyCompactItemize}

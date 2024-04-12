@@ -1,0 +1,63 @@
+\doxysection{Macgyver\+::Components\+::UI\+::UICamera Struct Reference}
+\hypertarget{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_camera}{}\label{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_camera}\index{Macgyver::Components::UI::UICamera@{Macgyver::Components::UI::UICamera}}
+
+
+{\ttfamily \#include $<$UICamera.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_camera_a95293937b8a279d31cf0c03f19ea4162}{draw}} (\mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component}{Gameobjects\+::\+Component}} \texorpdfstring{$\ast$}{*}self)
+\item 
+static void \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_camera_aff800f4a93d84a4d08261d9600509027}{update}} (\mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component}{Gameobjects\+::\+Component}} \texorpdfstring{$\ast$}{*}self, unsigned int delta\+Time)
+\item 
+static void \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_camera_ac65d153314bdd11b330f11d1b902d810}{Attach\+New}} (\mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component}{Gameobjects\+::\+Component}} \texorpdfstring{$\ast$}{*}comp)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Component to handle \doxylink{namespace_macgyver_1_1_components_1_1_u_i}{UI} renderable \doxylink{namespace_macgyver_1_1_components}{Components} draws them above the normal \doxylink{struct_macgyver_1_1_components_1_1_renderable}{Renderable} \doxylink{namespace_macgyver_1_1_components}{Components} 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_camera_ac65d153314bdd11b330f11d1b902d810}\label{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_camera_ac65d153314bdd11b330f11d1b902d810} 
+\index{Macgyver::Components::UI::UICamera@{Macgyver::Components::UI::UICamera}!AttachNew@{AttachNew}}
+\index{AttachNew@{AttachNew}!Macgyver::Components::UI::UICamera@{Macgyver::Components::UI::UICamera}}
+\doxysubsubsection{\texorpdfstring{AttachNew()}{AttachNew()}}
+{\footnotesize\ttfamily void Macgyver\+::\+Components\+::\+UI\+::\+UICamera\+::\+Attach\+New (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component}{Gameobjects\+::\+Component}} \texorpdfstring{$\ast$}{*}}]{comp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Attaches a new \doxylink{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_camera}{UICamera} to an existing Component. Note\+: a Component should only have one thing attached to it
+
+
+\begin{DoxyParams}{Parameters}
+{\em comp} & pointer to the component to attach the \doxylink{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_camera}{UICamera} to \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_camera_a95293937b8a279d31cf0c03f19ea4162}\label{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_camera_a95293937b8a279d31cf0c03f19ea4162} 
+\index{Macgyver::Components::UI::UICamera@{Macgyver::Components::UI::UICamera}!draw@{draw}}
+\index{draw@{draw}!Macgyver::Components::UI::UICamera@{Macgyver::Components::UI::UICamera}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Macgyver\+::\+Components\+::\+UI\+::\+UICamera\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component}{Gameobjects\+::\+Component}} \texorpdfstring{$\ast$}{*}}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Draws components to the screen based off their absoloute position (0,0) top left to (720,1280) bottom right
+
+NOTE\+: this behaviour may change in future to be based off the \doxylink{namespace_macgyver_1_1_components_1_1_u_i}{UI} camera\textquotesingle{}s position \Hypertarget{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_camera_aff800f4a93d84a4d08261d9600509027}\label{struct_macgyver_1_1_components_1_1_u_i_1_1_u_i_camera_aff800f4a93d84a4d08261d9600509027} 
+\index{Macgyver::Components::UI::UICamera@{Macgyver::Components::UI::UICamera}!update@{update}}
+\index{update@{update}!Macgyver::Components::UI::UICamera@{Macgyver::Components::UI::UICamera}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Macgyver\+::\+Components\+::\+UI\+::\+UICamera\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component}{Gameobjects\+::\+Component}} \texorpdfstring{$\ast$}{*}}]{self,  }\item[{unsigned int}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\doxylink{namespace_macgyver_1_1_components_1_1_u_i}{UI} \doxylink{struct_macgyver_1_1_components_1_1_camera}{Camera}\textquotesingle{}s update method, calls the draw function at the end.
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & pointer to the Component which the \doxylink{namespace_macgyver_1_1_components_1_1_u_i}{UI} camera is part of \\
+\hline
+{\em delta\+Time} & time in milliseconds since last frame and this one \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Mac\+Gyver/\mbox{\hyperlink{_u_i_camera_8h}{UICamera.\+h}}\item 
+Mac\+Gyver/\mbox{\hyperlink{_u_i_camera_8cpp}{UICamera.\+cpp}}\end{DoxyCompactItemize}

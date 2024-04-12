@@ -1,0 +1,30 @@
+\doxysection{Font.\+h}
+\hypertarget{_font_8h_source}{}\label{_font_8h_source}\index{MacGyver/Font.h@{MacGyver/Font.h}}
+\mbox{\hyperlink{_font_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}SDL.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}SDL\_ttf.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_macgyver_1_1_u_i}{Macgyver::UI}}\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_macgyver_1_1_u_i_1_1_font}{Font}}\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_u_i_1_1_font_a7fc60a6a5ecf16b67c6ff1eeeaca4515}{Font}}(SDL\_Renderer*\ renderer,std::string\ fontName,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ptSize);}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_macgyver_1_1_u_i_1_1_font_ae32a7c1644acdf9c3ebb09dd24ff2a9b}{\string~Font}}();}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_macgyver_1_1_u_i_1_1_font_ae1d782d6c7776ed42d7452f8a56e31de}{addUsage}}();}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_macgyver_1_1_u_i_1_1_font_a599bacd8d14f93384ae50892c6d959ca}{removeUsage}}();}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_macgyver_1_1_u_i_1_1_font_a4890b83a233d7e8aa20c99a6090d5586}{numSymbols}};}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{class_macgyver_1_1_u_i_1_1_font_a07656afe75a39115e8e22534d6e98c8c}{letters}}[70];}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ SDL\_Rect*\ \mbox{\hyperlink{class_macgyver_1_1_u_i_1_1_font_acdd31bac85ef435e5932748c47184bfa}{symbolRects}};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ SDL\_Texture*\ \mbox{\hyperlink{class_macgyver_1_1_u_i_1_1_font_a2fec20b458efafbb33438112eab6b4b6}{fontMap}};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_macgyver_1_1_u_i_1_1_font_ad35d831dcc1062ad7276ba4e77cbb99a}{storedRenderSize}};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ usageCount;}
+\DoxyCodeLine{00026\ \ \ \ \ \};}
+\DoxyCodeLine{00027\ \}}
+
+\end{DoxyCode}

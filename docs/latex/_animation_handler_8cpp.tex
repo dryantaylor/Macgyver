@@ -1,0 +1,19 @@
+\doxysection{Mac\+Gyver/\+Animation\+Handler.cpp File Reference}
+\hypertarget{_animation_handler_8cpp}{}\label{_animation_handler_8cpp}\index{MacGyver/AnimationHandler.cpp@{MacGyver/AnimationHandler.cpp}}
+{\ttfamily \#include "{}Animation\+Handler.\+h"{}}\newline
+{\ttfamily \#include $<$ranges$>$}\newline
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr unsigned int \mbox{\hyperlink{_animation_handler_8cpp_a3d5bda5440faab43d3cde96a500a2151}{NUM\+\_\+\+IDS}} = 512
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_animation_handler_8cpp_a3d5bda5440faab43d3cde96a500a2151}\label{_animation_handler_8cpp_a3d5bda5440faab43d3cde96a500a2151} 
+\index{AnimationHandler.cpp@{AnimationHandler.cpp}!NUM\_IDS@{NUM\_IDS}}
+\index{NUM\_IDS@{NUM\_IDS}!AnimationHandler.cpp@{AnimationHandler.cpp}}
+\doxysubsubsection{\texorpdfstring{NUM\_IDS}{NUM\_IDS}}
+{\footnotesize\ttfamily constexpr unsigned int NUM\+\_\+\+IDS = 512\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+MSVC stores std\+::deque elements in blocks of 16 bytes, in powers of 2 4 uints can fit into 16 bytes, so number of IDs should be some number which is a power of 2. However more ID\textquotesingle{}s will cause higher memory usage. 

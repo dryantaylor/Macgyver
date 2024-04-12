@@ -1,0 +1,36 @@
+\doxysection{Text.\+h}
+\hypertarget{_text_8h_source}{}\label{_text_8h_source}\index{MacGyver/Text.h@{MacGyver/Text.h}}
+\mbox{\hyperlink{_text_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_component_8h}{Component.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_component_manager_8h}{ComponentManager.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_component_data_8h}{ComponentData.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}SDL.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_macgyver_1_1_components_1_1_u_i}{Macgyver::Components::UI}}\ \{}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_macgyver_1_1_components_1_1_u_i_1_1_text}{Text}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_u_i_1_1_text_aa82ad75be88138ac97e8a94c79dec9a3}{update}}(\mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component}{Gameobjects::Component}}*\ self,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ deltaTime);}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_u_i_1_1_text_a56422f7188422418f1faccc02dc1400a}{attachNew}}(\mbox{\hyperlink{class_macgyver_1_1_gameobjects_1_1_component}{Gameobjects::Component}}*\ comp,\ std::string\ font,\ std::string\ text,}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ptSize,\ SDL\_Rect\ size);}
+\DoxyCodeLine{00021\ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data}{TextData}}\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_a53fff2e180b23670655d1144b530b0d6}{TextData}}(SDL\_Renderer*\ renderer,\ std::string\ txt,\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ fnt,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_a53f25e47d34ec0e2598cb52c023a7a95}{ptSize}},\ SDL\_Rect\ rect);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_aeed5e9eaeab783aedf28b5ffd204a689}{text}};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_a7ec87ed9e7219d2648db89305f29542c}{font}};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_a53f25e47d34ec0e2598cb52c023a7a95}{ptSize}};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_a1762f7a47312594561cbd2818a259bc8}{INTERNAL\_cachedText}};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_ada936f2caccf604e78f53d5979bd4e4f}{INTERNAL\_cachedFont}};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_ad544ca9d278db1cafa0f7d93dddeec8f}{INTERNAL\_cachedPtSize}};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ SDL\_Rect\ \mbox{\hyperlink{struct_macgyver_1_1_components_1_1_u_i_1_1_text_data_afa8e9a0b8fc0ba2e20086e8bee510254}{textBoundries}};}
+\DoxyCodeLine{00045\ \ \ \ \ \};}
+\DoxyCodeLine{00046\ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ }
+
+\end{DoxyCode}
