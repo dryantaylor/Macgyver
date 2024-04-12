@@ -1,0 +1,38 @@
+<div id="structdetail_1_1iterator__traits_3_01_t_01_5_00_01enable__if__t_3_01std_1_1is__object_3_01_t_01_4_1_1value_01_4_01_4">
+
+</div>
+
+<span id="structdetail_1_1iterator__traits_3_01_t_01_5_00_01enable__if__t_3_01std_1_1is__object_3_01_t_01_4_1_1value_01_4_01_4"
+label="structdetail_1_1iterator__traits_3_01_t_01_5_00_01enable__if__t_3_01std_1_1is__object_3_01_t_01_4_1_1value_01_4_01_4"></span>
+
+<div class="DoxyCompactItemize">
+
+<span id="structdetail_1_1iterator__traits_3_01_t_01_5_00_01enable__if__t_3_01std_1_1is__object_3_01_t_01_4_1_1value_01_4_01_4_afbb5c47eb1979803c8bc61a6808cf3eb"
+label="structdetail_1_1iterator__traits_3_01_t_01_5_00_01enable__if__t_3_01std_1_1is__object_3_01_t_01_4_1_1value_01_4_01_4_afbb5c47eb1979803c8bc61a6808cf3eb"></span>
+using **iterator_category** = std::random_access_iterator_tag
+
+<span id="structdetail_1_1iterator__traits_3_01_t_01_5_00_01enable__if__t_3_01std_1_1is__object_3_01_t_01_4_1_1value_01_4_01_4_aab1f49bed564ad78899dce0522465803"
+label="structdetail_1_1iterator__traits_3_01_t_01_5_00_01enable__if__t_3_01std_1_1is__object_3_01_t_01_4_1_1value_01_4_01_4_aab1f49bed564ad78899dce0522465803"></span>
+using **value_type** = T
+
+<span id="structdetail_1_1iterator__traits_3_01_t_01_5_00_01enable__if__t_3_01std_1_1is__object_3_01_t_01_4_1_1value_01_4_01_4_ad08ccea3ab6f13f11bcd790866ee1dc8"
+label="structdetail_1_1iterator__traits_3_01_t_01_5_00_01enable__if__t_3_01std_1_1is__object_3_01_t_01_4_1_1value_01_4_01_4_ad08ccea3ab6f13f11bcd790866ee1dc8"></span>
+using **difference_type** = ptrdiff_t
+
+<span id="structdetail_1_1iterator__traits_3_01_t_01_5_00_01enable__if__t_3_01std_1_1is__object_3_01_t_01_4_1_1value_01_4_01_4_ab6ac817567b1b21b7df52b525d80528c"
+label="structdetail_1_1iterator__traits_3_01_t_01_5_00_01enable__if__t_3_01std_1_1is__object_3_01_t_01_4_1_1value_01_4_01_4_ab6ac817567b1b21b7df52b525d80528c"></span>
+using **pointer** = T$\ast$
+
+<span id="structdetail_1_1iterator__traits_3_01_t_01_5_00_01enable__if__t_3_01std_1_1is__object_3_01_t_01_4_1_1value_01_4_01_4_af1702a8be706ef08e9de3d5a7f111a4a"
+label="structdetail_1_1iterator__traits_3_01_t_01_5_00_01enable__if__t_3_01std_1_1is__object_3_01_t_01_4_1_1value_01_4_01_4_af1702a8be706ef08e9de3d5a7f111a4a"></span>
+using **reference** = T&
+
+</div>
+
+The documentation for this struct was generated from the following file:
+
+<div class="DoxyCompactItemize">
+
+MacGyver/json.hpp
+
+</div>

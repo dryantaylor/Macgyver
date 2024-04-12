@@ -1,0 +1,46 @@
+<div id="structdetail_1_1iterator__input__adapter__factory_3_01_iterator_type_00_01enable__if__t_3_01is__5cecb9bc5a87721b11b4762b91835d89">
+
+</div>
+
+<span id="structdetail_1_1iterator__input__adapter__factory_3_01_iterator_type_00_01enable__if__t_3_01is__5cecb9bc5a87721b11b4762b91835d89"
+label="structdetail_1_1iterator__input__adapter__factory_3_01_iterator_type_00_01enable__if__t_3_01is__5cecb9bc5a87721b11b4762b91835d89"></span>
+
+<div class="DoxyCompactItemize">
+
+<span id="structdetail_1_1iterator__input__adapter__factory_3_01_iterator_type_00_01enable__if__t_3_01is__5cecb9bc5a87721b11b4762b91835d89_ae840993e679fd93faefa34b273b96d8b"
+label="structdetail_1_1iterator__input__adapter__factory_3_01_iterator_type_00_01enable__if__t_3_01is__5cecb9bc5a87721b11b4762b91835d89_ae840993e679fd93faefa34b273b96d8b"></span>
+using **iterator_type** = IteratorType
+
+<span id="structdetail_1_1iterator__input__adapter__factory_3_01_iterator_type_00_01enable__if__t_3_01is__5cecb9bc5a87721b11b4762b91835d89_a024ec881421bb596438e5ee7033d2f61"
+label="structdetail_1_1iterator__input__adapter__factory_3_01_iterator_type_00_01enable__if__t_3_01is__5cecb9bc5a87721b11b4762b91835d89_a024ec881421bb596438e5ee7033d2f61"></span>
+using **char_type** = typename
+std::iterator_traits$<$iterator_type$>$::value_type
+
+<span id="structdetail_1_1iterator__input__adapter__factory_3_01_iterator_type_00_01enable__if__t_3_01is__5cecb9bc5a87721b11b4762b91835d89_a366ed8a17446bb25026ccdc8e85fd42a"
+label="structdetail_1_1iterator__input__adapter__factory_3_01_iterator_type_00_01enable__if__t_3_01is__5cecb9bc5a87721b11b4762b91835d89_a366ed8a17446bb25026ccdc8e85fd42a"></span>
+using **base_adapter_type** =
+[iterator_input_adapter](#classdetail_1_1iterator__input__adapter)$<$iterator_type$>$
+
+<span id="structdetail_1_1iterator__input__adapter__factory_3_01_iterator_type_00_01enable__if__t_3_01is__5cecb9bc5a87721b11b4762b91835d89_ab7241691093fde82e63d52a065ea859d"
+label="structdetail_1_1iterator__input__adapter__factory_3_01_iterator_type_00_01enable__if__t_3_01is__5cecb9bc5a87721b11b4762b91835d89_ab7241691093fde82e63d52a065ea859d"></span>
+using **adapter_type** =
+[wide_string_input_adapter](#classdetail_1_1wide__string__input__adapter)$<$base_adapter_type,
+char_type$>$
+
+</div>
+
+<div class="DoxyCompactItemize">
+
+<span id="structdetail_1_1iterator__input__adapter__factory_3_01_iterator_type_00_01enable__if__t_3_01is__5cecb9bc5a87721b11b4762b91835d89_ade87ec2596ed70e924a256e5b0711830"
+label="structdetail_1_1iterator__input__adapter__factory_3_01_iterator_type_00_01enable__if__t_3_01is__5cecb9bc5a87721b11b4762b91835d89_ade87ec2596ed70e924a256e5b0711830"></span>
+static adapter_type **create** (IteratorType first, IteratorType last)
+
+</div>
+
+The documentation for this struct was generated from the following file:
+
+<div class="DoxyCompactItemize">
+
+MacGyver/json.hpp
+
+</div>

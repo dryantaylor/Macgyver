@@ -1,0 +1,26 @@
+<div id="structdetail_1_1detector_3_01_default_00_01void__t_3_01_op_3_01_args_8_8_8_01_4_01_4_00_01_op_00_01_args_8_8_8_01_4">
+
+</div>
+
+<span id="structdetail_1_1detector_3_01_default_00_01void__t_3_01_op_3_01_args_8_8_8_01_4_01_4_00_01_op_00_01_args_8_8_8_01_4"
+label="structdetail_1_1detector_3_01_default_00_01void__t_3_01_op_3_01_args_8_8_8_01_4_01_4_00_01_op_00_01_args_8_8_8_01_4"></span>
+
+<div class="DoxyCompactItemize">
+
+<span id="structdetail_1_1detector_3_01_default_00_01void__t_3_01_op_3_01_args_8_8_8_01_4_01_4_00_01_op_00_01_args_8_8_8_01_4_a5d1d57c0a1b9e8b9d7ecb78dd0b7f386"
+label="structdetail_1_1detector_3_01_default_00_01void__t_3_01_op_3_01_args_8_8_8_01_4_01_4_00_01_op_00_01_args_8_8_8_01_4_a5d1d57c0a1b9e8b9d7ecb78dd0b7f386"></span>
+using **value_t** = std::true_type
+
+<span id="structdetail_1_1detector_3_01_default_00_01void__t_3_01_op_3_01_args_8_8_8_01_4_01_4_00_01_op_00_01_args_8_8_8_01_4_afac40ba5f8649babce55fe469f7cfa3b"
+label="structdetail_1_1detector_3_01_default_00_01void__t_3_01_op_3_01_args_8_8_8_01_4_01_4_00_01_op_00_01_args_8_8_8_01_4_afac40ba5f8649babce55fe469f7cfa3b"></span>
+using **type** = Op$<$Args...$>$
+
+</div>
+
+The documentation for this struct was generated from the following file:
+
+<div class="DoxyCompactItemize">
+
+MacGyver/json.hpp
+
+</div>
