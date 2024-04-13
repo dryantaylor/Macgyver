@@ -12,6 +12,7 @@
 #include "Globals.h"
 #include "Vector3.h"
 #include "Scene.h"
+#include "SceneManager.h"
 #include "GameObject.h"
 #include "Input.h"
 #include "Camera.h"
@@ -163,7 +164,7 @@ int main(int argc, char* argv[])
 	* MAIN GAME, CREATE ALL DATA BEFORE THE WHILE LOOP
 	* CALL ALL UPDATES AND DRAWING WITHIN THE WHILE LOOP
 	*/
-	Gameobjects::Scene sc = Gameobjects::Scene();
+	auto sc = Gameobjects::Scene();
 	sc.scene_RENDERER = c_RENDERER;
 
 	Gameobjects::GameObject playerController;
@@ -239,7 +240,9 @@ int main(int argc, char* argv[])
 	buttonText.localTransform.y += 20;
 	Macgyver::Components::UI::Text::attachNew(&buttonText, "test-font", "Press", 128, { 0,0,400,150 });
 
-	
+	getSceneManager.addScene("main",
+		std::make_shared<Gameobjects::Scene>(sc));
+	getSceneManager.setActiveScene("main");
 	/*
 	* INIITIALISE VALUES NEEDED FOR THE MAIN LOOP
 	*/
@@ -251,7 +254,7 @@ int main(int argc, char* argv[])
 	while (running)
 	{
 		curr_time = SDL_GetTicks();
-		deltaTime = std::max(curr_time - last_time, (unsigned int)1);
+		deltaTime = std::max(curr_time - last_time, static_cast<uint32_t>(1));
 		/*
 		* handle events within the while loop
 		*/
@@ -279,8 +282,8 @@ int main(int argc, char* argv[])
 		/*
 		* Place update then drawing code here
 		*/
-	    sc.physicsUpdate(deltaTime);
-		sc.update(deltaTime);
+	    getSceneManager.physicsUpdate(deltaTime);
+		getSceneManager.update(deltaTime);
 		SDL_RenderPresent(c_RENDERER);
 		
 		//std::cout << deltaTime << std::endl;

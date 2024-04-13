@@ -2,9 +2,9 @@
 #include <cstring>
 #include <utility>
 
-void Macgyver::Messenger::setDataSize(size_t newSize)
+void Macgyver::Messenger::setDataSize(const size_t newSize)
 {
-	long long* newData = new long long[newSize];
+	auto newData = new int64_t[newSize];
 	//TODO: kinda janky to be writing all 0's just to overwrite
 	// consider coming up with a cleverer way of doing this or hope
 	// the compiler figures it out

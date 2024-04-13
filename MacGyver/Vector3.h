@@ -4,10 +4,10 @@
 namespace Macgyver::Math {
 	class Force2D;
 	/**
-	Class to represent a 3 dimensional vector
-	x -> represents horizontal
-	y -> represents vertical
-	z -> represents distance to the camera
+	Class to represent a 3 dimensional vector \n
+	x -> represents horizontal \n
+	y -> represents vertical \n
+	z -> represents distance to the camera \n
 	*/
 	class Vector3{
 	public:
@@ -29,8 +29,8 @@ namespace Macgyver::Math {
 		Creates a new force 2D object with the same x and y components as this
 		object
 
-		@returns a Force2D object which has the same x and y components as this
-		vector but anb under the hood z component of 0.
+		\return a Force2D object which has the same x and y components as this
+		vector but an under the hood z component of 0.
 		*/
 		Force2D copyToForce2D();
 

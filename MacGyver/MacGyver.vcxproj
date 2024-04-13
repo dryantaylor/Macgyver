@@ -158,6 +158,7 @@
     <ClCompile Include="PlayerFSM.cpp" />
     <ClCompile Include="Renderable.cpp" />
     <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="SingletonSerialiser.cpp" />
     <ClCompile Include="Text.cpp" />
     <ClCompile Include="TextRenderer.cpp" />
@@ -195,6 +196,7 @@
     <ClInclude Include="PlayerFSM.h" />
     <ClInclude Include="Renderable.h" />
     <ClInclude Include="Scene.h" />
+    <ClInclude Include="SceneManager.h" />
     <ClInclude Include="SingletonSerialiser.h" />
     <ClInclude Include="Text.h" />
     <ClInclude Include="TextData.h" />

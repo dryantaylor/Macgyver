@@ -34,12 +34,12 @@ namespace Macgyver::Components {
 		SDL_Rect rect;
 	};
 
-	/*
+	/**(
 	Struct to hold a Renderable Component
 	*/
 	struct Renderable {
 		COMPONENT_TYPE flags = RENDERABLE;
-		/*
+		/**
 		Renderables update method, does nothing.
 
 		@param self pointer to the Component which the renderable is part of
@@ -47,7 +47,7 @@ namespace Macgyver::Components {
 		*/
 		static void update(Gameobjects::Component* self, unsigned int deltaTime);
 		
-		/*
+		/**
 		Attaches a new Renderable to an existing Component.
 		Note: a Component should only have one thing attached to it
 
