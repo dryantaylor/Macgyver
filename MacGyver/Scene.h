@@ -1,4 +1,6 @@
 #pragma once
+#include <string>
+
 #include "SDL.h"
 #include <vector>
 #include "ComponentManager.h"
@@ -17,7 +19,7 @@ namespace Macgyver::Gameobjects {
 		/**
 		Default Contsructor
 		*/
-		Scene();
+		Scene(std::string name);
 		/**
 		Adds a GameObject instance to the scene
 
@@ -35,7 +37,9 @@ namespace Macgyver::Gameobjects {
 		Components in the scene which match the flag given
 		*/
 		std::vector<Component*> getComponentsInWorldByType(Components::COMPONENT_TYPES type);
-		
+
+		std::string getName() { return name; }
+
 		/**
 		Update method for the scene
 		to be called once in the main game loop after updating input
@@ -71,5 +75,7 @@ namespace Macgyver::Gameobjects {
 		std::vector<Component*> physicsColliderCache;
 		//stores the ticks since the last physicsUpdate
 		unsigned int physicsTick = 0;
+
+		std::string name;
 	};
 }

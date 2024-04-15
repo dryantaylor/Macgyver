@@ -3,9 +3,11 @@
 #include "Component.h"
 
 using namespace Macgyver;
-Gameobjects::Scene::Scene()
+Gameobjects::Scene::Scene(std::string name)
 {
 	objects = std::vector<GameObject*>();
+	this->name = name;
+	physicsVelocityCache = std::vector<Component*>();
 }
 
 void Gameobjects::Scene::addObject(GameObject* obj)
@@ -45,7 +47,7 @@ void Macgyver::Gameobjects::Scene::physicsUpdate(unsigned int deltaTime)
 	//while loop used to account for sudden frame spikes
 	while (true){
 		//20 ticks = 1/50th of a second, physics update runs 50 times per second
-		if (physicsTick < 20) {
+ 		if (physicsTick < 20) {
 			return;
 		}
 		physicsTick -= 20;

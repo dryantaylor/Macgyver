@@ -10,9 +10,9 @@ Macgyver::Gameobjects::SceneManager::SceneManager()
 }
 
 
-void Macgyver::Gameobjects::SceneManager::addScene(std::string name,std::shared_ptr<Scene> scene)
+void Macgyver::Gameobjects::SceneManager::addScene(std::shared_ptr<Scene> scene)
 {
-		scenes.insert(std::make_pair(name,scene));
+		scenes.insert(std::make_pair(scene->getName(),scene));
 }
 
 void Macgyver::Gameobjects::SceneManager::removeScene(const std::string& name)
@@ -44,7 +44,7 @@ void Macgyver::Gameobjects::SceneManager::physicsUpdate(const uint32_t deltaTime
 		
 		throw std::runtime_error("No active scene set");
 	}
-	#endif 
+	#endif
 	activeScene->physicsUpdate(deltaTime);
 }
 

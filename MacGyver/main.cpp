@@ -164,8 +164,10 @@ int main(int argc, char* argv[])
 	* MAIN GAME, CREATE ALL DATA BEFORE THE WHILE LOOP
 	* CALL ALL UPDATES AND DRAWING WITHIN THE WHILE LOOP
 	*/
-	auto sc = Gameobjects::Scene();
-	sc.scene_RENDERER = c_RENDERER;
+	auto sc = 
+		std::make_shared<Gameobjects::Scene>(
+			Gameobjects::Scene("main"));
+	sc->scene_RENDERER = c_RENDERER;
 
 	Gameobjects::GameObject playerController;
 	Gameobjects::GameObject camera;
@@ -173,10 +175,10 @@ int main(int argc, char* argv[])
 	Gameobjects::GameObject UIcam;
 	Gameobjects::GameObject UItext;
 
-	sc.addObject(&playerController);
-	sc.addObject(&camera);
-	sc.addObject(&UIcam);
-	sc.addObject(&UItext);
+	sc->addObject(&playerController);
+	sc->addObject(&camera);
+	sc->addObject(&UIcam);
+	sc->addObject(&UItext);
 
 
 	Gameobjects::Component playerSprite;
@@ -219,7 +221,7 @@ int main(int argc, char* argv[])
 	DemoProject::KeyPressedOverlay::attachNew(&keyPressOverlay,&UItext_comp);
 
 	Gameobjects::GameObject button;
-	sc.addObject(&button);
+	sc->addObject(&button);
 
 	button.transform.x = 400;
 	button.transform.y = 200;
@@ -240,8 +242,7 @@ int main(int argc, char* argv[])
 	buttonText.localTransform.y += 20;
 	Macgyver::Components::UI::Text::attachNew(&buttonText, "test-font", "Press", 128, { 0,0,400,150 });
 
-	getSceneManager.addScene("main",
-		std::make_shared<Gameobjects::Scene>(sc));
+	getSceneManager.addScene(sc);
 	getSceneManager.setActiveScene("main");
 	/*
 	* INIITIALISE VALUES NEEDED FOR THE MAIN LOOP
@@ -282,6 +283,9 @@ int main(int argc, char* argv[])
 		/*
 		* Place update then drawing code here
 		*/
+		//sc.physicsUpdate(deltaTime);
+		//sc.update(deltaTime);
+		
 	    getSceneManager.physicsUpdate(deltaTime);
 		getSceneManager.update(deltaTime);
 		SDL_RenderPresent(c_RENDERER);

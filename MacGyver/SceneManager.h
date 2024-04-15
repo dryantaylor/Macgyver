@@ -23,6 +23,8 @@ namespace  Macgyver::Gameobjects
 		SceneManager(const SceneManager&) = delete;
 		SceneManager& operator=(const SceneManager&) = delete;
 
+		Scene* getActiveScene() { return activeScene.get(); }
+
 		/**
 		 * \brief adds a new scene to the scene manager
 		 * \param name name to refer to the scene by
@@ -30,7 +32,7 @@ namespace  Macgyver::Gameobjects
 		 *
 		 * NOTE: USE std::make_shared<Scene> to create the pointer
 		 */
-		void addScene(std::string name, std::shared_ptr<Scene> scene);
+		void addScene(std::shared_ptr<Scene> scene);
 
 		/**
 		 * \brief removes a scene from the scene manager by name
