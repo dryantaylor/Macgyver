@@ -23,7 +23,7 @@ namespace  Macgyver::Gameobjects
 		SceneManager(const SceneManager&) = delete;
 		SceneManager& operator=(const SceneManager&) = delete;
 
-		Scene* getActiveScene() { return activeScene.get(); }
+		Scene* getActiveScene() const { return activeScene.get(); }
 
 		/**
 		 * \brief adds a new scene to the scene manager

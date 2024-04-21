@@ -42,7 +42,7 @@ namespace Macgyver::Gameobjects {
 		@returns a vector of pointers to all components which
 		are attached to the object and have the selected flag
 		*/
-		std::vector<Component*> getComponentsWithProperty(Components::COMPONENT_TYPES type);
+		std::vector<Component*> getComponentsWithProperty(Components::COMPONENT_TYPES type) const;
 		
 		/**
 		Objects update method. Calls the update method

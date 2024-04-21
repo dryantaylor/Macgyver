@@ -16,7 +16,7 @@ Macgyver::UI::Font::Font(SDL_Renderer* renderer, std::string fontName, unsigned 
 
 	//TODO: split rows not when reaching 8192 pixels but evenly along the horizontal
 	//creates the symbols as SDL_Surfaces and stores their native width/height
-	symbolRects = new SDL_Rect[numSymbols];
+	//symbolRects = new SDL_Rect[numSymbols];
 	TTF_Font* ttfFont = TTF_OpenFont((std::string(SDL_GetBasePath()) + fontName).c_str(), ptSize);
 	SDL_Surface* symbols[numSymbols];
 	int maxHeight = 0;
@@ -43,6 +43,7 @@ Macgyver::UI::Font::Font(SDL_Renderer* renderer, std::string fontName, unsigned 
 		
 		maxHeight = symbols[i]->h > maxHeight ? symbols[i]->h : maxHeight;
 	}
+
 	for (int i = 0; i < numSymbols; i++) 
 	{
 		symbolRects[i].y *= maxHeight+1;
@@ -64,8 +65,10 @@ Macgyver::UI::Font::Font(SDL_Renderer* renderer, std::string fontName, unsigned 
 		SDL_FreeSurface(symbols[i]);
 		SDL_DestroyTexture(tempTexture);
 	}
+	
 	SDL_SetRenderTarget(renderer, NULL);
 	TTF_CloseFont(ttfFont);
+	
 }
 
 Macgyver::UI::Font::~Font()

@@ -5,9 +5,10 @@
 
 using namespace Macgyver;
 
-Gameobjects::GameObject::GameObject(int x, int y, int z)
+Gameobjects::GameObject::GameObject(const int x, const int y, const int z)
 {
 	transform = Macgyver::Math::Vector3(x, y, z);
+	
 }
 
 void Gameobjects::GameObject::addComponent(Component* comp)
@@ -16,7 +17,7 @@ void Gameobjects::GameObject::addComponent(Component* comp)
 	comp->parent = this;
 }
 
-std::vector<Gameobjects::Component*> Gameobjects::GameObject::getComponentsWithProperty(Components::COMPONENT_TYPES type)
+std::vector<Gameobjects::Component*> Gameobjects::GameObject::getComponentsWithProperty(Components::COMPONENT_TYPES type) const
 {
 	std::vector<Component*> comps;
 	for (Component* comp : components) {
@@ -27,7 +28,7 @@ std::vector<Gameobjects::Component*> Gameobjects::GameObject::getComponentsWithP
 	return comps;
 }
 
-void Gameobjects::GameObject::update(unsigned int deltaTime)
+void Gameobjects::GameObject::update(const unsigned int deltaTime)
 {
 	Scene* parentScene = this->getParentScene();
 	for (Component* comp : components)

@@ -148,18 +148,29 @@ int main(int argc, char* argv[])
 	getAnimationHandler.attachRenderer(c_RENDERER);
 	getInput;
 	getMessenger;
-	
 
+	auto fonts = static_cast<Macgyver::UI::Font**>(malloc(sizeof(Macgyver::UI::Font*) * 100));
+	for (int i = 0; i < 100; i++)
+	{
+		fonts[i] = new Macgyver::UI::Font(c_RENDERER,
+			"\\KirimomiSwash.ttf",
+			256);
+		std::cout << i << std::endl;
+	}
+	delete[] fonts;
+	return 0;
 	Macgyver::UI::Font font(c_RENDERER,
 		"\\KirimomiSwash.ttf",
 		256);
 	getTextRenderer.addFont("test-font", &font);
-	SDL_Rect test{};
-	test.x = test.y = 0;
-	test.w = 1280;
-		test.h = 720;
 
-	
+	Macgyver::UI::Font font2(c_RENDERER,
+	               "\\JetBrainsMono-Medium.ttf",
+	              256);
+
+	getTextRenderer.addFont("jetbrains", &font2);
+
+
 	/*
 	* MAIN GAME, CREATE ALL DATA BEFORE THE WHILE LOOP
 	* CALL ALL UPDATES AND DRAWING WITHIN THE WHILE LOOP
@@ -238,8 +249,8 @@ int main(int argc, char* argv[])
 
 	Macgyver::Gameobjects::Component buttonText;
 	button.addComponent(&buttonText);
-	buttonText.localTransform.x += 35;
-	buttonText.localTransform.y += 20;
+	buttonText.localTransform.x += 25;
+	buttonText.localTransform.y += 15;
 	Macgyver::Components::UI::Text::attachNew(&buttonText, "test-font", "Press", 128, { 0,0,400,150 });
 
 	getSceneManager.addScene(sc);

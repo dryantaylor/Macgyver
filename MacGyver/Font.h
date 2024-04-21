@@ -28,7 +28,7 @@ namespace Macgyver::UI {
 		static const char* letters[70];
 
 		///the location and size of the symbols in the font
-		SDL_Rect* symbolRects;
+		SDL_Rect symbolRects[70];
 		/// single SDL_texture containing all the symbols
 		SDL_Texture* fontMap;
 		/// the pt size the font was rendered at for scaling
