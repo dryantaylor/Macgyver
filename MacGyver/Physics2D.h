@@ -18,6 +18,7 @@ namespace Macgyver::Components {
 		SDL_Rect* collider;
 		/// velocity of the Object
 		Math::Force2D velocity;
+
 		/// mass of the object
 		float mass; 
 		bool isMoveable;

@@ -29,6 +29,13 @@ void Macgyver::UI::TextRenderer::removeFontUsage(std::string fontName)
 SDL_Texture* Macgyver::UI::TextRenderer::displayText(SDL_Renderer* renderer, std::string fontName, std::string text,
                                                      const SDL_Rect* dstRect, SDL_Color displayColour, const int ptSize )
 {
+#ifdef _DEBUG
+	if (!this->fonts.contains(fontName))
+	{
+				std::cout << "Font: \""<< fontName <<"\" not found" << std::endl;
+		throw std::runtime_error("Font not found");
+	}
+#endif
 	const Font* font = this->fonts.at(fontName);
 
 	//e.g font stored at 256, and outputting at 128

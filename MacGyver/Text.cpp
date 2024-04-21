@@ -11,6 +11,7 @@ void Macgyver::Components::UI::Text::update(Gameobjects::Component* self, unsign
 		UIRenderableData* renderData = componentGetData(self, UIRenderableData);
 
 		SDL_DestroyTexture(renderData->texture);
+
 		renderData->texture = 
 			getTextRenderer.displayText
 		(

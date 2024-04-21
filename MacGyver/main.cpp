@@ -149,19 +149,10 @@ int main(int argc, char* argv[])
 	getInput;
 	getMessenger;
 
-	auto fonts = static_cast<Macgyver::UI::Font**>(malloc(sizeof(Macgyver::UI::Font*) * 100));
-	for (int i = 0; i < 100; i++)
-	{
-		fonts[i] = new Macgyver::UI::Font(c_RENDERER,
-			"\\KirimomiSwash.ttf",
-			256);
-		std::cout << i << std::endl;
-	}
-	delete[] fonts;
-	return 0;
-	Macgyver::UI::Font font(c_RENDERER,
+	Macgyver::UI::Font font = Macgyver::UI::Font(c_RENDERER,
 		"\\KirimomiSwash.ttf",
 		256);
+
 	getTextRenderer.addFont("test-font", &font);
 
 	Macgyver::UI::Font font2(c_RENDERER,
@@ -251,7 +242,7 @@ int main(int argc, char* argv[])
 	button.addComponent(&buttonText);
 	buttonText.localTransform.x += 25;
 	buttonText.localTransform.y += 15;
-	Macgyver::Components::UI::Text::attachNew(&buttonText, "test-font", "Press", 128, { 0,0,400,150 });
+	Macgyver::Components::UI::Text::attachNew(&buttonText, "jetbrains", "Press", 128, { 0,0,400,150 });
 
 	getSceneManager.addScene(sc);
 	getSceneManager.setActiveScene("main");
@@ -267,6 +258,7 @@ int main(int argc, char* argv[])
 	{
 		curr_time = SDL_GetTicks();
 		deltaTime = std::max(curr_time - last_time, static_cast<uint32_t>(1));
+		
 		/*
 		* handle events within the while loop
 		*/
