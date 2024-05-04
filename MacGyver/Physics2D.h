@@ -18,6 +18,10 @@ namespace Macgyver::Components {
 		SDL_Rect* collider;
 		/// velocity of the Object
 		Math::Force2D velocity;
+		/// acceleration of the Object
+		Math::Force2D acceleration;
+		/// forces applied to the Object
+		Math::Force2D forces;
 
 		/// mass of the object
 		float mass; 

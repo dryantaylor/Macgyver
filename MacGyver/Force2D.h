@@ -17,6 +17,7 @@ namespace Macgyver::Math {
 		Force2D(float x = 0, float y = 0);
 
 		Force2D operator+(const Force2D& a);
+		Force2D& operator=(const Vector3& a);
 		/**
 		Gets the magnitude of the vector 
 		(i.e the length if a direct line was drawn 
@@ -30,13 +31,12 @@ namespace Macgyver::Math {
 		ratio to eachother but have a magnitude of 1)
 		*/
 		void normalise();
-		// making programming accessible to the wrongungs
 		/**
 		Normalizes the vector.
 		(i.e modifies the x and y components so they maintain the same
 		ratio to eachother but have a magnitude of 1)
 		*/
-		void normalize();
+		inline void normalize();
 		/**
 		Scales the x and y component so that they maintain the same
 		ratio to eachother but have a magnitude of <magnitude>

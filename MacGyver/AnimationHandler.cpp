@@ -61,6 +61,11 @@ unsigned int Macgyver::AnimationHandler::beginAnimation(Components::RenderableDa
 
 void Macgyver::AnimationHandler::changeActiveAnimation(unsigned int id, std::string animationName)
 {
+	if (!animations.contains(animationName))
+	{
+		std::cerr << "Animation " << animationName << " does not exist" << std::endl;
+		throw std::runtime_error("animation doesn't exist");
+	}
 	Animations::ActiveAnimation* animation = activeAnimations.at(id);
 	Animations::AnimationData* newAnim = animations.at(animationName);
 	if (newAnim != animation->activeAnimation) {

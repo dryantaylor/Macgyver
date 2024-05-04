@@ -40,6 +40,14 @@ namespace Macgyver::Gameobjects {
 
 		std::string getName() { return name; }
 
+		/*
+		 * \brief gets the physicsGravImpactingCache as readonly
+		 *
+		 * Used for applying gravity
+		 *
+		 */
+		const std::vector<Component*>& getPhysicsGravImpactedCache() { return physicsGravImpactedCache; }
+
 		/**
 		Update method for the scene
 		to be called once in the main game loop after updating input

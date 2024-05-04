@@ -60,6 +60,8 @@ void Macgyver::Gameobjects::Scene::physicsUpdate(unsigned int deltaTime)
 		for (Component* comp : physicsGravImpactedCache) {
 			comp->physicsUpdate(comp);
 		}
+
+
 		for (Component* comp : physicsColliderCache) {
 			comp->physicsUpdate(comp);
 		}

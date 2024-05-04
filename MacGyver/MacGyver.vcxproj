@@ -148,6 +148,7 @@
     <ClCompile Include="Force2D.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Globals.cpp" />
+    <ClCompile Include="GravityImpacting.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="InputBuffer.cpp" />
     <ClCompile Include="KeyPressedOverlay.cpp" />
@@ -185,6 +186,7 @@
     <ClInclude Include="GameInputs.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Globals.h" />
+    <ClInclude Include="GravityImpacting.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="InputBuffer.h" />
     <ClInclude Include="json.hpp" />

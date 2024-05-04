@@ -32,6 +32,7 @@
 #include "SingletonSerialiser.h"
 
 //extra components imports
+#include "GravityImpacting.h"
 #include "PlayerController.h"
 #include "KeyPressedOverlay.h"
 #include "PlayerFSM.h"
@@ -244,6 +245,13 @@ int main(int argc, char* argv[])
 	buttonText.localTransform.y += 15;
 	Macgyver::Components::UI::Text::attachNew(&buttonText, "jetbrains", "Press", 128, { 0,0,400,150 });
 
+
+	Macgyver::Gameobjects::GameObject gravity;
+	Macgyver::Gameobjects::Component gravityComp;
+	gravity.addComponent(&gravityComp);
+	Macgyver::Components::GravityImpacting::attachNew(&gravityComp, -500.0);
+	sc->addObject(&gravity);
+
 	getSceneManager.addScene(sc);
 	getSceneManager.setActiveScene("main");
 	/*
@@ -301,6 +309,7 @@ int main(int argc, char* argv[])
 		{
 			std::cout << "pressed" << std::endl;
 		}
+		//std::cout << playerController.transform.y << std::endl;
 	}
 	/*
 	* HANDLE CLEAN UP HERE

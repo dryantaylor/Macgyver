@@ -99,7 +99,7 @@ namespace Macgyver::Gameobjects{
 		std::vector<Components::ComponentDataWrapper*> data;
 		/// pointer to the parent GameObject
 		GameObject* parent;
-		/// properties/flags of this component, which makes garentees
+		/// properties/flags of this component, which makes guarantees
 		/// about what methods or data structures it will have
 		COMPONENT_TYPE componentProperties = 0x0000;		
 	

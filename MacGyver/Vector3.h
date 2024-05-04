@@ -24,7 +24,7 @@ namespace Macgyver::Math {
 		Vector3 operator*(const float b);
 		Vector3 operator/(const float b);
 		Vector3& operator+=(const Vector3& a);
-
+		Vector3& operator= (const Vector3& a);
 		/**
 		Creates a new force 2D object with the same x and y components as this
 		object

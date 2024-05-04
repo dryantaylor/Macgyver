@@ -64,9 +64,9 @@ RUN_STATE:
 void DemoProject::PlayerFSM::attachNew(Gameobjects::Component* comp)
 {
 	comp->update = PlayerFSM::update;
-	Components::Physics2DData* physicsData =
+ 	Components::Physics2DData* physicsData =
 		componentGetData(
-			comp->getParent()->getComponentsWithProperty(Components::VELOCITY)[0],
+			comp->getParent()->getComponentsWithProperty(Components::GRAV_IMPACTED)[0],
 			Components::Physics2DData);
 	DemoProject::PlayerFSMData* data = new DemoProject::PlayerFSMData(physicsData);
 	data->PlayerRenderable = comp->getParent()->getComponentsWithProperty(Components::RENDERABLE)[0];

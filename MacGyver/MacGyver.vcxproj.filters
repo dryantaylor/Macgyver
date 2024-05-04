@@ -177,6 +177,9 @@
     <ClCompile Include="SceneManager.cpp">
       <Filter>Source Files\Engine\Gameobjects</Filter>
     </ClCompile>
+    <ClCompile Include="GravityImpacting.cpp">
+      <Filter>Source Files\Engine\Components\Physics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vector3.h">
@@ -289,6 +292,9 @@
     </ClInclude>
     <ClInclude Include="SceneManager.h">
       <Filter>Header Files\Engine\Gameobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="GravityImpacting.h">
+      <Filter>Header Files\Engine\Components\Physics</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
