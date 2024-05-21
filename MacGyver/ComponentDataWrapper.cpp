@@ -1,13 +1,7 @@
 #include "ComponentDataWrapper.h"
-#include  "UIRenderableData.h"
 
-const std::map<std::size_t, const std::function<void(Macgyver::Components::ComponentData*)>>
-Macgyver::Components::ComponentDataWrapper::ComponentDataWrapper::deletors = {
-	{typeid(Macgyver::Components::UI::UIRenderableData).hash_code(), [](ComponentData* data) {
-		delete dynamic_cast<UI::UIRenderableData*>(data);
-	}}
-};
-
+//creates the map to map hashCodes to deleting an arbritrary component data object
+#include "deletors.h"
 
 
 Macgyver::Components::ComponentDataWrapper::ComponentDataWrapper(std::size_t type,

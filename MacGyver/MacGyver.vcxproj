@@ -180,6 +180,7 @@
     <ClInclude Include="ComponentData.h" />
     <ClInclude Include="ComponentDataWrapper.h" />
     <ClInclude Include="ComponentManager.h" />
+    <ClInclude Include="deletors.h" />
     <ClInclude Include="Font.h" />
     <ClInclude Include="Force2D.h" />
     <ClInclude Include="GameCOMPONENT_TYPES.h" />

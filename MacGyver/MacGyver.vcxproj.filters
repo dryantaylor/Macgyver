@@ -82,6 +82,9 @@
     <Filter Include="Header Files\Engine\Serialisation">
       <UniqueIdentifier>{8bbec3df-37db-429d-b0dc-5ceb96d60fa4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\future-ide-created">
+      <UniqueIdentifier>{37855322-3a62-4a5b-ac10-97d4e99c712e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -295,6 +298,9 @@
     </ClInclude>
     <ClInclude Include="GravityImpacting.h">
       <Filter>Header Files\Engine\Components\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="deletors.h">
+      <Filter>Header Files\future-ide-created</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
