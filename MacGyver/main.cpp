@@ -238,7 +238,12 @@ int main(int argc, char* argv[])
 	Macgyver::Gameobjects::Component buttonBackground;
 	button.addComponent(&buttonBackground);
 	Macgyver::Components::UI::UIRenderable::AttachNew(&buttonBackground, "\\button.png", 400, 150);
-
+	
+	
+	Macgyver::Components::UI::UIRenderableData* DEUG_buttonBackgroundData =
+	componentGetData((& buttonBackground), Macgyver::Components::UI::UIRenderableData);
+	
+	
 	Macgyver::Gameobjects::Component buttonText;
 	button.addComponent(&buttonText);
 	buttonText.localTransform.x += 25;
@@ -249,7 +254,7 @@ int main(int argc, char* argv[])
 	Macgyver::Gameobjects::GameObject gravity;
 	Macgyver::Gameobjects::Component gravityComp;
 	gravity.addComponent(&gravityComp);
-	Macgyver::Components::GravityImpacting::attachNew(&gravityComp, -500.0);
+	Macgyver::Components::GravityImpacting::attachNew(&gravityComp, -9.81);
 	sc->addObject(&gravity);
 
 	getSceneManager.addScene(sc);
@@ -323,6 +328,7 @@ int main(int argc, char* argv[])
 	//Destroy window
 	SDL_DestroyWindow(WINDOW);
 
+	DEUG_buttonBackgroundData->outputAlive();
 
 	//Quit SDL subsystems
 	SDL_Quit();

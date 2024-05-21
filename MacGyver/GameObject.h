@@ -59,6 +59,8 @@ namespace Macgyver::Gameobjects {
 		*/
 		Scene* getParentScene();
 
+		~GameObject();
+
 		bool enabled = true;
 	private:
 		///pointer to parent Scene object

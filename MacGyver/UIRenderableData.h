@@ -32,5 +32,10 @@ namespace Macgyver::Components::UI {
 		/// SDL rect to contain the width and height to render the 
 		/// texture at on screen
 		SDL_Rect rect;
+
+		void outputAlive() {
+			std::cout << " UI RENDERABLE Alive" << std::endl;
+			std::cout << rect.x << std::endl;
+		}
 	};
 }

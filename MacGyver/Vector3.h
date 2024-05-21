@@ -34,5 +34,13 @@ namespace Macgyver::Math {
 		*/
 		Force2D copyToForce2D();
 
+#ifdef _DEBUG
+		/**
+		Converts the vector to a string
+		\return a string representation of the vector
+		*/
+		const std::string toString();
+#endif // DEBUG
+
 	};
 }

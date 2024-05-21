@@ -64,3 +64,11 @@ Macgyver::Math::Force2D Macgyver::Math::Vector3::copyToForce2D()
 {
 	return Force2D(this->x, this->y);
 }
+
+#ifdef _DEBUG
+#include <string>
+const std::string Macgyver::Math::Vector3::toString()
+{
+	return "Math::Vector3(x: " + std::to_string(x) + ", y: " + std::to_string(y) + ", z: " + std::to_string(z) + ")";
+}
+#endif // DEBUG

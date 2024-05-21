@@ -67,6 +67,9 @@ namespace Macgyver::Gameobjects {
 		@param deltaTime time in milliseconds since the last frame
 		*/
 		void physicsUpdate(unsigned int deltaTime);
+
+		~Scene();
+
 	private:
 		/// vector of GameObjects in the scene
 		std::vector<GameObject*> objects;

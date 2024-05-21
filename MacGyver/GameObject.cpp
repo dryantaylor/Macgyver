@@ -55,3 +55,10 @@ Gameobjects::Scene* Gameobjects::GameObject::getParentScene()
 {
 	return parentScene;
 }
+
+Macgyver::Gameobjects::GameObject::~GameObject()
+{
+	for (Component* comp : components) {
+		delete comp;
+	}
+}

@@ -69,3 +69,10 @@ void Macgyver::Gameobjects::Scene::physicsUpdate(unsigned int deltaTime)
 	}
 	
 }
+
+Macgyver::Gameobjects::Scene::~Scene()
+{
+	for (GameObject* obj : objects) {
+		delete obj;
+	}
+}

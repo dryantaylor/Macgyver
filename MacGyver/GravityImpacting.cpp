@@ -3,7 +3,7 @@
 #include "ComponentManager.h"
 #include "Physics2D.h"
 void Macgyver::Components::GravityImpacting::
-update(Gameobjects::Component* self, unsigned int deltaTime)
+update(Gameobjects::Component* self, uint32_t deltaTime)
 {
 
 }

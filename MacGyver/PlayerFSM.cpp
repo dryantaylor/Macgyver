@@ -24,11 +24,11 @@ IDLE_STATE_TRANSITION:
 	data->PlayerRenderable->localTransform.x = 0;
 	data->PlayerRenderable->localTransform.y = 0;
 IDLE_STATE:
-	if (data->physics->velocity.magnitude() > 150) {
+	if (std::abs(data->physics->velocity.x) > 150) {
 		data->currState = RUN;
 		goto RUN_STATE_TRANSITION;
 	}
-	if (data->physics->velocity.magnitude() > 0) {
+	if (std::abs(data->physics->velocity.x) > 0.005f) {
 		data->currState = WALK;
 		goto WALK_STATE_TRANSITION;
 	}
@@ -38,11 +38,11 @@ WALK_STATE_TRANSITION:
 	data->PlayerRenderable->localTransform.x = 0;
 	data->PlayerRenderable->localTransform.y = 73;
 WALK_STATE:
-	if (data->physics->velocity.magnitude() > 150) {
+	if (std::abs(data->physics->velocity.x) > 150) {
 		data->currState = RUN;
 		goto RUN_STATE_TRANSITION;
 	}
-	if (data->physics->velocity.magnitude() == 0) {
+	if (std::abs(data->physics->velocity.x) < 0.005f) {
 		data->currState = IDLE;
 		goto IDLE_STATE_TRANSITION;
 	}
@@ -50,11 +50,11 @@ WALK_STATE:
 RUN_STATE_TRANSITION:
 	getAnimationHandler.changeActiveAnimation(data->internal_animId, "player/run");
 RUN_STATE:
-	if (data->physics->velocity.magnitude() > 0 && data->physics->velocity.magnitude() < 300) {
+	if (std::abs(data->physics->velocity.x) > 0.005f && std::abs(data->physics->velocity.x) < 150) {
 		data->currState = WALK;
 		goto WALK_STATE_TRANSITION;
 	}
-	if (data->physics->velocity.magnitude() == 0) {
+	if (std::abs(data->physics->velocity.x) <= 0.005f) {
 		data->currState = IDLE;
 		goto IDLE_STATE_TRANSITION;
 	}
@@ -66,7 +66,7 @@ void DemoProject::PlayerFSM::attachNew(Gameobjects::Component* comp)
 	comp->update = PlayerFSM::update;
  	Components::Physics2DData* physicsData =
 		componentGetData(
-			comp->getParent()->getComponentsWithProperty(Components::GRAV_IMPACTED)[0],
+			comp->getParent()->getComponentsWithProperty(Components::VELOCITY)[0],
 			Components::Physics2DData);
 	DemoProject::PlayerFSMData* data = new DemoProject::PlayerFSMData(physicsData);
 	data->PlayerRenderable = comp->getParent()->getComponentsWithProperty(Components::RENDERABLE)[0];

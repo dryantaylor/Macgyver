@@ -41,15 +41,15 @@ void DemoProject::PlayerController::update(Macgyver::Gameobjects::Component* sel
 	}
 	else {
 	}
-	data->velocity.y = force.y;
-	data->velocity.x = force.x;
+	data->forces.y = force.y;
+	data->forces.x = force.x;
 
 }
 
 
 void DemoProject::PlayerController::attachNew(Macgyver::Gameobjects::Component* comp)
 {
-	comp->setComponentProperties(Macgyver::Components::GRAV_IMPACTED);
+	comp->setComponentProperties(Macgyver::Components::VELOCITY);
 	comp->update = PlayerController::update;
 	comp->physicsUpdate = Macgyver::Components::Velocity::physicsUpdate;
 	//comp->addData((Macgyver::Components::ComponentData*)

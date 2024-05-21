@@ -10,3 +10,17 @@ Components::Physics2DData::Physics2DData()
 	velocity = Math::Force2D(0, 0);
 	mass = 0;
 }
+
+#ifdef _DEBUG
+#include <string>
+const std::string Macgyver::Components::Physics2DData::toString()
+{
+	std::string output = "Physics2DData: \n";
+	output += "Velocity: " + velocity.toString() + "\n";
+	output += "Acceleration: " + acceleration.toString() + "\n";
+	output += "Forces: " + forces.toString() + "\n";
+	output += "Mass: " + std::to_string(mass) + "\n";
+	return output;
+
+}
+#endif // DEBUG

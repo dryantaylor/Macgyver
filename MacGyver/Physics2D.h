@@ -26,5 +26,9 @@ namespace Macgyver::Components {
 		/// mass of the object
 		float mass; 
 		bool isMoveable;
+#ifdef _DEBUG
+		/// debug function to print the data
+		 const std::string toString();
+#endif
 	};
 }
