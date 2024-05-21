@@ -163,6 +163,7 @@ int main(int argc, char* argv[])
 	getTextRenderer.addFont("jetbrains", &font2);
 
 
+
 	/*
 	* MAIN GAME, CREATE ALL DATA BEFORE THE WHILE LOOP
 	* CALL ALL UPDATES AND DRAWING WITHIN THE WHILE LOOP
@@ -171,6 +172,24 @@ int main(int argc, char* argv[])
 		std::make_shared<Gameobjects::Scene>(
 			Gameobjects::Scene("main"));
 	sc->scene_RENDERER = c_RENDERER;
+
+	Gameobjects::GameObject* button_TEST = new Gameobjects::GameObject();;
+	sc->addObject(button_TEST);
+	Macgyver::Gameobjects::Component* buttonBackground_TEST = new Gameobjects::Component();
+	button_TEST->addComponent(buttonBackground_TEST);
+	Macgyver::Components::UI::UIRenderable::AttachNew(buttonBackground_TEST, "\\button.png", 400, 150);
+
+
+	Macgyver::Components::UI::UIRenderableData* DEBUG_buttonBackgroundData_TEST =
+		componentGetData((buttonBackground_TEST), Macgyver::Components::UI::UIRenderableData);
+	
+	DEBUG_buttonBackgroundData_TEST->rect.x = 34785;
+	sc.reset();
+	sc = nullptr;
+	DEBUG_buttonBackgroundData_TEST->outputAlive();
+
+	return 0;
+
 
 	Gameobjects::GameObject playerController;
 	Gameobjects::GameObject camera;

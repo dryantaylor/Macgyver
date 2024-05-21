@@ -1,4 +1,5 @@
-﻿  Text.cpp
+﻿  ComponentDataWrapper.cpp
+  Text.cpp
   UICamera.cpp
 C:\Users\44791\source\repos\macgyver_v1\MacGyver\UICamera.cpp(17,43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
 C:\Users\44791\source\repos\macgyver_v1\MacGyver\UICamera.cpp(18,43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
@@ -8,6 +9,6 @@ C:\Users\44791\source\repos\macgyver_v1\MacGyver\UICamera.cpp(18,43): warning C4
 C:\Users\44791\source\repos\macgyver_v1\MacGyver\Physics2D.h(11,3): warning C4091: 'static ': ignored on left of 'Macgyver::Components::PhysicsConstants' when no variable is declared
   (compiling source file 'main.cpp')
   
-C:\Users\44791\source\repos\macgyver_v1\MacGyver\main.cpp(257,67): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\44791\source\repos\macgyver_v1\MacGyver\main.cpp(276,67): warning C4305: 'argument': truncation from 'double' to 'float'
   Generating Code...
   MacGyver.vcxproj -> C:\Users\44791\source\repos\macgyver_v1\x64\Debug\MacGyver.exe

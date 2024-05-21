@@ -58,5 +58,14 @@ Gameobjects::Scene* Gameobjects::Component::getWorldScene()
     return this->getParent()->getParentScene();
 }
 
+Macgyver::Gameobjects::Component::~Component()
+{
+    for (Components::ComponentDataWrapper* wrapper : data) {
+        wrapper->deleteComponent();
+        //delete wrapper;
+	}
+	//data.clear();
+}
+
 
 

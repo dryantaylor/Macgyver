@@ -92,11 +92,14 @@ namespace Macgyver::Gameobjects{
 		/// with a self argument)
 		std::function<void(Component*)> physicsUpdate;
 
+		~Component();
+
+
 		bool enabled = true;
 	private:
 		/// set of pointers to the different data structs this
 		/// component has
-		std::vector<Components::ComponentDataWrapper*> data;
+		std::vector<Macgyver::Components::ComponentDataWrapper*> data;
 		/// pointer to the parent GameObject
 		GameObject* parent;
 		/// properties/flags of this component, which makes guarantees

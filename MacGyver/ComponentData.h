@@ -31,6 +31,9 @@ namespace Macgyver::Components {
 	Dummy structure to represent a given used Data struct
 	*/
 	struct ComponentData {
-		
+		virtual void ignore() { }
+		 ~ComponentData() {
+			std::cout << "freeing component : "<< this << std::endl;
+		}
 	};
 }

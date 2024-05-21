@@ -7,7 +7,7 @@
 
 namespace Macgyver::Components::UI {
 
-	struct UIRenderableData {
+	struct UIRenderableData: public ComponentData{
 		/**
 		* Constructor to create a UIRenderableDataStruct
 		* 
