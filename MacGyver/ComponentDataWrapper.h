@@ -2,6 +2,7 @@
 #include "ComponentData.h"
 #include <map>
 #include <functional>
+#include <string>
 
 //#include "UIRenderableData.h"
 namespace Macgyver::Components {
@@ -10,7 +11,6 @@ namespace Macgyver::Components {
 	and a pointer to the Data struct
 	*/
 	struct ComponentDataWrapper {
-		static const std::map<std::size_t, const std::function<void(ComponentData*)>> deletors;
 		/**
 		Constructor for the struct
 
@@ -27,5 +27,11 @@ namespace Macgyver::Components {
 		ComponentData* data;
 
 		void deleteComponent();
+
+	
+		static const std::map<std::size_t, const std::function<void(ComponentData*)>> destructors;
+#ifdef _DEBUG
+		static const std::map<std::size_t, const std::string > typeHashToComponentNames;
+#endif // _DEBUG
 	};
 }

@@ -299,8 +299,5 @@
     <ClInclude Include="GravityImpacting.h">
       <Filter>Header Files\Engine\Components\Physics</Filter>
     </ClInclude>
-    <ClInclude Include="deletors.h">
-      <Filter>Header Files\future-ide-created</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

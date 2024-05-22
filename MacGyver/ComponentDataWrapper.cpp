@@ -1,7 +1,7 @@
 #include "ComponentDataWrapper.h"
 
 //creates the map to map hashCodes to deleting an arbritrary component data object
-#include "deletors.h"
+#include "constructDataWrapperMaps.h"
 
 
 Macgyver::Components::ComponentDataWrapper::ComponentDataWrapper(std::size_t type,
@@ -14,9 +14,9 @@ Macgyver::Components::ComponentDataWrapper::ComponentDataWrapper(std::size_t typ
 void Macgyver::Components::ComponentDataWrapper::deleteComponent()
 {
 
-	if (deletors.find(type) != deletors.end()) {
-		std::cout << "deleting component in deleteComponent: "<< data << std::endl;
-		deletors.at(type)(data);
+	if (destructors.find(type) != destructors.end()) {
+		std::cout << "deleting component: "<< data << ", using deletor for "<< typeHashToComponentNames.at(type) << std::endl;
+		destructors.at(type)(data);
 
 	}
 

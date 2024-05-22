@@ -169,114 +169,92 @@ int main(int argc, char* argv[])
 	* CALL ALL UPDATES AND DRAWING WITHIN THE WHILE LOOP
 	*/
 	auto sc = 
-		std::make_shared<Gameobjects::Scene>(
+		std::make_unique<Gameobjects::Scene>(
 			Gameobjects::Scene("main"));
 	sc->scene_RENDERER = c_RENDERER;
-
-	Gameobjects::GameObject* button_TEST = new Gameobjects::GameObject();;
-	sc->addObject(button_TEST);
-	Macgyver::Gameobjects::Component* buttonBackground_TEST = new Gameobjects::Component();
-	button_TEST->addComponent(buttonBackground_TEST);
-	Macgyver::Components::UI::UIRenderable::AttachNew(buttonBackground_TEST, "\\button.png", 400, 150);
-
-
-	Macgyver::Components::UI::UIRenderableData* DEBUG_buttonBackgroundData_TEST =
-		componentGetData((buttonBackground_TEST), Macgyver::Components::UI::UIRenderableData);
 	
-	DEBUG_buttonBackgroundData_TEST->rect.x = 34785;
-	sc.reset();
-	sc = nullptr;
-	DEBUG_buttonBackgroundData_TEST->outputAlive();
+	Gameobjects::GameObject* playerController = new Gameobjects::GameObject();
+	Gameobjects::GameObject* camera = new Gameobjects::GameObject();
 
-	return 0;
+	Gameobjects::GameObject* UIcam = new Gameobjects::GameObject();
+	Gameobjects::GameObject* UItext = new Gameobjects::GameObject();
 
-
-	Gameobjects::GameObject playerController;
-	Gameobjects::GameObject camera;
-
-	Gameobjects::GameObject UIcam;
-	Gameobjects::GameObject UItext;
-
-	sc->addObject(&playerController);
-	sc->addObject(&camera);
-	sc->addObject(&UIcam);
-	sc->addObject(&UItext);
+	sc->addObject(playerController);
+	sc->addObject(camera);
+	sc->addObject(UIcam);
+	sc->addObject(UItext);
 
 
-	Gameobjects::Component playerSprite;
-	Gameobjects::Component playerMovement;
-	Gameobjects::Component playerState;
-	Gameobjects::Component playerInputBuffer;
-	playerController.addComponent(&playerSprite);
-	playerController.addComponent(&playerMovement);
-	playerController.addComponent(&playerState);
-	playerController.addComponent(&playerInputBuffer);
+	Gameobjects::Component* playerSprite = new Gameobjects::Component();
+	Gameobjects::Component* playerMovement = new Gameobjects::Component();
+	Gameobjects::Component* playerState = new Gameobjects::Component();
+	Gameobjects::Component* playerInputBuffer = new Gameobjects::Component();
+	playerController->addComponent(playerSprite);
+	playerController->addComponent(playerMovement);
+	playerController->addComponent(playerState);
+	playerController->addComponent(playerInputBuffer);
 
-	Gameobjects::Component cam;
-	camera.addComponent(&cam);
+	Gameobjects::Component* cam = new Gameobjects::Component();
+	camera->addComponent(cam);
 
-	Gameobjects::Component UIcam_comp;
-	UIcam.addComponent(&UIcam_comp);
+	Gameobjects::Component* UIcam_comp = new Gameobjects::Component();
+	UIcam->addComponent(UIcam_comp);
 
-	Gameobjects::Component UItext_comp;
-	UItext.addComponent(&UItext_comp);
+	Gameobjects::Component* UItext_comp = new Gameobjects::Component();
+	UItext->addComponent(UItext_comp);
 
 
-	Components::Renderable::AttachNew(&playerSprite, "", 525, 410);
-	DemoProject::PlayerController::attachNew(&playerMovement);
-	DemoProject::PlayerFSM::attachNew(&playerState);
-	DemoProject::InputBuffer::attachNew(&playerInputBuffer);
+	Components::Renderable::AttachNew(playerSprite, "", 525, 410);
+	DemoProject::PlayerController::attachNew(playerMovement);
+	DemoProject::PlayerFSM::attachNew(playerState);
+	DemoProject::InputBuffer::attachNew(playerInputBuffer);
 
-	Components::Camera::AttachNew(&cam);
+	Components::Camera::AttachNew(cam);
 
-	Components::UI::UICamera::AttachNew(&UIcam_comp);
+	Components::UI::UICamera::AttachNew(UIcam_comp);
 
 	SDL_Rect temp;
 	temp.x = temp.y = 0;
 	temp.w = 400;
 	temp.h = 400;
-	Components::UI::Text::attachNew(&UItext_comp,
+	Components::UI::Text::attachNew(UItext_comp,
 		"test-font", "Hello World", 256, temp
 	);
-	Macgyver::Gameobjects::Component keyPressOverlay;
-	UItext.addComponent(&keyPressOverlay);
-	DemoProject::KeyPressedOverlay::attachNew(&keyPressOverlay,&UItext_comp);
+	Macgyver::Gameobjects::Component* keyPressOverlay = new Gameobjects::Component();
+	UItext->addComponent(keyPressOverlay);
+	DemoProject::KeyPressedOverlay::attachNew(keyPressOverlay,UItext_comp);
 
-	Gameobjects::GameObject button;
-	sc->addObject(&button);
+	Gameobjects::GameObject* button = new Gameobjects::GameObject();
+	sc->addObject(button);
 
-	button.transform.x = 400;
-	button.transform.y = 200;
+	button->transform.x = 400;
+	button->transform.y = 200;
 
-	Macgyver::Gameobjects::Component pressedDetector;
-	button.addComponent(&pressedDetector);
+	Macgyver::Gameobjects::Component* pressedDetector = new Gameobjects::Component();
+	button->addComponent(pressedDetector);
 	Macgyver::Components::UI::UIMouseDetector::attachNew(
-		&pressedDetector, { 0,0,400,150 }, 10, 0b1
+		pressedDetector, { 0,0,400,150 }, 10, 0b1
 	);
 
-	Macgyver::Gameobjects::Component buttonBackground;
-	button.addComponent(&buttonBackground);
-	Macgyver::Components::UI::UIRenderable::AttachNew(&buttonBackground, "\\button.png", 400, 150);
+	Macgyver::Gameobjects::Component* buttonBackground = new Gameobjects::Component();
+	button->addComponent(buttonBackground);
+	Macgyver::Components::UI::UIRenderable::AttachNew(buttonBackground, "\\button.png", 400, 150);
 	
-	
-	Macgyver::Components::UI::UIRenderableData* DEUG_buttonBackgroundData =
-	componentGetData((& buttonBackground), Macgyver::Components::UI::UIRenderableData);
-	
-	
-	Macgyver::Gameobjects::Component buttonText;
-	button.addComponent(&buttonText);
-	buttonText.localTransform.x += 25;
-	buttonText.localTransform.y += 15;
-	Macgyver::Components::UI::Text::attachNew(&buttonText, "jetbrains", "Press", 128, { 0,0,400,150 });
+
+	Macgyver::Gameobjects::Component* buttonText = new Gameobjects::Component();
+	button->addComponent(buttonText);
+	buttonText->localTransform.x += 25;
+	buttonText->localTransform.y += 15;
+	Macgyver::Components::UI::Text::attachNew(buttonText, "jetbrains", "Press", 128, { 0,0,400,150 });
 
 
-	Macgyver::Gameobjects::GameObject gravity;
-	Macgyver::Gameobjects::Component gravityComp;
-	gravity.addComponent(&gravityComp);
-	Macgyver::Components::GravityImpacting::attachNew(&gravityComp, -9.81);
-	sc->addObject(&gravity);
+	Macgyver::Gameobjects::GameObject* gravity = new Gameobjects::GameObject();
+	Macgyver::Gameobjects::Component* gravityComp = new Gameobjects::Component();
+	gravity->addComponent(gravityComp);
+	Macgyver::Components::GravityImpacting::attachNew(gravityComp, -9.81);
+	sc->addObject(gravity);
 
-	getSceneManager.addScene(sc);
+	getSceneManager.addScene(std::move(sc));
 	getSceneManager.setActiveScene("main");
 	/*
 	* INIITIALISE VALUES NEEDED FOR THE MAIN LOOP
@@ -347,7 +325,6 @@ int main(int argc, char* argv[])
 	//Destroy window
 	SDL_DestroyWindow(WINDOW);
 
-	DEUG_buttonBackgroundData->outputAlive();
 
 	//Quit SDL subsystems
 	SDL_Quit();

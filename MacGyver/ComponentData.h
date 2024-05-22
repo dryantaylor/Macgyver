@@ -32,8 +32,5 @@ namespace Macgyver::Components {
 	*/
 	struct ComponentData {
 		virtual void ignore() { }
-		 ~ComponentData() {
-			std::cout << "freeing component : "<< this << std::endl;
-		}
 	};
 }

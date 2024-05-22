@@ -29,7 +29,7 @@ namespace Macgyver::Components::UI {
 			SDL_Rect location, size_t messageIndex, long long hoverValue = 1);
 	};
 
-	struct UIMouseDetectorData {
+	struct UIMouseDetectorData : ComponentData  {
 		/**
 		* Constructor for MouseDetectorData
 		* 
