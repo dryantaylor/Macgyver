@@ -83,7 +83,7 @@ void DEBUG_PROFILE_FRAMETIMES(unsigned int* frames, std::size_t numFrames)
 	std::cout << "Median Frame time : " << frames[((numFrames + 1) / 2) -1] << std::endl;
 	std::cout << "90th %tile Frame time: " << frames[(numFrames / 10 * 9) - 1] << std::endl;
 	std::cout << "99th %tile Frame time: " << frames[(numFrames / 100 * 99) -1] << std::endl;
-	std::cout << "Highest Frame: " << frames[numFrames - 2] << std::endl;
+	std::cout << "Highest Frame: " << frames[numFrames - 1] << std::endl;
 
 }
 
@@ -256,6 +256,9 @@ int main(int argc, char* argv[])
 
 	getSceneManager.addScene(std::move(sc));
 	getSceneManager.setActiveScene("main");
+
+	unsigned int* frameTimes = new unsigned int[1000];
+	unsigned int frameIndex = 0;
 	/*
 	* INIITIALISE VALUES NEEDED FOR THE MAIN LOOP
 	*/
@@ -264,7 +267,7 @@ int main(int argc, char* argv[])
 	unsigned int curr_time;
 	SDL_Event e;
 	running = true;
-	while (running)
+	while (running && frameIndex < 1000)
 	{
 		curr_time = SDL_GetTicks();
 		deltaTime = std::max(curr_time - last_time, static_cast<uint32_t>(1));
@@ -312,7 +315,10 @@ int main(int argc, char* argv[])
 			std::cout << "pressed" << std::endl;
 		}
 		//std::cout << playerController.transform.y << std::endl;
+		frameTimes[frameIndex] = deltaTime;
+		frameIndex++;
 	}
+	DEBUG_PROFILE_FRAMETIMES(frameTimes, frameIndex);
 	/*
 	* HANDLE CLEAN UP HERE
 	*/

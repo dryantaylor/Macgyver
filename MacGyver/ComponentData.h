@@ -13,7 +13,7 @@
 * type *type* casted correctly
 */
 #define componentGetData(comp, type) \
-(type*)(comp->getData(typeHash(type)))
+(type*)(comp->getData(typeHash(type))) 
 
 /**
 * Macro for creating a new ComponentData of type
@@ -31,6 +31,7 @@ namespace Macgyver::Components {
 	Dummy structure to represent a given used Data struct
 	*/
 	struct ComponentData {
+	private:
 		virtual void ignore() { }
 	};
 }
