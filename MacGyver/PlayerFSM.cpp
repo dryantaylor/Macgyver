@@ -2,12 +2,12 @@
 #include "AnimationHandler.h"
 #include "ComponentData.h"
 using namespace Macgyver;
-void DemoProject::PlayerFSM::update(Gameobjects::Component* self, unsigned int deltaTime)
+void DemoProject::PlayerFSM::update(Gameobjects::Component* self, std::uint32_t deltaTime)
 {
-	PlayerFSMData* data = componentGetData(self, PlayerFSMData);
-	switch (data->currState) {
+	PlayerFSMData* state = componentGetData(self, PlayerFSMData);
+	switch (state->currState) {
 	case LAUNCH:
-		data->currState = IDLE;
+		state->currState = IDLE;
 		goto IDLE_STATE_TRANSITION;
 	case IDLE:
 		goto IDLE_STATE;
@@ -19,43 +19,43 @@ void DemoProject::PlayerFSM::update(Gameobjects::Component* self, unsigned int d
 
 	return;
 IDLE_STATE_TRANSITION:
-	getAnimationHandler.changeActiveAnimation(data->internal_animId, "player/idle");
+	getAnimationHandler.changeActiveAnimation(state->internal_animId, "player/idle");
 	//local transform changes handles difference in sprite sizes
-	data->PlayerRenderable->localTransform.x = 0;
-	data->PlayerRenderable->localTransform.y = 0;
+	state->PlayerRenderable->localTransform.x = 0;
+	state->PlayerRenderable->localTransform.y = 0;
 IDLE_STATE:
-	if (std::abs(data->physics->velocity.x) > 150) {
-		data->currState = RUN;
+	if (std::abs(state->physics->velocity.x) > 150) {
+		state->currState = RUN;
 		goto RUN_STATE_TRANSITION;
 	}
-	if (std::abs(data->physics->velocity.x) > 0.005f) {
-		data->currState = WALK;
+	if (std::abs(state->physics->velocity.x) > 0.005f) {
+		state->currState = WALK;
 		goto WALK_STATE_TRANSITION;
 	}
 	return;
 WALK_STATE_TRANSITION:
-	getAnimationHandler.changeActiveAnimation(data->internal_animId, "player/walk");
-	data->PlayerRenderable->localTransform.x = 0;
-	data->PlayerRenderable->localTransform.y = 73;
+	getAnimationHandler.changeActiveAnimation(state->internal_animId, "player/walk");
+	state->PlayerRenderable->localTransform.x = 0;
+	state->PlayerRenderable->localTransform.y = 73;
 WALK_STATE:
-	if (std::abs(data->physics->velocity.x) > 150) {
-		data->currState = RUN;
+	if (std::abs(state->physics->velocity.x) > 150) {
+		state->currState = RUN;
 		goto RUN_STATE_TRANSITION;
 	}
-	if (std::abs(data->physics->velocity.x) < 0.005f) {
-		data->currState = IDLE;
+	if (std::abs(state->physics->velocity.x) < 0.005f) {
+		state->currState = IDLE;
 		goto IDLE_STATE_TRANSITION;
 	}
 	return;
 RUN_STATE_TRANSITION:
-	getAnimationHandler.changeActiveAnimation(data->internal_animId, "player/run");
+	getAnimationHandler.changeActiveAnimation(state->internal_animId, "player/run");
 RUN_STATE:
-	if (std::abs(data->physics->velocity.x) > 0.005f && std::abs(data->physics->velocity.x) < 150) {
-		data->currState = WALK;
+	if (std::abs(state->physics->velocity.x) > 0.005f && std::abs(state->physics->velocity.x) < 150) {
+		state->currState = WALK;
 		goto WALK_STATE_TRANSITION;
 	}
-	if (std::abs(data->physics->velocity.x) <= 0.005f) {
-		data->currState = IDLE;
+	if (std::abs(state->physics->velocity.x) <= 0.005f) {
+		state->currState = IDLE;
 		goto IDLE_STATE_TRANSITION;
 	}
 	return;

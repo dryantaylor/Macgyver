@@ -1,6 +1,7 @@
 #pragma once
 #include "SDL.h"
 #include "Force2D.h"
+#include "ComponentData.h"
 namespace Macgyver::Components {
 	/**
 	Contains constants for the physics
@@ -12,7 +13,7 @@ namespace Macgyver::Components {
 	/**
 	Struct to hold Physics data for a component
 	*/
-	struct Physics2DData {
+	struct Physics2DData: ComponentData {
 		Physics2DData();
 		/// pointer to a Rect to represent a collider
 		SDL_Rect* collider;
@@ -27,7 +28,10 @@ namespace Macgyver::Components {
 		float mass; 
 		bool isMoveable;
 #ifdef _DEBUG
-		/// debug function to print the data
+		/*
+		* Overridden function to print Physics2DData to string
+		* \returns all properties of Physics2DData formatted to string
+		*/
 		 const std::string toString();
 #endif
 	};

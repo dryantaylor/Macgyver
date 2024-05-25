@@ -24,7 +24,7 @@ namespace Macgyver::Components::UI {
 	/**
 	* Struct to hold data about text being rendered to the screen
 	*/
-	struct TextData {
+	struct TextData : ComponentData{
 		TextData(SDL_Renderer* renderer, std::string txt, 
 			std::string fnt, unsigned int ptSize, SDL_Rect rect);
 

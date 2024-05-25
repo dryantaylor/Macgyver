@@ -254,9 +254,6 @@
     <ClInclude Include="Text.h">
       <Filter>Header Files\Engine\Components\UI</Filter>
     </ClInclude>
-    <ClInclude Include="TextData.h">
-      <Filter>Header Files\Engine\Components\UI</Filter>
-    </ClInclude>
     <ClInclude Include="UICamera.h">
       <Filter>Header Files\Engine\Components\UI</Filter>
     </ClInclude>
@@ -281,9 +278,6 @@
     <ClInclude Include="json.hpp">
       <Filter>Header Files\Engine\Serialisation</Filter>
     </ClInclude>
-    <ClInclude Include="PlayerFSM.h">
-      <Filter>Header Files\Game</Filter>
-    </ClInclude>
     <ClInclude Include="GameCOMPONENT_TYPES.h">
       <Filter>Header Files\Game</Filter>
     </ClInclude>
@@ -298,6 +292,9 @@
     </ClInclude>
     <ClInclude Include="GravityImpacting.h">
       <Filter>Header Files\Engine\Components\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerFSM.h">
+      <Filter>Source Files\Game</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

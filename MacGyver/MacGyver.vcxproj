@@ -201,7 +201,6 @@
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="SingletonSerialiser.h" />
     <ClInclude Include="Text.h" />
-    <ClInclude Include="TextData.h" />
     <ClInclude Include="TextRenderer.h" />
     <ClInclude Include="UICamera.h" />
     <ClInclude Include="UIMouseDetector.h" />

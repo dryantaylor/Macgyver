@@ -12,18 +12,18 @@ namespace DemoProject {
 		RUN
 	};
 
-	struct PlayerFSMData {
+	struct PlayerFSMData: Macgyver::Components::ComponentData {
 		PlayerFSMData(Macgyver::Components::Physics2DData* phys);
 		Macgyver::Gameobjects::Component* PlayerRenderable;
 		Macgyver::Components::Physics2DData* physics;
 		PlayerFSMstates currState;
 
-		unsigned int internal_animId;
+		std::uint32_t internal_animId;
 
 	};
 
 	struct PlayerFSM {
-		static void update(Macgyver::Gameobjects::Component* self, unsigned int deltaTime);
+		static void update(Macgyver::Gameobjects::Component* self, std::uint32_t deltaTime);
 		static void attachNew(Macgyver::Gameobjects::Component* comp);
 	};
 }

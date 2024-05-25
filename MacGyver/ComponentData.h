@@ -2,7 +2,8 @@
 #include "GameObject.h"
 
 #include "Scene.h"
-
+#include < iomanip >
+#include <sstream>
 /**
 * Macro for getting the hash of a type
 */
@@ -31,6 +32,17 @@ namespace Macgyver::Components {
 	Dummy structure to represent a given used Data struct
 	*/
 	struct ComponentData {
+#if _DEBUG
+		/*
+		* Default function to output Component Data to string
+		* \returns address of function in string form
+		*/
+		virtual const std::string toString() {
+			std::stringstream stream;
+			stream << std::hex << this;
+			return stream.str();
+		}
+#endif
 	private:
 		virtual void ignore() { }
 	};

@@ -15,7 +15,7 @@ void Macgyver::Components::ComponentDataWrapper::deleteComponent()
 {
 
 	if (destructors.find(type) != destructors.end()) {
-		std::cout << "deleting component: "<< data << ", using deletor for "<< typeHashToComponentNames.at(type) << std::endl;
+		std::cout << "deleting component: {"<< data->toString() << "}"<< std::endl <<"\tusing deletor for "<< typeHashToComponentNames.at(type) << std::endl;
 		destructors.at(type)(data);
 
 	}

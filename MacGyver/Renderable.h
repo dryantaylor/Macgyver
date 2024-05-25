@@ -11,7 +11,7 @@ namespace Macgyver::Components {
 	/**
 	Struct to hold data needed for a component to render data.
 	*/
-	struct RenderableData {
+	struct RenderableData: ComponentData {
 		/**
 		Creates a RenderableData struct
 		
