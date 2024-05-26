@@ -6,6 +6,9 @@
 
 #define getInput Macgyver::Input::getInstance()
 
+///maximum value for controller range, technically the max is 
+#define Sint16_MAX (Sint16) 32767
+#define Sint16_MIN (Sint16) -32768
 namespace Macgyver {
 	/**
 	Static class to handle checking for input in the engine
@@ -53,6 +56,8 @@ namespace Macgyver {
 		bool controller_isButtonDown(int32_t id, SDL_GameControllerButton button);
 
 		int32_t controller_getAxisPosition(int32_t id, SDL_GameControllerAxis axis);
+
+		std::vector<int32_t> getAllOpenedControllers();
 
 		bool isMouseButtonDown(Mouse button);
 		

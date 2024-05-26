@@ -151,6 +151,7 @@
     <ClCompile Include="GravityImpacting.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="InputBuffer.cpp" />
+    <ClCompile Include="InputMap.cpp" />
     <ClCompile Include="KeyPressedOverlay.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Messenger.cpp" />
@@ -189,6 +190,7 @@
     <ClInclude Include="GravityImpacting.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="InputBuffer.h" />
+    <ClInclude Include="InputMap.h" />
     <ClInclude Include="json.hpp" />
     <ClInclude Include="KeyPressedOverlay.h" />
     <ClInclude Include="Messenger.h" />

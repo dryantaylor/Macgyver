@@ -68,6 +68,17 @@ int32_t Macgyver::Input::controller_getAxisPosition(int32_t id, SDL_GameControll
 	return SDL_JoystickGetAxis(controllers.at(id), axis);
 }
 
+std::vector<int32_t> Macgyver::Input::getAllOpenedControllers()
+{
+	auto ids = std::vector<int32_t>();
+
+	for (auto iter = controllers.begin(); iter != controllers.end(); iter++) {
+		ids.push_back(iter->first);
+	}
+	ids.shrink_to_fit();
+	return ids;
+}
+
 bool Macgyver::Input::isMouseButtonDown(Mouse button)
 {
 	return mouseState & button;

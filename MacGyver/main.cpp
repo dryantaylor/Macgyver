@@ -15,12 +15,13 @@
 #include "SceneManager.h"
 #include "GameObject.h"
 #include "Input.h"
+#include "InputMap.h"
 #include "Camera.h"
 #include "Renderable.h"
 #include "AnimationHandler.h"
 
 #include "TextRenderer.h"
-#include  "Font.h"
+#include "Font.h"
 #include "Text.h"
 #include "UICamera.h"
 #include "UIMouseDetector.h"
@@ -149,6 +150,7 @@ int main(int argc, char* argv[])
 	getAnimationHandler.attachRenderer(c_RENDERER);
 	getInput;
 	getMessenger;
+	getInputMap;
 
 	Macgyver::UI::Font font = Macgyver::UI::Font(c_RENDERER,
 		"\\KirimomiSwash.ttf",
@@ -162,7 +164,10 @@ int main(int argc, char* argv[])
 
 	getTextRenderer.addFont("jetbrains", &font2);
 
-
+	std::cout << getInput.getNumConnectedControllers();
+	
+	getInput.openController(0);
+	//getInputMap.addBinding("X-Axis", SDL_CONTROLLER_BUTTON_DPAD_LEFT, 0);
 
 	/*
 	* MAIN GAME, CREATE ALL DATA BEFORE THE WHILE LOOP
@@ -190,7 +195,7 @@ int main(int argc, char* argv[])
 	Gameobjects::Component* playerState = new Gameobjects::Component();
 	Gameobjects::Component* playerInputBuffer = new Gameobjects::Component();
 	playerController->addComponent(playerSprite);
-	playerController->addComponent(playerMovement);
+	playerController->addComponent(playerMovement); 
 	playerController->addComponent(playerState);
 	playerController->addComponent(playerInputBuffer);
 
@@ -315,7 +320,7 @@ int main(int argc, char* argv[])
 			std::cout << "pressed" << std::endl;
 		}
 		//std::cout << playerController.transform.y << std::endl;
-		
+		std::cout << getInputMap.getValue("X-Axis") << std::endl;
 	}
 	std::cin;
 	/*
