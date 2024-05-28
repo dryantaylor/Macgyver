@@ -167,7 +167,8 @@ int main(int argc, char* argv[])
 	std::cout << getInput.getNumConnectedControllers();
 	
 	getInput.openController(0);
-	//getInputMap.addBinding("X-Axis", SDL_CONTROLLER_BUTTON_DPAD_LEFT, 0);
+	getInputMap.addBinding("X-Axis",SDL_CONTROLLER_AXIS_LEFTX, 0);
+	getInputMap.addBinding("Y-Axis", SDL_CONTROLLER_AXIS_LEFTY, 0);
 
 	/*
 	* MAIN GAME, CREATE ALL DATA BEFORE THE WHILE LOOP

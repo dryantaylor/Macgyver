@@ -1,5 +1,6 @@
 #include "PlayerController.h"
 #include "Input.h"
+#include "InputMap.h"
 #include "AnimationHandler.h"
 #include "Force2D.h"
 #include "ComponentManager.h"
@@ -13,6 +14,7 @@ void DemoProject::PlayerController::update(Macgyver::Gameobjects::Component* sel
 	Math::Force2D force(0, 0);
 	Components::Physics2DData* data = 
 		componentGetData(self, Components::Physics2DData);
+	/*
 	if (Input::getInstance().isKeyDown(SDLK_w)) {
 		force.y += 1;
 	}
@@ -24,15 +26,21 @@ void DemoProject::PlayerController::update(Macgyver::Gameobjects::Component* sel
 	}
 	if (Input::getInstance().isKeyDown(SDLK_d)) {
 		force.x += 1;
-	}
+	}*/
 
+	float xAxis = getInputMap.getValue("X-Axis");
+	if (std::abs(xAxis) >= 0.1)
+		force.x += xAxis;
+	float yAxis = getInputMap.getValue("Y-Axis");
+	if (std::abs(yAxis) >= 0.1)
+		force.y -= yAxis;
 	//Display keys pressed on UI, must be done before scaling
 	getMessenger[0] = getInput.isKeyDown(SDLK_LSHIFT);
 	getMessenger[1] = force.x;
 	getMessenger[2] = force.y;
 
 	if (force.x != 0 || force.y != 0 ) {
-		if (Input::getInstance().isKeyDown(SDLK_LSHIFT)) {
+		if (force.magnitude() >= 0.75) {
 			force.scaleToMagnitude(playerData->sprintSpeed);	
 		}
 		else {

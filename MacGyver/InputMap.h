@@ -31,11 +31,14 @@ namespace Macgyver {
 		std::map<const std::string, SDL_Scancode> keyboardButtonBindings;
 		std::map<const std::string, std::tuple<SDL_GameControllerButton, int32_t>> controllerButtonBindings;
 
+
 		float getKeyboardAxisValue(std::tuple<SDL_Scancode, SDL_Scancode>* keys);
 		float getControllerAxisValue(std::tuple<SDL_GameControllerAxis, int32_t>* binding);
 		float getControllerButtonAxisValue(std::tuple<SDL_GameControllerButton,
 			SDL_GameControllerButton, int32_t>* binding);
+		float getKeyboardButtonValue(SDL_Scancode* key);
 
+		float getControllerButtonValue(std::tuple<SDL_GameControllerButton, int32_t>* binding);
 		InputMap() = default;
 		~InputMap() = default;
 	};

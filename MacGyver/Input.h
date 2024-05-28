@@ -69,7 +69,7 @@ namespace Macgyver {
 
 		void resetMouseWheelPos();
 	private:
-		std::map<int,SDL_Joystick*> controllers;
+		std::map<int,SDL_GameController*> controllers;
 		Input();
 		~Input();
 		///pointer to the internal SDL keyboard array

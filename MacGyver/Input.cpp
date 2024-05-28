@@ -27,22 +27,22 @@ int32_t Macgyver::Input::getNumConnectedControllers()
 void Macgyver::Input::openController(int32_t id)
 {
 	if (controllers.contains(id)) { return; }
-	controllers.insert({ id,SDL_JoystickOpen(id) });
+	controllers.insert({ id,SDL_GameControllerOpen(id) });
 }
 
 void Macgyver::Input::closeController(int32_t id)
 {
 	if (!controllers.contains(id)) {return;}
-	SDL_JoystickClose(controllers.at(id));
+	SDL_GameControllerClose(controllers.at(id));
 	controllers.erase(id);
 }
 
 void Macgyver::Input::closeAllControllers()
 {
-	for (std::pair<int,SDL_Joystick*> controller 
+	for (std::pair<int,SDL_GameController*> controller 
 		: controllers) {
 
-		SDL_JoystickClose(controller.second);
+		SDL_GameControllerClose(controller.second);
 	}
 	controllers.clear();
 }
@@ -60,12 +60,12 @@ bool Input::isKeyDown(SDL_Scancode key)
 
 bool Macgyver::Input::controller_isButtonDown(int32_t id, SDL_GameControllerButton button)
 {
-	return SDL_JoystickGetButton(controllers.at(id),button);
+	return SDL_GameControllerGetButton(controllers.at(id),button);
 }
 
 int32_t Macgyver::Input::controller_getAxisPosition(int32_t id, SDL_GameControllerAxis axis)
 {
-	return SDL_JoystickGetAxis(controllers.at(id), axis);
+	return SDL_GameControllerGetAxis(controllers.at(id), axis);
 }
 
 std::vector<int32_t> Macgyver::Input::getAllOpenedControllers()

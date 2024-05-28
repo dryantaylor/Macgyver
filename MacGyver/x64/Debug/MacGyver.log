@@ -1,4 +1,4 @@
 ﻿  main.cpp
-C:\Users\44791\source\repos\Macgyver\MacGyver\Physics2D.h(9,16): warning C4091: 'static ': ignored on left of 'Macgyver::Components::PhysicsConstants' when no variable is declared
-C:\Users\44791\source\repos\Macgyver\MacGyver\main.cpp(259,65): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\44791\source\repos\Macgyver\MacGyver\Physics2D.h(12,3): warning C4091: 'static ': ignored on left of 'Macgyver::Components::PhysicsConstants' when no variable is declared
+C:\Users\44791\source\repos\Macgyver\MacGyver\main.cpp(260,66): warning C4305: 'argument': truncation from 'double' to 'float'
   MacGyver.vcxproj -> C:\Users\44791\source\repos\Macgyver\x64\Debug\MacGyver.exe

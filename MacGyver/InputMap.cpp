@@ -3,12 +3,17 @@
 
 float Macgyver::InputMap::getValue(const std::string name)
 {
-	if (keyboardAxisBindings.contains(name)) 
+	if (keyboardAxisBindings.contains(name))
 		return getKeyboardAxisValue(&(keyboardAxisBindings.at(name)));
 	if (controllerAxisBindings.contains(name))
 		return getControllerAxisValue(&(controllerAxisBindings.at(name)));
 	if (controllerButtonAxisBindings.contains(name))
 		return getControllerButtonAxisValue(&(controllerButtonAxisBindings.at(name)));
+	if (keyboardButtonBindings.contains(name))
+		return getKeyboardButtonValue(&(keyboardButtonBindings.at(name)));
+	if (controllerButtonBindings.contains(name))
+		return getControllerButtonValue(&(controllerButtonBindings.at(name)));
+	return NAN;
 }
 
 float Macgyver::InputMap::getKeyboardAxisValue(std::tuple<SDL_Scancode, SDL_Scancode>* keys)
@@ -27,10 +32,10 @@ float Macgyver::InputMap::getControllerAxisValue(std::tuple<SDL_GameControllerAx
 	SDL_GameControllerAxis axis;
 	int32_t id;
 	std::tie(axis, id) = *binding;
-	if (id != -1)
+	if (id != -1) {
 		//To rescale a number in the range s..e to 0..1, you do (value-s)/(e-s).
-		return 2 * ((float)getInput.controller_getAxisPosition(id, axis) - Sint16_MIN)/ (Sint16_MAX - Sint16_MIN) -1;
-
+		return 2 * ((float)getInput.controller_getAxisPosition(id, axis) - Sint16_MIN) / (Sint16_MAX - Sint16_MIN) - 1;
+	}
 	float max = 0;
 	for (int32_t id_local : getInput.getAllOpenedControllers()) {
 		float newValue = 2 * ((float)getInput.controller_getAxisPosition(id_local, axis) - Sint16_MIN) / (Sint16_MAX - Sint16_MIN) - 1;
@@ -67,6 +72,19 @@ float Macgyver::InputMap::getControllerButtonAxisValue(std::tuple<SDL_GameContro
 		
 }
 
+float Macgyver::InputMap::getKeyboardButtonValue(SDL_Scancode* key)
+{
+	return getInput.isKeyDown(*key) ? 1 : 0;
+}
+
+float Macgyver::InputMap::getControllerButtonValue(std::tuple<SDL_GameControllerButton, int32_t>* binding)
+{
+	SDL_GameControllerButton button;
+	int32_t id;
+	std::tie(button, id) = *binding;
+	return getInput.controller_isButtonDown(id, button) ? 1 : 0;
+}
+
 
 
 void Macgyver::InputMap::addBinding(const std::string name, SDL_Scancode positive, SDL_Scancode negative)
@@ -77,6 +95,7 @@ void Macgyver::InputMap::addBinding(const std::string name, SDL_Scancode positiv
 void Macgyver::InputMap::addBinding(const std::string name, SDL_GameControllerAxis axis, int32_t id)
 {
 	controllerAxisBindings.insert({ name, {axis, id} });
+	
 }
 
 void Macgyver::InputMap::addBinding(const std::string name, SDL_GameControllerButton positive, SDL_GameControllerButton negative, int32_t id)
