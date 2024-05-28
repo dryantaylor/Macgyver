@@ -21,6 +21,11 @@ Math::Force2D& Macgyver::Math::Force2D::operator=(const Vector3& a)
 	return *this;
 }
 
+Macgyver::Math::Force2D::operator b2Vec2()
+{
+	return b2Vec2(this->x, this->y);
+}
+
 float Math::Force2D::magnitude()
 {
 	return std::sqrtf(x * x + y * y);

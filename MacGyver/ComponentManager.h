@@ -21,12 +21,10 @@ namespace Macgyver::Components {
 		///Same commitment as PHYSICS2D_VELOCITY but allowing gravity to act on it
 		//TODO: currently any other y force will be overwritten by gravity
 		GRAV_IMPACTED           = 0b00000000000000000000000000010000,
-		///commitment to only have one in the scene
-		GRAV_IMPACTING          = 0b00000000000000000000000000100000,
 
 		///Don't update with other objects, call UIUpdate at after all world objects are done updating
-		UI_RENDERABLE           = 0b00000000000000000000000001000000,
-		UI_INTERACTABLE         = 0b00000000000000000000000010000000
+		UI_RENDERABLE           = 0b00000000000000000000000000100000,
+		UI_INTERACTABLE         = 0b00000000000000000000000001000000
 	};
 	constexpr unsigned int MIN_PLAYER_TYPE_VAL = 128U << 1;
 	/**

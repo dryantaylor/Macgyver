@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "box2d.h"
 
 namespace Macgyver::Math {
 	class Force2D;
@@ -11,7 +12,9 @@ namespace Macgyver::Math {
 	*/
 	class Vector3{
 	public:
+		static const float physicsScale;
 		float x, y, z;
+		
 		/**
 		Contructor for the class
 		@param x x-value for the vector, default 0
@@ -34,6 +37,7 @@ namespace Macgyver::Math {
 		*/
 		Force2D copyToForce2D();
 
+		const b2Vec2 toPhysicsScale();
 #ifdef _DEBUG
 		/**
 		Converts the vector to a string

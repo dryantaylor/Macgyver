@@ -44,9 +44,6 @@ void Gameobjects::GameObject::update(const unsigned int deltaTime)
 			else if (Components::hasProperty(Components::COLLIDER, comp->componentProperties)) {
 				parentScene->physicsColliderCache.push_back(comp);
 			}
-			else if (Components::hasProperty(Components::GRAV_IMPACTING, comp->componentProperties)) {
-				parentScene->physicsGravImpactingCache = comp;
-			}
 		}
 	}
 }

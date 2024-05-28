@@ -1,6 +1,6 @@
 #pragma once
 #include "Vector3.h"
-
+#include "box2d.h"
 namespace Macgyver::Math {
 	/**
 	Class to represent a 2D force being applied to an object.
@@ -18,6 +18,8 @@ namespace Macgyver::Math {
 
 		Force2D operator+(const Force2D& a);
 		Force2D& operator=(const Vector3& a);
+
+		operator b2Vec2();
 		/**
 		Gets the magnitude of the vector 
 		(i.e the length if a direct line was drawn 

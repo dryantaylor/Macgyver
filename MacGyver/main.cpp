@@ -6,7 +6,7 @@
 #include <SDL_image.h>
 #include <SDL_ttf.h>
 #include <SDL_mixer.h>
-
+#include "box2d.h"
 
 //main engine framework imports
 #include "Globals.h"
@@ -33,7 +33,6 @@
 #include "SingletonSerialiser.h"
 
 //extra components imports
-#include "GravityImpacting.h"
 #include "PlayerController.h"
 #include "KeyPressedOverlay.h"
 #include "PlayerFSM.h"
@@ -90,7 +89,6 @@ void DEBUG_PROFILE_FRAMETIMES(unsigned int* frames, std::size_t numFrames)
 
 int main(int argc, char* argv[])
 {
-
 	//NOTE: FULLSCREEN RESOLOUTION DOES NOT WORK WITH SCALED DISPLAYS!
 	Globals::SCREEN_WIDTH = 1280;
 	Globals::SCREEN_HEIGHT = 720;
@@ -141,7 +139,7 @@ int main(int argc, char* argv[])
 		printf("Renderer could not be created! SDL_Error: %s\n", SDL_GetError());
 		return 1;
 	}
-
+	
 	/*
 	* INITIALISE SINGLETON OBJECTS FOR:
 	* ANIMATION
@@ -176,7 +174,7 @@ int main(int argc, char* argv[])
 	*/
 	auto sc = 
 		std::make_unique<Gameobjects::Scene>(
-			Gameobjects::Scene("main"));
+			Gameobjects::Scene("main", {0,-10}));
 	sc->scene_RENDERER = c_RENDERER;
 	
 	Gameobjects::GameObject* playerController = new Gameobjects::GameObject();
@@ -254,15 +252,9 @@ int main(int argc, char* argv[])
 	Macgyver::Components::UI::Text::attachNew(buttonText, "jetbrains", "Press", 128, { 0,0,400,150 });
 
 
-	Macgyver::Gameobjects::GameObject* gravity = new Gameobjects::GameObject();
-	Macgyver::Gameobjects::Component* gravityComp = new Gameobjects::Component();
-	gravity->addComponent(gravityComp);
-	Macgyver::Components::GravityImpacting::attachNew(gravityComp, -9.81);
-	sc->addObject(gravity);
-
 	getSceneManager.addScene(std::move(sc));
 	getSceneManager.setActiveScene("main");
-
+	
 	/*
 	* INIITIALISE VALUES NEEDED FOR THE MAIN LOOP
 	*/

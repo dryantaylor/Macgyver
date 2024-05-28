@@ -4,7 +4,8 @@
 #include "SDL.h"
 #include <vector>
 #include "ComponentManager.h"
-
+#include "box2d.h"
+#include "Force2d.h"
 namespace Macgyver::Gameobjects {
 	class GameObject;
 	class Component;
@@ -17,9 +18,15 @@ namespace Macgyver::Gameobjects {
 		///sdl renderer used for the scene
 		SDL_Renderer* scene_RENDERER;
 		/**
-		Default Contsructor
+		Default Contsructor, set's world gravity to 0,0
 		*/
 		Scene(std::string name);
+
+		/**
+		* Constructor which also sets gravity
+		*/
+		Scene(std::string name, Math::Force2D gravity);
+
 		/**
 		Adds a GameObject instance to the scene
 
@@ -47,7 +54,7 @@ namespace Macgyver::Gameobjects {
 		 *
 		 */
 		const std::vector<Component*>& getPhysicsGravImpactedCache() { return physicsGravImpactedCache; }
-
+		 b2Body* createPhysicsBody(const b2BodyDef* def) const;
 		/**
 		Update method for the scene
 		to be called once in the main game loop after updating input
@@ -57,7 +64,7 @@ namespace Macgyver::Gameobjects {
 		@param deltaTime time in milliseconds that has elapsed since the
 		last frame
 		*/
-		void update(unsigned int deltaTime);
+		void update(uint32_t deltaTime);
 
 		/**
 		physics update method for the scene.
@@ -66,18 +73,17 @@ namespace Macgyver::Gameobjects {
 
 		@param deltaTime time in milliseconds since the last frame
 		*/
-		void physicsUpdate(unsigned int deltaTime);
+		void physicsUpdate(uint32_t deltaTime);
 
 		~Scene();
 
 	private:
+		b2World* world;
 		/// vector of GameObjects in the scene
 		std::vector<GameObject*> objects;
 		// In order of calling in physicsUpdate. 
 		// Updated every frame during the scenes update method
-		
-		/// stores a component in the scene which causes gravity to act
-		Component* physicsGravImpactingCache;
+	
 		/// stores all components which have the velocity flag
 		std::vector<Component*> physicsVelocityCache;
 		/// stores all components which have the gravity impacted flag
@@ -85,7 +91,7 @@ namespace Macgyver::Gameobjects {
 		/// stores all components in the scene which have the collider flag
 		std::vector<Component*> physicsColliderCache;
 		//stores the ticks since the last physicsUpdate
-		unsigned int physicsTick = 0;
+		uint32_t physicsTick = 0;
 
 		std::string name;
 	};

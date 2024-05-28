@@ -16,7 +16,9 @@ namespace Macgyver::Components {
 	struct Physics2DData: ComponentData {
 		Physics2DData();
 		/// pointer to a Rect to represent a collider
-		SDL_Rect* collider;
+		b2Body* body;
+		b2PolygonShape* shape;
+
 		/// velocity of the Object
 		Math::Force2D velocity;
 		/// acceleration of the Object

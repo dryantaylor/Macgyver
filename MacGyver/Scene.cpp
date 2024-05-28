@@ -8,6 +8,17 @@ Gameobjects::Scene::Scene(std::string name)
 	objects = std::vector<GameObject*>();
 	this->name = name;
 	physicsVelocityCache = std::vector<Component*>();
+	this->world = new b2World({0,0});
+
+}
+
+Gameobjects::Scene::Scene(std::string name, Math::Force2D gravity)
+{
+	objects = std::vector<GameObject*>();
+	this->name = name;
+	physicsVelocityCache = std::vector<Component*>();
+	this->world = new b2World( (b2Vec2) gravity);
+	
 }
 
 void Gameobjects::Scene::addObject(GameObject* obj)
@@ -27,9 +38,13 @@ std::vector<Gameobjects::Component*> Gameobjects::Scene::getComponentsInWorldByT
 	return comps;
 }
 
-void Gameobjects::Scene::update(unsigned int deltaTime)
+b2Body* Macgyver::Gameobjects::Scene::createPhysicsBody(const b2BodyDef* def) const
 {
-	physicsGravImpactingCache = nullptr;
+	return world->CreateBody(def);
+}
+
+void Gameobjects::Scene::update(uint32_t deltaTime)
+{
 	physicsVelocityCache.clear();
 	physicsGravImpactedCache.clear();
 	physicsColliderCache.clear();
@@ -41,7 +56,7 @@ void Gameobjects::Scene::update(unsigned int deltaTime)
 	}
 }
 
-void Macgyver::Gameobjects::Scene::physicsUpdate(unsigned int deltaTime)
+void Macgyver::Gameobjects::Scene::physicsUpdate(uint32_t deltaTime)
 {
 	physicsTick += deltaTime;
 	//while loop used to account for sudden frame spikes
@@ -51,9 +66,6 @@ void Macgyver::Gameobjects::Scene::physicsUpdate(unsigned int deltaTime)
 			return;
 		}
 		physicsTick -= 20;
-		if (physicsGravImpactingCache != nullptr) {
-			physicsGravImpactingCache->physicsUpdate(physicsGravImpactingCache);
-		}
 		for (Component* comp : physicsVelocityCache) {
 			comp->physicsUpdate(comp);
 		}
@@ -75,4 +87,5 @@ Macgyver::Gameobjects::Scene::~Scene()
 	for (GameObject* obj : objects) {
 		delete obj;
 	}
+	//delete world;
 }

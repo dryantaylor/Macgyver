@@ -2,6 +2,7 @@
 #include "Force2D.h"
 //using namespace Macgyver::Math;
 
+const float Macgyver::Math::Vector3::physicsScale = 200;
 Macgyver::Math::Vector3::Vector3(float x , float y, float z) {
 	this->x = x;
 	this->y = y;
@@ -63,6 +64,11 @@ Macgyver::Math::Vector3& Macgyver::Math::Vector3::operator=(const Vector3& a)
 Macgyver::Math::Force2D Macgyver::Math::Vector3::copyToForce2D()
 {
 	return Force2D(this->x, this->y);
+}
+
+const b2Vec2 Macgyver::Math::Vector3::toPhysicsScale()
+{ 
+	return b2Vec2( this->x / physicsScale, this->y / physicsScale);
 }
 
 #ifdef _DEBUG
