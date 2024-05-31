@@ -162,12 +162,18 @@ int main(int argc, char* argv[])
 
 	getTextRenderer.addFont("jetbrains", &font2);
 
-	std::cout << getInput.getNumConnectedControllers();
-	
-	getInput.openController(0);
-	getInputMap.addBinding("X-Axis",SDL_CONTROLLER_AXIS_LEFTX, 0);
-	getInputMap.addBinding("Y-Axis", SDL_CONTROLLER_AXIS_LEFTY, 0);
-
+	if (getInput.getNumConnectedControllers() > 0) {
+		getInput.openController(0);
+		getInputMap.addBinding("X-Axis", SDL_CONTROLLER_AXIS_LEFTX, 0);
+		getInputMap.addBinding("Y-Axis", SDL_CONTROLLER_AXIS_LEFTY, 0);
+		getMessenger[100] = 0x0A;
+	}
+	else {
+		getInputMap.addBinding("X-Axis", SDL_SCANCODE_D, SDL_SCANCODE_A);
+		getInputMap.addBinding("Y-Axis", SDL_SCANCODE_S, SDL_SCANCODE_W);
+		getInputMap.addBinding("sprint", SDL_SCANCODE_LSHIFT);
+		getMessenger[100] = 0xF;
+	}
 	/*
 	* MAIN GAME, CREATE ALL DATA BEFORE THE WHILE LOOP
 	* CALL ALL UPDATES AND DRAWING WITHIN THE WHILE LOOP
@@ -313,7 +319,7 @@ int main(int argc, char* argv[])
 			std::cout << "pressed" << std::endl;
 		}
 		//std::cout << playerController.transform.y << std::endl;
-		std::cout << getInputMap.getValue("X-Axis") << std::endl;
+		//std::cout << getInputMap.getValue("X-Axis") << std::endl;
 	}
 	std::cin;
 	/*

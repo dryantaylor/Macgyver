@@ -1,5 +1,5 @@
-﻿  Scene.cpp
-  main.cpp
+﻿  PlayerController.cpp
 C:\Users\44791\source\repos\Macgyver\MacGyver\Physics2D.h(12,3): warning C4091: 'static ': ignored on left of 'Macgyver::Components::PhysicsConstants' when no variable is declared
-  Generating Code...
+C:\Users\44791\source\repos\Macgyver\MacGyver\PlayerController.cpp(39,25): warning C4244: '=': conversion from 'float' to 'int64_t', possible loss of data
+C:\Users\44791\source\repos\Macgyver\MacGyver\PlayerController.cpp(40,25): warning C4244: '=': conversion from 'float' to 'int64_t', possible loss of data
   MacGyver.vcxproj -> C:\Users\44791\source\repos\Macgyver\x64\Debug\MacGyver.exe

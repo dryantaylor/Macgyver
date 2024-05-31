@@ -40,11 +40,21 @@ void DemoProject::PlayerController::update(Macgyver::Gameobjects::Component* sel
 	getMessenger[2] = force.y;
 
 	if (force.x != 0 || force.y != 0 ) {
-		if (force.magnitude() >= 0.75) {
-			force.scaleToMagnitude(playerData->sprintSpeed);	
+		if (getMessenger[100] == 0x0A) {
+			if (force.magnitude() >= 0.75) {
+				force.scaleToMagnitude(playerData->sprintSpeed);
+			}
+			else {
+				force.scaleToMagnitude(playerData->walkSpeed);
+			}
 		}
-		else {
-			force.scaleToMagnitude(playerData->walkSpeed);
+		else if (getMessenger[100] == 0x0F) {
+			if (getInputMap.getValue("sprint") > 0) {
+				force.scaleToMagnitude(playerData->sprintSpeed);
+			}
+			else {
+				force.scaleToMagnitude(playerData->walkSpeed);
+			}
 		}
 	}
 	else {

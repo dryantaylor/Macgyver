@@ -12,7 +12,7 @@ namespace Macgyver::Math {
 	*/
 	class Vector3{
 	public:
-		static const float physicsScale;
+		//static const float physicsScale;
 		float x, y, z;
 		
 		/**

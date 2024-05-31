@@ -6,7 +6,7 @@ const float Components::PhysicsConstants::physicsDeltaTime   = float(1) / 50;
 
 Components::Physics2DData::Physics2DData()
 {
-	collider = nullptr;
+	//collider = nullptr;
 	velocity = Math::Force2D(0, 0);
 	mass = 0;
 }
