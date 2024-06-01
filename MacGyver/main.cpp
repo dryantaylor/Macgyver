@@ -196,21 +196,28 @@ int main(int argc, char* argv[])
 
 
 	Gameobjects::Component* playerSprite = new Gameobjects::Component();
+	playerSprite->name = "playerSprite";
 	Gameobjects::Component* playerMovement = new Gameobjects::Component();
+	playerMovement->name = "playerMovement";
 	Gameobjects::Component* playerState = new Gameobjects::Component();
+	playerState->name = "playerState";
 	Gameobjects::Component* playerInputBuffer = new Gameobjects::Component();
+	playerInputBuffer->name = "playerInputBuffer";
 	playerController->addComponent(playerSprite);
 	playerController->addComponent(playerMovement); 
 	playerController->addComponent(playerState);
 	playerController->addComponent(playerInputBuffer);
 
 	Gameobjects::Component* cam = new Gameobjects::Component();
+	cam->name = "cam";
 	camera->addComponent(cam);
 
 	Gameobjects::Component* UIcam_comp = new Gameobjects::Component();
+	UIcam_comp->name = "ui_cam_comp";
 	UIcam->addComponent(UIcam_comp);
 
 	Gameobjects::Component* UItext_comp = new Gameobjects::Component();
+	UItext_comp->name = "ui_text_comp";
 	UItext->addComponent(UItext_comp);
 
 
@@ -231,6 +238,7 @@ int main(int argc, char* argv[])
 		"test-font", "Hello World", 256, temp
 	);
 	Macgyver::Gameobjects::Component* keyPressOverlay = new Gameobjects::Component();
+	keyPressOverlay->name = "keypressoverlay";
 	UItext->addComponent(keyPressOverlay);
 	DemoProject::KeyPressedOverlay::attachNew(keyPressOverlay,UItext_comp);
 
@@ -241,12 +249,14 @@ int main(int argc, char* argv[])
 	button->transform.y = 200;
 
 	Macgyver::Gameobjects::Component* pressedDetector = new Gameobjects::Component();
+	pressedDetector->name = "pressed_Detector";
 	button->addComponent(pressedDetector);
 	Macgyver::Components::UI::UIMouseDetector::attachNew(
 		pressedDetector, { 0,0,400,150 }, 10, 0b1
 	);
 
 	Macgyver::Gameobjects::Component* buttonBackground = new Gameobjects::Component();
+	buttonBackground->name = "button_background";
 	button->addComponent(buttonBackground);
 	Macgyver::Components::UI::UIRenderable::AttachNew(buttonBackground, "\\button.png", 400, 150);
 	

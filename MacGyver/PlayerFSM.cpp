@@ -19,10 +19,17 @@ void DemoProject::PlayerFSM::update(Gameobjects::Component* self, std::uint32_t 
 
 	return;
 IDLE_STATE_TRANSITION:
+IDLE_STATE:
+WALK_STATE:
+RUN_STATE:
+	return;
+	/*
+IDLE_STATE_TRANSITION:
 	getAnimationHandler.changeActiveAnimation(state->internal_animId, "player/idle");
 	//local transform changes handles difference in sprite sizes
 	state->PlayerRenderable->localTransform.x = 0;
 	state->PlayerRenderable->localTransform.y = 0;
+
 IDLE_STATE:
 	if (std::abs(state->physics->velocity.x) > 150) {
 		state->currState = RUN;
@@ -59,16 +66,14 @@ RUN_STATE:
 		goto IDLE_STATE_TRANSITION;
 	}
 	return;
+	*/
 }
 
 void DemoProject::PlayerFSM::attachNew(Gameobjects::Component* comp)
 {
 	comp->update = PlayerFSM::update;
- 	Components::Physics2DData* physicsData =
-		componentGetData(
-			comp->getParent()->getComponentsWithProperty(Components::VELOCITY)[0],
-			Components::Physics2DData);
-	DemoProject::PlayerFSMData* data = new DemoProject::PlayerFSMData(physicsData);
+
+	DemoProject::PlayerFSMData* data = new DemoProject::PlayerFSMData();
 	data->PlayerRenderable = comp->getParent()->getComponentsWithProperty(Components::RENDERABLE)[0];
 	comp->addData((Macgyver::Components::ComponentData*)data, typeHash(PlayerFSMData));
 
@@ -87,9 +92,9 @@ void DemoProject::PlayerFSM::attachNew(Gameobjects::Component* comp)
 			, "player/idle");
 }
 
-DemoProject::PlayerFSMData::PlayerFSMData(Macgyver::Components::Physics2DData* phys)
+DemoProject::PlayerFSMData::PlayerFSMData()
 {
-	this->physics = phys;
+	//this->physics = phys;
 	currState = IDLE;
 }
 

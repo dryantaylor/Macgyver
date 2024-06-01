@@ -96,6 +96,8 @@ namespace Macgyver::Gameobjects{
 
 
 		bool enabled = true;
+
+		std::string name;
 	private:
 		/// set of pointers to the different data structs this
 		/// component has

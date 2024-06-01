@@ -126,15 +126,6 @@
     <ClCompile Include="Camera.cpp">
       <Filter>Source Files\Engine\Components\Images</Filter>
     </ClCompile>
-    <ClCompile Include="Physics2D.cpp">
-      <Filter>Source Files\Engine\Components\Physics</Filter>
-    </ClCompile>
-    <ClCompile Include="Collider.cpp">
-      <Filter>Source Files\Engine\Components\Physics</Filter>
-    </ClCompile>
-    <ClCompile Include="Velocity.cpp">
-      <Filter>Source Files\Engine\Components\Physics</Filter>
-    </ClCompile>
     <ClCompile Include="AnimationHandler.cpp">
       <Filter>Source Files\Engine\Animations</Filter>
     </ClCompile>
@@ -223,15 +214,6 @@
     </ClInclude>
     <ClInclude Include="Renderable.h">
       <Filter>Header Files\Engine\Components\Images</Filter>
-    </ClInclude>
-    <ClInclude Include="Collider.h">
-      <Filter>Header Files\Engine\Components\Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="Physics2D.h">
-      <Filter>Header Files\Engine\Components\Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="Velocity.h">
-      <Filter>Header Files\Engine\Components\Physics</Filter>
     </ClInclude>
     <ClInclude Include="AnimationHandler.h">
       <Filter>Header Files\Engine\Animations</Filter>

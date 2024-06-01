@@ -1,6 +1,6 @@
 #pragma once
 #include "Component.h"
-#include "Velocity.h"
+
 #include "ComponentManager.h"
 #include "ComponentData.h"
 namespace DemoProject {
@@ -13,9 +13,9 @@ namespace DemoProject {
 	};
 
 	struct PlayerFSMData: Macgyver::Components::ComponentData {
-		PlayerFSMData(Macgyver::Components::Physics2DData* phys);
+		PlayerFSMData();
 		Macgyver::Gameobjects::Component* PlayerRenderable;
-		Macgyver::Components::Physics2DData* physics;
+		//Macgyver::Components::Physics2DData* physics;
 		PlayerFSMstates currState;
 
 		std::uint32_t internal_animId;

@@ -63,20 +63,14 @@ void Macgyver::Gameobjects::Scene::physicsUpdate(uint32_t deltaTime)
 	while (true){
 		//20 ticks = 1/50th of a second, physics update runs 50 times per second
  		if (physicsTick < 20) {
+			for (Macgyver::Gameobjects::Component* component : this->getComponentsInWorldByType(Macgyver::Components::COLLIDER))
+			{
+				//physics update transforms goes here
+			}
 			return;
 		}
 		physicsTick -= 20;
-		for (Component* comp : physicsVelocityCache) {
-			comp->physicsUpdate(comp);
-		}
-		for (Component* comp : physicsGravImpactedCache) {
-			comp->physicsUpdate(comp);
-		}
-
-
-		for (Component* comp : physicsColliderCache) {
-			comp->physicsUpdate(comp);
-		}
+		this->world->Step(20.0 / 1000.0, 6, 2);
 		
 	}
 	

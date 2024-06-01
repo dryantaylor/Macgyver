@@ -12,8 +12,8 @@ void DemoProject::PlayerController::update(Macgyver::Gameobjects::Component* sel
 {
 	PlayerControllerData* playerData = componentGetData(self, PlayerControllerData);
 	Math::Force2D force(0, 0);
-	Components::Physics2DData* data = 
-		componentGetData(self, Components::Physics2DData);
+	
+	return;
 	/*
 	if (Input::getInstance().isKeyDown(SDLK_w)) {
 		force.y += 1;
@@ -59,8 +59,8 @@ void DemoProject::PlayerController::update(Macgyver::Gameobjects::Component* sel
 	}
 	else {
 	}
-	data->forces.y = force.y;
-	data->forces.x = force.x;
+	//data->forces.y = force.y;
+	//data->forces.x = force.x;
 
 }
 
@@ -69,15 +69,11 @@ void DemoProject::PlayerController::attachNew(Macgyver::Gameobjects::Component* 
 {
 	comp->setComponentProperties(Macgyver::Components::VELOCITY);
 	comp->update = PlayerController::update;
-	comp->physicsUpdate = Macgyver::Components::Velocity::physicsUpdate;
+	
 	//comp->addData((Macgyver::Components::ComponentData*)
 	//	new Macgyver::Components::Physics2DData(), 
 	//	typeid(Components::Physics2DData).hash_code());
-	comp->addData(
-	    componentCreateData(Macgyver::Components::Physics2DData)
-	);
-	Components::Physics2DData* physicsData = componentGetData(comp, Components::Physics2DData);
-	physicsData->mass = 1;
+	
 	PlayerControllerData* data = new PlayerControllerData();
 	
 	comp->addData((Macgyver::Components::ComponentData*)
