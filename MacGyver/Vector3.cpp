@@ -68,6 +68,15 @@ Macgyver::Math::Vector3& Macgyver::Math::Vector3::operator=(const b2Vec2& a)
 	return *this;
 }
 
+Macgyver::Math::Vector3& Macgyver::Math::Vector3::operator=(const b2Transform& a)
+{
+	this->x = a.p.x;
+	this->y = a.p.y;
+	//this->z = this->z;
+
+	return *this;
+}
+
 Macgyver::Math::Force2D Macgyver::Math::Vector3::copyToForce2D()
 {
 	return Force2D(this->x, this->y);
@@ -85,3 +94,10 @@ const std::string Macgyver::Math::Vector3::toString()
 	return "Math::Vector3(x: " + std::to_string(x) + ", y: " + std::to_string(y) + ", z: " + std::to_string(z) + ")";
 }
 #endif // DEBUG
+
+std::ostream& Macgyver::Math::operator<<(std::ostream& os, const Vector3& vec)
+{
+	os << "( " << vec.x << " , " << vec.y << 
+		(vec.z != 0 ? (std::string(" , ") + std::to_string(vec.z)) : "") << ")";
+	return os;
+}

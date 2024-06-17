@@ -35,6 +35,11 @@ void Gameobjects::GameObject::update(const unsigned int deltaTime)
 	{
 		if (comp->enabled) {
 			comp->update(comp, deltaTime);
+			if (Components::hasProperty(Components::PHYSICS_STATIC, comp->componentProperties) ||
+				Components::hasProperty(Components::PHYSICS_DYNAMIC, comp->componentProperties)) {
+
+				this->parentScene->physicsColliderCache.push_back(comp);
+			}
 		}
 	}
 }

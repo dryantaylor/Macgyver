@@ -11,10 +11,11 @@ void Macgyver::Components::StaticPhysics::update(Macgyver::Gameobjects::Componen
 		data->body->GetTransform(),
 		0
 	);
+	
 	SDL_Rect rect(
-		0, 0,
+
 		convertPhysicsToEngineScale(boundingBox->upperBound.x),
-		convertPhysicsToEngineScale(boundingBox->upperBound.y)
+		- convertPhysicsToEngineScale(boundingBox->upperBound.y)
 	);
 	SDL_SetRenderTarget(self->getWorldScene()->scene_RENDERER, renderData->texture);
 	renderData->rect.w = rect.w;
@@ -27,7 +28,7 @@ void Macgyver::Components::StaticPhysics::update(Macgyver::Gameobjects::Componen
 
 void Macgyver::Components::StaticPhysics::physicsUpdate(Macgyver::Gameobjects::Component* self)
 {
-
+	
 }
 
 void Macgyver::Components::StaticPhysics::attachNew(Macgyver::Gameobjects::Component* comp, int32_t width, int32_t height)
@@ -49,6 +50,7 @@ void Macgyver::Components::DynamicPhysics::physicsUpdate(Macgyver::Gameobjects::
 {
 	auto data = componentGetData(self, PhysicsData);
 	self->getParent()->transform = data->body->GetPosition();
+	std::cout << self->getParent()->transform << std::endl;
 }
 
 void Macgyver::Components::DynamicPhysics::attachNew(Macgyver::Gameobjects::Component* comp, int32_t width, int32_t height, float friction, float mass)

@@ -78,9 +78,9 @@ void DemoProject::PlayerFSM::attachNew(Gameobjects::Component* comp)
 	comp->addData((Macgyver::Components::ComponentData*)data, typeHash(PlayerFSMData));
 
 	getAnimationHandler
-		.addAnimation("player/idle", "/Animations/cerebella/Idle");
+		.addAnimation("player/idle", "/Animations/new_idle");
 	getAnimationHandler
-		.addAnimation("player/walk", "/Animations/cerebella/Walk");
+		.addAnimation("player/walk", "/Animations/new_walk");
 	getAnimationHandler
 		.addAnimation("player/run", "/Animations/Run");
 
@@ -97,4 +97,5 @@ DemoProject::PlayerFSMData::PlayerFSMData()
 	//this->physics = phys;
 	currState = IDLE;
 }
+
 

@@ -30,7 +30,7 @@ Components::RenderableData::~RenderableData()
 
 void Components::Renderable::update(Gameobjects::Component* self, unsigned int deltaTime)
 {
-
+	
 }
 
 void Components::Renderable::AttachNew(Gameobjects::Component* comp, std::string path, int width, int height)

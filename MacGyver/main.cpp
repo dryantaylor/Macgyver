@@ -277,9 +277,9 @@ int main(int argc, char* argv[])
 	Macgyver::Gameobjects::Component* floorComp = new Gameobjects::Component();
 	sc->addObject(floor); 
 	floor->addComponent(floorComp);
-	floor->transform.y = 100;
+	floor->transform.y = -500;
 
-	Macgyver::Components::StaticPhysics::attachNew(floorComp, 1000, 1000);
+	Macgyver::Components::StaticPhysics::attachNew(floorComp, 1000, 5);
 
 
 	getSceneManager.addScene(std::move(sc));

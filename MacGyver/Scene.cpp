@@ -52,6 +52,7 @@ void Gameobjects::Scene::update(uint32_t deltaTime)
 	for (GameObject* obj : objects) {
 		if (obj->enabled) {
 			obj->update(deltaTime);
+			
 		}
 	}
 }

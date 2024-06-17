@@ -4,6 +4,7 @@ Macgyver::Components::PhysicsData::PhysicsData(Macgyver::Gameobjects::Component*
 	int32_t width, int32_t height)
 {
 	 b2BodyDef def;
+	 def.type = b2_kinematicBody;
 	def.position.Set(
 		convertEngineToPhysicsScale(parent->getWorldTransform().x),
 		convertEngineToPhysicsScale(parent->getWorldTransform().y)
@@ -17,7 +18,9 @@ Macgyver::Components::PhysicsData::PhysicsData(Macgyver::Gameobjects::Component*
 	);
 
 	body->CreateFixture(&colliderBox, 0.0);
-	
+	std::cout << "static location: " << "("
+		<< convertPhysicsToEngineScale(body->GetPosition().x) 
+		<< "," << convertPhysicsToEngineScale(body->GetPosition().y) << ")" << std::endl;
 }
 
 Macgyver::Components::PhysicsData::PhysicsData(Gameobjects::Component* parent,int32_t width, 

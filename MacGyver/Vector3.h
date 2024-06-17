@@ -29,6 +29,8 @@ namespace Macgyver::Math {
 		Vector3& operator+=(const Vector3& a);
 		Vector3& operator= (const Vector3& a);
 		Vector3& operator= (const b2Vec2& a);
+		Vector3& operator= (const b2Transform& a);
+		friend std::ostream& operator<<(std::ostream& os, const Vector3& vec);
 		/**
 		Creates a new force 2D object with the same x and y components as this
 		object
