@@ -1,5 +1,3 @@
-﻿  PlayerFSM.cpp
-  Renderable.cpp
-  UIRenderable.cpp
-  Generating Code...
+﻿  main.cpp
+C:\Users\44791\source\repos\Macgyver\MacGyver\main.cpp(228,65): warning C4305: 'argument': truncation from 'double' to 'float'
   MacGyver.vcxproj -> C:\Users\44791\source\repos\Macgyver\x64\Debug\MacGyver.exe

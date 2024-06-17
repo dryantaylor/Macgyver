@@ -153,6 +153,8 @@
     <ClCompile Include="KeyPressedOverlay.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Messenger.cpp" />
+    <ClCompile Include="Physics.cpp" />
+    <ClCompile Include="PhysicsData.cpp" />
     <ClCompile Include="PlayerController.cpp" />
     <ClCompile Include="PlayerFSM.cpp" />
     <ClCompile Include="Renderable.cpp" />
@@ -189,6 +191,8 @@
     <ClInclude Include="KeyPressedOverlay.h" />
     <ClInclude Include="Messenger.h" />
     <ClInclude Include="MouseEnum.h" />
+    <ClInclude Include="Physics.h" />
+    <ClInclude Include="PhysicsData.h" />
     <ClInclude Include="PlayerController.h" />
     <ClInclude Include="PlayerFSM.h" />
     <ClInclude Include="Renderable.h" />

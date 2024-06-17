@@ -1,6 +1,6 @@
 #include "KeyPressedOverlay.h"
 #include "Messenger.h"
-void DemoProject::KeyPressedOverlay::update(Macgyver::Gameobjects::Component* self, unsigned int deltaTime)
+void DemoProject::KeyPressedOverlay::update(Macgyver::Gameobjects::Component* self, uint32_t deltaTime)
 {
 	Macgyver::Gameobjects::Component* textBox = 
 		self->getParent()

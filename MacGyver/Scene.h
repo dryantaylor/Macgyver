@@ -6,6 +6,10 @@
 #include "ComponentManager.h"
 #include "box2d.h"
 #include "Force2d.h"
+
+#define PHSYICS_SCALE 50.0
+#define convertEngineToPhysicsScale(size) size/PHSYICS_SCALE
+#define convertPhysicsToEngineScale(size) (int)(size * PHSYICS_SCALE)
 namespace Macgyver::Gameobjects {
 	class GameObject;
 	class Component;

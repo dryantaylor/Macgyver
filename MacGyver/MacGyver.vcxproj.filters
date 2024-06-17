@@ -174,6 +174,12 @@
     <ClCompile Include="InputMap.cpp">
       <Filter>Source Files\Engine\Input</Filter>
     </ClCompile>
+    <ClCompile Include="PhysicsData.cpp">
+      <Filter>Source Files\Engine\Components\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Physics.cpp">
+      <Filter>Source Files\Engine\Components\Physics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vector3.h">
@@ -277,6 +283,12 @@
     </ClInclude>
     <ClInclude Include="InputMap.h">
       <Filter>Header Files\Engine\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicsData.h">
+      <Filter>Header Files\Engine\Components\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics.h">
+      <Filter>Header Files\Engine\Components\Physics</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

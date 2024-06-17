@@ -5,7 +5,7 @@
 #include "Text.h"
 namespace DemoProject {
 	struct KeyPressedOverlay {
-		static void update(Macgyver::Gameobjects::Component* self, unsigned int deltaTime);
+		static void update(Macgyver::Gameobjects::Component* self, uint32_t deltaTime);
 		static void attachNew(Macgyver::Gameobjects::Component* comp, Macgyver::Gameobjects::Component* target);
 	};
 

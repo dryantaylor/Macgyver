@@ -38,6 +38,7 @@
 #include "PlayerFSM.h"
 #include "InputBuffer.h"
 
+#include "Physics.h"
 
 using namespace Macgyver;
 
@@ -203,6 +204,11 @@ int main(int argc, char* argv[])
 	playerState->name = "playerState";
 	Gameobjects::Component* playerInputBuffer = new Gameobjects::Component();
 	playerInputBuffer->name = "playerInputBuffer";
+
+	Gameobjects::Component* playerPhysics = new Gameobjects::Component();
+	playerPhysics->name = "playerPhysics";
+	playerController->addComponent(playerPhysics);
+
 	playerController->addComponent(playerSprite);
 	playerController->addComponent(playerMovement); 
 	playerController->addComponent(playerState);
@@ -218,8 +224,8 @@ int main(int argc, char* argv[])
 
 	Gameobjects::Component* UItext_comp = new Gameobjects::Component();
 	UItext_comp->name = "ui_text_comp";
-	UItext->addComponent(UItext_comp);
-
+	UItext->addComponent(UItext_comp); 
+	Components::DynamicPhysics::attachNew(playerPhysics, 525, 410, 0.3, 1);
 
 	Components::Renderable::AttachNew(playerSprite, "", 525, 410);
 	DemoProject::PlayerController::attachNew(playerMovement);
@@ -266,6 +272,14 @@ int main(int argc, char* argv[])
 	buttonText->localTransform.x += 25;
 	buttonText->localTransform.y += 15;
 	Macgyver::Components::UI::Text::attachNew(buttonText, "jetbrains", "Press", 128, { 0,0,400,150 });
+
+	Macgyver::Gameobjects::GameObject* floor = new Gameobjects::GameObject();
+	Macgyver::Gameobjects::Component* floorComp = new Gameobjects::Component();
+	sc->addObject(floor); 
+	floor->addComponent(floorComp);
+	floor->transform.y = 100;
+
+	Macgyver::Components::StaticPhysics::attachNew(floorComp, 1000, 1000);
 
 
 	getSceneManager.addScene(std::move(sc));

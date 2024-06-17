@@ -61,6 +61,13 @@ Macgyver::Math::Vector3& Macgyver::Math::Vector3::operator=(const Vector3& a)
 	return *this;
 }
 
+Macgyver::Math::Vector3& Macgyver::Math::Vector3::operator=(const b2Vec2& a)
+{
+	this->x = a.x;
+	this->y = a.y;
+	return *this;
+}
+
 Macgyver::Math::Force2D Macgyver::Math::Vector3::copyToForce2D()
 {
 	return Force2D(this->x, this->y);

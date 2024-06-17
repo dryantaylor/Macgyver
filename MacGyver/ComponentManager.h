@@ -15,13 +15,10 @@ namespace Macgyver::Components {
 		///commitment to handle sprite drawing
 		RENDERER                = 0b00000000000000000000000000000010,
 		///Commitment to have Physics 2D data with a collision box
-		COLLIDER                = 0b10000000000000000000000000000100,
+		COLLIDER                = 0b00000000000000000000000000000100,
 		///Commitment to have Physics2DData where velocity will act on GameObjects Transform
-		VELOCITY                = 0b10000000000000000000000000001000,
-		///Same commitment as PHYSICS2D_VELOCITY but allowing gravity to act on it
-		//TODO: currently any other y force will be overwritten by gravity
-		GRAV_IMPACTED           = 0b10000000000000000000000000010000,
-		PHYSICS_ENABLED         = 0b10000000000000000000000000000000,
+		PHYSICS_STATIC          = 0b00000000000000000000000000001000,
+		PHYSICS_DYNAMIC         = 0b00000000000000000000000000010000,
 		///Don't update with other objects, call UIUpdate at after all world objects are done updating
 		UI_RENDERABLE           = 0b00000000000000000000000000100000,
 		UI_INTERACTABLE         = 0b00000000000000000000000001000000

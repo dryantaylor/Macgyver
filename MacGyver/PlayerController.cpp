@@ -67,7 +67,6 @@ void DemoProject::PlayerController::update(Macgyver::Gameobjects::Component* sel
 
 void DemoProject::PlayerController::attachNew(Macgyver::Gameobjects::Component* comp)
 {
-	comp->setComponentProperties(Macgyver::Components::VELOCITY);
 	comp->update = PlayerController::update;
 	
 	//comp->addData((Macgyver::Components::ComponentData*)
