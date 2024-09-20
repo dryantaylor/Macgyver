@@ -1,0 +1,3 @@
+[submodule "Macgyver/ducktape"]
+	path = Macgyver/ducktape
+	url = https://github.com/dryantaylor/ducktape-debug-menu.git

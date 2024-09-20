@@ -152,18 +152,6 @@ int main(int argc, char* argv[])
 	getMessenger;
 	getInputMap;
 
-	Macgyver::UI::Font font = Macgyver::UI::Font(c_RENDERER,
-		"\\KirimomiSwash.ttf",
-		256);
-
-	getTextRenderer.addFont("test-font", &font);
-
-	Macgyver::UI::Font font2(c_RENDERER,
-	               "\\JetBrainsMono-Medium.ttf",
-	              256);
-
-	getTextRenderer.addFont("jetbrains", &font2);
-
 	std::cout << getInput.getNumConnectedControllers();
 	
 	getInput.openController(0);
@@ -182,12 +170,10 @@ int main(int argc, char* argv[])
 	Gameobjects::GameObject* camera = new Gameobjects::GameObject();
 
 	Gameobjects::GameObject* UIcam = new Gameobjects::GameObject();
-	Gameobjects::GameObject* UItext = new Gameobjects::GameObject();
 
 	sc->addObject(playerController);
 	sc->addObject(camera);
 	sc->addObject(UIcam);
-	sc->addObject(UItext);
 
 
 	Gameobjects::Component* playerSprite = new Gameobjects::Component();
@@ -205,11 +191,8 @@ int main(int argc, char* argv[])
 	Gameobjects::Component* UIcam_comp = new Gameobjects::Component();
 	UIcam->addComponent(UIcam_comp);
 
-	Gameobjects::Component* UItext_comp = new Gameobjects::Component();
-	UItext->addComponent(UItext_comp);
 
-
-	Components::Renderable::AttachNew(playerSprite, "", 525, 410);
+	Components::Renderable::AttachNew(playerSprite, "\\player.png", 525, 410);
 	DemoProject::PlayerController::attachNew(playerMovement);
 	DemoProject::PlayerFSM::attachNew(playerState);
 	DemoProject::InputBuffer::attachNew(playerInputBuffer);
@@ -218,16 +201,6 @@ int main(int argc, char* argv[])
 
 	Components::UI::UICamera::AttachNew(UIcam_comp);
 
-	SDL_Rect temp;
-	temp.x = temp.y = 0;
-	temp.w = 400;
-	temp.h = 400;
-	Components::UI::Text::attachNew(UItext_comp,
-		"test-font", "Hello World", 256, temp
-	);
-	Macgyver::Gameobjects::Component* keyPressOverlay = new Gameobjects::Component();
-	UItext->addComponent(keyPressOverlay);
-	DemoProject::KeyPressedOverlay::attachNew(keyPressOverlay,UItext_comp);
 
 	Gameobjects::GameObject* button = new Gameobjects::GameObject();
 	sc->addObject(button);
@@ -245,13 +218,6 @@ int main(int argc, char* argv[])
 	button->addComponent(buttonBackground);
 	Macgyver::Components::UI::UIRenderable::AttachNew(buttonBackground, "\\button.png", 400, 150);
 	
-
-	Macgyver::Gameobjects::Component* buttonText = new Gameobjects::Component();
-	button->addComponent(buttonText);
-	buttonText->localTransform.x += 25;
-	buttonText->localTransform.y += 15;
-	Macgyver::Components::UI::Text::attachNew(buttonText, "jetbrains", "Press", 128, { 0,0,400,150 });
-
 
 	Macgyver::Gameobjects::GameObject* gravity = new Gameobjects::GameObject();
 	Macgyver::Gameobjects::Component* gravityComp = new Gameobjects::Component();

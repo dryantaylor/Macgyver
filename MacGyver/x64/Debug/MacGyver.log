@@ -1,4 +1,86 @@
-﻿  main.cpp
-C:\Users\44791\source\repos\Macgyver\MacGyver\Physics2D.h(9,16): warning C4091: 'static ': ignored on left of 'Macgyver::Components::PhysicsConstants' when no variable is declared
-C:\Users\44791\source\repos\Macgyver\MacGyver\main.cpp(259,65): warning C4305: 'argument': truncation from 'double' to 'float'
-  MacGyver.vcxproj -> C:\Users\44791\source\repos\Macgyver\x64\Debug\MacGyver.exe
+﻿  File created at: C:\Users\Dia\source\repos\MacGyver\MacGyver\constructDataWrapperMaps.h
+  AnimationData.cpp
+C:\Users\Dia\source\repos\Macgyver\MacGyver\AnimationData.cpp(31,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Dia\source\repos\Macgyver\MacGyver\AnimationData.cpp(58,24): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  AnimationHandler.cpp
+  Camera.cpp
+C:\Users\Dia\source\repos\Macgyver\MacGyver\Camera.cpp(43,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Dia\source\repos\Macgyver\MacGyver\Camera.cpp(44,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Collider.cpp
+C:\Users\Dia\source\repos\Macgyver\MacGyver\Physics2D.h(9,16): warning C4091: 'static ': ignored on left of 'Macgyver::Components::PhysicsConstants' when no variable is declared
+  (compiling source file 'Collider.cpp')
+  
+  Component.cpp
+  ComponentDataWrapper.cpp
+C:\Users\Dia\source\repos\Macgyver\MacGyver\Physics2D.h(9,16): warning C4091: 'static ': ignored on left of 'Macgyver::Components::PhysicsConstants' when no variable is declared
+  (compiling source file 'ComponentDataWrapper.cpp')
+  
+  ComponentManager.cpp
+  Font.cpp
+  Force2D.cpp
+  GameObject.cpp
+C:\Users\Dia\source\repos\Macgyver\MacGyver\GameObject.cpp(10,44): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+C:\Users\Dia\source\repos\Macgyver\MacGyver\GameObject.cpp(10,41): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+C:\Users\Dia\source\repos\Macgyver\MacGyver\GameObject.cpp(10,38): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+  Globals.cpp
+  GravityImpacting.cpp
+C:\Users\Dia\source\repos\Macgyver\MacGyver\Physics2D.h(9,16): warning C4091: 'static ': ignored on left of 'Macgyver::Components::PhysicsConstants' when no variable is declared
+  (compiling source file 'GravityImpacting.cpp')
+  
+  Input.cpp
+  InputBuffer.cpp
+C:\Users\Dia\source\repos\Macgyver\MacGyver\Physics2D.h(9,16): warning C4091: 'static ': ignored on left of 'Macgyver::Components::PhysicsConstants' when no variable is declared
+  (compiling source file 'InputBuffer.cpp')
+  
+  InputMap.cpp
+  KeyPressedOverlay.cpp
+C:\Users\Dia\source\repos\Macgyver\MacGyver\Physics2D.h(9,16): warning C4091: 'static ': ignored on left of 'Macgyver::Components::PhysicsConstants' when no variable is declared
+  (compiling source file 'KeyPressedOverlay.cpp')
+  
+  Messenger.cpp
+  Physics2D.cpp
+C:\Users\Dia\source\repos\Macgyver\MacGyver\Physics2D.h(9,16): warning C4091: 'static ': ignored on left of 'Macgyver::Components::PhysicsConstants' when no variable is declared
+  (compiling source file 'Physics2D.cpp')
+  
+  PlayerController.cpp
+C:\Users\Dia\source\repos\Macgyver\MacGyver\Physics2D.h(9,16): warning C4091: 'static ': ignored on left of 'Macgyver::Components::PhysicsConstants' when no variable is declared
+  (compiling source file 'PlayerController.cpp')
+  
+C:\Users\Dia\source\repos\Macgyver\MacGyver\PlayerController.cpp(31,25): warning C4244: '=': conversion from 'float' to 'int64_t', possible loss of data
+C:\Users\Dia\source\repos\Macgyver\MacGyver\PlayerController.cpp(32,25): warning C4244: '=': conversion from 'float' to 'int64_t', possible loss of data
+  PlayerFSM.cpp
+C:\Users\Dia\source\repos\Macgyver\MacGyver\Physics2D.h(9,16): warning C4091: 'static ': ignored on left of 'Macgyver::Components::PhysicsConstants' when no variable is declared
+  (compiling source file 'PlayerFSM.cpp')
+  
+  Generating Code...
+C:\Users\Dia\source\repos\Macgyver\MacGyver\InputMap.cpp(12,1): warning C4715: 'Macgyver::InputMap::getValue': not all control paths return a value
+  Compiling...
+  Renderable.cpp
+  Scene.cpp
+  SceneManager.cpp
+  SingletonSerialiser.cpp
+  Text.cpp
+  TextRenderer.cpp
+  UICamera.cpp
+C:\Users\Dia\source\repos\Macgyver\MacGyver\UICamera.cpp(17,43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Dia\source\repos\Macgyver\MacGyver\UICamera.cpp(18,43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  UIMouseDetector.cpp
+C:\Users\Dia\source\repos\Macgyver\MacGyver\Physics2D.h(9,16): warning C4091: 'static ': ignored on left of 'Macgyver::Components::PhysicsConstants' when no variable is declared
+  (compiling source file 'UIMouseDetector.cpp')
+  
+C:\Users\Dia\source\repos\Macgyver\MacGyver\UIMouseDetector.cpp(25,46): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Dia\source\repos\Macgyver\MacGyver\UIMouseDetector.cpp(26,46): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  UIRenderable.cpp
+  UIRenderableData.cpp
+  Vector3.cpp
+  Velocity.cpp
+C:\Users\Dia\source\repos\Macgyver\MacGyver\Physics2D.h(9,16): warning C4091: 'static ': ignored on left of 'Macgyver::Components::PhysicsConstants' when no variable is declared
+  (compiling source file 'Velocity.cpp')
+  
+  main.cpp
+C:\Users\Dia\source\repos\Macgyver\MacGyver\Physics2D.h(9,16): warning C4091: 'static ': ignored on left of 'Macgyver::Components::PhysicsConstants' when no variable is declared
+  (compiling source file 'main.cpp')
+  
+C:\Users\Dia\source\repos\Macgyver\MacGyver\main.cpp(225,65): warning C4305: 'argument': truncation from 'double' to 'float'
+  Generating Code...
+  MacGyver.vcxproj -> C:\Users\Dia\source\repos\Macgyver\x64\Debug\MacGyver.exe

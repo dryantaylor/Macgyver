@@ -19,7 +19,6 @@ void DemoProject::PlayerFSM::update(Gameobjects::Component* self, std::uint32_t 
 
 	return;
 IDLE_STATE_TRANSITION:
-	getAnimationHandler.changeActiveAnimation(state->internal_animId, "player/idle");
 	//local transform changes handles difference in sprite sizes
 	state->PlayerRenderable->localTransform.x = 0;
 	state->PlayerRenderable->localTransform.y = 0;
@@ -34,7 +33,6 @@ IDLE_STATE:
 	}
 	return;
 WALK_STATE_TRANSITION:
-	getAnimationHandler.changeActiveAnimation(state->internal_animId, "player/walk");
 	state->PlayerRenderable->localTransform.x = 0;
 	state->PlayerRenderable->localTransform.y = 73;
 WALK_STATE:
@@ -48,7 +46,6 @@ WALK_STATE:
 	}
 	return;
 RUN_STATE_TRANSITION:
-	getAnimationHandler.changeActiveAnimation(state->internal_animId, "player/run");
 RUN_STATE:
 	if (std::abs(state->physics->velocity.x) > 0.005f && std::abs(state->physics->velocity.x) < 150) {
 		state->currState = WALK;
@@ -72,19 +69,7 @@ void DemoProject::PlayerFSM::attachNew(Gameobjects::Component* comp)
 	data->PlayerRenderable = comp->getParent()->getComponentsWithProperty(Components::RENDERABLE)[0];
 	comp->addData((Macgyver::Components::ComponentData*)data, typeHash(PlayerFSMData));
 
-	getAnimationHandler
-		.addAnimation("player/idle", "/Animations/cerebella/Idle");
-	getAnimationHandler
-		.addAnimation("player/walk", "/Animations/cerebella/Walk");
-	getAnimationHandler
-		.addAnimation("player/run", "/Animations/Run");
-
-	data->internal_animId = getAnimationHandler
-		.beginAnimation(
-			componentGetData(
-				comp->getParent()->getComponentsWithProperty(Components::RENDERABLE)[0]
-				, Components::RenderableData)
-			, "player/idle");
+	data->internal_animId = 0;
 }
 
 DemoProject::PlayerFSMData::PlayerFSMData(Macgyver::Components::Physics2DData* phys)
